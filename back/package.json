@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon --exec babel-node src/index.js",
-    "cleanModels":"rm -rf ./models -v !index.js"
+    "cleanModels":"rm -rf ./models -v !index.js",
     "setupbd": "sudo node ./node_modules/sequelize-auto/bin/sequelize-auto -o './models' -d JurisSi -h localhost -u $1 -x $2"
 
   },
