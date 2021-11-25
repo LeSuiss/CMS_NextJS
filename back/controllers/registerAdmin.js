@@ -21,6 +21,7 @@ const globalStructure = {}
 const login = async (req, res) => {
 
   const firstConnection = await models.Users.findAll({ raw: true })
+  console.log(`firstConnection`, firstConnection)
   if (firstConnection.length === 0) {
     console.log('creating new user as it is first connection')
     const hashedPassword = await bcrypt.hash(req.body.password, 10)
@@ -30,7 +31,7 @@ const login = async (req, res) => {
 
   const account = await models.Users.findOne({ where: { "email": req.body.username }, raw: true });
 
-
+  console.log(`account`, account)
   // check account found and verify password
   if (!account || !bcrypt.compareSync(req.body.password, account.password)) {
     // authentication failed
@@ -59,7 +60,7 @@ const Authentification = async (req, res) => {
   catch (error) {
     console.log("catching token verification error:", error)
   }
-  console.log(result)
+
   res.send(result)
 }
 

@@ -1,25 +1,20 @@
 
-const env = process.env.NODE_ENV || 'development';
-const config = require(__dirname + '/../../config/config.json')[env];
 const express = require('express')
 const CRUD = require('express-sequelize-crud')
 const _ = require('lodash')
 const { camelCase } = require('../../tools/array')
 
-const bcrypt = require('bcryptjs')
-const jwt = require('jsonwebtoken')
-
 const models = require('../../models');
 const { Authentification, login } = require('../../controllers/registerAdmin');
-const { sequelize } = require('../../models');
 
-console.log(`sequelize`, sequelize.models.Users.prototype)
 const Index = express.Router()
 
 const globalStructure = {}
 const ManyToManyRelations = {}
 
-for (const ModelName of Object.keys(models.sequelize.models).filter(name => name.slice(0, 3) !== 'TJ_')
+for (const ModelName of
+  Object.keys(models.sequelize.models)
+    .filter(name => name.slice(0, 3) !== 'TJ_')
 ) {
   Index.use(CRUD.crud(`/${ModelName}`, models[ModelName]))
   //if is not jointure table
@@ -28,6 +23,7 @@ for (const ModelName of Object.keys(models.sequelize.models).filter(name => name
   Object.keys(models[ModelName].rawAttributes)
     .map(fieldName => { Object.assign(globalStructure[camelCase(ModelName)][fieldName], { "typeof": globalStructure[camelCase(ModelName)][fieldName].type.constructor.name.toLowerCase() }) })
 }
+
 Object.keys(models.sequelize.models)
   .filter(name => name.slice(0, 3) === 'TJ_')
   .map(ModelName => {
