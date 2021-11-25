@@ -1,29 +1,28 @@
 {
-  "name": "sapem",
-  "version": "0.1.0",
+  "name": "nextjs",
+  "version": "5.0.0",
   "private": true,
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start"
-  },
   "dependencies": {
-    "axios": "^0.21.1",
+    "@emotion/cache": "latest",
+    "@emotion/react": "latest",
+    "@emotion/server": "latest",
+    "@emotion/styled": "latest",
+    "@mui/material": "latest",
+    "axios": "^0.24.0",
     "bcryptjs": "^2.4.3",
+    "clsx": "latest",
     "lodash": "^4.17.21",
-    "next": "10.2.0",
-    "ra-data-simple-rest": "^3.16.0",
-    "react": "17.0.2",
-    "react-admin": "^3.16.3",
-    "react-dom": "17.0.2",
-    "react-redux": "^7.2.4",
-    "react-router-dom": "^5.2.0",
-    "redux-devtools-extension": "^2.13.9",
-    "redux-saga": "^1.1.3",
-    "semantic-ui-react": "^2.0.3"
+    "next": "latest",
+    "prop-types": "latest",
+    "ra-data-simple-rest": "^3.19.2",
+    "react": "latest",
+    "react-admin": "^3.19.2",
+    "react-dom": "latest"
   },
-  "devDependencies": {
-    "@types/react": "^17.0.5",
-    "typescript": "^4.2.4"
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start",
+    "post-update": "echo \"codesandbox preview only, need an update\" && yarn upgrade --latest"
   }
 }

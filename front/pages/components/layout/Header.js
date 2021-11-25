@@ -1,30 +1,20 @@
 import React, { useContext } from 'react';
 import Link from 'next/link'
 
-import { Menu } from 'semantic-ui-react'
+import CustomMenu from '../customMUI/CustomMenu'
 import navigationStructure from '../../../constants';
-import attributeKey from '../../../tools/attributeKey';
 
 const Header = (props) => {
 
-  return (
+    return (
+        <div >
+            <CustomMenu linksToDisplay={navigationStructure} />
 
-    <div >
-
-      <Menu >
-        {navigationStructure
-          .map(nav => {
-
-            console.log(attributeKey())
-            // return <Link key={attributeKey()} className="item" href={nav.link} > {nav.nav}</Link>
-          }
-          )}
-      </Menu>
-    </div >
+        </div >
 
 
 
-  );
+    );
 }
 
 export default Header;
