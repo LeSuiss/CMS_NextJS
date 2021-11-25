@@ -18,26 +18,26 @@ config.logging = function (text) { console.log(sequelizeLogger(text)); }
 let sequelize;
 
 if (process.env) {
-  sequelize = new Sequelize(
-    process.env.DB_SELECTED,
+    sequelize = new Sequelize(
+        process.env.DB_SELECTED,
 
-    process.env.DB_USER,
-    process.env.DB_PASSWORD,
-    config)
+        process.env.DB_USER,
+        process.env.DB_PASSWORD,
+        config)
 }
 else {
-  config.use_env_variable ?
-    sequelize = new Sequelize(process.env[config.use_env_variable], config)
-    :
-    sequelize = new Sequelize(config.database, config.username, config.password, config);
+    config.use_env_variable ?
+        sequelize = new Sequelize(process.env[config.use_env_variable], config)
+        :
+        sequelize = new Sequelize(config.database, config.username, config.password, config);
 }
 const initModels = require("./init-models");
 Object.assign(db, initModels(sequelize));
 
 Object.keys(db).forEach(modelName => {
-  if (db[modelName].associate) {
-    db[modelName].associate(db);
-  }
+    if (db[modelName].associate) {
+        db[modelName].associate(db);
+    }
 });
 
 db.sequelize = sequelize;
