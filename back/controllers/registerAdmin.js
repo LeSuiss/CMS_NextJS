@@ -1,22 +1,12 @@
 
-const env = process.env.NODE_ENV || 'development';
-const path = require('path')
-const config = require(path.dirname(require.main.filename) + '/config/config.json')[env];
+const config = require('../config')
 // Methods to display directory
-
-
-const express = require('express')
-const fs = require('fs');
-const CRUD = require('express-sequelize-crud')
-
+console.log(`config**`, config)
 const bcrypt = require('bcryptjs')
 const jwt = require('jsonwebtoken')
 
 const models = require('../models');
 
-const Index = express.Router()
-
-const globalStructure = {}
 
 const login = async (req, res) => {
 
@@ -31,7 +21,7 @@ const login = async (req, res) => {
 
   const account = await models.Users.findOne({ where: { "email": req.body.username }, raw: true });
 
-  console.log(`account`, account)
+
   // check account found and verify password
   if (!account || !bcrypt.compareSync(req.body.password, account.password)) {
     // authentication failed
@@ -60,7 +50,7 @@ const Authentification = async (req, res) => {
   catch (error) {
     console.log("catching token verification error:", error)
   }
-
+  console.log(result)
   res.send(result)
 }
 
