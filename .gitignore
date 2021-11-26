@@ -32,4 +32,4 @@ front/.env.production.local
 
 
 back/node_modules
-back/.env
+back/config/config.json
