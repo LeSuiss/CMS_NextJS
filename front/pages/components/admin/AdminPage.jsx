@@ -13,10 +13,12 @@ const AdminPage = ({authProvider, dataProvider, history}) => {
                     .then(res=>setDbStructure(res.data))
                     .catch(console.log)
     , [])
-
+console.log(dbStructure)
     return <Admin authProvider={authProvider} dataProvider={dataProvider} history = {history} >
             {dbStructure && 
-                Object.entries(dbStructure).map(([table,fields])=> 
+                Object.entries(dbStructure)
+                // .filter(([table,fields])=> !table.startsWith('TJ_'))
+                .map(([table,fields], line)=> 
                     <Resource 
                         key={table}
                         name={table} 

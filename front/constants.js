@@ -2,7 +2,7 @@
 const navigationStructure = [
   {
     nav: "admin",
-    link: '/Admin'
+    link: '/Admin#/login'
   },
   {
     nav: "nav2",

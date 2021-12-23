@@ -7,7 +7,6 @@ const db = {};
 
 
 const sequelizeLogger = require('sequelize-log-syntax-colors');
-console.log(`config`, config)
 config.logging = function (text) { console.log(sequelizeLogger(text)); }
 
 let sequelize = new Sequelize(config.database, config.username, config.password, config);

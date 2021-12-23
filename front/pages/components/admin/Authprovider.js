@@ -10,7 +10,6 @@ export default {
     let result = false
     await Axios.post(process.env.DB_URL + '/admin/login', { username, password })
       .then(response => {
-        console.log(response.data);
         if (!!response.data.isAuth) {
           result = true;
           return localStorage.setItem('jwt_token', response.data.jwt_token)
@@ -42,7 +41,6 @@ export default {
       let result
       await Axios.post(process.env.DB_URL + '/admin/checkAuth', { jwt_token: localStorage.getItem('jwt_token') })
         .then(response => {
-          console.log('response')
           result = response.data
           if (!!result.isAuth) {
             console.log('resolving ok', result)

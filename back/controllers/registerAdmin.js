@@ -1,7 +1,6 @@
 
 const config = require('../config')
 // Methods to display directory
-console.log(`config**`, config)
 const bcrypt = require('bcryptjs')
 const jwt = require('jsonwebtoken')
 
@@ -11,11 +10,9 @@ const models = require('../models');
 const login = async (req, res) => {
 
   const firstConnection = await models.Users.findAll({ raw: true })
-  console.log(`firstConnection`, firstConnection)
   if (firstConnection.length === 0) {
     console.log('creating new user as it is first connection')
     const hashedPassword = await bcrypt.hash(req.body.password, 10)
-    console.log(`hashedPassword`, hashedPassword)
     await models.Users.create({ "email": req.body.username, password: hashedPassword })
   }
 
@@ -25,7 +22,7 @@ const login = async (req, res) => {
   // check account found and verify password
   if (!account || !bcrypt.compareSync(req.body.password, account.password)) {
     // authentication failed
-    console.log('refused')
+    console.log('loggin refused')
     res.send({ isAuth: false });
   } else {
     console.log('succes in logging: sending token to front')
@@ -50,7 +47,6 @@ const Authentification = async (req, res) => {
   catch (error) {
     console.log("catching token verification error:", error)
   }
-  console.log(result)
   res.send(result)
 }
 

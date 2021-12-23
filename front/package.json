@@ -7,6 +7,7 @@
     "@emotion/react": "latest",
     "@emotion/server": "latest",
     "@emotion/styled": "latest",
+    "@lesuiss/mui_compo": "^0.1.2",
     "@mui/material": "latest",
     "axios": "^0.24.0",
     "bcryptjs": "^2.4.3",
@@ -17,12 +18,23 @@
     "ra-data-simple-rest": "^3.19.2",
     "react": "latest",
     "react-admin": "^3.19.2",
-    "react-dom": "latest"
+    "react-dom": "latest",
+    "storybook": "^6.4.0"
   },
   "scripts": {
     "dev": "next",
     "build": "next build",
     "start": "next start",
-    "post-update": "echo \"codesandbox preview only, need an update\" && yarn upgrade --latest"
+    "post-update": "echo \"codesandbox preview only, need an update\" && yarn upgrade --latest",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.16.0",
+    "@storybook/addon-actions": "^6.4.0",
+    "@storybook/addon-essentials": "^6.4.0",
+    "@storybook/addon-links": "^6.4.0",
+    "@storybook/react": "^6.4.0",
+    "babel-loader": "^8.2.3"
   }
 }

@@ -4,14 +4,16 @@
     "dialect": "mysql",
     "username": "root",
     "password": "bijour11",
-    "runningPort":3002
+    "runningPort":3002,
+    "jwt_secret": "mapetiteentrepriseconnaitpaslacrise"
   },
   "test": {
     "database": "database_test",
     "dialect": "mysql",
     "username": "root",
     "password": null,
-        "runningPort":3002
+    "runningPort":3002,
+    "jwt_secret": "mapetiteentrepriseconnaitpaslacrise"
 
   },
   "production": {
@@ -19,7 +21,8 @@
     "dialect": "mysql",
     "username": "root",
     "password": null,
-        "runningPort":3002
+    "runningPort":3002,
+    "jwt_secret": "mapetiteentrepriseconnaitpaslacrise"
 
   }
 }

@@ -14,8 +14,9 @@ const ManyToManyRelations = {}
 
 for (const ModelName of
   Object.keys(models.sequelize.models)
-    .filter(name => name.slice(0, 3) !== 'TJ_')
+  // .filter(name => !name.startsWith('TJ_'))
 ) {
+  console.log(`ModelName`, ModelName)
   Index.use(CRUD.crud(`/${ModelName}`, models[ModelName]))
   //if is not jointure table
   _.mergeWith(globalStructure, { [camelCase(ModelName)]: models[ModelName].rawAttributes })
@@ -25,7 +26,7 @@ for (const ModelName of
 }
 
 Object.keys(models.sequelize.models)
-  .filter(name => name.slice(0, 3) === 'TJ_')
+  .filter(name => name.startsWith('TJ_'))
   .map(ModelName => {
     let cuttingCaracter = ModelName.lastIndexOf('_')
     let [tab1, tab2] = [ModelName.slice(3, cuttingCaracter), ModelName.slice(cuttingCaracter + 1, ModelName.length)]
@@ -38,7 +39,6 @@ Object.keys(models.sequelize.models)
   })
 
 
-// console.log(`globalStructure`, globalStructure.Users.ManyToMany_Projects)
 Index.get('/getStructure', (req, res) => {
   res.send(globalStructure)
 });

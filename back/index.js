@@ -10,7 +10,6 @@ app.use(express.json())
 app.use(express.urlencoded(
   { extended: true }
 ))
-console.log(`process.env.NODE_ENV`, require('./config/index'))
 app.use("/", routes)
 app.use('/path', (req, res, next) => {
   res.send('hoho')

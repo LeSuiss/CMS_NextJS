@@ -1,38 +1,27 @@
 const Sequelize = require('sequelize');
 module.exports = function(sequelize, DataTypes) {
-  return sequelize.define('Comments', {
-    id: {
+  return sequelize.define('TJ_Projects_Users', {
+    fk_Projects: {
       type: DataTypes.INTEGER,
       allowNull: false,
-      primaryKey: true
-    },
-    title: {
-      type: DataTypes.STRING(45),
-      allowNull: true
-    },
-    content: {
-      type: DataTypes.STRING(255),
-      allowNull: true
+      primaryKey: true,
+      references: {
+        model: 'Projects',
+        key: 'id'
+      }
     },
     fk_Users: {
       type: DataTypes.INTEGER,
       allowNull: false,
+      primaryKey: true,
       references: {
         model: 'Users',
-        key: 'id'
-      }
-    },
-    fk_Articles: {
-      type: DataTypes.INTEGER,
-      allowNull: false,
-      references: {
-        model: 'Articles',
         key: 'id'
       }
     }
   }, {
     sequelize,
-    tableName: 'Comments',
+    tableName: 'TJ_Projects_Users',
     timestamps: false,
     indexes: [
       {
@@ -40,21 +29,22 @@ module.exports = function(sequelize, DataTypes) {
         unique: true,
         using: "BTREE",
         fields: [
-          { name: "id" },
+          { name: "fk_Projects" },
+          { name: "fk_Users" },
         ]
       },
       {
-        name: "fk_Comments_Users_idx",
+        name: "fk_TJ_Projects_Users_Users1_idx",
         using: "BTREE",
         fields: [
           { name: "fk_Users" },
         ]
       },
       {
-        name: "fk_Comments_Articles1_idx",
+        name: "fk_TJ_Projects_Users_Projects1_idx",
         using: "BTREE",
         fields: [
-          { name: "fk_Articles" },
+          { name: "fk_Projects" },
         ]
       },
     ]
