@@ -50,7 +50,6 @@ module.exports = {
     'sort-imports': 'off',
     'import/order': 'off',
     'import/prefer-default-export': 'off',
-    'import/no-extraneous-dependencies': ['error', { devDependencies: ['**/*.stories.jsx', '**/*.test.js'] }],
     'simple-import-sort/imports': [
       'error',
       {
