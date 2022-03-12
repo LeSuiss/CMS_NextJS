@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from 'react';
-import { List, Create, Edit, SimpleForm, Datagrid, ReferenceManyField, useListContext, useQuery } from 'react-admin';
-import { ReferenceField, SingleFieldList, ChipField, UrlField, NumberField, FileField, EmailField, BooleanField, ImageField, DateField, TextField, } from 'react-admin'
-import { TextInput, BooleanInput, ReferenceArrayField, ReferenceArrayInput, ReferenceInput, NumberInput, SelectArrayInput, DateInput, SelectInput } from 'react-admin';
-import _ from 'lodash'
-import axios from 'axios'
+
+import axios from 'axios';
+import _ from 'lodash';
+import { Create, Datagrid, Edit, List, ReferenceManyField, SimpleForm, useListContext, useQuery } from 'react-admin';
+import { BooleanField, ChipField, DateField, EmailField, FileField, ImageField, NumberField, ReferenceField, SingleFieldList, TextField, UrlField, } from 'react-admin'
+import { BooleanInput, DateInput, NumberInput, ReferenceArrayField, ReferenceArrayInput, ReferenceInput, SelectArrayInput, SelectInput, TextInput } from 'react-admin';
+
 import CustomManyToMany from './CustomManyToMany'
 
 const DataGriCustom = ({ table, fields, structure }) => {
