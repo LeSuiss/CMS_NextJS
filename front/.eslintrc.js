@@ -5,7 +5,7 @@ module.exports = {
     node: true,
     jest: true,
   },
-  extends: ['plugin:react/recommended', 'airbnb', 'plugin:prettier/recommended', 'plugin:react-hooks/recommended'],
+  extends: ['plugin:react/recommended', 'plugin:prettier/recommended', 'plugin:react-hooks/recommended'],
   settings: {
     'import/resolver': {
       node: {
