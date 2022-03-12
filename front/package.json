@@ -20,6 +20,7 @@
     "react-admin": "^3.19.2",
     "react-dom": "latest",
     "storybook": "^6.3.13"
+
   },
   "scripts": {
     "dev": "next",
@@ -36,6 +37,15 @@
     "@storybook/addon-links": "^6.4.0",
     "@storybook/react": "^6.1.21",
     "babel-loader": "^8.2.3",
-    "eslint": "^8.11.0"
+    "eslint": "^8.11.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-import-resolver-custom-alias": "^1.2.0",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-prettier": "^3.4.0",
+    "eslint-plugin-react": "^7.23.2",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "eslint-plugin-simple-import-sort": "^7.0.0",
+    "prettier": "^2.2.1"
   }
 }
