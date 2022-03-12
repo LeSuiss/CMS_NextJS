@@ -12,7 +12,6 @@
     "axios": "^0.24.0",
     "bcryptjs": "^2.4.3",
     "clsx": "latest",
-    "eslint": "^8.11.0",
     "lodash": "^4.17.21",
     "next": "latest",
     "prop-types": "latest",
@@ -20,7 +19,7 @@
     "react": "latest",
     "react-admin": "^3.19.2",
     "react-dom": "latest",
-    "storybook": "^6.4.0"
+    "storybook": "^6.3.13"
   },
   "scripts": {
     "dev": "next",
@@ -33,9 +32,10 @@
   "devDependencies": {
     "@babel/core": "^7.16.0",
     "@storybook/addon-actions": "^6.4.0",
-    "@storybook/addon-essentials": "^6.4.0",
+    "@storybook/addon-essentials": "^5.3.21",
     "@storybook/addon-links": "^6.4.0",
-    "@storybook/react": "^6.4.0",
-    "babel-loader": "^8.2.3"
+    "@storybook/react": "^6.1.21",
+    "babel-loader": "^8.2.3",
+    "eslint": "^8.11.0"
   }
 }
