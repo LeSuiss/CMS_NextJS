@@ -5,14 +5,7 @@ import { Button } from '@lesuiss/mui_compo'
 const Card = (props) => {
   return (
     <div>
-      <Header />
-      <Button >
-        hi :)
-      </Button>
-      <p>            ******************
-      </p>
-
-      {JSON.stringify(props, undefined, 4)}
+      aaaa
     </div>
   )
 }
