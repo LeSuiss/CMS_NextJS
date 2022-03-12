@@ -43,7 +43,6 @@ export default {
         .then(response => {
           result = response.data
           if (!!result.isAuth) {
-            console.log('resolving ok', result)
             return Promise.resolve()
           }
           else {

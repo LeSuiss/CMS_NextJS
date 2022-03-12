@@ -16,13 +16,15 @@ for (const ModelName of
   Object.keys(models.sequelize.models)
   // .filter(name => !name.startsWith('TJ_'))
 ) {
-  console.log(`ModelName`, ModelName)
   Index.use(CRUD.crud(`/${ModelName}`, models[ModelName]))
   //if is not jointure table
-  _.mergeWith(globalStructure, { [camelCase(ModelName)]: models[ModelName].rawAttributes })
-  //for each "column" in db add the type
-  Object.keys(models[ModelName].rawAttributes)
-    .map(fieldName => { Object.assign(globalStructure[camelCase(ModelName)][fieldName], { "typeof": globalStructure[camelCase(ModelName)][fieldName].type.constructor.name.toLowerCase() }) })
+  if (!ModelName.startsWith('TJ_')) {
+
+    _.mergeWith(globalStructure, { [camelCase(ModelName)]: models[ModelName].rawAttributes })
+    //for each "column" in db add the type
+    Object.keys(models[ModelName].rawAttributes)
+      .map(fieldName => { Object.assign(globalStructure[camelCase(ModelName)][fieldName], { "typeof": globalStructure[camelCase(ModelName)][fieldName].type.constructor.name.toLowerCase() }) })
+  }
 }
 
 Object.keys(models.sequelize.models)

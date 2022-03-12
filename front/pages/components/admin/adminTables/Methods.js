@@ -9,6 +9,7 @@ import CustomManyToMany from './CustomManyToMany'
 const DataGriCustom = ({ table, fields, structure }) => {
   const { ids, data } = useListContext()
   const [ref, setRef] = useState([])
+  const [result, setresult] = useState([])
 
 
   useEffect(() => {
@@ -23,6 +24,7 @@ const DataGriCustom = ({ table, fields, structure }) => {
     payload: { ids: ref.map(obj => obj.fk_Projects) }
   })
 
+  console.log(`TJ_ID`, ids, TJ_ID?.data?.map(x => x.id))
   return (<Datagrid rowClick="edit">
     {Object.entries(fields).map(([key, value], y) => {
       if (value.field.indexOf("fk_") > -1) {
@@ -34,7 +36,6 @@ const DataGriCustom = ({ table, fields, structure }) => {
 
       if (key?.includes('ManyToMany')) {
         const lineData = Object.values(data)[0]
-        console.log(`lineData`, lineData, y)
         return <CustomManyToMany
           fieldName={structure[table][key].field}
           joinTableName={structure[table][key].joinTable}
