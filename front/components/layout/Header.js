@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 
 import Link from "next/link";
 
-import navigationStructure from "../../../constants";
+import navigationStructure from "../../constants";
 import CustomMenu from "../customMUI/CustomMenu";
 
 const Header = (props) => {

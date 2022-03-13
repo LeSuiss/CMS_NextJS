@@ -6,8 +6,8 @@ import simpleRestProvider from "ra-data-simple-rest";
 import AdminPage from "./AdminPage";
 import authProvider from "./Authprovider";
 
-const history = createHashHistory();
 const AdminApp = (props) => {
+  const history = createHashHistory();
   const dataProvider = simpleRestProvider(
     process.env.DB_URL + "/admin",
     httpClient

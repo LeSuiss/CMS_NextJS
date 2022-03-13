@@ -2,7 +2,7 @@ import * as React from "react";
 
 import dynamic from "next/dynamic";
 
-const AdminApp = dynamic(() => import("./components/admin/AdminApp"), {
+const AdminApp = dynamic(() => import("../components/admin/AdminApp"), {
   ssr: false,
 });
 
