@@ -1,5 +1,5 @@
 /* eslint-disable react/react-in-jsx-scope */
-import { useListContext } from 'react-admin';
+import { useListContext } from "react-admin";
 const CustomManyToMany = ({ fieldName, joinTableName, propsList }) => {
   // console.log('is in custommm')
   const {

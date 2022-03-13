@@ -1,8 +1,11 @@
-import * as React from 'react';
-import dynamic from 'next/dynamic'
+import * as React from "react";
 
-const AdminApp = dynamic(() => import('./components/admin/AdminApp'), { ssr: false })
+import dynamic from "next/dynamic";
+
+const AdminApp = dynamic(() => import("./components/admin/AdminApp"), {
+  ssr: false,
+});
 
 export default function Admin() {
-  return <AdminApp />
+  return <div>aa</div>;
 }

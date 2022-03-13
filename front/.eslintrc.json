@@ -1,0 +1,14 @@
+{
+  "extends": ["next/babel","next/core-web-vitals"],
+  "settings": {
+    "next": {
+      "rootDir": "packages/my-app/"
+    }
+    
+  },
+  "rules": {
+    "react/no-unescaped-entities": "off",
+    "@next/next/no-page-custom-font": "off",
+    "@next/next/no-anonymous-default-export":"off"
+  }
+}
