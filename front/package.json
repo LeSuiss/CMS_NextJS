@@ -8,27 +8,38 @@
     "@emotion/styled": "^11.8.1",
     "@lesuiss/mui_compo": "^0.1.2",
     "@mui/material": "^5.5.0",
+    "@mui/styles": "^5.5.0",
     "@next/eslint-plugin-next": "^12.1.0",
     "axios": "^0.24.0",
     "bcryptjs": "^2.4.3",
     "clsx": "latest",
     "eslint-plugin-next": "^0.0.0",
     "lodash": "^4.17.21",
+    "@lingui/react": "^3.13.2",
     "next": "latest",
     "prop-types": "latest",
     "ra-data-simple-rest": "^3.19.2",
     "react": "latest",
     "react-admin": "^3.19.10",
-    "react-dom": "latest"
+    "react-dom": "latest",
+
+    "make-plural": "^7.1.0"
   },
   "scripts": {
     "dev": "next",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "post-update": "echo \"codesandbox preview only, need an update\" && yarn upgrade --latest"
+    "post-update": "echo \"codesandbox preview only, need an update\" && yarn upgrade --latest",
+    "translations:add-locale": "lingui add-locale",
+    "translations:extract":"NODE_ENV=development lingui extract",
+    "translations:compile": "NODE_ENV=development lingui compile"
   },
   "devDependencies": {
+    "@lingui/cli": "^3.13.2",
+    "@lingui/loader": "^3.13.2",
+    "@lingui/macro": "^3.13.2",
+    "babel-plugin-macros": "^3.1.0",
     "@babel/core": "^7.16.0",
     "@babel/eslint-parser": "^7.17.0",
     "@emotion/core": "^10.3.1",

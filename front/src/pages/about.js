@@ -5,9 +5,9 @@ import Button from "@mui/material/Button";
 import Container from "@mui/material/Container";
 import Typography from "@mui/material/Typography";
 
-import Copyright from "../src/Copyright";
-import Link from "../src/Link";
-import ProTip from "../src/ProTip";
+import Copyright from "../Copyright";
+import Link from "../Link";
+import ProTip from "../ProTip";
 
 export default function About() {
   return (

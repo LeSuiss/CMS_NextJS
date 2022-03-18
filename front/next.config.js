@@ -1,7 +1,21 @@
 const nextConfig = {
+  i18n: {
+    locales: ['en', 'sr', 'es', 'pseudo'],
+    defaultLocale: 'en'
+  },
   env: {
     DB_URL: process.env.DB_URL,
     CI: process.env.CI,
+  },
+  webpack: (config, { isServer }) => {
+    config.module.rules.push({
+      test: /\.po/,
+      use: ['@lingui/loader'],
+    })
+    if (!isServer) {
+      config.resolve.fallback.fs = false;
+    }
+    return config
   },
 };
 

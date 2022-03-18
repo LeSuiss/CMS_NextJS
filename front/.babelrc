@@ -1,7 +1,8 @@
 {
   "presets": ["next/babel"],
-  "plugins": [
+  "plugins": ["babel-plugin-macros",
     [
+      
       "module-resolver",
       {
         "root": ["./"],

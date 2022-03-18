@@ -1,0 +1,1 @@
+/*eslint-disable*/module.exports={messages:{"Detailed order":"Detailed order","English":"English","Pseudo":"Pseudo","Serbian":"Serbian","Spanish":"Spanish"}};
