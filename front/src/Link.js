@@ -1,19 +1,21 @@
-import * as React from "react";
+/* eslint-disable react/forbid-prop-types */
+/* eslint-disable react/require-default-props */
+/* eslint-disable react/display-name */
+/* eslint-disable @typescript-eslint/no-unused-vars */
+/* eslint-disable react/jsx-filename-extension */
+import * as React from 'react';
 
-import MuiLink from "@mui/material/Link";
-import { styled } from "@mui/material/styles";
-import clsx from "clsx";
-import NextLink from "next/link";
-import { useRouter } from "next/router";
-import PropTypes from "prop-types";
+import MuiLink from '@mui/material/Link';
+import { styled } from '@mui/material/styles';
+import clsx from 'clsx';
+import NextLink from 'next/link';
+import { useRouter } from 'next/router';
+import PropTypes from 'prop-types';
 
 // Add support for the sx prop for consistency with the other branches.
-const Anchor = styled("a")({});
+const Anchor = styled('a')({});
 
-export const NextLinkComposed = React.forwardRef(function NextLinkComposed(
-  props,
-  ref
-) {
+export const NextLinkComposed = React.forwardRef((props, ref) => {
   const {
     to,
     linkAs,
@@ -56,9 +58,9 @@ NextLinkComposed.propTypes = {
 
 // A styled version of the Next.js Link component:
 // https://nextjs.org/docs/#with-link
-const Link = React.forwardRef(function Link(props, ref) {
+const Link = React.forwardRef((props, ref) => {
   const {
-    activeClassName = "active",
+    activeClassName = 'active',
     as: linkAs,
     className: classNameProps,
     href,
@@ -68,14 +70,14 @@ const Link = React.forwardRef(function Link(props, ref) {
   } = props;
 
   const router = useRouter();
-  const pathname = typeof href === "string" ? href : href.pathname;
+  const pathname = typeof href === 'string' ? href : href.pathname;
   const className = clsx(classNameProps, {
     [activeClassName]: router.pathname === pathname && activeClassName,
   });
 
   const isExternal =
-    typeof href === "string" &&
-    (href.indexOf("http") === 0 || href.indexOf("mailto:") === 0);
+    typeof href === 'string' &&
+    (href.indexOf('http') === 0 || href.indexOf('mailto:') === 0);
 
   if (isExternal) {
     if (noLinkStyle) {
