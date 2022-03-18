@@ -24,7 +24,7 @@ module.exports = {
     'plugin:@next/next/recommended',
   ],
   rules: {
-    'react/jsx-filename-extension': [1, { extensions: ['.ts', '.tsx'] }],
+    'react/jsx-filename-extension': [1, { extensions: ['.ts', '.tsx', 'js', 'jsx'] }],
     'import/extensions': 'off',
     'react/prop-types': 'off',
     'jsx-a11y/anchor-is-valid': 'off',
