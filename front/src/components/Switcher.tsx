@@ -3,11 +3,11 @@
 // src/components/Switcher.tsx
 
 import { useContext } from 'react';
-import { rootContext } from '../_app';
+import { rootContext } from '../pages/_app';
 
 type LOCALES = 'en' | 'sr' | 'es' | 'pseudo'
 
-export function Switcher() {
+function Switcher() {
   const { context, dispatchContext } = useContext(rootContext);
   return (
     <>
@@ -26,3 +26,5 @@ export function Switcher() {
     </>
   );
 }
+
+export default Switcher;

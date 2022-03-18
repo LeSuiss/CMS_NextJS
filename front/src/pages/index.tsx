@@ -7,9 +7,9 @@ import { GetStaticProps } from 'next';
 import { loadTranslation } from '@utils/loadTranslation';
 import { t } from '@lingui/macro';
 import { i18n } from '@lingui/core';
-import Layout from './components/layout';
+import Layout from '../components/layout';
 import navigationStructure from '../constants';
-import { Switcher } from './components/Switcher';
+import Switcher from '../components/Switcher';
 
 function Home(props) {
   return (

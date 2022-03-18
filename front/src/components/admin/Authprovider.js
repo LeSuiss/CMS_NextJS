@@ -6,7 +6,7 @@ import { useRedirect } from 'react-admin';
 
 const bcrypt = require('bcryptjs');
 
-export default {
+const AuthProvider = {
   // called when the user attempts to log in
   login: async ({ username, password }) => {
     let result = false;
@@ -64,3 +64,5 @@ export default {
   // called when the user navigates to a new location, to check for permissions / roles
   getPermissions: () => Promise.resolve(),
 };
+
+export default AuthProvider;
