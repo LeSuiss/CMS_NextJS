@@ -1,11 +1,14 @@
+/* eslint-disable max-len */
 /* eslint-disable react/display-name */
-import * as React from "react";
+import * as React from 'react';
 
-import createEmotionServer from "@emotion/server/create-instance";
-import Document, { Head, Html, Main, NextScript } from "next/document";
+import createEmotionServer from '@emotion/server/create-instance';
+import Document, {
+  Head, Html, Main, NextScript,
+} from 'next/document';
 
-import createEmotionCache from "../createEmotionCache";
-import theme from "../theme";
+import createEmotionCache from '../createEmotionCache';
+import theme from '../theme';
 
 export default class MyDocument extends Document {
   render() {
@@ -60,10 +63,11 @@ MyDocument.getInitialProps = async (ctx) => {
   const cache = createEmotionCache();
   const { extractCriticalToChunks } = createEmotionServer(cache);
 
-  ctx.renderPage = () =>
-    originalRenderPage({
-      enhanceApp: (App) => (props) => <App emotionCache={cache} {...props} />,
-    });
+  ctx.renderPage = () => originalRenderPage({
+    enhanceApp: (App) => function (props) {
+      return <App emotionCache={cache} {...props} />;
+    },
+  });
 
   const initialProps = await Document.getInitialProps(ctx);
   // This is important. It prevents emotion to render invalid HTML.
@@ -71,7 +75,7 @@ MyDocument.getInitialProps = async (ctx) => {
   const emotionStyles = extractCriticalToChunks(initialProps.html);
   const emotionStyleTags = emotionStyles.styles.map((style) => (
     <style
-      data-emotion={`${style.key} ${style.ids.join(" ")}`}
+      data-emotion={`${style.key} ${style.ids.join(' ')}`}
       key={style.key}
       // eslint-disable-next-line react/no-danger
       dangerouslySetInnerHTML={{ __html: style.css }}

@@ -46,7 +46,7 @@ export default function MyApp(props) {
   const firstRender = useRef(true);
   const [context, dispatchContext] = useReducer(
     contextReducer,
-    contextInitialValue
+    contextInitialValue,
   );
 
   if (pageProps.translation && firstRender.current) {

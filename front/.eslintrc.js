@@ -21,7 +21,6 @@ module.exports = {
     'plugin:import/errors',
     'plugin:import/warnings',
     'plugin:import/typescript',
-    'prettier',
   ],
   rules: {
     'react/jsx-filename-extension': [1, { extensions: ['.ts', '.tsx'] }],
@@ -37,15 +36,6 @@ module.exports = {
     '@typescript-eslint/no-use-before-define': [
       'error',
       { functions: false, classes: false, variables: true },
-    ],
-    'prettier/prettier': [
-      'error',
-      { singleQuote: true, parser: 'flow' },
-      {
-        fileInfoOptions: {
-          withNodeModules: true,
-        },
-      },
     ],
   },
   settings: {

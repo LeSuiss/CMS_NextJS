@@ -1,27 +1,31 @@
 /* eslint-disable prettier/prettier */
 /* eslint-disable import/no-extraneous-dependencies */
-import React from "react";
+import React from 'react';
 
-import axios from "axios";
+import axios from 'axios';
 
-import { Button } from "@lesuiss/mui_compo";
-import { GetStaticProps } from "next";
-import { loadTranslation } from "@utils/loadTranslation";
-import {t} from '@lingui/macro'
-import { i18n } from '@lingui/core'
-import Layout from "./components/layout";
-import Header from "./components/layout/Header";
-import navigationStructure from '../constants'
-import { Switcher } from "./components/Switcher";
+import { Button } from '@lesuiss/mui_compo';
+import { GetStaticProps } from 'next';
+import { loadTranslation } from '@utils/loadTranslation';
+import { t } from '@lingui/macro';
+import { i18n } from '@lingui/core';
+import Layout from './components/layout';
+import Header from './components/layout/Header';
+import navigationStructure from '../constants';
+import { Switcher } from './components/Switcher';
 
 function Home(props) {
   return (
     <Layout navigationStructure={navigationStructure}>
       <Button>hi :)</Button>
-      <p> {i18n._(
-              /* i18n: The title of detailed order banner on Home page */ t`Detailed order`
-            )}</p>
-            <Switcher/>
+      <p>
+        {' '}
+        {i18n._(
+          /* i18n: The title of detailed order banner on Home page */ t`Detailed order`,
+        )}
+
+      </p>
+      <Switcher />
     </Layout>
   );
 }
@@ -42,12 +46,12 @@ export default Home;
 // src/pages/index.tsx
 
 export const getStaticProps: GetStaticProps = async (ctx) => {
-  console.log('ctx', ctx)
-  const translation = await loadTranslation( ctx.locale! )
-  console.log(translation)
+  console.log('ctx', ctx);
+  const translation = await loadTranslation(ctx.locale!);
+  console.log(translation);
   return {
     props: {
-      translation
-    }
-  }
-}
+      translation,
+    },
+  };
+};

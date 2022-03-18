@@ -1,10 +1,11 @@
+/* eslint-disable import/no-extraneous-dependencies */
 /* eslint-disable react/jsx-key */
-import * as React from "react";
+import * as React from 'react';
 
-import { Link } from "@material-ui/core";
-import Button from "@mui/material/Button";
-import Menu from "@mui/material/Menu";
-import MenuItem from "@mui/material/MenuItem";
+import { Link } from '@material-ui/core';
+import Button from '@mui/material/Button';
+import Menu from '@mui/material/Menu';
+import MenuItem from '@mui/material/MenuItem';
 
 export default function BasicMenu({ linksToDisplay }) {
   const [anchorEl, setAnchorEl] = React.useState(null);
@@ -22,7 +23,7 @@ export default function BasicMenu({ linksToDisplay }) {
         id="basic-button"
         aria-controls="basic-menu"
         aria-haspopup="true"
-        aria-expanded={open ? "true" : undefined}
+        aria-expanded={open ? 'true' : undefined}
         onClick={handleClick}
       >
         Dashboard
@@ -33,7 +34,7 @@ export default function BasicMenu({ linksToDisplay }) {
         open={open}
         onClose={handleClose}
         MenuListProps={{
-          "aria-labelledby": "basic-button",
+          'aria-labelledby': 'basic-button',
         }}
       >
         {linksToDisplay.map((item) => (

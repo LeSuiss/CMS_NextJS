@@ -4,12 +4,12 @@ import React, {
   useReducer,
   useRef,
   useState,
-} from "react";
+} from 'react';
 
-import Footer from "../layout/Footer";
-import Header from "../layout/Header";
+import Footer from '../layout/Footer';
+import Header from '../layout/Header';
 
-const HomePage = (props) => {
+function HomePage(props) {
   return (
     <div>
       <Header />
@@ -17,6 +17,6 @@ const HomePage = (props) => {
       <Footer />
     </div>
   );
-};
+}
 
 export default HomePage;

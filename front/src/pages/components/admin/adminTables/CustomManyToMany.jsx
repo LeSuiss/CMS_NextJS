@@ -1,6 +1,9 @@
+/* eslint-disable max-len */
+/* eslint-disable @typescript-eslint/no-unused-vars */
 /* eslint-disable react/react-in-jsx-scope */
-import { useListContext } from "react-admin";
-const CustomManyToMany = ({ fieldName, joinTableName, propsList }) => {
+import { useListContext } from 'react-admin';
+
+function CustomManyToMany({ fieldName, joinTableName, propsList }) {
   // console.log('is in custommm')
   const {
     // fetched data
@@ -36,9 +39,11 @@ const CustomManyToMany = ({ fieldName, joinTableName, propsList }) => {
   } = useListContext();
   return (
     <div>
-      {fieldName}, {joinTableName}
+      {fieldName}
+      ,
+      {joinTableName}
     </div>
   );
-};
+}
 
 export default CustomManyToMany;

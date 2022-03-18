@@ -1,6 +1,8 @@
-import React from 'react'
-import Footer from './Footer'
-import Header from './Header'
+/* eslint-disable react/jsx-filename-extension */
+/* eslint-disable react/destructuring-assignment */
+import React from 'react';
+import Footer from './Footer';
+import Header from './Header';
 
 function Layout(props) {
   return (
@@ -10,7 +12,7 @@ function Layout(props) {
       <Footer />
     </>
 
-  )
+  );
 }
 
-export default Layout
+export default Layout;

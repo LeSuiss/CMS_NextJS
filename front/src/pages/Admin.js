@@ -1,6 +1,6 @@
-import * as React from "react";
+import * as React from 'react';
 
-import dynamic from "next/dynamic";
+import dynamic from 'next/dynamic';
 
 // const AdminApp = dynamic(() => import("../components/admin/AdminApp"), {
 //   ssr: false,
@@ -9,7 +9,6 @@ import dynamic from "next/dynamic";
 export default function Admin() {
   return <div>aa</div>;
 }
-
 
 // export async function getServerSideProps(context) {
 //   const result = await axios
