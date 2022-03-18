@@ -1,28 +1,30 @@
+/* eslint-disable prettier/prettier */
+/* eslint-disable import/no-extraneous-dependencies */
 import React from "react";
 
 import axios from "axios";
-import navigationStructure from '../constants'
 
 import { Button } from "@lesuiss/mui_compo";
-import Header from "./components/layout/Header";
-import Layout from "./components/layout";
 import { GetStaticProps } from "next";
 import { loadTranslation } from "@utils/loadTranslation";
 import {t} from '@lingui/macro'
 import { i18n } from '@lingui/core'
+import Layout from "./components/layout";
+import Header from "./components/layout/Header";
+import navigationStructure from '../constants'
 import { Switcher } from "./components/Switcher";
 
-const Home = (props) => {
+function Home(props) {
   return (
     <Layout navigationStructure={navigationStructure}>
       <Button>hi :)</Button>
       <p> {i18n._(
-              /*i18n: The title of detailed order banner on Home page*/ t`Detailed order`
+              /* i18n: The title of detailed order banner on Home page */ t`Detailed order`
             )}</p>
             <Switcher/>
     </Layout>
   );
-};
+}
 export default Home;
 
 // export async function getServerSideProps(context) {

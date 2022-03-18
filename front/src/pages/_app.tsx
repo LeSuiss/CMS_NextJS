@@ -1,5 +1,13 @@
+/* eslint-disable react/jsx-no-constructed-context-values */
+/* eslint-disable react-hooks/exhaustive-deps */
+/* eslint-disable @typescript-eslint/ban-types */
+/* eslint-disable import/no-extraneous-dependencies */
 import React, {
-  useRef, useEffect, useState, createContext, useReducer,
+  useRef,
+  useEffect,
+  useState,
+  createContext,
+  useReducer,
 } from 'react';
 
 import { CacheProvider } from '@emotion/react';
@@ -11,7 +19,7 @@ import { i18n } from '@lingui/core';
 import { t } from '@lingui/macro';
 import { I18nProvider } from '@lingui/react';
 import { useRouter } from 'next/router';
-import { initTranslation } from '../utils/lingui';
+import initTranslation from '../utils/lingui';
 
 import createEmotionCache from '../createEmotionCache';
 import theme from '../theme';
@@ -20,7 +28,10 @@ initTranslation(i18n);
 
 // Client-side cache, shared for the whole session of the user in the browser.
 const clientSideEmotionCache = createEmotionCache();
-export const rootContext = createContext<{context?:any, dispatchContext?:Function}>({});
+export const rootContext = createContext<{
+  context?: any,
+  dispatchContext?: Function,
+}>({});
 
 export default function MyApp(props) {
   const { Component, emotionCache = clientSideEmotionCache, pageProps } = props;
@@ -31,10 +42,12 @@ export default function MyApp(props) {
     sr: t`Serbian`,
     es: t`Spanish`,
     selected: 'en',
-
   };
   const firstRender = useRef(true);
-  const [context, dispatchContext] = useReducer(contextReducer, contextInitialValue);
+  const [context, dispatchContext] = useReducer(
+    contextReducer,
+    contextInitialValue
+  );
 
   if (pageProps.translation && firstRender.current) {
     // load the translations for the locale
@@ -75,9 +88,3 @@ export default function MyApp(props) {
     </CacheProvider>
   );
 }
-
-MyApp.propTypes = {
-  Component: PropTypes.elementType.isRequired,
-  emotionCache: PropTypes.object,
-  pageProps: PropTypes.object.isRequired,
-};
