@@ -19,6 +19,7 @@ import { i18n } from '@lingui/core';
 import { t } from '@lingui/macro';
 import { I18nProvider } from '@lingui/react';
 import { useRouter } from 'next/router';
+import loadTranslation from '@utils/loadTranslation';
 import initTranslation from '../utils/lingui';
 
 import createEmotionCache from '../createEmotionCache';
@@ -51,24 +52,22 @@ export default function MyApp(props) {
 
   if (pageProps.translation && firstRender.current) {
     // load the translations for the locale
-
     const locale = router.locale || router.defaultLocale;
-    i18n.load(locale, pageProps.translation);
+    i18n.load(locale, pageProps?.translation ?? {});
     i18n.activate(locale);
     // render only once
     firstRender.current = false;
   }
 
   function contextReducer(state, action) {
-    const selectedLanguage = action.payload;
+    const selectedLanguage = action.payload.selected;
+    const messages = action.payload.message;
+    router.push(router.pathname, {}, { locale: selectedLanguage });
+    i18n.load(selectedLanguage, messages);
+    i18n.activate(selectedLanguage);
 
     return { ...state, selected: selectedLanguage };
   }
-
-  useEffect(() => {
-    i18n.activate(context.selected);
-    router.push(router.pathname, {}, { locale: context.selected });
-  }, [context]);
 
   return (
     <CacheProvider value={emotionCache}>

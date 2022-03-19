@@ -13,22 +13,22 @@ msgstr ""
 "Language-Team: \n"
 "Plural-Forms: \n"
 
-#: src/pages/index.tsx:20
+#: src/pages/index.tsx:21
 msgid "Detailed order"
 msgstr "this is spanish"
 
-#: src/pages/components/Switcher.tsx:16
+#: src/pages/_app.tsx:41
 msgid "English"
 msgstr "zzzzz"
 
 #: src/pages/components/Switcher.tsx:23
-msgid "Pseudo"
-msgstr "PseudoES"
+#~ msgid "Pseudo"
+#~ msgstr "PseudoES"
 
-#: src/pages/components/Switcher.tsx:17
+#: src/pages/_app.tsx:42
 msgid "Serbian"
 msgstr "SERBIANES"
 
-#: src/pages/components/Switcher.tsx:18
+#: src/pages/_app.tsx:43
 msgid "Spanish"
 msgstr "SPANISHES"

@@ -4,9 +4,9 @@ import React from 'react';
 
 import { Button } from '@lesuiss/mui_compo';
 import { GetStaticProps } from 'next';
-import { loadTranslation } from '@utils/loadTranslation';
 import { t } from '@lingui/macro';
 import { i18n } from '@lingui/core';
+import loadTranslation from '@utils/loadTranslation';
 import Layout from '../components/layout';
 import navigationStructure from '../constants';
 import Switcher from '../components/Switcher';
@@ -14,12 +14,14 @@ import Switcher from '../components/Switcher';
 function Home(props) {
   return (
     <Layout navigationStructure={navigationStructure}>
+      {JSON.stringify(props, undefined, 4)}
       <Button>hi :)</Button>
-      <p>
+      <>
         {i18n._(
           /* i18n: The title of detailed order banner on Home page */ t`Detailed order`,
         )}
-      </p>
+        {t`Detailed order`}
+      </>
       <Switcher />
     </Layout>
   );

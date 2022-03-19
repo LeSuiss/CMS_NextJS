@@ -3,19 +3,26 @@
 // src/components/Switcher.tsx
 
 import { useContext } from 'react';
+import { i18n } from '@lingui/core';
+import loadTranslation from '@utils/loadTranslation';
 import { rootContext } from '../pages/_app';
-
-type LOCALES = 'en' | 'sr' | 'es' | 'pseudo'
 
 function Switcher() {
   const { context, dispatchContext } = useContext(rootContext);
   return (
     <>
-      {JSON.stringify(context)}
+      <p>{JSON.stringify(context)}</p>
+      <p>
+        swithcer
+      </p>
 
       <select
         value={context.selected}
-        onChange={(evt) => dispatchContext({ payload: evt.target.value })}
+        onChange={async (evt) => {
+          const choice = evt.target.value;
+          const message = await loadTranslation(choice);
+          dispatchContext({ payload: { selected: choice, message } });
+        }}
       >
         {Object.keys(context).filter((key) => key !== 'selected').map((locale) => (
           <option value={locale} key={locale}>
