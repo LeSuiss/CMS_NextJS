@@ -13,22 +13,35 @@ msgstr ""
 "Language-Team: \n"
 "Plural-Forms: \n"
 
-#: src/pages/index.tsx:21
+#: src/pages/index.tsx:20
+#: src/pages/index.tsx:22
 msgid "Detailed order"
 msgstr ""
 
-#: src/pages/_app.tsx:41
+#: src/pages/_app.tsx:46
 msgid "English"
+msgstr ""
+
+#: src/constants.js:6
+msgid "Home"
 msgstr ""
 
 #: src/pages/components/Switcher.tsx:23
 #~ msgid "Pseudo"
 #~ msgstr ""
 
-#: src/pages/_app.tsx:42
+#: src/pages/_app.tsx:47
 msgid "Serbian"
 msgstr ""
 
-#: src/pages/_app.tsx:43
+#: src/pages/_app.tsx:48
 msgid "Spanish"
+msgstr ""
+
+#: src/constants.js:10
+msgid "about us"
+msgstr ""
+
+#: src/constants.js:14
+msgid "contact us"
 msgstr ""

@@ -1,16 +1,15 @@
-
 module.exports = {
   locales: ['en', 'sr', 'es', 'pseudo'],
   pseudoLocale: 'pseudo',
   sourceLocale: 'en',
   fallbackLocales: {
-    default: 'en'
+    default: 'en',
   },
   catalogs: [
     {
       path: 'src/locales/{locale}/messages',
-      include: ['src/pages', 'src/components']
-    }
+      include: ['src/pages', 'src/components', 'src/constants.js'],
+    },
   ],
-  format: 'po'
-}
+  format: 'po',
+};

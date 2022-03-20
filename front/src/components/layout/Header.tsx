@@ -28,7 +28,7 @@ const useStyle = makeStyles({
     borderWidth: 'solid',
   },
 });
-function Header({ navigationStructure, className }) {
+function Header({ navigationStructure }) {
   const classes = useStyle();
   const isMobile = useMediaQuery('(max-width:600px)');
 
