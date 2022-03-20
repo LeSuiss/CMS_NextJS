@@ -5,19 +5,21 @@
 import { useContext } from 'react';
 import { i18n } from '@lingui/core';
 import loadTranslation from '@utils/loadTranslation';
+import { useRouter } from 'next/router';
 import { rootContext } from '../pages/_app';
 
 function Switcher() {
+  const router                       = useRouter();
   const { context, dispatchContext } = useContext(rootContext);
   return (
     <>
-      <p>{JSON.stringify(context)}</p>
+      <div>{JSON.stringify(router.locale, undefined, 4)}</div>
       <p>
         swithcer
       </p>
 
       <select
-        value={context.selected}
+        value={router.locale ?? context.selected}
         onChange={async (evt) => {
           const choice = evt.target.value;
           const message = await loadTranslation(choice);

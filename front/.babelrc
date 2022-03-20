@@ -13,14 +13,13 @@
           "@screens": "./src/screens",
           "@hooks": "./src/hooks",
           "@services": "./src/services",
-          "@constants": "./src/constants",
+          "@constants": "./src/constants.js",
           "@context": "./src/context",
           "@queries": "./src/queries",
           "@data": "./src/data",
           "@typeDefs": "./src/types",
-          "@generated": "./src/generated",
+          "@assets": "./src/assets",
           "@utils": "./src/utils",
-          "@public": "./public"
         }
       }
     ]  ]

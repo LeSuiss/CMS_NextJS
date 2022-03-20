@@ -7,7 +7,7 @@ import Button from '@mui/material/Button';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 
-export default function BasicMenu({ linksToDisplay }) {
+export default function BasicMenu({ linksToDisplay, className }) {
   const [anchorEl, setAnchorEl] = React.useState(null);
   const open = Boolean(anchorEl);
   const handleClick = (event) => {
@@ -18,7 +18,7 @@ export default function BasicMenu({ linksToDisplay }) {
   };
 
   return (
-    <div>
+    <div className={className}>
       <Button
         id="basic-button"
         aria-controls="basic-menu"

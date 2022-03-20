@@ -13,8 +13,7 @@ import Switcher from '../components/Switcher';
 
 function Home(props) {
   return (
-    <Layout navigationStructure={navigationStructure}>
-      {JSON.stringify(props, undefined, 4)}
+    <>
       <Button>hi :)</Button>
       <>
         {i18n._(
@@ -23,29 +22,13 @@ function Home(props) {
         {t`Detailed order`}
       </>
       <Switcher />
-    </Layout>
+    </>
   );
 }
 export default Home;
 
-// export async function getServerSideProps(context) {
-//   const result = await axios
-//     .get(process.env.DB_URL + "/global")
-//     .then((x) => x.data);
-//   if (!result) {
-//     return { notFound: true };
-//   }
-
-//   return {
-//     props: { api: result }, // will be passed to the page component as props
-//   };
-// }
-// src/pages/index.tsx
-
 export const getStaticProps: GetStaticProps = async (ctx) => {
-  console.log('ctx', ctx);
   const translation = await loadTranslation(ctx.locale!);
-  console.log(translation);
   return {
     props: {
       translation,

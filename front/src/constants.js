@@ -1,18 +1,15 @@
 const navigationStructure = [
   {
-    nav: 'admin',
-    link: '/Admin#/login',
+    nav: 'Home',
+    link: '/',
   },
   {
-    nav: 'nav2',
-    link: '/contact',
+    nav: 'about us',
+    link: '/about',
   },
   {
+    nav: 'contact us',
     link: '/contact/tamère',
-  },
-  {
-    nav: 'nav3',
-    link: '/Admin3',
   },
 ];
 

@@ -20,8 +20,11 @@ import { t } from '@lingui/macro';
 import { I18nProvider } from '@lingui/react';
 import { useRouter } from 'next/router';
 import loadTranslation from '@utils/loadTranslation';
+import Layout from '@components/layout';
+import { constants } from 'buffer';
+import navigationStructure from '../constants';
 import initTranslation from '../utils/lingui';
-
+import '../styles.css';
 import createEmotionCache from '../createEmotionCache';
 import theme from '../theme';
 // initialization function
@@ -37,6 +40,7 @@ export const rootContext = createContext<{
 export default function MyApp(props) {
   const { Component, emotionCache = clientSideEmotionCache, pageProps } = props;
   const router = useRouter();
+  const firstRender = useRef(true);
 
   const contextInitialValue = {
     en: t`English`,
@@ -44,7 +48,6 @@ export default function MyApp(props) {
     es: t`Spanish`,
     selected: 'en',
   };
-  const firstRender = useRef(true);
   const [context, dispatchContext] = useReducer(
     contextReducer,
     contextInitialValue,
@@ -80,7 +83,9 @@ export default function MyApp(props) {
           <ThemeProvider theme={theme}>
             {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
             <CssBaseline />
-            <Component {...pageProps} />
+            <Layout navigationStructure={navigationStructure}>
+              <Component {...pageProps} />
+            </Layout>
           </ThemeProvider>
         </rootContext.Provider>
       </I18nProvider>
