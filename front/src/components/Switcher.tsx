@@ -6,6 +6,7 @@ import { useContext } from 'react';
 import { i18n } from '@lingui/core';
 import loadTranslation from '@utils/loadTranslation';
 import { useRouter } from 'next/router';
+import { t } from '@lingui/macro';
 import { rootContext } from '../pages/_app';
 
 function Switcher() {

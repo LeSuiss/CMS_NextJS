@@ -23,8 +23,8 @@ msgid "English"
 msgstr ""
 
 #: src/constants.js:6
-msgid "Home"
-msgstr ""
+#~ msgid "Home"
+#~ msgstr ""
 
 #: src/pages/components/Switcher.tsx:23
 #~ msgid "Pseudo"
@@ -39,9 +39,13 @@ msgid "Spanish"
 msgstr ""
 
 #: src/constants.js:10
-msgid "about us"
-msgstr ""
+#~ msgid "about us"
+#~ msgstr ""
 
 #: src/constants.js:14
-msgid "contact us"
+#~ msgid "contact us"
+#~ msgstr ""
+
+#: src/components/layout/Header.tsx:48
+msgid "{0}"
 msgstr ""

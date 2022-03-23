@@ -1,1 +1,1 @@
-/*eslint-disable*/module.exports={messages:{"Detailed order":"this is spanish","English":"zzzzz","Pseudo":"PseudoES","Serbian":"SERBIANES","Spanish":"SPANISHES"}};
+/*eslint-disable*/module.exports={messages:{"Detailed order":"this is spanish","English":"zzzzz","Home":"Home","Pseudo":"PseudoES","Serbian":"SERBIANES","Spanish":"SPANISHES","about us":"A propos de nous","contact us":"nous contacter"}};
