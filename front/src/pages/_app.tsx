@@ -22,13 +22,12 @@ import { I18nProvider } from '@lingui/react';
 import { useRouter } from 'next/router';
 import loadTranslation from '@utils/loadTranslation';
 import Layout from '@components/layout';
-import { constants } from 'buffer';
+import { StylesProvider, createGenerateClassName } from '@mui/styles';
 import navigationStructure from '../constants';
 import initTranslation from '../utils/lingui';
 import '../styles.css';
 import createEmotionCache from '../createEmotionCache';
 import theme from '../theme';
-import { StylesProvider, createGenerateClassName } from '@mui/styles';
 
 const generateClassName = createGenerateClassName({
   productionPrefix: 'c',
