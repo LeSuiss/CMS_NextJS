@@ -8,7 +8,6 @@ import { t } from '@lingui/macro';
 import { i18n } from '@lingui/core';
 import loadTranslation from '@utils/loadTranslation';
 import Layout from '../components/layout';
-import navigationStructure from '../constants';
 import Switcher from '../components/Switcher';
 
 function Home(props) {

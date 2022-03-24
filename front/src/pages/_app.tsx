@@ -1,3 +1,4 @@
+/* eslint-disable max-len */
 /* eslint-disable react/jsx-no-constructed-context-values */
 /* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable @typescript-eslint/ban-types */
@@ -27,6 +28,12 @@ import initTranslation from '../utils/lingui';
 import '../styles.css';
 import createEmotionCache from '../createEmotionCache';
 import theme from '../theme';
+import { StylesProvider, createGenerateClassName } from '@mui/styles';
+
+const generateClassName = createGenerateClassName({
+  productionPrefix: 'c',
+});
+
 // initialization function
 initTranslation(i18n);
 
@@ -41,6 +48,7 @@ export default function MyApp(props) {
   const { Component, emotionCache = clientSideEmotionCache, pageProps } = props;
   const router = useRouter();
   const firstRender = useRef(true);
+
   useEffect(() => {
     const jssStyles = document.querySelector('#jss-server-side');
     if (jssStyles) {
@@ -87,9 +95,12 @@ export default function MyApp(props) {
       <I18nProvider i18n={i18n}>
         <rootContext.Provider value={{ context, dispatchContext }}>
           <ThemeProvider theme={theme}>
-            {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
-            <CssBaseline />
-            <Component {...pageProps} />
+            <StylesProvider generateClassName={generateClassName}>
+              {' '}
+              {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
+              <CssBaseline />
+              <Component {...pageProps} />
+            </StylesProvider>
           </ThemeProvider>
         </rootContext.Provider>
       </I18nProvider>

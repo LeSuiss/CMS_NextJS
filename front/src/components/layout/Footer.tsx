@@ -7,6 +7,7 @@ import {
 import { makeStyles } from '@mui/styles';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import YouTubeIcon from '@mui/icons-material/YouTube';
 import PhoneIphoneIcon from '@mui/icons-material/PhoneIphone';
 import MailOutlineIcon from '@mui/icons-material/MailOutline';
 import logo from '../../assets/logo.jpg';
@@ -90,9 +91,7 @@ function Footer() {
       <div className={classes.container_FooterContent}>
         <div className={classes.cards}>
           <h3>{i18n._(/* i18n: Footer>SiteInformation>InformationTitle> */ t`INFORMATION`)}</h3>
-          <Link>{i18n._(/* i18n: Footer>SiteInformation>Site Map */ t`SITE MAP`)}</Link>
           <Link>{i18n._(/* i18n: Footer>SiteInformation>LegalNotices */ t`LEGAL NOTICE`)}</Link>
-          <Link>{i18n._(/* i18n: Footer>SiteInformation>Personal Data */ t`PERSONAL DATAS`)}</Link>
           <Link>{i18n._(/* i18n: Footer>SiteInformation>Cookies */ t`COOKIES`)}</Link>
         </div>
 
@@ -100,12 +99,10 @@ function Footer() {
           <h3>{i18n._(/* i18n: Footer>SiteInformation>ContactTitle> */ t`CONTACT`)}</h3>
           <div className={classes.container_socialMediaRow}>
             <PhoneIphoneIcon className={classes.socialMediaIcons} fontSize="medium" />
-            {' '}
             {i18n._(/* i18n: Footer>SiteInformation>PhoneTel */ t`0188246590`)}
           </div>
           <div className={classes.container_socialMediaRow}>
             <MailOutlineIcon className={classes.socialMediaIcons} fontSize="medium" />
-            {' '}
             {i18n._(/* i18n: Footer>SiteInformation>Mail Contact */ t`CONTACT US BY MAIL`)}
           </div>
         </div>
@@ -114,6 +111,7 @@ function Footer() {
           <h3>{i18n._(/* i18n: Footer>SiteInformation>TrackActivityTitle> */ t`TRACK OUR ACTIVITY`)}</h3>
           <FacebookIcon className={classes.socialMediaIcons} fontSize="large" />
           <LinkedInIcon fontSize="large" />
+          <YouTubeIcon fontSize="large" />
         </div>
       </div>
       <div className={classes.container_copyright}>
