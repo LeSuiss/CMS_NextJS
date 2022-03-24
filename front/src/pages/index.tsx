@@ -13,7 +13,7 @@ import Switcher from '../components/Switcher';
 
 function Home(props) {
   return (
-    <>
+    <Layout>
       <Button>hi :)</Button>
       <>
         {i18n._(
@@ -22,7 +22,7 @@ function Home(props) {
         {t`Detailed order`}
       </>
       <Switcher />
-    </>
+    </Layout>
   );
 }
 export default Home;

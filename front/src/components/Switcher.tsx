@@ -24,7 +24,9 @@ function Switcher() {
         onChange={async (evt) => {
           const choice = evt.target.value;
           const message = await loadTranslation(choice);
-          dispatchContext({ payload: { selected: choice, message } });
+          router.push(router.pathname, {}, { locale: choice });
+          i18n.load(choice, message);
+          i18n.activate(choice);
         }}
       >
         {Object.keys(context).filter((key) => key !== 'selected').map((locale) => (
