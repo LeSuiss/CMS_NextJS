@@ -11,12 +11,32 @@ msgstr ""
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: \n"
 
+#: src/components/layout/Footer.tsx:99
+msgid "0188246590"
+msgstr "0188246590"
+
+#: src/components/layout/Footer.tsx:96
+msgid "CONTACT"
+msgstr "CONTACT"
+
+#: src/components/layout/Footer.tsx:103
+msgid "CONTACT US BY MAIL"
+msgstr "CONTACT US BY MAIL"
+
+#: src/components/layout/Footer.tsx:92
+msgid "COOKIES"
+msgstr "COOKIES"
+
+#: src/components/layout/Footer.tsx:115
+msgid "Copyright © 5aSec-Services {0}."
+msgstr "Copyright © 5aSec-Services {0}."
+
 #: src/pages/index.tsx:20
 #: src/pages/index.tsx:22
 msgid "Detailed order"
 msgstr "Detailed order"
 
-#: src/pages/_app.tsx:46
+#: src/pages/_app.tsx:55
 msgid "English"
 msgstr "English"
 
@@ -24,26 +44,46 @@ msgstr "English"
 #~ msgid "Home"
 #~ msgstr "Home"
 
+#: src/components/layout/Footer.tsx:90
+msgid "INFORMATION"
+msgstr "INFORMATION"
+
+#: src/components/layout/Footer.tsx:91
+msgid "LEGAL NOTICE"
+msgstr "LEGAL NOTICE"
+
+#: src/components/layout/index.tsx:122
+msgid "Pressing and Laundry"
+msgstr "Pressing and Laundry"
+
 #: src/pages/components/Switcher.tsx:23
 #~ msgid "Pseudo"
 #~ msgstr "Pseudo"
 
-#: src/pages/_app.tsx:47
+#: src/pages/_app.tsx:56
 msgid "Serbian"
 msgstr "Serbian"
 
-#: src/pages/_app.tsx:48
+#: src/pages/_app.tsx:57
 msgid "Spanish"
 msgstr "Spanish"
+
+#: src/components/layout/Footer.tsx:108
+msgid "TRACK OUR ACTIVITY"
+msgstr "TRACK OUR ACTIVITY"
 
 #: src/constants.js:10
 #~ msgid "about us"
 #~ msgstr "about us"
+
+#: src/components/layout/index.tsx:125
+msgid "at Home"
+msgstr "at Home"
 
 #: src/constants.js:14
 #~ msgid "contact us"
 #~ msgstr "contact us"
 
 #: src/components/layout/Header.tsx:48
-msgid "{0}"
-msgstr "{0}"
+#~ msgid "{0}"
+#~ msgstr "{0}"

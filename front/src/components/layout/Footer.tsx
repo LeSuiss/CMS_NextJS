@@ -1,16 +1,13 @@
 import { i18n } from '@lingui/core';
 import { t } from '@lingui/macro';
-import React, { FunctionComponent } from 'react';
-import {
-  AppBar, Box, Link, Theme, Toolbar, Typography, useMediaQuery,
-} from '@mui/material';
+import React from 'react';
+import { Link } from '@mui/material';
 import { makeStyles } from '@mui/styles';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import YouTubeIcon from '@mui/icons-material/YouTube';
 import PhoneIphoneIcon from '@mui/icons-material/PhoneIphone';
 import MailOutlineIcon from '@mui/icons-material/MailOutline';
-import logo from '../../assets/logo.jpg';
 
 const useStyles = makeStyles((theme) => ({
   cards: {

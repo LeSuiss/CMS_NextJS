@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-non-null-assertion */
 /* eslint-disable prettier/prettier */
 /* eslint-disable import/no-extraneous-dependencies */
 import React from 'react';
@@ -8,19 +9,13 @@ import { t } from '@lingui/macro';
 import { i18n } from '@lingui/core';
 import loadTranslation from '@utils/loadTranslation';
 import Layout from '../components/layout';
-import Switcher from '../components/Switcher';
 
-function Home(props) {
+function Home() {
   return (
     <Layout>
-      <Button>hi :)</Button>
-      <>
-        {i18n._(
-          /* i18n: The title of detailed order banner on Home page */ t`Detailed order`,
-        )}
-        {t`Detailed order`}
-      </>
-      <Switcher />
+      trad
+
+      this is Home
     </Layout>
   );
 }

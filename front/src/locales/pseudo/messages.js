@@ -1,1 +1,0 @@
-/*eslint-disable*/module.exports={messages:{"Detailed order":"Ďēţàĩĺēď ōŕďēŕ","English":"Ēńĝĺĩśĥ","Home":"Ĥōmē","Pseudo":"Ƥśēũďō","Serbian":"Śēŕƀĩàń","Spanish":"Śƥàńĩśĥ","about us":"àƀōũţ ũś","contact us":"ćōńţàćţ ũś"}};

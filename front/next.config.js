@@ -1,11 +1,8 @@
-/* eslint-disable @typescript-eslint/no-var-requires */
-const path = require('path');
-
 /* eslint-disable no-param-reassign */
 const nextConfig = {
   i18n: {
-    locales: ['en', 'sr', 'es', 'pseudo'],
-    defaultLocale: 'en',
+    locales: ['en', 'fr'],
+    defaultLocale: 'fr',
   },
   env: {
     DB_URL: process.env.DB_URL,

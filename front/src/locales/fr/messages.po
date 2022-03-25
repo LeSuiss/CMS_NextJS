@@ -1,0 +1,69 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language: \n"
+"Language-Team: \n"
+"Content-Type: \n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#: src/components/layout/Footer.tsx:99
+msgid "0188246590"
+msgstr ""
+
+#: src/components/layout/Footer.tsx:96
+msgid "CONTACT"
+msgstr ""
+
+#: src/components/layout/Footer.tsx:103
+msgid "CONTACT US BY MAIL"
+msgstr ""
+
+#: src/components/layout/Footer.tsx:92
+msgid "COOKIES"
+msgstr ""
+
+#: src/components/layout/Footer.tsx:115
+msgid "Copyright © 5aSec-Services {0}."
+msgstr ""
+
+#: src/pages/index.tsx:20
+#: src/pages/index.tsx:22
+msgid "Detailed order"
+msgstr ""
+
+#: src/pages/_app.tsx:55
+msgid "English"
+msgstr ""
+
+#: src/components/layout/Footer.tsx:90
+msgid "INFORMATION"
+msgstr ""
+
+#: src/components/layout/Footer.tsx:91
+msgid "LEGAL NOTICE"
+msgstr ""
+
+#: src/components/layout/index.tsx:122
+msgid "Pressing and Laundry"
+msgstr ""
+
+#: src/pages/_app.tsx:56
+msgid "Serbian"
+msgstr ""
+
+#: src/pages/_app.tsx:57
+msgid "Spanish"
+msgstr ""
+
+#: src/components/layout/Footer.tsx:108
+msgid "TRACK OUR ACTIVITY"
+msgstr ""
+
+#: src/components/layout/index.tsx:125
+msgid "at Home"
+msgstr ""

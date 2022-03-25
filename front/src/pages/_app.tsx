@@ -6,7 +6,6 @@
 import React, {
   useRef,
   useEffect,
-  useState,
   createContext,
   useReducer,
 } from 'react';
@@ -15,15 +14,11 @@ import { CacheProvider } from '@emotion/react';
 import CssBaseline from '@mui/material/CssBaseline';
 import { ThemeProvider } from '@mui/material/styles';
 import Head from 'next/head';
-import PropTypes from 'prop-types';
 import { i18n } from '@lingui/core';
 import { t } from '@lingui/macro';
 import { I18nProvider } from '@lingui/react';
 import { useRouter } from 'next/router';
-import loadTranslation from '@utils/loadTranslation';
-import Layout from '@components/layout';
 import { StylesProvider, createGenerateClassName } from '@mui/styles';
-import navigationStructure from '../constants';
 import initTranslation from '../utils/lingui';
 import '../styles.css';
 import createEmotionCache from '../createEmotionCache';
@@ -39,6 +34,7 @@ initTranslation(i18n);
 // Client-side cache, shared for the whole session of the user in the browser.
 const clientSideEmotionCache = createEmotionCache();
 export const rootContext = createContext<{
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   context?: any,
   dispatchContext?: Function,
 }>({});
@@ -57,9 +53,7 @@ export default function MyApp(props) {
 
   const contextInitialValue = {
     en: t`English`,
-    sr: t`Serbian`,
-    es: t`Spanish`,
-    selected: 'en',
+    fr: t`French`,
   };
   const [context, dispatchContext] = useReducer(
     contextReducer,
