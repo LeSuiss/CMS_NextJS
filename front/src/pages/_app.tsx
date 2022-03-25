@@ -51,13 +51,9 @@ export default function MyApp(props) {
     }
   }, []);
 
-  const contextInitialValue = {
-    en: t`English`,
-    fr: t`French`,
-  };
   const [context, dispatchContext] = useReducer(
-    contextReducer,
-    contextInitialValue,
+    (state) => state,
+    {},
   );
 
   if (pageProps.translation && firstRender.current) {
@@ -67,16 +63,6 @@ export default function MyApp(props) {
     i18n.activate(locale);
     // render only once
     firstRender.current = false;
-  }
-
-  function contextReducer(state, action) {
-    const selectedLanguage = action.payload.selected;
-    const messages = action.payload.message;
-    router.push(router.pathname, {}, { locale: selectedLanguage });
-    i18n.load(selectedLanguage, messages);
-    i18n.activate(selectedLanguage);
-
-    return { ...state, selected: selectedLanguage };
   }
 
   return (

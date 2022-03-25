@@ -8,7 +8,9 @@ import logo from '@assets/logo.jpg';
 import Image from 'next/image';
 import { makeStyles, useTheme } from '@mui/styles';
 import { ThemeContext } from '@emotion/react';
-import { Theme, useMediaQuery } from '@mui/material';
+import {
+  Tab, Tabs, Theme, useMediaQuery,
+} from '@mui/material';
 import CustomMenu from '../customMUI/CustomMenu';
 import Switcher from '../Switcher';
 
@@ -17,7 +19,7 @@ const useStyle = makeStyles((theme:Theme) => ({
     display: 'flex',
     justifyContent: 'space-between',
     textAlign: 'center',
-    backgroundColor: theme.palette.secondary.main,
+    // backgroundColor: theme.palette.secondary.main,
     '& >*:not(first-child())': {
       flex: 1,
     },
@@ -40,14 +42,14 @@ function Header({ navigationStructure }) {
         isMobile
           ? <CustomMenu className={classes.desktopMenu} linksToDisplay={navigationStructure} />
           : (
-            <>
+            <Tabs value={0}>
               {navigationStructure
-                .map((page) => (
+                .map((page, index) => (
                   <Link key={page.nav} href={page.link}>
-                    {page.nav}
+                    <Tab label={page.nav} />
                   </Link>
                 ))}
-            </>
+            </Tabs>
           )
 
       }

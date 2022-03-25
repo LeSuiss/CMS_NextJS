@@ -1,7 +1,6 @@
 import {
-  Card, CircularProgress, Grid, Theme, Typography,
+  Card, Grid,
 } from '@mui/material';
-import { grey } from '@mui/material/colors';
 import { makeStyles } from '@mui/styles';
 import React, {
   FunctionComponent, useLayoutEffect, useRef, useState,
@@ -13,7 +12,7 @@ import useMediaQuery from '@mui/material/useMediaQuery';
 import { i18n } from '@lingui/core';
 import { t } from '@lingui/macro';
 
-import navigationStructure from '../../constants';
+import { navigationStructure } from '../../constants';
 import Header  from './Header';
 import Footer from './Footer';
 

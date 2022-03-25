@@ -1,36 +1,47 @@
+/* eslint-disable no-underscore-dangle */
 /* eslint-disable max-len */
 /* eslint-disable no-eval */
 /* eslint-disable import/prefer-default-export */
 /* eslint-disable react/react-in-jsx-scope */
 // src/components/Switcher.tsx
 
-import { useContext } from 'react';
 import { i18n } from '@lingui/core';
 import loadTranslation from '@utils/loadTranslation';
 import { useRouter } from 'next/router';
-import { t } from '@lingui/macro';
-import flags from '@assets/flags';
-import Image from 'next/image';
 import ReactFlagSelect from 'react-flags-select';
-import { rootContext } from '../pages/_app';
+import nextConfig from 'next.config';
+import { languages } from '../constants';
 
 function Switcher() {
   const router                       = useRouter();
+  const labels = {};
+  languages
+    .filter((lang) =>  nextConfig.i18n.locales.includes(lang.locale))
+    .forEach((lang) => Object.assign(labels, { [lang.flag]: lang.locale }));
+
+  const countries = languages
+    .filter((lang) => Object.keys(labels).includes(lang.flag))
+    .map((x) => x.flag);
+
+  const selected = languages
+    .filter((lang) => router.locale === lang.locale)
+    .map((x) => x.flag)[0];
+
+  const handleSelect = async (choice) => {
+    const convertedValue = languages.filter((x) => x.flag === choice)[0].locale;
+    const message = await loadTranslation(convertedValue);
+    router.push(router.pathname, {}, { locale: convertedValue });
+    i18n.load(convertedValue, message);
+    i18n.activate(convertedValue);
+  };
+
   return (
 
     <ReactFlagSelect
-      countries={['GB', 'FR', 'DE', 'IT']}
-      selected={router.locale.toUpperCase()}
-      customLabels={{
-        GB: 'EN', FR: 'FR', DE: 'DE', IT: 'IT',
-      }}
-      placeholder="Select Language"
-      onSelect={async (choice) => {
-        const message = await loadTranslation(choice.toLowerCase());
-        router.push(router.pathname, {}, { locale: choice });
-        i18n.load(choice, message);
-        i18n.activate(choice);
-      }}
+      countries={countries}
+      selected={selected}
+      customLabels={labels}
+      onSelect={handleSelect}
     />
 
   );
