@@ -112,7 +112,9 @@ function Footer() {
         </div>
       </div>
       <div className={classes.container_copyright}>
-        Copyright © Sapem. {new Date().getFullYear()}}
+        Copyright © Sapem.
+        {' '}
+        {new Date().getFullYear()}
       </div>
 
     </footer>
