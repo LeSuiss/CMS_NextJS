@@ -1,69 +1,74 @@
 msgid ""
 msgstr ""
+"POT-Creation-Date: 2022-03-26 07:31+0100\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: @lingui/cli\n"
+"Language: fr\n"
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: \n"
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
-"Language: \n"
 "Language-Team: \n"
-"Content-Type: \n"
-"Content-Transfer-Encoding: \n"
 "Plural-Forms: \n"
 
 #: src/components/layout/Footer.tsx:99
 msgid "0188246590"
-msgstr ""
+msgstr "0188246590"
+
+#: src/constants.ts:11
+msgid "A propos"
+msgstr "A propos"
+
+#: src/constants.ts:11
+#~ msgid "About us"
+#~ msgstr "About us"
 
 #: src/components/layout/Footer.tsx:96
 msgid "CONTACT"
-msgstr ""
+msgstr "CONTACT"
 
 #: src/components/layout/Footer.tsx:103
 msgid "CONTACT US BY MAIL"
-msgstr ""
+msgstr "CONTACT US BY MAIL"
+
+#: src/components/layout/Footer.tsx:103
+#~ msgid "CONTACTEZ NOUS PAR MAIL"
+#~ msgstr ""
 
 #: src/components/layout/Footer.tsx:92
 msgid "COOKIES"
-msgstr ""
+msgstr "COOKIES"
 
 #: src/components/layout/Footer.tsx:115
-msgid "Copyright © 5aSec-Services {0}."
-msgstr ""
+#~ msgid "Copyright © Sapem."
+#~ msgstr "Copyright © Sapem."
 
-#: src/pages/index.tsx:20
-#: src/pages/index.tsx:22
-msgid "Detailed order"
-msgstr ""
-
-#: src/pages/_app.tsx:55
-msgid "English"
-msgstr ""
+#: src/constants.ts:7
+#~ msgid "Home"
+#~ msgstr "Home"
 
 #: src/components/layout/Footer.tsx:90
 msgid "INFORMATION"
-msgstr ""
+msgstr "INFORMATION"
 
 #: src/components/layout/Footer.tsx:91
 msgid "LEGAL NOTICE"
-msgstr ""
+msgstr "LEGAL"
 
-#: src/components/layout/index.tsx:122
+#: src/components/layout/index.tsx:121
 msgid "Pressing and Laundry"
-msgstr ""
-
-#: src/pages/_app.tsx:56
-msgid "Serbian"
-msgstr ""
-
-#: src/pages/_app.tsx:57
-msgid "Spanish"
-msgstr ""
+msgstr "Pressing and Laundry"
 
 #: src/components/layout/Footer.tsx:108
 msgid "TRACK OUR ACTIVITY"
-msgstr ""
+msgstr "RETROUVEZ NOUS"
 
-#: src/components/layout/index.tsx:125
+#: src/components/layout/index.tsx:124
 msgid "at Home"
-msgstr ""
+msgstr "at home fr"
+
+#: src/constants.ts:15
+msgid "contactez nous"
+msgstr "contactez nous"

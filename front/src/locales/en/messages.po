@@ -1,19 +1,29 @@
 msgid ""
 msgstr ""
+"POT-Creation-Date: 2022-03-26 07:31+0100\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: @lingui/cli\n"
+"Language: en\n"
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: \n"
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
-"Language: \n"
 "Language-Team: \n"
-"Content-Type: \n"
-"Content-Transfer-Encoding: \n"
 "Plural-Forms: \n"
 
 #: src/components/layout/Footer.tsx:99
 msgid "0188246590"
 msgstr "0188246590"
+
+#: src/constants.ts:11
+msgid "A propos"
+msgstr "about us"
+
+#: src/constants.ts:11
+#~ msgid "About us"
+#~ msgstr "About us"
 
 #: src/components/layout/Footer.tsx:96
 msgid "CONTACT"
@@ -28,19 +38,10 @@ msgid "COOKIES"
 msgstr "COOKIES"
 
 #: src/components/layout/Footer.tsx:115
-msgid "Copyright © 5aSec-Services {0}."
-msgstr "Copyright © 5aSec-Services {0}."
+#~ msgid "Copyright © 5aSec-Services {0}."
+#~ msgstr "Copyright © 5aSec-Services {0}."
 
-#: src/pages/index.tsx:20
-#: src/pages/index.tsx:22
-msgid "Detailed order"
-msgstr "Detailed order"
-
-#: src/pages/_app.tsx:55
-msgid "English"
-msgstr "English"
-
-#: src/constants.js:6
+#: src/constants.ts:7
 #~ msgid "Home"
 #~ msgstr "Home"
 
@@ -52,38 +53,18 @@ msgstr "INFORMATION"
 msgid "LEGAL NOTICE"
 msgstr "LEGAL NOTICE"
 
-#: src/components/layout/index.tsx:122
+#: src/components/layout/index.tsx:121
 msgid "Pressing and Laundry"
 msgstr "Pressing and Laundry"
-
-#: src/pages/components/Switcher.tsx:23
-#~ msgid "Pseudo"
-#~ msgstr "Pseudo"
-
-#: src/pages/_app.tsx:56
-msgid "Serbian"
-msgstr "Serbian"
-
-#: src/pages/_app.tsx:57
-msgid "Spanish"
-msgstr "Spanish"
 
 #: src/components/layout/Footer.tsx:108
 msgid "TRACK OUR ACTIVITY"
 msgstr "TRACK OUR ACTIVITY"
 
-#: src/constants.js:10
-#~ msgid "about us"
-#~ msgstr "about us"
-
-#: src/components/layout/index.tsx:125
+#: src/components/layout/index.tsx:124
 msgid "at Home"
 msgstr "at Home"
 
-#: src/constants.js:14
-#~ msgid "contact us"
-#~ msgstr "contact us"
-
-#: src/components/layout/Header.tsx:48
-#~ msgid "{0}"
-#~ msgstr "{0}"
+#: src/constants.ts:15
+msgid "contactez nous"
+msgstr "Contact us"

@@ -12,7 +12,7 @@ import useMediaQuery from '@mui/material/useMediaQuery';
 import { i18n } from '@lingui/core';
 import { t } from '@lingui/macro';
 
-import { navigationStructure } from '../../constants';
+import { NAVIGATION_STRUCTURE } from '../../constants';
 import Header  from './Header';
 import Footer from './Footer';
 
@@ -107,7 +107,7 @@ function Layout({ children }) {
 
   return (
     <div className={classes.container_GlobalLayoutPage}>
-      <Header navigationStructure={navigationStructure} />
+      <Header navigationStructure={NAVIGATION_STRUCTURE} />
       <Grid
         container
         className={classes.container_component}

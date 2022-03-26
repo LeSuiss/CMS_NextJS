@@ -8,12 +8,27 @@ import { GetStaticProps } from 'next';
 import { t } from '@lingui/macro';
 import { i18n } from '@lingui/core';
 import loadTranslation from '@utils/loadTranslation';
+import Image from 'next/image';
+import { makeStyles } from '@mui/styles';
 import Layout from '../components/layout';
+import bgHome from '../assets/bgHome.webp';
+
+const useStyles = makeStyles((theme) => ({
+  background: {
+    // position: 'absolute',
+    zIndex: '-1',
+    opacity: '0.6',
+  },
+}));
 
 function Home() {
+  const classes = useStyles();
   return (
     <Layout>
-      trad
+      <Image alt="bgHome" src={bgHome} className={classes.background} layout="fill"  />
+      <section style={{  position: 'relative' }}>
+        trad
+      </section>
 
       this is Home
     </Layout>

@@ -1,13 +1,13 @@
 module.exports = {
   locales: ['en', 'fr'],
-  sourceLocale: 'en',
+  sourceLocale: 'fr',
   fallbackLocales: {
     default: 'fr',
   },
   catalogs: [
     {
       path: 'src/locales/{locale}/messages',
-      include: ['src/pages', 'src/components', 'src/constants.js'],
+      include: ['src/pages', 'src/components', 'src/constants.ts'],
     },
   ],
   format: 'po',

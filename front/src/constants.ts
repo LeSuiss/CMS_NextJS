@@ -1,20 +1,23 @@
 /* eslint-disable import/prefer-default-export */
-export const navigationStructure = [
+import { t, defineMessage } from '@lingui/macro';
+import { i18n } from '@lingui/core';
+
+export const NAVIGATION_STRUCTURE = [
   {
     nav: 'Home',
     link: '/',
   },
   {
-    nav: 'about us',
+    nav: defineMessage({ message: 'A propos' }),
     link: '/about',
   },
   {
-    nav: 'contact us',
+    nav: defineMessage({ message: 'contactez nous' }),
     link: '/contact/tamère',
   },
 ];
 
-export const languages: { flag: string, name: string, locale: string }[] = [
+export const LANGUAGES: { flag: string, name: string, locale: string }[] = [
   {
     flag: 'GB',
     name: 'EN',

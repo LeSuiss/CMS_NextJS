@@ -10,25 +10,25 @@ import loadTranslation from '@utils/loadTranslation';
 import { useRouter } from 'next/router';
 import ReactFlagSelect from 'react-flags-select';
 import nextConfig from 'next.config';
-import { languages } from '../constants';
+import { LANGUAGES } from '../constants';
 
 function Switcher() {
   const router                       = useRouter();
   const labels = {};
-  languages
+  LANGUAGES
     .filter((lang) =>  nextConfig.i18n.locales.includes(lang.locale))
     .forEach((lang) => Object.assign(labels, { [lang.flag]: lang.locale }));
 
-  const countries = languages
+  const countries = LANGUAGES
     .filter((lang) => Object.keys(labels).includes(lang.flag))
     .map((x) => x.flag);
 
-  const selected = languages
+  const selected = LANGUAGES
     .filter((lang) => router.locale === lang.locale)
     .map((x) => x.flag)[0];
 
   const handleSelect = async (choice) => {
-    const convertedValue = languages.filter((x) => x.flag === choice)[0].locale;
+    const convertedValue = LANGUAGES.filter((x) => x.flag === choice)[0].locale;
     const message = await loadTranslation(convertedValue);
     router.push(router.pathname, {}, { locale: convertedValue });
     i18n.load(convertedValue, message);

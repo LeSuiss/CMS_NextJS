@@ -84,7 +84,7 @@ function Footer() {
   const classes = useStyles();
 
   return (
-    <div className={classes.container_Footer}>
+    <footer className={classes.container_Footer}>
       <div className={classes.container_FooterContent}>
         <div className={classes.cards}>
           <h3>{i18n._(/* i18n: Footer>SiteInformation>InformationTitle> */ t`INFORMATION`)}</h3>
@@ -112,10 +112,10 @@ function Footer() {
         </div>
       </div>
       <div className={classes.container_copyright}>
-        {i18n._(/* Copyright text in footer */t`Copyright © 5aSec-Services ${new Date().getFullYear()}.`)}
+        Copyright © Sapem. {new Date().getFullYear()}}
       </div>
 
-    </div>
+    </footer>
   );
 }
 
