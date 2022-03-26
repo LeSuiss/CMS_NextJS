@@ -38,6 +38,7 @@ const useStyles = makeStyles((theme) => ({
     '& >:nth-child(1)': {
       gridArea: 'header',
       position: 'sticky',
+      zIndex: '40',
       top: 0,
     },
     // mainPage
@@ -56,6 +57,7 @@ const useStyles = makeStyles((theme) => ({
   },
   container_component: {
     display: 'flex',
+    // position: 'relative',
     justifyContent: 'center',
     alignItems: 'center',
     '& >*': {
@@ -111,18 +113,9 @@ function Layout({ children }) {
       <Grid
         container
         className={classes.container_component}
-        // style={{
-        //   backgroundImage: `url(${mainPage_background})`,
-        //   backgroundPosition: 'top',
-        //   backgroundRepeat: 'no-repeat',
-        // }}
       >
         <h2>
           {i18n._(/* i18n: MainPageTItle1/2 */ t`Pressing and Laundry`)}
-          {' '}
-          <br />
-          {i18n._(/* i18n: MainPageTItle2/2 */ t`at Home`)}
-          {' '}
         </h2>
         <Card
           ref={cardComponentRef}

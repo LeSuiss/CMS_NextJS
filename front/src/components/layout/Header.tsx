@@ -24,7 +24,7 @@ const useStyle = makeStyles((theme:Theme) => ({
     textAlign: 'center',
     alignItems: 'end',
     maxHeight: '60px',
-    backgroundColor: 'rgba(255,255,255, 1)',
+    backgroundColor: 'rgba(255,255,255, 0.89)',
     boxShadow: '1px 1px 1px 1px grey',
     '& >*:not(first-child())': {
       flex: 1,

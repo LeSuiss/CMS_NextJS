@@ -16,7 +16,7 @@ import bgHome from '../assets/bgHome.webp';
 const useStyles = makeStyles((theme) => ({
   background: {
     // position: 'absolute',
-    zIndex: '-1',
+    zIndex: '-10',
     opacity: '0.6',
   },
 }));
