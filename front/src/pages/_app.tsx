@@ -23,6 +23,10 @@ import initTranslation from '../utils/lingui';
 import '../styles.css';
 import createEmotionCache from '../createEmotionCache';
 import theme from '../theme';
+import '@fontsource/roboto/300.css';
+import '@fontsource/roboto/400.css';
+import '@fontsource/roboto/500.css';
+import '@fontsource/roboto/700.css';
 
 const generateClassName = createGenerateClassName({
   productionPrefix: 'c',
@@ -75,7 +79,6 @@ export default function MyApp(props) {
         <rootContext.Provider value={{ context, dispatchContext }}>
           <ThemeProvider theme={theme}>
             <StylesProvider generateClassName={generateClassName}>
-              {' '}
               {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
               <CssBaseline />
               <Component {...pageProps} />
