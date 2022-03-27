@@ -16,6 +16,7 @@ export default function BasicMenu({ linksToDisplay, className }) {
   const handleClose = () => {
     setAnchorEl(null);
   };
+  console.log(linksToDisplay);
 
   return (
     <div className={className}>
@@ -39,8 +40,8 @@ export default function BasicMenu({ linksToDisplay, className }) {
       >
         {linksToDisplay.map((item) => (
           <MenuItem>
-            <Link key={item.link} onClick={handleClose} href={item.link}>
-              {item.nav}
+            <Link key={item.nav.id ?? item.nav} onClick={handleClose} href={item.link}>
+              {item.nav.id ?? item.nav}
             </Link>
           </MenuItem>
         ))}
