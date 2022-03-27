@@ -51,7 +51,7 @@ function Header({ navigationStructure }) {
             <Tabs value={0}>
               {navigationStructure
                 .map((page, index) => (
-                  <Link key={page.nav} href={page.link}>
+                  <Link key={page.nav.id ?? page.nav} href={page.link}>
                     <Tab label={i18n._(page.nav)} />
                   </Link>
                 ))}

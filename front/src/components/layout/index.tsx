@@ -97,15 +97,8 @@ const useStyles = makeStyles((theme) => ({
 function Layout({ children }) {
   const classes = useStyles();
   const cardComponentRef = useRef < HTMLDivElement >(null);
-  const [advertiserWidth, setAdvertiserWidth] = useState < number >(0);
   const theme = useTheme();
   const isOnSmarthPhoneDevice = useMediaQuery(theme.breakpoints.down('sm'));
-
-  useLayoutEffect(() => {
-    if (cardComponentRef.current) {
-      setAdvertiserWidth(cardComponentRef.current.getBoundingClientRect().width ?? 0);
-    }
-  }, []);
 
   return (
     <div className={classes.container_GlobalLayoutPage}>

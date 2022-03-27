@@ -16,7 +16,6 @@ export default function BasicMenu({ linksToDisplay, className }) {
   const handleClose = () => {
     setAnchorEl(null);
   };
-  console.log(linksToDisplay);
 
   return (
     <div className={className}>
