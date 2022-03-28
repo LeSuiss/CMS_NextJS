@@ -48,12 +48,13 @@ export default function MyApp(props) {
   const router = useRouter();
   const firstRender = useRef(true);
 
-  // useEffect(() => {
-  //   const jssStyles = document.querySelector('#jss-server-side');
-  //   if (jssStyles) {
-  //     jssStyles.parentElement.removeChild(jssStyles);
-  //   }
-  // }, []);
+  React.useEffect(() => {
+    // Remove the server-side injected CSS.
+    const jssStyles = document.querySelector('#jss-server-side');
+    if (jssStyles) {
+      jssStyles.parentElement.removeChild(jssStyles);
+    }
+  }, []);
 
   const [context, dispatchContext] = useReducer(
     (state) => state,
