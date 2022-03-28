@@ -12,23 +12,23 @@ import Image from 'next/image';
 import { makeStyles } from '@mui/styles';
 import Layout from '../components/layout';
 import bgHome from '../assets/bgHome.webp';
-
-const useStyles = makeStyles((theme) => ({
-  background: {
-    // position: 'absolute',
-    zIndex: '-10',
-    opacity: '0.6',
-  },
-}));
+import styles from '../styles/Home.module.scss';
 
 function Home() {
-  const classes = useStyles();
   return (
     <Layout>
-      <Image alt="bgHome" src={bgHome} className={classes.background} layout="fill"  />
-      <section style={{  position: 'relative' }}>
-        trad
-      </section>
+      <Image
+        alt="bgHome"
+        src={bgHome}
+        layout="fill"
+        className={styles.homeBackground}
+      />
+      <div style={{ backgroundColor: 'black', border: 'solid red 5px', opacity: 10 }}>
+
+        <section style={{ backgroundColor: 'red', zIndex: 40  }}>
+          tradaaaaffffffzzz
+        </section>
+      </div>
 
       this is Home
     </Layout>

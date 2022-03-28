@@ -36,13 +36,14 @@ function Switcher() {
   };
 
   return (
-
-    <ReactFlagSelect
-      countries={countries}
-      selected={selected}
-      customLabels={labels}
-      onSelect={handleSelect}
-    />
+    <div>
+      <ReactFlagSelect
+        countries={countries}
+        selected={selected}
+        customLabels={labels}
+        onSelect={handleSelect}
+      />
+    </div>
 
   );
 }
