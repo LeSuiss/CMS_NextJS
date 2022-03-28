@@ -2,10 +2,10 @@
 /* eslint-disable react/jsx-key */
 import * as React from 'react';
 
-import { Link } from '@material-ui/core';
 import Button from '@mui/material/Button';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
+import Link from 'next/link';
 
 export default function BasicMenu({ linksToDisplay, className }) {
   const [anchorEl, setAnchorEl] = React.useState(null);
