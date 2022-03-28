@@ -1,20 +1,20 @@
 /* eslint-disable import/prefer-default-export */
-// import { t, defineMessage } from '@lingui/macro';
-// import { i18n } from '@lingui/core';
+import { t, defineMessage } from '@lingui/macro';
+import { i18n } from '@lingui/core';
 
 export const NAVIGATION_STRUCTURE = [
-//   {
-//     nav: 'Home',
-//     link: '/',
-//   },
-//   {
-//     nav: defineMessage({ message: 'A propos' }),
-//     link: '/about',
-//   },
-//   {
-//     nav: defineMessage({ message: 'contactez nous' }),
-//     link: '/contact/tamère',
-//   },
+  {
+    nav: 'Home',
+    link: '/',
+  },
+  {
+    nav: defineMessage({ message: 'A propos' }),
+    link: '/about',
+  },
+  {
+    nav: defineMessage({ message: 'contactez nous' }),
+    link: '/contact/tamère',
+  },
 ];
 
 export const LANGUAGES: { flag: string, name: string, locale: string }[] = [
