@@ -39,7 +39,7 @@ const useStyle = makeStyles((theme:Theme) => ({
 }));
 function Header({ navigationStructure }) {
   const classes = useStyle();
-  const isMobile = useMediaQuery('(max-width:600px)');
+  const isMobile = useMediaQuery('(max-width:800px)');
 
   return (
     <header className={classes.mainContainer}>

@@ -6,6 +6,9 @@ import Button from '@mui/material/Button';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 import Link from 'next/link';
+import MenuIcon from '@mui/icons-material/Menu';
+import MenuOpenIcon from '@mui/icons-material/MenuOpen';
+import { Divider } from '@mui/material';
 
 export default function BasicMenu({ linksToDisplay, className }) {
   const [anchorEl, setAnchorEl] = React.useState(null);
@@ -26,10 +29,24 @@ export default function BasicMenu({ linksToDisplay, className }) {
         aria-expanded={open ? 'true' : undefined}
         onClick={handleClick}
       >
-        Dashboard
+        {
+          open
+            ? <MenuOpenIcon className="mobileMenuIcon" fontSize="large" />
+            : <MenuIcon className="mobileMenuIcon" fontSize="large" />
+        }
       </Button>
       <Menu
-        id="basic-menu"
+        id="menu_DropDown"
+        PaperProps={{
+          style: {
+            width: '100%',
+            maxWidth: '100%',
+            translateY: 220,
+            top: 2,
+            marginTop: '1px',
+            opacity: 0.95,
+          },
+        }}
         anchorEl={anchorEl}
         open={open}
         onClose={handleClose}
@@ -37,12 +54,15 @@ export default function BasicMenu({ linksToDisplay, className }) {
           'aria-labelledby': 'basic-button',
         }}
       >
-        {linksToDisplay.map((item) => (
-          <MenuItem>
-            <Link key={item.nav.id ?? item.nav} onClick={handleClose} href={item.link}>
-              {item.nav.id ?? item.nav}
-            </Link>
-          </MenuItem>
+        {linksToDisplay.map((item, index) => (
+          <>
+            <MenuItem>
+              <Link key={item.nav.id ?? item.nav} onClick={handleClose} href={item.link}>
+                {item.nav.id ?? item.nav}
+              </Link>
+            </MenuItem>
+            {index + 1 < linksToDisplay.length && <Divider style={{ margin: 0 }} />}
+          </>
         ))}
       </Menu>
     </div>

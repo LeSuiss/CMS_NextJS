@@ -20,7 +20,7 @@ import { I18nProvider } from '@lingui/react';
 import { useRouter } from 'next/router';
 import { StylesProvider, createGenerateClassName } from '@mui/styles';
 import initTranslation from '../utils/lingui';
-import '../styles.css';
+import '../styles/styles.scss';
 import createEmotionCache from '../createEmotionCache';
 import theme from '../theme';
 import '@fontsource/roboto/300.css';
