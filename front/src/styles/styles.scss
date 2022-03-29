@@ -118,7 +118,7 @@ $redSapem: rgb(194, 0, 43);
     h2{
       max-width:260px;
       padding-left: 1%;
-      background-color:#e6e6e6;
+      background-color:rgb(255,255,255, 0.5);
       color: $redSapem;
       text-shadow: 1px 1px 2px black;
       align-self: baseline;
@@ -131,13 +131,19 @@ $redSapem: rgb(194, 0, 43);
     min-width: 70vw;
     }
     .cardContent{
-      padding:4%;
+      background-color: rgba(255,255,255,0.5) !important;
+      padding:1%;
       text-align: justify;
-      h4{margin: 20px 0;
-        border-bottom: $redSapem solid 2px;
-      }
-      p{
-        margin:10px 0
+      //content
+      article{padding:4%; };
+      article div{
+        padding:4%;
+        h4{margin: 20px 0;
+          border-bottom: $redSapem solid 2px;
+        }
+        p{
+          margin:10px
+        }
       }
     }
   }

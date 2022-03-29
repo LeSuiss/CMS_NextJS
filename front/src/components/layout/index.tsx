@@ -33,9 +33,9 @@ function Layout({ children }) {
           <h2>
             {i18n._(/* i18n: MainPageTItle1/2 */ t`Pressing and Laundry`)}
           </h2>
-          <Card className="cardContent">
+          <div className="cardContent">
             {children}
-          </Card>
+          </div>
         </div>
       </div>
       <Footer />
