@@ -21,22 +21,7 @@ function Layout({ children }) {
     <div className="container_GlobalLayoutPage">
       <Header navigationStructure={NAVIGATION_STRUCTURE} />
       <div className="container_component">
-        <Image
-          alt="bgHome"
-          src={bgHome}
-          layout="fill"
-          className="BackgroundImage"
-        />
-        <div
-          className="cardComponent"
-        >
-          <h2>
-            {i18n._(/* i18n: MainPageTItle1/2 */ t`Pressing and Laundry`)}
-          </h2>
-          <div className="cardContent">
-            {children}
-          </div>
-        </div>
+        {children}
       </div>
       <Footer />
     </div>
