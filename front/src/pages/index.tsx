@@ -11,7 +11,7 @@ import { GetStaticProps } from 'next';
 import { t } from '@lingui/macro';
 import { i18n } from '@lingui/core';
 import loadTranslation from '@utils/loadTranslation';
-import { Card, Grid } from '@mui/material';
+import { Box, Card, Grid } from '@mui/material';
 import ReactPlayer from 'react-player';
 import Image from 'next/image';
 import HomePageSection, { section } from '@components/HomePageSection';
@@ -39,7 +39,7 @@ function Home() {
   return (
     <Layout>
       <div className={styles.pageContainer}>
-        <div className={styles.playerWrapper}>
+        <Box component={Grid} sm={0} md={12} display={{ xs: 'none', md: 'block' }} className={styles.playerWrapper}>
           <ReactPlayer
             className={styles.reactPlayer}
             url="/homePageBG.mp4"
@@ -49,7 +49,7 @@ function Home() {
             width="100vw"
             height="auto"
           />
-        </div>
+        </Box>
 
         { sectionsToDisply.map((section, index) => <HomePageSection index={index} key={section.title} {...section} />) }
 
