@@ -34,12 +34,12 @@ $redSapem: rgb(194, 0, 43);
   height: auto;
   min-height: 50vh;
   max-height: 100%;
-  display: grid;
-  grid-template-columns: 1fr auto;
+  // display: flex;
   .imageContainer{
     position: relative;
     opacity: 0.7;
-    min-width: 400px;
+    width:auto;
+    background-color: red;
   }
   &:is(:nth-child(3)){
     .contentContainer{
@@ -50,6 +50,7 @@ $redSapem: rgb(194, 0, 43);
 .contentContainer{
   display:flex;
   flex-flow: column;
+  // min-width: 500px;
   padding:20px;
   padding-top: 5%;
 
