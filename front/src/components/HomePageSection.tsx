@@ -23,7 +23,7 @@ function HomePageSection({
       <Grid container>
         <Grid className={styles.contentContainer} md={8} xs={12}>
           <h2>
-            {i18n._(/* i18n: MainPageTItle1/2 */ t`${title}`)}
+            {i18n._(title)}
           </h2>
           <p>
             {text}
