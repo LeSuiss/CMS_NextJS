@@ -10,7 +10,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 import MenuOpenIcon from '@mui/icons-material/MenuOpen';
 import { Divider } from '@mui/material';
 
-export default function BasicMenu({ linksToDisplay, className }) {
+export default function BasicMenu({ linksToDisplay }) {
   const [anchorEl, setAnchorEl] = React.useState(null);
   const open = Boolean(anchorEl);
   const handleClick = (event) => {
@@ -21,7 +21,7 @@ export default function BasicMenu({ linksToDisplay, className }) {
   };
 
   return (
-    <div className={className}>
+    <div className="desktopMenu">
       <Button
         id="basic-button"
         aria-controls="basic-menu"
@@ -44,7 +44,6 @@ export default function BasicMenu({ linksToDisplay, className }) {
             translateY: 220,
             top: 2,
             marginTop: '1px',
-            opacity: 0.95,
           },
         }}
         anchorEl={anchorEl}

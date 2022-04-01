@@ -73,9 +73,9 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   container_copyright: {
-    backgroundColor: 'blue',
     textAlign: 'center',
-    fontSize: '10px',
+    fontSize: '20px',
+    fontWeight: 'bold',
     gridColumn: '1 / 6',
   },
 }));

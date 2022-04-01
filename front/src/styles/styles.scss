@@ -43,9 +43,16 @@ $redSapem: rgb(194, 0, 43);
   header {
     grid-area: header;
     position: sticky;
-    // height:60px;
-    z-index: 40;
-    top: 0;
+    max-height: 60px;
+    
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    align-items: end;
+    
+    background-color: whitesmoke;
+    box-shadow: 1px 1px 1px 1px grey;
+    
     //flagSelect
     > :last-child * {
       border: white;
@@ -92,6 +99,8 @@ $redSapem: rgb(194, 0, 43);
 
   //2. FOOTER
   footer {
+    background-color: $redSapem;
+    z-index: 10;
     grid-area: footer;
     width: 100vw;
     bottom: 0;
@@ -109,39 +118,7 @@ $redSapem: rgb(194, 0, 43);
   .container_component {
     position:relative;
     grid-area: mainPage;
-    display: flex;
-    flex-flow: column;
 
-    h2{
-      max-width:260px;
-      padding-left: 1%;
-      background-color:rgb(255,255,255, 0.5);
-      color: $redSapem;
-      text-shadow: 1px 1px 2px black;
-      align-self: baseline;
-    }
-
-    .cardComponent {
-    margin: 4%;
-    margin-top: 0px;
-    max-width: 1000px;
-    min-width: 70vw;
-    }
-    .cardContent{
-      background-color: rgba(255,255,255,0.5) !important;
-      padding:1%;
-      text-align: justify;
-      //content
-      article{padding:4%; };
-      article div{
-        padding:4%;
-        h4{margin: 20px 0;
-          border-bottom: $redSapem solid 2px;
-        }
-        p{
-          margin:10px
-        }
-      }
     }
   }
 
@@ -150,6 +127,5 @@ $redSapem: rgb(194, 0, 43);
 
   // footer
 
-}
 
 //3 LAYOUT

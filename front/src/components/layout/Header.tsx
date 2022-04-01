@@ -16,37 +16,15 @@ import { i18n } from '@lingui/core';
 import CustomMenu from '../customMUI/CustomMenu';
 import Switcher from '../Switcher';
 
-const useStyle = makeStyles((theme:Theme) => ({
-  mainContainer: {
-    position: 'relative',
-    display: 'flex',
-    justifyContent: 'space-between',
-    textAlign: 'center',
-    alignItems: 'end',
-    maxHeight: '60px',
-    backgroundColor: 'rgba(255,255,255, 0.89)',
-    boxShadow: '1px 1px 1px 1px grey',
-    '& >*:not(first-child())': {
-      flex: 1,
-    },
-  },
-  mobileMenu: {
-
-  },
-  desktopMenu: {
-    borderWidth: 'solid',
-  },
-}));
 function Header({ navigationStructure }) {
-  const classes = useStyle();
   const isMobile = useMediaQuery('(max-width:800px)');
 
   return (
-    <header className={classes.mainContainer}>
+    <header className="mainContainer">
       <Image alt="logoSapem" src={logo} layout="fill" />
       {
         isMobile
-          ? <CustomMenu className={classes.desktopMenu} linksToDisplay={navigationStructure} />
+          ? <CustomMenu linksToDisplay={navigationStructure} />
           : (
             <Tabs value={0}>
               {navigationStructure
