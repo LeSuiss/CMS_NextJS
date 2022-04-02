@@ -11,7 +11,9 @@ import { GetStaticProps } from 'next';
 import { t } from '@lingui/macro';
 import { i18n } from '@lingui/core';
 import loadTranslation from '@utils/loadTranslation';
-import { Box, Card, Grid } from '@mui/material';
+import {
+  Box, Card, Fade, Grid,
+} from '@mui/material';
 import ReactPlayer from 'react-player';
 import Image from 'next/image';
 import HomePageSection, { section } from '@components/HomePageSection';
@@ -40,6 +42,10 @@ function Home() {
     <Layout>
       <div className={styles.pageContainer}>
         <Box component={Grid} sm={0} md={12} display={{ xs: 'none', md: 'block' }} className={styles.playerWrapper}>
+          <div className={styles.slogan}>
+
+            <h1>WHEN SECURITY PREVAILS</h1>
+          </div>
           <ReactPlayer
             className={styles.reactPlayer}
             url="/homePageBG.mp4"

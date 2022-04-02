@@ -28,6 +28,7 @@
     "@mui/material": "^5.5.0",
     "@mui/styles": "^5.5.0",
     "@next/eslint-plugin-next": "^12.1.0",
+    "animate.css": "^4.1.1",
     "axios": "^0.24.0",
     "bcryptjs": "^2.4.3",
     "clsx": "latest",

@@ -21,6 +21,7 @@ import { useRouter } from 'next/router';
 import { StylesProvider, createGenerateClassName } from '@mui/styles';
 import initTranslation from '../utils/lingui';
 import '../styles/styles.scss';
+import 'animate.css';
 import createEmotionCache from '../createEmotionCache';
 import theme from '../theme';
 import '@fontsource/roboto/300.css';
