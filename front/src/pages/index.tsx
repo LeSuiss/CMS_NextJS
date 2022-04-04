@@ -4,7 +4,7 @@
 /* eslint-disable @typescript-eslint/no-non-null-assertion */
 /* eslint-disable prettier/prettier */
 /* eslint-disable import/no-extraneous-dependencies */
-import React, { useRef } from 'react';
+import React, { useLayoutEffect, useRef } from 'react';
 
 import { Button } from '@lesuiss/mui_compo';
 import { GetStaticProps } from 'next';
@@ -12,7 +12,7 @@ import { t } from '@lingui/macro';
 import { i18n } from '@lingui/core';
 import loadTranslation from '@utils/loadTranslation';
 import {
-  Box, Card, Fade, Grid,
+  Box, Card, Fade, Grid, useMediaQuery,
 } from '@mui/material';
 import ReactPlayer from 'react-player';
 import Image from 'next/image';
@@ -21,7 +21,7 @@ import Layout from '../components/layout';
 import styles from '../styles/Home.module.scss';
 
 function Home() {
-  const cardComponentRef = useRef < HTMLDivElement >(null);
+  const videoRef = useRef<any>(null);
   const sectionsToDisply :section[] = [{
     text: 'hoho',
     title: 'we are experts',
@@ -38,25 +38,53 @@ function Home() {
     imageSrc: '/bgHistory.webp',
   },
   ];
+  const isDesktop = useMediaQuery('(min-width:900px)');
+
   return (
     <Layout>
       <div className={styles.pageContainer}>
+        {isDesktop && (
+        <div className={styles.sideMenu}>
+          <p>DISCOVER </p>
+          {['history', 'our products', 'JoJo Ceo'].map((x) => (
+            <button type="button" className={styles.sideMenuItem} key={x}>
+              {x}
+            </button>
+          ))}
+        </div>
+        )}
         <Box component={Grid} sm={0} md={12} display={{ xs: 'none', md: 'block' }} className={styles.playerWrapper}>
-          <div className={styles.slogan}>
 
-            <h1>WHEN SECURITY PREVAILS</h1>
+          <div
+            className={`${styles.slogan}`}
+          >
+            {
+            [
+              'when security prevails',
+              'when fiability is required',
+              'My tailor is Rich',
+            ].map((text, index) => (
+              <h1 key={text}>{text}</h1>
+            ))
+
+              }
           </div>
           <ReactPlayer
+            ref={videoRef}
             className={styles.reactPlayer}
             url="/homePageBG.mp4"
             playing
             loop
             muted
             width="100vw"
-            height="auto"
+            height="98vh"
           />
-        </Box>
 
+          {/* <Button>xxxx</Button> */}
+        </Box>
+        <Button className={styles.skipIntroButton}>
+          Discover SAPEM
+        </Button>
         { sectionsToDisply.map((section, index) => <HomePageSection index={index} key={section.title} {...section} />) }
 
       </div>

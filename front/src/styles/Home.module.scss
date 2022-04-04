@@ -18,8 +18,6 @@ $redSapem: rgb(194, 0, 43);
   margin:auto;
   color:whitesmoke;
   text-shadow: 2px 2px 2px   rgb(110, 32, 32); 
-  animation: bounce; /* referring directly to the animation's @keyframe declaration */
-  animation-duration: 2s; /* don't forget to set a duration! */
 }
 
 .playerWrapper {
@@ -28,8 +26,9 @@ $redSapem: rgb(194, 0, 43);
   justify-content: center;
   align-items: center;
   width: 100vw;
-  max-height: 300px;
-  height: 400px;
+  background-color: rgb(46, 45, 45);
+  max-height: calc(100vh - $headerHeight);
+  height: calc(100vh - $headerHeight);
   width: 100vw;
   z-index: -1;  
     >*{text-align: center;}
@@ -37,11 +36,48 @@ $redSapem: rgb(194, 0, 43);
 
 .reactPlayer {
   position: absolute;
-  top: -40%;
   left: 0;
-  height: auto;
-  z-index: -20;
+  top:0;
+  z-index: -2;
 }
+.sideMenu{
+  // background-color: red 0;
+  font-size: larger;
+  font-weight: bold;
+  position: absolute;
+  right:0px;
+  top:20vh;
+  min-height:300px;
+  display: flex;
+  flex-flow: column;
+  align-items: flex-end;
+  transition-delay: 0.7s;
+  transition-duration: 1s;
+  >*{ 
+    
+    &:first-child{ 
+      padding:5px;
+      text-align: center;
+      width:250px
+    };
+    
+    &:not(:first-child){
+      border-left:solid 3px $redSapem;
+      &:hover{
+        color:white;
+        width: 215px !important;
+      };
+      }
+
+    width:200px;
+    background-color: rgba(white, 0.8) ;
+    color:$redSapem;
+    padding:5px;
+    margin:10px;
+    margin-right: 0px;
+  }
+}
+
 
 
 .sectionContainer{
@@ -55,8 +91,7 @@ $redSapem: rgb(194, 0, 43);
     position: relative;
     opacity: 0.7;
     width:auto;
-    background-color: $redSapem;
-    min-height: 300px;
+    min-height: calc(100vh - $headerHeight);
     image{object-fit: cover;
   }
   }
@@ -64,10 +99,9 @@ $redSapem: rgb(194, 0, 43);
   &:is(:nth-child(2n+1)){
     .contentContainer{
       background-color:$redSapem;
-      button{
-
-        color:$redSapem;
-      background: linear-gradient(3deg, whitesmoke 90%, whiteSmoke 100%);
+      button{ 
+        color:$redSapem; 
+        background: linear-gradient(3deg, whitesmoke 90%, whiteSmoke 100%);
       }
       h2{
 
@@ -84,11 +118,13 @@ $redSapem: rgb(194, 0, 43);
   flex-flow: column;
   // min-width: 500px;
   padding:20px;
-  padding-top: 5%;
 
   h2{ 
-    justify-self: flex-start; 
-    padding:0 55px 0 0px;
+    justify-self: flex-start;
+    display: flex;
+    align-items: center;
+
+    padding:0 55px 0px 0px;
     margin-bottom: 15px; 
     border-bottom:solid $redSapem 2px
   }

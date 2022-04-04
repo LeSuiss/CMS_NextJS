@@ -7,7 +7,10 @@
     color: inherit;
   }
 }
-*{animation: slidein 1s;}
+body{
+  max-width: 100vw;
+  overflow-x: hidden;
+}
 //VARIABLES
 $headerHeight: 40px;
 $redSapem: rgb(194, 0, 43);
@@ -136,4 +139,40 @@ $redSapem: rgb(194, 0, 43);
 
   .MuiTabs-scroller:hover {
     color: black;
+  }
+  div[class^="Home_slogan"]  {
+    h1{ position: absolute; visibility: hidden; font-size:4em;}
+    @for $child from 1 to 4{
+      $timing: $child - 1;
+      :nth-child(#{$child}){
+        animation: 
+        zoomIn 4s linear unquote("#{$timing*4}s"),
+        hideIt 4.5s linear unquote("#{$timing*4}s"),
+        ;
+      }
+      
+    }
+        // transition: opacity 1s linear ;
+        
+      }
+  $timingIn : 4;
+  $timingOut: 0.5;
+  @keyframes hideIt{
+    from { opacity:1; visibility: visible; }
+    #{unquote(#{$timingIn*100 / ( $timingIn + $timingOut)}) +'%'}  { opacity: 1 ; visibility: visible; } /* ignorée */  
+    to   { opacity: 0; visibility:hidden }
+    }
+
+    div[class^="Home_playerWrapper"]{
+      pointer-events: none ;
+      *:not(button){pointer-events:none}
+    }
+    div[class^="Home_sideMenu"] {
+    animation: slideInRight;
+    animation-duration: 3s;
+    >*{
+    animation: fadeIn;
+    animation-duration: 3s;
+      
+    }
   }
