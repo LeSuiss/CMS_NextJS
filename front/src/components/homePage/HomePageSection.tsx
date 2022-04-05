@@ -8,7 +8,7 @@ import React from 'react';
 import { t } from '@lingui/macro';
 import { i18n } from '@lingui/core';
 import Image from 'next/image';
-import styles from '../styles/Home.module.scss';
+import styles from '../../styles/Home.module.scss';
 
 export interface section{
   imageSrc:string,

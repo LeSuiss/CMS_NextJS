@@ -1,12 +1,13 @@
-$headerHeight: 40px;
-$redSapem: rgb(194, 0, 43);
+@import 'variables';
+@import './../components/homePage/styles/homePageSection.scss';
+@import './../components/homePage/styles/sideMenu.scss';
+
 
 .pageContainer{
   &:nth-child(1){
       height: auto;
     }
 }
-
 
 .slogan{ 
   height: 100%;
@@ -39,106 +40,4 @@ $redSapem: rgb(194, 0, 43);
   left: 0;
   top:0;
   z-index: -2;
-}
-.sideMenu{
-  // background-color: red 0;
-  font-size: larger;
-  font-weight: bold;
-  position: absolute;
-  right:0px;
-  top:20vh;
-  min-height:300px;
-  display: flex;
-  flex-flow: column;
-  align-items: flex-end;
-  transition-delay: 0.7s;
-  transition-duration: 1s;
-  >*{ 
-    
-    &:first-child{ 
-      padding:5px;
-      text-align: center;
-      width:250px
-    };
-    
-    &:not(:first-child){
-      border-left:solid 3px $redSapem;
-      &:hover{
-        color:white;
-        width: 215px !important;
-      };
-      }
-
-    width:200px;
-    background-color: rgba(white, 0.8) ;
-    color:$redSapem;
-    padding:5px;
-    margin:10px;
-    margin-right: 0px;
-  }
-}
-
-
-
-.sectionContainer{
-  background-color:whitesmoke ;
-  height: auto;
-  min-height: 50vh;
-  max-height: 100%;
-  display: flex;
-
-  .imageContainer{
-    position: relative;
-    opacity: 0.7;
-    width:auto;
-    min-height: calc(100vh - $headerHeight);
-    image{object-fit: cover;
-  }
-  }
-  
-  &:is(:nth-child(2n+1)){
-    .contentContainer{
-      background-color:$redSapem;
-      button{ 
-        color:$redSapem; 
-        background: linear-gradient(3deg, whitesmoke 90%, whiteSmoke 100%);
-      }
-      h2{
-
-    border-bottom:solid whitesmoke 2px
-      }
-      
-    }
-  
-    
-    color:white
-  }
-.contentContainer{
-  display:grid;
-  flex-flow: column;
-  // min-width: 500px;
-  padding:20px;
-
-  h2{ 
-    justify-self: flex-start;
-    display: flex;
-    align-items: center;
-
-    padding:0 55px 0px 0px;
-    margin-bottom: 15px; 
-    border-bottom:solid $redSapem 2px
-  }
-  
-  p{
-    text-align: justify;
-  }
-  button{
-    justify-self: flex-end;
-    align-self: flex-end;
-    margin:3%;
-    color:white;
-    background: linear-gradient(3deg, $redSapem 90%, $redSapem 100%);
-  }
-}
-  
 }

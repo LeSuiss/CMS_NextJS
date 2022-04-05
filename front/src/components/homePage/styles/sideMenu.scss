@@ -1,0 +1,39 @@
+.sideMenu{
+  // background-color: red 0;
+  font-size: larger;
+  font-weight: bold;
+  position: absolute;
+  right:0px;
+  top:20vh;
+  min-height:300px;
+  display: flex;
+  flex-flow: column;
+  align-items: flex-end;
+  transition-delay: 0.7s;
+  transition-duration: 1s;
+  >*{ 
+    
+    &:first-child{ 
+      padding:5px;
+      text-align: center;
+      width:250px
+    };
+    
+    &:not(:first-child){
+      border-left:solid 3px $redSapem;
+      &:hover{
+        color:white;
+        width: 215px !important;
+      };
+      }
+
+    width:200px;
+    background-color: rgba(white, 0.8) ;
+    color:$redSapem;
+    padding:5px;
+    margin:10px;
+    margin-right: 0px;
+  }
+}
+
+

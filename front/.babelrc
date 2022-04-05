@@ -32,6 +32,7 @@
           "@typeDefs": "./src/types",
           "@assets": "./src/assets",
           "@utils": "./src/utils",
+          "@@styles":".src/styles/*"
         }
       }
     ]  ]

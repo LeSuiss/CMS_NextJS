@@ -10,7 +10,7 @@ import loadTranslation from '@utils/loadTranslation';
 import { useRouter } from 'next/router';
 import ReactFlagSelect from 'react-flags-select';
 import nextConfig from 'next.config';
-import { LANGUAGES } from '../constants';
+import { LANGUAGES } from '../../constants';
 
 function Switcher() {
   const router                       = useRouter();

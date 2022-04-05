@@ -13,8 +13,8 @@ import {
 } from '@mui/material';
 import { t } from '@lingui/macro';
 import { i18n } from '@lingui/core';
-import CustomMenu from '../customMUI/CustomMenu';
-import Switcher from '../Switcher';
+import CustomMenu from './CustomMenu';
+import Switcher from './Switcher';
 
 function Header({ navigationStructure }) {
   const isMobile = useMediaQuery('(max-width:800px)');

@@ -23,21 +23,6 @@
       "@components/*": [
         "./src/components/*"
       ],
-      "@api/*": [
-        "./src/api/*"
-      ],
-      "@models/*": [
-        "./src/models/*"
-      ],
-      "@screens/*": [
-        "./src/screens/*"
-      ],
-      "@hooks/*": [
-        "./src/hooks/*"
-      ],
-      "@services/*": [
-        "./src/services/*"
-      ],
       "@constants": [
         "./src/constants.ts"
       ],
@@ -67,7 +52,10 @@
       ],
       "@assets/*": [
         "./src/assets/*"
-      ]
+      ],
+       "@@styles": [
+        "./src/styles/*"
+      ],
     },
     "incremental": true
   },
