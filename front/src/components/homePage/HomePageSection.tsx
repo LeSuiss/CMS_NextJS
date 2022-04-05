@@ -23,7 +23,7 @@ function HomePageSection({
   const imageOrder = (!isMobile && index % 2 === 0)  ? 1 : -1;
   return (
 
-    <section className={styles?.sectionContainer}>
+    <section className={styles.sectionContainer}>
       <Grid container>
         <Grid className={styles.contentContainer} md={8} xs={12}>
           <h2>

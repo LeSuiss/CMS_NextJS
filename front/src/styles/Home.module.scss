@@ -1,43 +1,10 @@
 @import 'variables';
+
+//LAYOUT
+@import './../components/layout/styles/header.scss';
+
+//PAGE
 @import './../components/homePage/styles/homePageSection.scss';
 @import './../components/homePage/styles/sideMenu.scss';
+@import './../components/homePage/styles/videoBackground.scss';
 
-
-.pageContainer{
-  &:nth-child(1){
-      height: auto;
-    }
-}
-
-.slogan{ 
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding:20px;
-  opacity: 1;
-  margin:auto;
-  color:whitesmoke;
-  text-shadow: 2px 2px 2px   rgb(110, 32, 32); 
-}
-
-.playerWrapper {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100vw;
-  background-color: rgb(46, 45, 45);
-  max-height: calc(100vh - $headerHeight);
-  height: calc(100vh - $headerHeight);
-  width: 100vw;
-  z-index: -1;  
-    >*{text-align: center;}
-}
-
-.reactPlayer {
-  position: absolute;
-  left: 0;
-  top:0;
-  z-index: -2;
-}

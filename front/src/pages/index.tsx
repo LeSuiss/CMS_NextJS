@@ -17,7 +17,9 @@ import {
 import ReactPlayer from 'react-player';
 import Image from 'next/image';
 import HomePageSection, { section } from '@components/homePage/HomePageSection';
+import SideMenu from '@components/homePage/SideMenu';
 import Layout from '../components/layout';
+import TrustingBrands from '../components/homePage/TrustingBrands';
 import styles from '../styles/Home.module.scss';
 
 function Home() {
@@ -44,14 +46,7 @@ function Home() {
     <Layout>
       <div className={styles.pageContainer}>
         {isDesktop && (
-        <div className={styles.sideMenu}>
-          <p>DISCOVER </p>
-          {['history', 'our products', 'JoJo Ceo'].map((x) => (
-            <button type="button" className={styles.sideMenuItem} key={x}>
-              {x}
-            </button>
-          ))}
-        </div>
+        <SideMenu />
         )}
         <Box component={Grid} sm={0} md={12} display={{ xs: 'none', md: 'block' }} className={styles.playerWrapper}>
 
@@ -85,6 +80,7 @@ function Home() {
         <Button className={styles.skipIntroButton}>
           Discover SAPEM
         </Button>
+        <TrustingBrands />
         { sectionsToDisply.map((section, index) => <HomePageSection index={index} key={section.title} {...section} />) }
 
       </div>

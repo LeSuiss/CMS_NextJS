@@ -1,4 +1,5 @@
 @import 'variables';
+@import 'animations';
 
 //CLEANING
 * {
@@ -107,72 +108,3 @@ body{
 
 //3 LAYOUT
 
-
-#menu_DropDown ul {
-    width: 150vw;
-    left: 0;
-    right: 0;
-    a {
-      text-decoration: none;
-      font-weight: 500;
-    }
-    li {
-      margin-bottom: 2px;
-      box-shadow: border-box;
-      &:hover {
-        box-shadow: 0px 2px 0px 0px $redSapem;
-        background-color: lightgrey;
-        a {
-          color: $redSapem;
-        }
-      }
-    }
-  }
-  .MuiPaper-root {
-
-    padding: 0 !important;
-    left: 0 !important;
-    top: 51px !important;
-    border-radius: 1% !important;
-    background-color: red;
-  }
-
-  .MuiTabs-scroller:hover {
-    color: black;
-  }
-  div[class^="Home_slogan"]  {
-    h1{ position: absolute; visibility: hidden; font-size:4em;}
-    @for $child from 1 to 4{
-      $timing: $child - 1;
-      :nth-child(#{$child}){
-        animation: 
-        zoomIn 4s linear unquote("#{$timing*4}s"),
-        hideIt 4.5s linear unquote("#{$timing*4}s"),
-        ;
-      }
-      
-    }
-        // transition: opacity 1s linear ;
-        
-      }
-  $timingIn : 4;
-  $timingOut: 0.5;
-  @keyframes hideIt{
-    from { opacity:1; visibility: visible; }
-    #{unquote(#{$timingIn*100 / ( $timingIn + $timingOut)}) +'%'}  { opacity: 1 ; visibility: visible; } /* ignorée */  
-    to   { opacity: 0; visibility:hidden }
-    }
-
-    div[class^="Home_playerWrapper"]{
-      pointer-events: none ;
-      *:not(button){pointer-events:none}
-    }
-    div[class^="Home_sideMenu"] {
-    animation: slideInRight;
-    animation-duration: 3s;
-    >*{
-    animation: fadeIn;
-    animation-duration: 3s;
-      
-    }
-  }
