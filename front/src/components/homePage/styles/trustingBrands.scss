@@ -1,0 +1,21 @@
+@import './homePageSection.scss';
+
+  .trustingBrands{
+  display: flex;
+  // justify-content: center;
+  flex-flow: column;
+  align-items: center;
+
+  h2{
+    @extend h2 ;
+    padding:20px;
+    margin:10px 0 40px 0;
+  }
+
+}
+
+.brandsList{
+  display: flex;
+  justify-content: space-around;
+  min-width: 80%;
+}
