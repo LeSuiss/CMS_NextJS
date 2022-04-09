@@ -22,7 +22,7 @@ import Layout from '../components/layout';
 import TrustingBrands from '../components/homePage/TrustingBrands';
 import styles from '../styles/Home.module.scss';
 
-function Home(props) {
+function Home({ brandsList }) {
   const videoRef = useRef<any>(null);
   const sectionsToDisply :section[] = [{
     text: 'hoho',
@@ -86,7 +86,7 @@ function Home(props) {
           </Button>
 
         </Grid>
-        <TrustingBrands brandsList={props.brandsList} />
+        <TrustingBrands brandsList={brandsList} />
         { sectionsToDisply.map((section, index) => <HomePageSection index={index} key={section.title} {...section} />) }
 
       </div>
