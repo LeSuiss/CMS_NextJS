@@ -38,7 +38,7 @@ body{
   }
 
   .BackgroundImage{
-  z-index: -10;
+  // z-index: -10;
   opacity: 0.85;
   position: relative; 
 }
@@ -60,6 +60,8 @@ body{
     
     //flagSelect
     > :last-child * {
+      z-index: 99999;
+      height: auto;
       border: white;
       .ReactFlagsSelect-module_selectBtn__19wW7::after {
         margin-left: -3px;
@@ -96,7 +98,7 @@ body{
   .container_component {
     position:relative;
     grid-area: mainPage;
-
+    z-index: -1;
     }
   }
 

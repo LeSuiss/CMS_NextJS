@@ -16,6 +16,10 @@
 
 .brandsList{
   display: flex;
+  flex-flow: wrap;
   justify-content: space-around;
   min-width: 80%;
+  padding:2%;
+
+  *{margin:2%; }
 }

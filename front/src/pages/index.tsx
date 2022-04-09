@@ -5,14 +5,14 @@
 /* eslint-disable prettier/prettier */
 /* eslint-disable import/no-extraneous-dependencies */
 import React, { useLayoutEffect, useRef } from 'react';
-
-import { Button } from '@lesuiss/mui_compo';
+import fs from 'fs';
+import path from 'path';
 import { GetStaticProps } from 'next';
 import { t } from '@lingui/macro';
 import { i18n } from '@lingui/core';
 import loadTranslation from '@utils/loadTranslation';
 import {
-  Box, Card, Fade, Grid, useMediaQuery,
+  Box, Button, Card, Fade, Grid, useMediaQuery,
 } from '@mui/material';
 import ReactPlayer from 'react-player';
 import Image from 'next/image';
@@ -22,7 +22,7 @@ import Layout from '../components/layout';
 import TrustingBrands from '../components/homePage/TrustingBrands';
 import styles from '../styles/Home.module.scss';
 
-function Home() {
+function Home(props) {
   const videoRef = useRef<any>(null);
   const sectionsToDisply :section[] = [{
     text: 'hoho',
@@ -77,10 +77,16 @@ function Home() {
 
           {/* <Button>xxxx</Button> */}
         </Box>
-        <Button className={styles.skipIntroButton}>
-          Discover SAPEM
-        </Button>
-        <TrustingBrands />
+        <Grid
+          container
+          justifyContent="center"
+        >
+          <Button className={styles.skipIntroButton} variant="contained">
+            Discover SAPEM
+          </Button>
+
+        </Grid>
+        <TrustingBrands brandsList={props.brandsList} />
         { sectionsToDisply.map((section, index) => <HomePageSection index={index} key={section.title} {...section} />) }
 
       </div>
@@ -91,9 +97,16 @@ export default Home;
 
 export const getStaticProps: GetStaticProps = async (ctx) => {
   const translation = await loadTranslation(ctx.locale!);
+
+  const test = path.join(process.cwd(), 'public/logo');
+
+  const brandsList = fs.readdirSync(test);
   return {
     props: {
+      brandsList,
       translation,
+      // fileList,
+      // __dirname,
     },
   };
 };
