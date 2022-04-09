@@ -18,7 +18,7 @@ function TrustingBrands(props: any) {
 
         {props.brandsList.map((x) => (
           <div key={`logo${x}`} className={styles.logo}>
-            <Image height="100%" width="100%" fill="responsive" alt={`logo${x}`} src={`/logo/${x}`} />
+            <Image height="100%" width="100%" alt={`logo${x}`} src={`/logo/${x}`} />
           </div>
         ))}
       </div>
