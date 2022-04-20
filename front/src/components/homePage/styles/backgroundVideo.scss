@@ -1,0 +1,43 @@
+
+.playerWrapper {
+  padding-top:30%;
+  width: 100vw;
+  position: relative;
+  display: flex !important;
+  justify-content: Center;
+}
+
+.reactPlayer {
+  position: absolute;
+  height: auto;
+  left: 0;
+  top:0;
+  width: 100vw;
+  object-fit: cover;
+  z-index: -10000;
+  background-color: rgb(46, 45, 45);
+}
+
+.slogan{ 
+  position: absolute;
+  left: 0;
+  top:0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding:20px;
+  opacity: 1;
+  margin:auto;
+  color:whitesmoke;
+  text-shadow: 2px 2px 2px   rgb(110, 32, 32); 
+}
+
+
+
+
+.skipIntroButton{
+  transform: translateY(-30px);
+  padding: 10px 40px !important
+}

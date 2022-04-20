@@ -11,16 +11,19 @@ import styles from '../../styles/Home.module.scss';
 function TrustingBrands(props: any) {
   return (
     <div className={`${styles.sectionContainer} ${styles.trustingBrands}`}>
-      <h2>
-        {i18n._(/* i18n: trustingBrands Title */ t`ILS NOUS FONT CONFIANCE`)}
-      </h2>
-      <div className={styles.brandsList}>
+      <div className={`${styles.contentContainer}`}>
 
-        {props.brandsList.map((x) => (
-          <div key={`logo${x}`} className={styles.logo}>
-            <Image height="100%" width="100%" alt={`logo${x}`} src={`/logo/${x}`} />
-          </div>
-        ))}
+        <h2>
+          {i18n._(/* i18n: trustingBrands Title */ t`ILS NOUS FONT CONFIANCE`)}
+        </h2>
+        <div className={styles.brandsList}>
+
+          {props.brandsList.map((x) => (
+            <div key={`logo${x}`} className={styles.logo}>
+              <Image height="100%" width="100%" alt={`logo${x}`} src={`/logo/${x}`} />
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );

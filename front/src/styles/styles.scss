@@ -1,5 +1,6 @@
 @import 'variables';
 @import 'animations';
+@import '../components/layout/styles/header.scss';
 
 //CLEANING
 * {
@@ -38,48 +39,14 @@ body{
   }
 
   .BackgroundImage{
-  // z-index: -10;
   opacity: 0.85;
   position: relative; 
 }
 
-
-
-  header {
-    grid-area: header;
-    position: sticky;
-    max-height: 60px;
-    
-    display: flex;
-    justify-content: space-between;
-    text-align: center;
-    align-items: end;
-    
-    background-color: whitesmoke;
-    box-shadow: 1px 1px 1px 1px grey;
-    
-    //flagSelect
-    > :last-child * {
-      z-index: 99999;
-      height: auto;
-      border: white;
-      .ReactFlagsSelect-module_selectBtn__19wW7::after {
-        margin-left: -3px;
-        margin-top: 4px;
-      }
-      ul{margin-top:5px;}
-    }
-
-    .mobileMenuIcon {
-      height: $headerHeight;
-      margin: 0px;
-    }
-  }
- 
-
   //2. FOOTER
   footer {
-    background-color: $redSapem;
+    background-color: white;
+    *{color:$redSapem !important;}
     z-index: 10;
     grid-area: footer;
     width: 100vw;
@@ -102,11 +69,4 @@ body{
     }
   }
 
- 
-  // mainPage
-
-  // footer
-
-
-//3 LAYOUT
 

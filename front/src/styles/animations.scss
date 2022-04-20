@@ -2,29 +2,22 @@
 
   div[class^="Home_slogan"]  {
     h1{ position: absolute; visibility: hidden; font-size:4em;}
+    
     @for $child from 1 to 4{
       $timing: $child - 1;
       :nth-child(#{$child}){
-        animation: 
-        zoomIn $animationDelay linear #{$timing*$animationDelay},
-        hideIt 4.5s linear #{$timing* $animationDelay},
-        ;
+        @if $child == 3 {
+          animation: 
+          lastRemains 2s forwards #{$timing*$animationDelay},
+          }
+        @else{
+            animation: 
+            zoomIn $animationDelay linear #{$timing*$animationDelay},
+            hideIt 4.5s linear #{$timing * $animationDelay},
+          }
       }
-      
-    }
-        // transition: opacity 1s linear ;
-        
-      }
-  @keyframes hideIt{
-    from { opacity:1; visibility: visible; }
-    #{unquote(#{$timingIn*100 / ( $timingIn + $timingOut)}) +'%'}  { opacity: 1 ; visibility: visible; } /* ignorée */  
-    to   { opacity: 0; visibility:hidden }
-    }
+    }}
 
-    div[class^="Home_playerWrapper"]{
-      pointer-events: none ;
-      *:not(button){pointer-events:none}
-    }
     div[class^="Home_sideMenu"] {
     animation: slideInRight;
     animation-duration: 3s;
@@ -34,3 +27,17 @@
       
     }
   }
+
+
+// KEYFRAMES
+  @keyframes hideIt{
+    from { opacity:1; visibility: visible; }
+    #{unquote(#{$timingIn*100 / ( $timingIn + $timingOut)}) +'%'}  { opacity: 1 ; visibility: visible; } /* ignorée */  
+    to   { opacity: 0; visibility:hidden }
+    }
+
+  @keyframes lastRemains{
+    from   { opacity: 0; visibility:hidden }
+    // 99%   { opacity: 0; visibility:hidden }
+    to { opacity:1; visibility: visible; }
+    }

@@ -20,7 +20,7 @@ function Header({ navigationStructure }) {
   const isMobile = useMediaQuery('(max-width:800px)');
 
   return (
-    <header className="mainContainer">
+    <header className="mainContainerHeader">
       <Image alt="logoSapem" src={logo} layout="fill" />
       {
         isMobile

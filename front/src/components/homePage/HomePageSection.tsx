@@ -1,3 +1,4 @@
+/* eslint-disable no-alert */
 /* eslint-disable react/require-default-props */
 /* eslint-disable max-len */
 /* eslint-disable @typescript-eslint/no-unused-vars */
@@ -35,7 +36,7 @@ function HomePageSection({
             {text}
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
           </p>
-          <Button>Learn More</Button>
+          <Button onClick={() => alert('hoho')}>Learn More</Button>
         </Grid>
         <Grid xs={12} md={4} className={styles.imageContainer} style={{ order: imageOrder, minHeight: '200px' }}>
           <Image
