@@ -16,11 +16,13 @@ function Home({ brandsList }) {
   const isDesktop = useMediaQuery('(min-width:900px)');
 
   return (
-    <Layout>
+    <>
       {isDesktop && <BackgroundVideo />}
-      {sectionsData.map((section, index) => <HomePageSection index={index} key={section.title} {...section} />) }
-      <TrustingBrands brandsList={brandsList} />
-    </Layout>
+      <Layout>
+        {sectionsData.map((section, index) => <HomePageSection index={index} key={section.title} {...section} />) }
+        <TrustingBrands brandsList={brandsList} />
+      </Layout>
+    </>
   );
 }
 export default Home;

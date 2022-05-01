@@ -8,12 +8,16 @@ export const NAVIGATION_STRUCTURE = [
     link: '/',
   },
   {
-    nav: defineMessage({ message: 'A propos' }),
-    link: '/about',
+    nav: defineMessage({ message: 'Our Innovations' }),
+    link: '/innovation',
   },
   {
-    nav: defineMessage({ message: 'contactez nous' }),
-    link: '/contact/tamère',
+    nav: defineMessage({ message: 'our products' }),
+    link: '/contact/products',
+  },
+  {
+    nav: defineMessage({ message: 'Contact' }),
+    link: '/contact',
   },
 ];
 

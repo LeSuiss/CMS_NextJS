@@ -2,7 +2,7 @@
 const path = require('path');
 /* eslint-disable no-param-reassign */
 const nextConfig = {
-
+  // trailingSlash: true,
   sassOptions: {
     includePaths: [path.join(__dirname, 'styles')],
   },

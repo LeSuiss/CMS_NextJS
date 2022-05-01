@@ -18,15 +18,7 @@
       }
     }}
 
-    div[class^="Home_sideMenu"] {
-    animation: slideInRight;
-    animation-duration: 3s;
-    >*{
-    animation: fadeIn;
-    animation-duration: 3s;
-      
-    }
-  }
+
 
 
 // KEYFRAMES

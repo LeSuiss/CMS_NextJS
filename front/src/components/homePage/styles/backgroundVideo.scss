@@ -1,6 +1,6 @@
 
 .playerWrapper {
-  padding-top:30%;
+  padding-top:35%;
   width: 100vw;
   position: relative;
   display: flex !important;
@@ -15,7 +15,6 @@
   width: 100vw;
   object-fit: cover;
   z-index: -10000;
-  background-color: rgb(46, 45, 45);
 }
 
 .slogan{ 
@@ -38,6 +37,7 @@
 
 
 .skipIntroButton{
-  transform: translateY(-30px);
+  $marginBottomButton : min(-60px , -10%);
+  transform: translateY($marginBottomButton);
   padding: 10px 40px !important
 }

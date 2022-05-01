@@ -12,7 +12,7 @@ import styles from '../../styles/Home.module.scss';
 
 function Footer() {
   return (
-    <footer className={styles.container_Footer}>
+    <footer className={`${styles.container_Footer}`}>
       <div className={styles.container_FooterContent}>
         <div className={styles.cards}>
           <h3>{i18n._(/* i18n: Footer>SiteInformation>InformationTitle> */ t`INFORMATION`)}</h3>
@@ -29,10 +29,10 @@ function Footer() {
             {i18n._(/* i18n: Footer>SiteInformation>PhoneTel */ t`0188246590`)}
           </div>
 
-          <div className={styles.container_socialMediaRow}>
+          <a className={styles.container_socialMediaRow} href="mailto: archer.alexis@hotmail.fr">
             <MailOutlineIcon className={styles.socialMediaIcons} fontSize="medium" />
             {i18n._(/* i18n: Footer>SiteInformation>Mail Contact */ t`CONTACT US BY MAIL`)}
-          </div>
+          </a>
         </div>
 
         <Divider orientation="vertical" style={{ color: 'red' }} />

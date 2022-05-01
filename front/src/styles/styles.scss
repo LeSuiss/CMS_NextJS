@@ -6,10 +6,7 @@
 * {
   margin: 0px;
   padding: 0px;
-  a a:hover a:focus a:active {
-    text-decoration: none;
-    color: inherit;
-  }
+  
 }
 body{
   max-width: 100vw;
@@ -21,10 +18,15 @@ body{
 //2. FOOTER
 //3. LAYOUT
 //4. MAIN_CARD
-//1. HEADER
 
+
+//1. HEADER
+.MuiPaper-root{
+  left:0px !important;
+}
+
+// 3. LAYOUT
 .container_GlobalLayoutPage {
-  position: relative;
   width: 100vw;
   min-height: 100vh;
   display: grid;
@@ -34,19 +36,17 @@ body{
     'mainPage mainPage mainPage'
     'footer footer footer';
 
- & > * {
-    max-width: 100vw;
-  }
-
   .BackgroundImage{
   opacity: 0.85;
   position: relative; 
 }
 
+header{
+  img{position:sticky
+  }
+}
   //2. FOOTER
   footer {
-    background-color: white;
-    *{color:$redSapem !important;}
     z-index: 10;
     grid-area: footer;
     width: 100vw;
@@ -65,8 +65,12 @@ body{
   .container_component {
     position:relative;
     grid-area: mainPage;
-    z-index: -1;
     }
   }
 
 
+    .titleDivider{
+    background-color:$redSapem;
+    height: 3px !important;
+    width: max(200px, 30%);
+  } 

@@ -2,17 +2,22 @@
 
   .trustingBrands{
   display: flex;
-  // justify-content: center;
-  flex-flow: column;
+  >*{width:100%}
   align-items: center;
-  background-color: $redSapem;
+  width: 100vw;
   h2{
     text-align: center;
-    margin:10px 0 40px 0;
-    padding: 0 30px;
+    margin:10px 0 20px 0;
+    padding: 10px;
     margin:auto
   }
-
+  .titleDivider{
+    display: flex;
+    flex-flow: column ;
+    >*{width:100%}
+    margin:auto;
+    background-color: $redSapem
+  }
 }
 
 .brandsList{
@@ -21,6 +26,6 @@
   justify-content: space-around;
   min-width: 80%;
   padding:2%;
-
+  margin:auto;
   *{margin:2%; }
 }

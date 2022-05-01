@@ -1,6 +1,9 @@
 
 
 .container_Footer {
+
+    background-color: $redSapem;
+    *{color:white !important;}
   display: grid;
   grid-template-columns: 1fr repeat(3, auto) 2fr;
   h3{ align-self: center};

@@ -3,8 +3,6 @@ import { GetStaticProps } from 'next';
 import React from 'react';
 import { t } from '@lingui/macro';
 import { i18n } from '@lingui/core';
-import fs from 'fs';
-import path from 'path';
 import Image from 'next/image';
 import styles from '../../styles/Home.module.scss';
 
@@ -16,6 +14,8 @@ function TrustingBrands(props: any) {
         <h2>
           {i18n._(/* i18n: trustingBrands Title */ t`ILS NOUS FONT CONFIANCE`)}
         </h2>
+        <div className={`${styles.titleDivider} titleDivider`} />
+
         <div className={styles.brandsList}>
 
           {props.brandsList.map((x) => (

@@ -6,8 +6,6 @@ import React from 'react';
 import Link from 'next/link';
 import logo from '@assets/logo.svg';
 import Image from 'next/image';
-import { makeStyles, useTheme } from '@mui/styles';
-import { ThemeContext } from '@emotion/react';
 import {
   Tab, Tabs, Theme, useMediaQuery,
 } from '@mui/material';
@@ -15,13 +13,14 @@ import { t } from '@lingui/macro';
 import { i18n } from '@lingui/core';
 import CustomMenu from './CustomMenu';
 import Switcher from './Switcher';
+import styles from '../../styles/Home.module.scss';
 
 function Header({ navigationStructure }) {
   const isMobile = useMediaQuery('(max-width:800px)');
 
   return (
     <header className="mainContainerHeader">
-      <Image alt="logoSapem" src={logo} layout="fill" />
+      <Image className={styles.logo} alt="logoSapem" src={logo} layout="responsive"  />
       {
         isMobile
           ? <CustomMenu linksToDisplay={navigationStructure} />

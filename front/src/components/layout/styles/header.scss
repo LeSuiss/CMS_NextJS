@@ -1,16 +1,30 @@
 
 
   .mainContainerHeader {
-    grid-area: header;
+        background: $redSapem;
+      color: white;
+      padding:0px;
+      button{
+       
+              color:white !important;
+              opacity: 1 !important;
+              &:hover{
+                background-color: white;
+                color: $redSapem !important;
+              }
+     } 
     position: sticky;
+    z-index: 999;
+    top:0px;
+    grid-area: header;
     max-height: 60px;
     display: flex;
     justify-content: space-between;
     text-align: center;
     align-items: end;
     
-    background-color: whitesmoke;
-    box-shadow: 1px 1px 1px 1px grey;
+    color:$redSapem;
+    box-shadow: 1px 1px  grey;
     
     //flagSelect
     > :last-child * {
@@ -28,5 +42,20 @@
       height: $headerHeight;
       margin: 0px;
     }
+
+    
+      .MuiTabs-indicator{
+      display:none;
+    }
+    >span:first-of-type
+    {
+      background-color: white !important;
+      height: 48px !important;
+      width:150px !important;
+      
+    } 
+    >div:last-of-type{
+      padding-right: 30px;
+
+    }
   }
- 
