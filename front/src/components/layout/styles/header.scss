@@ -4,15 +4,7 @@
         background: $redSapem;
       color: white;
       padding:0px;
-      button{
-       
-              color:white !important;
-              opacity: 1 !important;
-              &:hover{
-                background-color: white;
-                color: $redSapem !important;
-              }
-     } 
+   
     position: sticky;
     z-index: 999;
     top:0px;
@@ -26,11 +18,20 @@
     color:$redSapem;
     box-shadow: 1px 1px  grey;
     
+    button{
+       
+              color:white !important;
+              opacity: 1 !important;
+              transition: 0.1s;
+              &:hover{
+                font-weight: bolder;
+                border-bottom: solid 4px white;
+              }
+     } 
     //flagSelect
     > :last-child * {
       z-index: 99999;
       height: auto;
-      border: white;
       .ReactFlagsSelect-module_selectBtn__19wW7::after {
         margin-left: -3px;
         margin-top: 4px;
@@ -39,7 +40,6 @@
     }
 
     .mobileMenuIcon {
-      height: $headerHeight;
       margin: 0px;
     }
 

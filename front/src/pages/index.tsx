@@ -1,31 +1,34 @@
-/* eslint-disable no-shadow */
-/* eslint-disable max-len */
-import React, { useLayoutEffect, useRef } from 'react';
+/* eslint-disable jsx-a11y/iframe-has-title */
+/* eslint-disable jsx-a11y/media-has-caption */
+import * as React from 'react';
+import {
+  Card, Divider, Grid,
+} from '@mui/material';
+import Typography from '@mui/material/Typography';
 import fs from 'fs';
 import path from 'path';
 import { GetStaticProps } from 'next';
 import loadTranslation from '@utils/loadTranslation';
-import { useMediaQuery } from '@mui/material';
-import { sectionsData } from '@components/homePage/config';
-import HomePageSection from '@components/homePage/HomePageSection';
-import BackgroundVideo from '@components/homePage/BackgroundVideo';
-import TrustingBrands from '@components//homePage/TrustingBrands';
 import Layout from '@components/layout';
+import { t } from '@lingui/macro';
+import { i18n } from '@lingui/core';
 
-function Home({ brandsList }) {
-  const isDesktop = useMediaQuery('(min-width:900px)');
-
+export default function innovation() {
   return (
-    <>
-      {isDesktop && <BackgroundVideo />}
-      <Layout>
-        {sectionsData.map((section, index) => <HomePageSection index={index} key={section.title} {...section} />) }
-        <TrustingBrands brandsList={brandsList} />
-      </Layout>
-    </>
+    <Layout>
+      <Typography variant="h2">
+        {i18n._(/* i18n: InnovationTitle */ t`We Overcome problems with disruptive innovations`)}
+      </Typography>
+      <Divider className="titleDivider" />
+      <Grid container>
+        <Card>
+          f
+        </Card>
+      </Grid>
+
+    </Layout>
   );
 }
-export default Home;
 
 export const getStaticProps: GetStaticProps = async (ctx) => {
   const translation = await loadTranslation(ctx.locale!);

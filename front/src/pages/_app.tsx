@@ -23,7 +23,7 @@ import initTranslation from '../utils/lingui';
 import '../styles/styles.scss';
 import 'animate.css';
 import createEmotionCache from '../createEmotionCache';
-import theme from '../theme';
+import { muiTheme } from '../styles/muiTheme';
 import '@fontsource/roboto/300.css';
 import '@fontsource/roboto/400.css';
 import '@fontsource/roboto/500.css';
@@ -79,7 +79,7 @@ export default function MyApp(props) {
       </Head>
       <I18nProvider i18n={i18n}>
         <rootContext.Provider value={{ context, dispatchContext }}>
-          <ThemeProvider theme={theme}>
+          <ThemeProvider theme={muiTheme}>
             <StylesProvider generateClassName={generateClassName}>
               {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
               <CssBaseline />
