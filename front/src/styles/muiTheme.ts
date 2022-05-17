@@ -1,7 +1,7 @@
 /* eslint-disable import/prefer-default-export */
 import { createTheme } from '@mui/material';
+import _variables from './_variables.module.scss';
 
-const redSapem = 'rgb(194, 0, 43)';
 export const muiTheme = createTheme(
   {
     typography: {
@@ -15,7 +15,6 @@ export const muiTheme = createTheme(
         fontWeight: 'bold !important',
         padding: '10px !important',
         Margin: '0 10px !important',
-        color: 'blue ',
       },
       h4: {
         fontWeight: 'bold',

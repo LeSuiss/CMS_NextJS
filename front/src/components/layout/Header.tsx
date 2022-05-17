@@ -1,19 +1,16 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
-/* eslint-disable max-len */
-/* eslint-disable react/destructuring-assignment */
-import React from 'react';
-
-import Link from 'next/link';
-import logo from '@assets/logo.svg';
-import Image from 'next/image';
+import Image      from 'next/image';
+import Link       from 'next/link';
+import React      from 'react';
+import logo       from '@assets/logo.svg';
+import { i18n }   from '@lingui/core';
 import {
-  Tab, Tabs, Theme, useMediaQuery,
+  Tab,
+  Tabs,
+  useMediaQuery,
 } from '@mui/material';
-import { t } from '@lingui/macro';
-import { i18n } from '@lingui/core';
+import styles     from '../../styles/Home.module.scss';
 import CustomMenu from './CustomMenu';
-import Switcher from './Switcher';
-import styles from '../../styles/Home.module.scss';
+import Switcher   from './Switcher';
 
 function Header({ navigationStructure }) {
   const isMobile = useMediaQuery('(max-width:800px)');

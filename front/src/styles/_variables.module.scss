@@ -1,0 +1,19 @@
+
+//VARIABLES
+$headerHeight: 40px;
+$redSapem: rgb(194, 0, 43);
+$breakPointMobile: 600px;
+$animationDelay: 4s;
+$timingIn : 4;
+$timingOut: 0.5;
+
+
+
+:export {
+headerHeight: $headerHeight;
+redSapem: $redSapem;
+breakPointMobile: $breakPointMobile;
+animationDelay: $animationDelay;
+timingIn: $timingIn;
+timingOut: $timingOut;
+}

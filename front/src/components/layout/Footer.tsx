@@ -1,15 +1,13 @@
-import { i18n } from '@lingui/core';
-import { t } from '@lingui/macro';
-import React from 'react';
-import {
-  Grid, Link, Typography, Divider,
-} from '@mui/material';
-import FacebookIcon from '@mui/icons-material/Facebook';
-import LinkedInIcon from '@mui/icons-material/LinkedIn';
-import YouTubeIcon from '@mui/icons-material/YouTube';
-import PhoneIphoneIcon from '@mui/icons-material/PhoneIphone';
-import MailOutlineIcon from '@mui/icons-material/MailOutline';
-import styles from '../../styles/Home.module.scss';
+import React                                from 'react';
+import { i18n }                             from '@lingui/core';
+import { t }                                from '@lingui/macro';
+import FacebookIcon                         from '@mui/icons-material/Facebook';
+import LinkedInIcon                         from '@mui/icons-material/LinkedIn';
+import MailOutlineIcon                      from '@mui/icons-material/MailOutline';
+import PhoneIphoneIcon                      from '@mui/icons-material/PhoneIphone';
+import YouTubeIcon                          from '@mui/icons-material/YouTube';
+import { Grid, Link, Typography }           from '@mui/material';
+import styles                               from '../../styles/Home.module.scss';
 
 function Footer() {
   return (

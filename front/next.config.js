@@ -2,6 +2,11 @@
 const path = require('path');
 /* eslint-disable no-param-reassign */
 const nextConfig = {
+  env: {
+    CI: process.env.CI,
+    API: process.env.API,
+    BACKEND_URL: process.env.BACKEND_URL,
+  },
   // trailingSlash: true,
   sassOptions: {
     includePaths: [path.join(__dirname, 'styles')],
@@ -9,10 +14,6 @@ const nextConfig = {
   i18n: {
     locales: ['en', 'fr'],
     defaultLocale: 'fr',
-  },
-  env: {
-    DB_URL: process.env.DB_URL,
-    CI: process.env.CI,
   },
   webpack: (config, { isServer }) => {
     config.module.rules.push({

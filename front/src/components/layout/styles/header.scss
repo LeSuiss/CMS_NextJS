@@ -1,61 +1,55 @@
+.mainContainerHeader {
+  background: $redSapem;
+  color: white;
+  padding: 0px;
+  position: sticky;
+  z-index: 999;
+  top: 0px;
+  grid-area: header;
+  max-height: 60px;
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  align-items: end;
 
+  color: $redSapem;
+  box-shadow: 1px 1px grey;
 
-  .mainContainerHeader {
-        background: $redSapem;
-      color: white;
-      padding:0px;
-   
-    position: sticky;
-    z-index: 999;
-    top:0px;
-    grid-area: header;
-    max-height: 60px;
-    display: flex;
-    justify-content: space-between;
-    text-align: center;
-    align-items: end;
-    
-    color:$redSapem;
-    box-shadow: 1px 1px  grey;
-    
-    button{
-       
-              color:white !important;
-              opacity: 1 !important;
-              transition: 0.1s;
-              &:hover{
-                font-weight: bolder;
-                border-bottom: solid 4px white;
-              }
-     } 
-    //flagSelect
-    > :last-child * {
-      z-index: 99999;
-      height: auto;
-      .ReactFlagsSelect-module_selectBtn__19wW7::after {
-        margin-left: -3px;
-        margin-top: 4px;
-      }
-      ul{margin-top:5px;}
-    }
-
-    .mobileMenuIcon {
-      margin: 0px;
-    }
-
-    
-      .MuiTabs-indicator{
-      display:none;
-    }
-    >span:first-of-type
-    {
-      background-color: white !important;
-      height: 48px !important;
-      width:150px !important;
-      
-    } 
-    >div:last-of-type{
-      padding-right: 30px;
-
+  button {
+    color: white !important;
+    opacity: 1 !important;
+    transition: 0.1s;
+    &:hover {
+      font-weight: bolder;
+      border-bottom: solid 4px white;
     }
   }
+  //flagSelect
+  > :last-child * {
+    z-index: 99999;
+    height: auto;
+    .ReactFlagsSelect-module_selectBtn__19wW7::after {
+      margin-left: -3px;
+      margin-top: 4px;
+    }
+    ul {
+      margin-top: 5px;
+    }
+  }
+
+  .mobileMenuIcon {
+    margin: 0px;
+  }
+
+  .MuiTabs-indicator {
+    display: none;
+  }
+  > span:first-of-type {
+    background-color: white !important;
+    height: 48px !important;
+    width: 150px !important;
+  }
+  > div:last-of-type {
+    padding-right: 30px;
+  }
+}

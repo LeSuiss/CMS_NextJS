@@ -1,10 +1,15 @@
 import React, { useLayoutEffect, useRef } from 'react';
-import {
-  Box, Button, Card, Fade, Grid, useMediaQuery,
-} from '@mui/material';
-import { t } from '@lingui/macro';
-import { i18n } from '@lingui/core';
 import ReactPlayer from 'react-player';
+import { i18n } from '@lingui/core';
+import { t } from '@lingui/macro';
+import {
+  Box,
+  Button,
+  Card,
+  Fade,
+  Grid,
+  useMediaQuery,
+} from '@mui/material';
 import styles from '../../styles/Home.module.scss';
 import { videoSliderMessages } from './config';
 // import Image from 'next/image';
@@ -16,7 +21,7 @@ function BackgroundVideo() {
       <ReactPlayer
         ref={videoRef}
         className={styles.reactPlayer}
-        url="/homePageBG.mp4"
+        url="/medias/homePageBG.mp4"
         playing
         loop
         muted

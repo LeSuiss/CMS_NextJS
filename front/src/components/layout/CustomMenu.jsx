@@ -1,24 +1,22 @@
-/* eslint-disable import/no-extraneous-dependencies */
-/* eslint-disable react/jsx-key */
-import * as React from 'react';
-
-import Button from '@mui/material/Button';
-import Menu from '@mui/material/Menu';
-import MenuItem from '@mui/material/MenuItem';
-import Link from 'next/link';
-import MenuIcon from '@mui/icons-material/Menu';
-import MenuOpenIcon from '@mui/icons-material/MenuOpen';
-import { Divider } from '@mui/material';
+import Link         from 'next/link'
+import * as React   from 'react'
+import MenuIcon     from '@mui/icons-material/Menu'
+import MenuOpenIcon from '@mui/icons-material/MenuOpen'
+import { Divider }  from '@mui/material'
+import Button       from '@mui/material/Button'
+import Menu         from '@mui/material/Menu'
+import MenuItem     from '@mui/material/MenuItem'
 
 export default function BasicMenu({ linksToDisplay }) {
-  const [anchorEl, setAnchorEl] = React.useState(null);
-  const open = Boolean(anchorEl);
+  const [anchorEl, setAnchorEl] = React.useState(null)
+  const open = Boolean(anchorEl)
+
   const handleClick = (event) => {
-    setAnchorEl(event.currentTarget);
-  };
+    setAnchorEl(event.currentTarget)
+  }
   const handleClose = () => {
-    setAnchorEl(null);
-  };
+    setAnchorEl(null)
+  }
 
   return (
     <div className="desktopMenu">
@@ -29,11 +27,11 @@ export default function BasicMenu({ linksToDisplay }) {
         aria-expanded={open ? 'true' : undefined}
         onClick={handleClick}
       >
-        {
-          open
-            ? <MenuOpenIcon className="mobileMenuIcon" fontSize="large" />
-            : <MenuIcon className="mobileMenuIcon" fontSize="large" />
-        }
+        {open ? (
+          <MenuOpenIcon className="mobileMenuIcon" fontSize="large" />
+        ) : (
+          <MenuIcon className="mobileMenuIcon" fontSize="large" />
+        )}
       </Button>
       <Menu
         id="menu_DropDown"
@@ -56,14 +54,20 @@ export default function BasicMenu({ linksToDisplay }) {
         {linksToDisplay.map((item, index) => (
           <>
             <MenuItem>
-              <Link key={item.nav.id ?? item.nav} onClick={handleClose} href={item.link}>
+              <Link
+                key={item.nav.id ?? item.nav}
+                onClick={handleClose}
+                href={item.link}
+              >
                 {item.nav.id ?? item.nav}
               </Link>
             </MenuItem>
-            {index + 1 < linksToDisplay.length && <Divider style={{ margin: 0 }} />}
+            {index + 1 < linksToDisplay.length && (
+              <Divider style={{ margin: 0 }} />
+            )}
           </>
         ))}
       </Menu>
     </div>
-  );
+  )
 }
