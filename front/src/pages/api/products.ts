@@ -1,4 +1,4 @@
-import axios        from 'axios'
-import { fetchAPI } from '../../utils/fetchApi'
+import axios          from 'axios'
+import { produceApi } from '../../utils/apiHandlers'
 
-export default fetchAPI('/products')
+export default produceApi('/products')

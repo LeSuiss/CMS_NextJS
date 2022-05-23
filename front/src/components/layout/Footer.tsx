@@ -13,7 +13,6 @@ function Footer() {
   return (
     <footer className={`${styles.container_Footer}`}>
       <Grid
-        md={12}
         justifyContent="center"
         container
         className={styles.container_FooterContent}
@@ -28,7 +27,7 @@ function Footer() {
         >
 
           <Typography variant="h3" style={{ paddingBottom: '30px' }}>{i18n._(/* i18n: Footer>SiteInformation>InformationTitle> */ t`INFORMATION`)}</Typography>
-          <Grid container direction="column">
+          <Grid item container direction="column">
 
             <Link href="http://www.google.com">
               <a>
@@ -69,7 +68,7 @@ function Footer() {
           <Grid item justifyContent="center" container md={12}>
             <Typography variant="h3" style={{ textAlign: 'center' }}>{i18n._(/* i18n: Footer>SiteInformation>TrackActivityTitle> */ t`TRACK OUR ACTIVITY`)}</Typography>
           </Grid>
-          <Grid container justifyContent="space-around" md={7}>
+          <Grid item container justifyContent="space-around" md={7}>
             <a target="_blank" href="https://www.linkedin.com/company/sapem-sa/" rel="noreferrer">
               <FacebookIcon className={styles.socialMediaIcons} fontSize="large" />
             </a>

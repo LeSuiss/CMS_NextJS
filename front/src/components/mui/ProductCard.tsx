@@ -38,7 +38,7 @@ subheader = '', productImageSrc, patented = true,
         title={title}
         subheader={subheader}
         action={<div style={{position:'relative', marginTop:'4px', transform:'rotate(35deg)', width:'40px', height:'40px'}}>
-        <Image src="/medias/products/label/patented.jpg" layout='fill' />
+        <Image src="/medias/products/label/patented.jpg" height="30px" width="30px"/>
         </div>
         }
       />
@@ -55,7 +55,7 @@ subheader = '', productImageSrc, patented = true,
       <CardActions disableSpacing sx={{display:'grid', padding:'0 5px 10px 5px', gridTemplateColumns:'1fr auto'}}>
         <div>
 
-       {/* {
+     {
         [
           {src:"armyLabel.jpg", title:"labellisé Armée Francaise"},
           {src:"labelISO.jpg", title:"labellisé ISO 9001"},
@@ -63,11 +63,11 @@ subheader = '', productImageSrc, patented = true,
       ]
       .map(({title, src})=> <Tooltip title={title} arrow>
         <IconButton sx={{ '&:hover':{transform:'scale(1.5)', zIndex:'5'}}} className={'labelButton'} aria-label="add to favorites" style={{width:'30px', height:'30px'}}>
-          <Image alt="patented" src={"/medias/products/label/" + src} layout="fill" />
+          <Image alt="patented" src={"/medias/products/label/" + src}  height="20px" width="20px" />
         </IconButton>
       </Tooltip>
       )
-    }  */}
+    } 
     </div>
       </CardActions>
     </Card>

@@ -1,5 +1,8 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
 const path = require('path');
+const withBundleAnalyzer = require('@next/bundle-analyzer')({
+  enabled: process.env.ANALYZE === 'true',
+})
 /* eslint-disable no-param-reassign */
 const nextConfig = {
   env: {
@@ -27,4 +30,4 @@ const nextConfig = {
   },
 };
 
-module.exports = nextConfig;
+module.exports = withBundleAnalyzer(nextConfig);

@@ -1,6 +1,6 @@
+import { i18n }             from '@lingui/core';
 /* eslint-disable import/prefer-default-export */
-import { t, defineMessage } from '@lingui/macro';
-import { i18n } from '@lingui/core';
+import { defineMessage, t } from '@lingui/macro';
 
 export const NAVIGATION_STRUCTURE = [
   {
@@ -19,6 +19,10 @@ export const NAVIGATION_STRUCTURE = [
     nav: defineMessage({ message: 'Contact' }),
     link: '/contact',
   },
+  {
+    nav: defineMessage({ message: 'Our team' }),
+    link: '/team',
+  },
 ];
 
 export const LANGUAGES: { flag: string, name: string, locale: string }[] = [
@@ -32,19 +36,19 @@ export const LANGUAGES: { flag: string, name: string, locale: string }[] = [
     name: 'FR',
     locale: 'fr',
   },
-  {
-    flag: 'DE',
-    name: 'DE',
-    locale: 'de',
-  },
-  {
-    flag: 'IT',
-    name: 'IT',
-    locale: 'it',
-  },
-  {
-    flag: 'ES',
-    name: 'ES',
-    locale: 'es',
-  },
+  // {
+  //   flag: 'DE',
+  //   name: 'DE',
+  //   locale: 'de',
+  // },
+  // {
+  //   flag: 'IT',
+  //   name: 'IT',
+  //   locale: 'it',
+  // },
+  // {
+  //   flag: 'ES',
+  //   name: 'ES',
+  //   locale: 'es',
+  // },
 ];

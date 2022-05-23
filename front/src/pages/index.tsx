@@ -2,13 +2,12 @@ import fs                      from 'fs'
 import path                    from 'path'
 import type { GetStaticProps } from 'next'
 import React                   from 'react'
-import TrustingBrands          from '@components//homePage/TrustingBrands'
+// import TrustingBrands          from '@components//homePage/TrustingBrands'
 import { Head }                from '@components/Head/Head'
 import BackgroundVideo         from '@components/homePage/BackgroundVideo'
 import HomePageSection         from '@components/homePage/HomePageSection'
 import { sectionsData }        from '@components/homePage/config'
 import Layout                  from '@components/layout'
-import { ProductCard }         from '@components/mui/ProductCard'
 import { useMediaQuery }       from '@mui/material'
 import loadTranslation         from '@utils/loadTranslation'
 function Home({ brandsList }) {
@@ -22,7 +21,7 @@ function Home({ brandsList }) {
         {sectionsData.map((section, index) => (
           <HomePageSection index={index} key={section.title} {...section} />
         ))}
-        <TrustingBrands brandsList={brandsList} />
+        {/* <TrustingBrands brandsList={brandsList} /> */}
       </Layout>
     </div>
   )

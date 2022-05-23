@@ -10,9 +10,11 @@ import { i18n }                         from '@lingui/core'
 import { t }                            from '@lingui/macro'
 import { Button, Card, Divider, Grid }  from '@mui/material'
 import Typography                       from '@mui/material/Typography'
+import { fetchApi }                     from '@utils/apiHandlers'
 import loadTranslation                  from '@utils/loadTranslation'
 import { fakeDataProducts }             from '../../fakeDataProducts'
 import style                            from '../styles/innovation.module.scss'
+import employees                        from './api/employees'
 
 export default function innovation(props) {
   const filteredProducts = []
@@ -56,7 +58,7 @@ export default function innovation(props) {
 export const getStaticProps: GetStaticProps = async (ctx) => {
   const translation = await loadTranslation(ctx.locale!)
   const logoList = path.join(process.cwd(), '/public/medias/logo')
-  const test = await axios.get('/api/employees')
+
   
   const brandsList = fs.readdirSync(logoList)
   return {
@@ -64,7 +66,7 @@ export const getStaticProps: GetStaticProps = async (ctx) => {
       brandsList,
       translation,
       fakeDataProducts,
-      test:test.data.data
+      // test:test
       // fileList,
       // __dirname,
     },
