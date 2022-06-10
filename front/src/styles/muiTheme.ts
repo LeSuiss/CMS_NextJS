@@ -1,17 +1,19 @@
 /* eslint-disable import/prefer-default-export */
 import { createTheme } from '@mui/material';
-import _variables from './_variables.module.scss';
+import _variables      from './_variables.module.scss';
 
 export const muiTheme = createTheme(
   {
     typography: {
       h2: {
         fontSize: '30px ! important',
-        padding: '15px !important',
+        Margin:'15px !important',
+        fontWeight:'bolder',
+        padding: '15px 15px 15px -2px !important',
 
       },
       h3: {
-        fontSize: '24px ! important',
+        fontSize: '18px ! important',
         fontWeight: 'bold !important',
         padding: '10px !important',
         Margin: '0 10px !important',

@@ -6,13 +6,15 @@
   max-height: 100%;
   width: 100vw;
   display: grid;
+  padding:'40Px';
+  background: linear-gradient(to top left, lightgray, white 100%);
+
   
   .imageContainer{
     position: relative;
     opacity: 0.7;
     width:auto;
     min-height: calc(100vh - $headerHeight);
-    img{object-fit: cover; }
   }
 
  
@@ -38,18 +40,20 @@
     color:white;
     float:right;
     justify-self: flex-end;
-    margin:30px
+    border:$redSapem solid 1px ;
+    margin:30px;
+    &:hover{
+      color:$redSapem !important;
+      background-color: transparent;
+    }
   }
   
    .contentContainer{
     display:flex;
     flex-flow: column;
     align-items: baseline;
-    background: linear-gradient(to top left, lightgray, white 100%);
     width: 100vw;
     min-height: 50vh;
-
-
   }
 }
 

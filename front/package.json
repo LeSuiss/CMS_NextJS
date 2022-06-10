@@ -30,9 +30,11 @@
     "@mui/styles": "^5.5.0",
     "axios": "^0.24.0",
     "clsx": "latest",
+    "eslint-config-airbnb-typescript": "^17.0.0",
     "eslint-plugin-next": "^0.0.0",
     "lodash": "^4.17.21",
     "make-plural": "^7.1.0",
+    "mui_compo": "^0.2.9",
     "next": "latest",
     "prop-types": "latest",
     "react": "latest",
@@ -41,12 +43,12 @@
     "react-player": "^2.10.0"
   },
   "devDependencies": {
-    "@next/bundle-analyzer": "^12.1.6",
     "@babel/core": "^7.16.0",
     "@babel/eslint-parser": "^7.17.0",
     "@emotion/core": "^10.3.1",
     "@lingui/cli": "^3.13.2",
     "@lingui/loader": "^3.13.2",
+    "@next/bundle-analyzer": "^12.1.6",
     "@next/eslint-plugin-next": "^12.1.0",
     "@storybook/addon-actions": "^6.2.9",
     "@storybook/addon-essentials": "^5.3.21",
@@ -91,7 +93,7 @@
       "style": "module-compact"
     }
   },
-  "browser":{
-"child_process": false
-}  
+  "browser": {
+    "child_process": false
+  }
 }

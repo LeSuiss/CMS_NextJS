@@ -42,9 +42,27 @@ subheader = '', productImageSrc, patented = true,
         </div>
         }
       />
-
       <Divider />
-      <Image src={productImageSrc} height="200px" width="386px" alt={`product${title}`} layout="intrinsic" />
+
+      <div style={{position:'relative'}}> 
+    <div style={{padding:"4px", position:'absolute', top:'0px', left:'0px', zIndex:"999", borderRight:'lightGrey solid 1px', borderBottom:'lightGrey solid 1px', backgroundColor:'white'}}>
+    {
+      [
+          {src:"armyLabel.jpg", title:"labellisé Armée Francaise"},
+          {src:"labelISO.jpg", title:"labellisé ISO 9001"},
+          {src:"labelIsoo.jpg", title:"labellisé ISO 9002"},
+        ]
+        .map(({title, src})=> <Tooltip title={title} arrow>
+        <div className={'labelButton'} aria-label="add to favorites" style={{transform:'translateX:100%'}}>
+          <Image alt="patented" src={"/medias/products/label/" + src} height="30px" width="30px" />
+        </div>
+      </Tooltip>
+      )
+    } 
+    </div>
+      {
+        !!productImageSrc && productImageSrc !=='undefined'&& <Image src={productImageSrc} height="200px" width="386px" alt={`product${title}`} layout="intrinsic" />
+      }
       {/* <Divider /> */}
 
       <CardContent>
@@ -52,22 +70,11 @@ subheader = '', productImageSrc, patented = true,
           {title}
         </Typography>
       </CardContent>
+          </div>
       <CardActions disableSpacing sx={{display:'grid', padding:'0 5px 10px 5px', gridTemplateColumns:'1fr auto'}}>
         <div>
 
-     {
-        [
-          {src:"armyLabel.jpg", title:"labellisé Armée Francaise"},
-          {src:"labelISO.jpg", title:"labellisé ISO 9001"},
-          {src:"labelIsoo.jpg", title:"labellisé ISO 9002"},
-      ]
-      .map(({title, src})=> <Tooltip title={title} arrow>
-        <IconButton sx={{ '&:hover':{transform:'scale(1.5)', zIndex:'5'}}} className={'labelButton'} aria-label="add to favorites" style={{width:'30px', height:'30px'}}>
-          <Image alt="patented" src={"/medias/products/label/" + src}  height="20px" width="20px" />
-        </IconButton>
-      </Tooltip>
-      )
-    } 
+ 
     </div>
       </CardActions>
     </Card>

@@ -16,8 +16,8 @@ function Home({ brandsList }) {
   return (
     <div >
       <Head />
-      {isDesktop && <BackgroundVideo />}
       <Layout>
+      {isDesktop && <BackgroundVideo />}
         {sectionsData.map((section, index) => (
           <HomePageSection index={index} key={section.title} {...section} />
         ))}

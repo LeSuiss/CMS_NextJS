@@ -4,18 +4,19 @@ import '@fontsource/roboto/400.css'
 import '@fontsource/roboto/500.css'
 import '@fontsource/roboto/700.css'
 
-import Head                                                    from 'next/head'
-import { useRouter }                                           from 'next/router'
-import React, { createContext, useReducer, useRef }            from 'react'
-import { CacheProvider }                                       from '@emotion/react'
-import { i18n }                                                from '@lingui/core'
-import { I18nProvider }                                        from '@lingui/react'
-import CssBaseline                                             from '@mui/material/CssBaseline'
-import { ThemeProvider }                                       from '@mui/material/styles'
-import { StylesProvider, createGenerateClassName }             from '@mui/styles'
-import createEmotionCache                                      from '../createEmotionCache'
-import { muiTheme }                                            from '../styles/muiTheme'
-import initTranslation                                         from '../utils/lingui'
+import Head from 'next/head'
+import { useRouter } from 'next/router'
+import React, { createContext, useReducer, useRef } from 'react'
+import { CacheProvider } from '@emotion/react'
+import { i18n } from '@lingui/core'
+import { I18nProvider } from '@lingui/react'
+import CssBaseline from '@mui/material/CssBaseline'
+import { ThemeProvider } from '@mui/material/styles'
+import { StylesProvider, createGenerateClassName } from '@mui/styles'
+import { GTAG } from '@utils/SEO&Co/GTAG'
+import createEmotionCache from '../createEmotionCache'
+import { muiTheme } from '../styles/muiTheme'
+import initTranslation from '../utils/lingui'
 
 const generateClassName = createGenerateClassName({
   productionPrefix: 'c',
@@ -57,6 +58,7 @@ export default function MyApp(props) {
 
   return (
     <CacheProvider value={emotionCache}>
+      {!!process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS && <GTAG />}
       <Head>
         <title>My page</title>
         <meta name="viewport" content="initial-scale=1, width=device-width" />
@@ -67,6 +69,7 @@ export default function MyApp(props) {
             <StylesProvider generateClassName={generateClassName}>
               {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
               <CssBaseline />
+
               <Component {...pageProps} />
             </StylesProvider>
           </ThemeProvider>

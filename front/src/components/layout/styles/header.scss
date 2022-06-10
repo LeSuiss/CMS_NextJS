@@ -19,6 +19,8 @@
     color: white !important;
     opacity: 1 !important;
     transition: 0.1s;
+    border-bottom: 4px solid $redSapem;
+    font-weight: bolder;
     &:hover {
       font-weight: bolder;
       border-bottom: solid 4px white;

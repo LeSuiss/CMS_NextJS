@@ -5,19 +5,8 @@
   >*{width:100%}
   align-items: center;
   width: 100vw;
-  h2{
-    text-align: center;
-    margin:10px 0 20px 0;
-    padding: 10px;
-    margin:auto
-  }
-  .titleDivider{
-    display: flex;
-    flex-flow: column ;
-    >*{width:100%}
-    margin:auto;
-    background-color: $redSapem
-  }
+  
+  
 }
 
 .brandsList{

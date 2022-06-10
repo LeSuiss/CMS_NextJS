@@ -14,6 +14,9 @@ const nextConfig = {
   sassOptions: {
     includePaths: [path.join(__dirname, 'styles')],
   },
+  images: {
+    domains: ["res.cloudinary.com"],
+  },
   i18n: {
     locales: ['en', 'fr'],
     defaultLocale: 'fr',
