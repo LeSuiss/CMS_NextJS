@@ -34,7 +34,6 @@
     "eslint-plugin-next": "^0.0.0",
     "lodash": "^4.17.21",
     "make-plural": "^7.1.0",
-    "mui_compo": "^0.2.9",
     "next": "latest",
     "prop-types": "latest",
     "react": "latest",
