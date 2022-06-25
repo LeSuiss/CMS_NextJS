@@ -1,16 +1,12 @@
-import fs                         from 'fs'
-import path                       from 'path'
-import type { GetStaticProps }    from 'next'
-import React                      from 'react'
+import fs                         from 'fs';
+import path                       from 'path';
+import type { GetStaticProps }    from 'next';
+import React                      from 'react';
 import Layout                     from '@components/layout'
 import { PortraitCard }           from '@components/mui/PortraitCard'
 import { i18n }                   from '@lingui/core';
 import { t }                      from '@lingui/macro';
 import {
-  Card,
-  CardActions,
-  CardContent,
-  CardHeader,
   Divider,
   Grid,
   Typography,
@@ -18,41 +14,41 @@ import {
 } from '@mui/material'
 import { fetchApi, getEmployees } from '@utils/apiHandlers'
 import loadTranslation            from '@utils/loadTranslation'
-function Team({ employees }) {
+import { NAVIGATION_STRUCTURE }   from '../constants';
+
+function team({ employees }) {
   const isDesktop = useMediaQuery('(min-width:900px)')
 
   return (
     <div>
       <Layout>""
-           <Typography variant="h2">
-        {i18n._(
-          /* i18n: InnovationTitle */ t`Our team of experts`
-          )}
-      </Typography>
-      <Divider className="titleDivider" />
+        <Typography variant="h2">
+
+        </Typography>
+        <Divider className="titleDivider" />
         <Grid container justifyContent="center" alignItems="stretch" padding={4}>
-          
+
           {employees
             // .filter((x, i) => i === 0)
             .map((e) => (
-              <Grid item md={3} sx={{minWidth:'345px'}}>
-              <PortraitCard
-                name={e.email}
-                description={e.description}
-                functions={e.fonction}
-                image={e.portait}
-                email={e.email}
-                phone={e.phone}
-              />
+              <Grid item md={3} sx={{ minWidth: '345px' }}>
+                <PortraitCard
+                  name={e.email}
+                  description={e.description}
+                  functions={e.fonction}
+                  image={e.portait}
+                  email={e.email}
+                  phone={e.phone}
+                />
               </Grid>
             ))}
           {JSON.stringify(employees[0], undefined, 6)}
-              </Grid>
+        </Grid>
       </Layout>
     </div>
   )
 }
-export default Team
+export default team
 
 export const getStaticProps: GetStaticProps = async (ctx) => {
   const translation = await loadTranslation(ctx.locale!)

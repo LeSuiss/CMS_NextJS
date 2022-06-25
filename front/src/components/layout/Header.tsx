@@ -12,11 +12,11 @@ import styles from '../../styles/Home.module.scss';
 import CustomMenu from './CustomMenu';
 import Switcher from './Switcher';
 
-function Header({ navigationStructure, style, className }) {
+function Header({ navigationStructure, style = {}, className }) {
   const isMobile = useMediaQuery('(max-width:800px)');
 
   return (
-    <header className={`mainContainerHeader ${className}`} style={style ?? {}} >
+    <header className={`mainContainerHeader ${className}`} style={style} >
       <div style={{ marginLeft: `${isMobile ? '0' : '5px'}`, height: "70px", width: "200px", position: "relative" }}>
         <Image className={styles.logo} alt="logoSapem" src={logo} layout="fill" />
       </div>
