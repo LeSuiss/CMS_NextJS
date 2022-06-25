@@ -1,32 +1,34 @@
-import Image      from 'next/image';
-import Link       from 'next/link';
-import React      from 'react';
-import logo       from '@assets/logo.svg';
-import { i18n }   from '@lingui/core';
+import Image from 'next/image';
+import Link from 'next/link';
+import React from 'react';
+import logo from '@assets/logo.svg';
+import { i18n } from '@lingui/core';
 import {
   Tab,
   Tabs,
   useMediaQuery,
 } from '@mui/material';
-import styles     from '../../styles/Home.module.scss';
+import styles from '../../styles/Home.module.scss';
 import CustomMenu from './CustomMenu';
-import Switcher   from './Switcher';
+import Switcher from './Switcher';
 
-function Header({ navigationStructure }) {
+function Header({ navigationStructure, style, className }) {
   const isMobile = useMediaQuery('(max-width:800px)');
 
   return (
-    <header className="mainContainerHeader">
-      <Image className={styles.logo} alt="logoSapem" src={logo} layout="responsive"  />
+    <header className={`mainContainerHeader ${className}`} style={style ?? {}} >
+      <div style={{ marginLeft: `${isMobile ? '0' : '5px'}`, height: "70px", width: "200px", position: "relative" }}>
+        <Image className={styles.logo} alt="logoSapem" src={logo} layout="fill" />
+      </div>
       {
         isMobile
           ? <CustomMenu linksToDisplay={navigationStructure} />
           : (
-            <Tabs value={0}>
+            <Tabs value={0} style={{ height: '100%' }}>
               {navigationStructure
                 .map((page, index) => (
                   <Link key={page.nav.id ?? page.nav} href={page.link}>
-                    <Tab label={i18n._(page.nav)} />
+                    <Tab style={{ height: '100%' }} label={i18n._(page.nav)} />
                   </Link>
                 ))}
             </Tabs>
@@ -34,7 +36,7 @@ function Header({ navigationStructure }) {
 
       }
       <Switcher />
-    </header>
+    </header >
   );
 }
 

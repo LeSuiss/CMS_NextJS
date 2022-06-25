@@ -1,6 +1,7 @@
 .playerWrapper {
   width: 100vw;
-  height: Calc(50vh - 50px);
+  height: 20vh;
+  object-fit: cover;
   position: relative;
   display: flex !important;
   justify-content: Center;

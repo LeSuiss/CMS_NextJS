@@ -22,7 +22,7 @@ function HomePageSection({
   return (
     <section >
       <Grid
-      style={{paddingTop:'3%', paddingBottom:'3% '}}
+        style={{ paddingTop: '3%', paddingBottom: '3% ' }}
         className={styles.sectionContainer}
         container
         display="flex"
@@ -36,12 +36,12 @@ function HomePageSection({
           alignItems="center"
         >
 
-          <Typography variant="h2" style={{display:'grid'}}>{i18n._(title).toUpperCase()}
-          <div className="titleDivider" />
+          <Typography variant="h2" style={{ display: 'grid' }}>{i18n._(title).toUpperCase()}
+            <div className="titleDivider" />
           </Typography>
           <p> {text} </p>
-          <div style={{width:'100%'}} justifyContent="flex-end" alignItems="flex-end">
-          <Button onClick={() => alert('hoho')}>Learn More</Button>
+          <div style={{ width: '100%', justifyContent: 'flex-end', alignItems: 'flex-end' }} >
+            <Button onClick={() => alert('hoho')}>Learn More</Button>
           </div>
         </Grid>
         <Grid item md={1} />

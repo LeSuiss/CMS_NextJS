@@ -1,38 +1,56 @@
+@import '../../../styles/variables.module';
+
+$secondary: white;
+$primary: $redSapem;
 .mainContainerHeader {
-  background: $redSapem;
-  color: white;
+  z-index: 99999;
+  background: $secondary;
+  box-shadow: 1px 1px grey;
   padding: 0px;
   position: sticky;
   z-index: 999;
   top: 0px;
   grid-area: header;
-  max-height: 60px;
+  max-height: 100px;
+  height:70px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   text-align: center;
-  align-items: flex-end;
 
-  color: $redSapem;
-  box-shadow: 1px 1px grey;
+  >*{
+    display:flex;
+    align-items: center;
+  }
+  *[role='tablist']{
+    height: 70%;
+    button {
+    color: $primary !important;
 
-  button {
-    color: white !important;
+    font-size: 1.2em;
     opacity: 1 !important;
     transition: 0.1s;
-    border-bottom: 4px solid $redSapem;
-    font-weight: bolder;
-    &:hover {
+    z-index: 99999;
+    border-bottom: solid 2px $secondary;
+
+      &:hover{
       font-weight: bolder;
-      border-bottom: solid 4px white;
+      border-bottom: solid 2px $primary !important;
     }
   }
+  }
+  
   //flagSelect
   > :last-child * {
     z-index: 99999;
     height: auto;
+    border:none;
+      &:hover{
+      font-weight: bolder;}
     .ReactFlagsSelect-module_selectBtn__19wW7::after {
       margin-left: -3px;
       margin-top: 4px;
+      border:none;
     }
     ul {
       margin-top: 5px;
@@ -54,4 +72,18 @@
   > div:last-of-type {
     padding-right: 30px;
   }
+}
+.is-sticky{
+
+  height:calc($headerHeight*0.8);
+  box-shadow: 0 2px 1px 1Px lightgrey;
+  transition: 0.7s;
+  &>*{
+    transform: scale(0.9);
+      transition: 0.7s;
+
+  }
+  // background-color: red !important;
+  // border:solid red 20px;
+  // background-color: whitesmoke;
 }
