@@ -1,42 +1,45 @@
+@import '../../../styles/variables.module';
+
+
 .playerWrapper {
-  width: 100vw;
-  height: 20vh;
+  min-height: Calc(100vh - $headerHeight);
+  min-width: 100vw;
   object-fit: cover;
   position: relative;
   display: flex !important;
   justify-content: Center;
+  opacity: 0.8;
+}
+.playerWrapper >div{
+  min-width: 100vw !important;
+  min-height: 100vh !important;
 }
 
 .reactPlayer {
   position: absolute;
-  height: auto;
-  left: 0;
-  top: Calc(
-    -15vh + $headerHeight
-  ); //if video is perfectly centered should be 25vh//yuèjh-c
-  width: 100vw;
   z-index: -10000;
 }
 
 .slogan {
   position: absolute;
-  left: 0;
-  top: 0;
+
   height: 100%;
   width: 100%;
   padding: 20px;
   display: flex;
   align-items: center;
   justify-content: center;
-  opacity: 1;
-  margin: auto;
   color: whitesmoke;
   text-shadow: 2px 2px 2px rgb(110, 32, 32);
 }
 
 .skipIntroButton {
+  position: absolute !important;
+  bottom:10%;
   $marginBottomButton: min(-60px, -10px);
   height: 40px;
+  width: 230px;
+  left:Calc(50% - 115px);
   transform: translateY($marginBottomButton);
   padding: 10px 40px !important;
 }

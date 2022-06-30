@@ -1,13 +1,14 @@
-import Link         from 'next/link'
-import * as React   from 'react'
-import MenuIcon     from '@mui/icons-material/Menu'
+import Link from 'next/link'
+import * as React from 'react'
+import MenuIcon from '@mui/icons-material/Menu'
 import MenuOpenIcon from '@mui/icons-material/MenuOpen'
-import { Divider }  from '@mui/material'
-import Button       from '@mui/material/Button'
-import Menu         from '@mui/material/Menu'
-import MenuItem     from '@mui/material/MenuItem'
+import { Divider } from '@mui/material'
+import Button from '@mui/material/Button'
+import Menu from '@mui/material/Menu'
+import MenuItem from '@mui/material/MenuItem'
+import Switcher from './Switcher'
 
-export default function BasicMenu({ linksToDisplay }) {
+export default function BasicMenu({ linksToDisplay, isMobile }) {
   const [anchorEl, setAnchorEl] = React.useState(null)
   const open = Boolean(anchorEl)
 
@@ -51,6 +52,7 @@ export default function BasicMenu({ linksToDisplay }) {
           'aria-labelledby': 'basic-button',
         }}
       >
+        {isMobile && < Switcher />}
         {linksToDisplay.map((item, index) => (
           <>
             <MenuItem>

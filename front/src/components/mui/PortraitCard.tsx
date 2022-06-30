@@ -1,7 +1,8 @@
-import Image from 'next/image'
+import Image                                 from 'next/image'
 /* eslint-disable import/prefer-default-export */
-import * as React from 'react'
+import * as React                            from 'react'
 import { MailOutline, PhoneAndroidOutlined } from '@mui/icons-material'
+import LinkedInIcon                          from '@mui/icons-material/LinkedIn';
 import {
   Avatar,
   Box,
@@ -13,62 +14,97 @@ import {
   Grid,
   Tooltip,
 } from '@mui/material'
-import IconButton, { IconButtonProps } from '@mui/material/IconButton'
-import Typography from '@mui/material/Typography'
-import { red } from '@mui/material/colors'
-import { color } from '@mui/system'
-
+import { useTheme }                          from '@mui/material'
+import IconButton, { IconButtonProps }       from '@mui/material/IconButton'
+import Typography                            from '@mui/material/Typography'
+import { red }                               from '@mui/material/colors'
+import { color }                             from '@mui/system'
 interface Props {
   name: string
   functions: string
   image: string
   email: string
   phone: string | number
-  description?: string
+  description?: string,
+  linkedin?: string,
   contact?: string[]
 }
 
 export function PortraitCard({
-  name,
+  name = "Alexis Archer",
   image,
   description,
   functions,
   contact,
   email,
   phone,
+  linkedin = 'https://fr.linkedin.com/in/joel-archer',
 }: Props) {
+  const theme = useTheme()
   return (
     <Card
       sx={{
-        maxWidth: 345,
+        width: 300,
         margin: 1.5,
         position: 'relative',
       }}
     >
-      <Grid padding="10px" borderLeft={`solid 5px rgb(194, 0, 43)`} >
+      {/* header */}
+      <Grid position='relative' padding="10px" borderLeft={`solid 5px ${theme.palette.primary.main}`} >
         <Typography variant="body2" fontWeight="bold" color="text.primary">
-          {'Alexis ARCHER'?.toUpperCase()}
+          {name?.toUpperCase()}
         </Typography>
         <Typography variant="body2" color="text.secondary">
           {functions}
         </Typography>
+        {linkedin && <a
+          href={linkedin}
+          style={{
+            position: 'absolute',
+            top: '0px',
+            right: '0px',
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center',
+            width: '35px',
+            height: '100%',
+            padding: '5px'
+          }}>
+
+          <LinkedInIcon fontSize='medium' sx={{ color: '#0a66c2' }}
+          />
+
+        </a>}
       </Grid>
 
-      <Grid padding="5px" display="flex" justifyContent="center" sx={{backgroundColor:"#eae8e8", minHeight:"250px", minWidth:"250px"}}>
+      {/* IMAGE */}
+      <Grid
+        padding="5px"
+        display="flex"
+        justifyContent="center"
+        sx={{
+          backgroundColor: "#eae8e8",
+          minHeight: "270px",
+          minWidth: "250px",
+          position: 'relative',
+        }}
+      >
         {!!image && (
           <Image
             src={image}
-            height="250px"
-            width="250px"
             alt={`Portrait_${name}`}
-            layout="intrinsic"
+            layout="fill"
+            objectFit='cover'
+            objectPosition='center'
           />
         )}
       </Grid>
 
       <Divider />
-
-      <CardContent sx={{height:'130px', overflow:"scroll"}}>{description}</CardContent>
+      {/* DESCRIPTION */}
+      <CardContent sx={{
+        height: '130px', overflowY: "auto"
+      }}>{description}</CardContent>
 
       <Divider />
 
@@ -76,18 +112,23 @@ export function PortraitCard({
         disableSpacing
         sx={{
           display: 'grid',
-          padding: '0 5px 10px 5px',
+          padding: '10px 5px 10px 5px',
+          "& a": { margin: '2px 5px' },
+          '& *': {
+            textDecoration: 'none'
+          }
         }}
       >
-        <Grid item container justifyContent="start" alignItems="center">
+        <Grid item container justifyContent="start" alignItems="center" sx={{
+        }}>
           <MailOutline fontSize="small" />
           <a href={'mailto:' + email}>{email}</a>
         </Grid>
         <Grid item container justifyContent="start" alignItems="center">
           <PhoneAndroidOutlined fontSize="small" />
-          <a href={'telto:'+phone }>{phone}</a>
+          <a href={'telto:' + phone}>{phone}</a>
         </Grid>
       </CardActions>
-    </Card>
+    </Card >
   )
 }

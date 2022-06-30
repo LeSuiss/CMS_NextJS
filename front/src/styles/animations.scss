@@ -1,7 +1,14 @@
 @import '_variables.module.scss';
 
+
+$animationDelay: 2.6s;
+$timingIn : 2.4;
+$timingOut: 0.25;
+
   div[class^="Home_slogan"]  {
-    h1{ position: absolute; visibility: hidden; font-size:4em;}
+    h1{ position: absolute; visibility: hidden; font-size:4em;
+      text-shadow: 1px 1px  black;
+    }
     
     @for $child from 1 to 4{
       $timing: $child - 1;
@@ -12,8 +19,8 @@
           }
         @else{
             animation: 
-            zoomIn $animationDelay linear #{$timing*$animationDelay},
-            hideIt 4.5s linear #{$timing * $animationDelay},
+            slideRight $animationDelay linear #{$timing*$animationDelay},
+            hideIt 2.5s linear #{$timing * $animationDelay},
           }
       }
     }}

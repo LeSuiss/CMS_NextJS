@@ -35,7 +35,7 @@ msgstr "CONTACT US BY MAIL"
 
 #: src/components/layout/Footer.tsx:103
 #~ msgid "CONTACTEZ NOUS PAR MAIL"
-#~ msgstr ""
+#~ msgstr "CONTUS US TEST"
 
 #: src/components/layout/Footer.tsx:92
 msgid "COOKIES"

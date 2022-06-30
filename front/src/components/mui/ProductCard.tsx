@@ -1,9 +1,10 @@
-import Image                           from 'next/image';
+import Image from 'next/image';
 /* eslint-disable import/prefer-default-export */
-import * as React                      from 'react';
+import * as React from 'react';
 // import { defineMessage }                    from '@lingui/macro';
-import FavoriteIcon                    from '@mui/icons-material/Favorite';
-import ShareIcon                       from '@mui/icons-material/Share';
+import FavoriteIcon from '@mui/icons-material/Favorite';
+import LibraryBooksOutlinedIcon from '@mui/icons-material/LibraryBooksOutlined';
+import ShareIcon from '@mui/icons-material/Share';
 import {
   Avatar,
   Box,
@@ -14,63 +15,87 @@ import {
   Divider,
   Grid,
   Tooltip,
+  useTheme,
+  useThemeProps,
 } from '@mui/material';
 import IconButton, { IconButtonProps } from '@mui/material/IconButton';
-import Typography                      from '@mui/material/Typography';
-import { red }                         from '@mui/material/colors';
+import Typography from '@mui/material/Typography';
+import { red } from '@mui/material/colors';
+'@mui/material/colors';
+'@mui/material/colors';
 '@mui/material/colors';
 export function ProductCard({ title = '',
   subheader = '', productImageSrc, patented = true,
 }) {
+
+  const theme = useTheme()
   return (
-    <Card sx={{
-      maxWidth: 345, margin: 1.5, position: 'relative',
-    }}
+    <Card
+      sx={{
+        maxWidth: 345, position: 'relative',
+      }}
     >
       <CardHeader
-        // avatar={(<></> )}
+        avatar={(<></>)
+        }
+        sx={{ backgroundColor: '#f3f3f3' }}
         title={title}
+        titleTypographyProps={{ fontWeight: 600 }}
         subheader={subheader}
-        action={<div style={{ position: 'relative', marginTop: '4px', transform: 'rotate(35deg)', width: '40px', height: '40px' }}>
-          <Image src="/medias/products/label/patented.jpg" height="30px" width="30px" />
-        </div>
+        action={
+          < Tooltip title={'download notice'} arrow placement='right' >
+            <a href="tel: 01882461290" style={{ padding: '10px 5px' }}>
+              <Image alt="pdfLogo" src='/pdf.svg' width='30px' height="30px" layout='intrinsic' objectFit='contain'
+              />
+            </a>
+          </Tooltip>
         }
       />
-      <Divider />
+      < Divider sx={{ border: 'none', boxShadow: `0px 1.5px 1px 1.5px ${theme.palette.primary.main} ` }} />
 
       <div style={{ position: 'relative' }}>
-        <div style={{ padding: "4px", position: 'absolute', top: '0px', left: '0px', zIndex: "99", borderRight: 'lightGrey solid 1px', borderBottom: 'lightGrey solid 1px', backgroundColor: 'white' }}>
-          {
-            [
-              { src: "armyLabel.jpg", title: "labellisé Armée Francaise" },
-              { src: "labelISO.jpg", title: "labellisé ISO 9001" },
-              { src: "labelIsoo.jpg", title: "labellisé ISO 9002" },
-            ]
-              .map(({ title, src }) => <Tooltip title={title} arrow placement='right'>
-                <div className={'labelButton'} aria-label="add to favorites" style={{ transform: 'translateX:100%' }}>
-                  <Image alt="patented" src={"/medias/products/label/" + src} height="30px" width="30px" />
-                </div>
-              </Tooltip>
-              )
-          }
-        </div>
-        {
-          !!productImageSrc && productImageSrc !== 'undefined' && <Image src={productImageSrc} height="200px" width="386px" alt={`product${title}`} layout="intrinsic" />
-        }
-        {/* <Divider /> */}
+        <CardContent sx={{ paddingLeft: 0, paddingRight: 0 }}>
+          <div style={{ display: 'flex', margin: '0px', justifyContent: 'center', alignItems: 'center' }}>
+            <div style={{ padding: 'min(5%, 10px)', display: 'flex', flexFlow: 'column', justifyContent: 'center', backgroundColor: 'white' }}>
+              {
+                [
+                  { src: "patented.jpg", title: "patented" },
+                  { src: "armyLabel.jpg", title: "labellisé Armée Francaise" },
+                  { src: "labelISO.jpg", title: "labellisé ISO 9001" },
+                  { src: "labelIsoo.jpg", title: "labellisé ISO 9002" },
+                ]
+                  .map(({ title, src }) => <Tooltip key={'label_' + title} title={title} arrow placement='right'>
+                    <div style={{ padding: '4px' }} aria-label="add to favorites" >
+                      <Image
+                        alt="patented"
+                        src={"/medias/products/label/" + src}
+                        height="40px"
+                        width="40px"
+                        objectFit='contain' />
+                    </div>
+                  </Tooltip>
+                  )
+              }
 
-        <CardContent>
-          <Typography variant="body2" color="text.secondary">
+
+            </div>
+            {
+              !!productImageSrc && productImageSrc !== 'undefined' && <Image
+                src={productImageSrc}
+                height="200px"
+                width="386px"
+                alt={`product${title}`}
+                layout="intrinsic"
+                objectFit='contain'
+              />
+            }
+          </div>
+
+          <Typography variant="body2" color="text.secondary" style={{ padding: '15px 5px 0 5px' }}>
             {title}
           </Typography>
         </CardContent>
-      </div>
-      <CardActions disableSpacing sx={{ display: 'grid', padding: '0 5px 10px 5px', gridTemplateColumns: '1fr auto' }}>
-        <div>
-
-
-        </div>
-      </CardActions>
-    </Card>
+      </div >
+    </Card >
   );
 }

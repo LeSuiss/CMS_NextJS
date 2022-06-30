@@ -65,6 +65,11 @@ header{
   .container_component {
     position:relative;
     grid-area: mainPage;
+    max-width: 100vw !important;
+    *{
+      max-width: 100vw !important;
+    }
+
     }
   }
 
@@ -74,3 +79,10 @@ header{
     height: 3px ;
     width: max(200px, 50%);
   } 
+
+
+  .MuiCardHeader-content{
+
+    >*{
+      border:'solid 2px red !important'}
+  }

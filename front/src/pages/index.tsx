@@ -8,7 +8,7 @@ import BackgroundVideo from '@components/homePage/BackgroundVideo'
 import HomePageSection from '@components/homePage/HomePageSection'
 import { sectionsData } from '@components/homePage/config'
 import Layout from '@components/layout'
-import { useMediaQuery } from '@mui/material'
+import { Fade, Slide, useMediaQuery } from '@mui/material'
 import loadTranslation from '@utils/loadTranslation'
 function Home({ brandsList }) {
   const isDesktop = useMediaQuery('(min-width:900px)')
@@ -16,14 +16,17 @@ function Home({ brandsList }) {
   return (
     <div >
       <Head />
-      {isDesktop && <BackgroundVideo />}
       <Layout>
-        {sectionsData.map((section, index) => (
+        {isDesktop && <BackgroundVideo />}
+        {sectionsData?.map((section, index) => (
+
+          // <Slide direction={index % 2 === 0 ? 'left' : 'right'} in appear mountOnEnter unmountOnExit >
           <HomePageSection index={index} key={section.title} {...section} />
+          // </Slide>
         ))}
         {/* <TrustingBrands brandsList={brandsList} /> */}
       </Layout>
-    </div>
+    </div >
   )
 }
 export default Home

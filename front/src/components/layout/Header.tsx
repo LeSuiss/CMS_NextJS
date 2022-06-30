@@ -17,12 +17,14 @@ function Header({ navigationStructure, style = {}, className }) {
 
   return (
     <header className={`mainContainerHeader ${className}`} style={style} >
-      <div style={{ marginLeft: `${isMobile ? '0' : '5px'}`, height: "70px", width: "200px", position: "relative" }}>
-        <Image className={styles.logo} alt="logoSapem" src={logo} layout="fill" />
+      <div style={{ marginLeft: `${isMobile ? '0' : '5px'}`, cursor: 'pointer', height: "70px", width: "200px", position: "relative" }}>
+        <Link href="/">
+          <Image className={styles.logo} alt="logoSapem" src={logo} layout="fill" />
+        </Link>
       </div>
       {
         isMobile
-          ? <CustomMenu linksToDisplay={navigationStructure} />
+          ? <CustomMenu isMobile={isMobile} linksToDisplay={navigationStructure} />
           : (
             <Tabs value={0} style={{ height: '100%' }}>
               {navigationStructure
@@ -35,7 +37,7 @@ function Header({ navigationStructure, style = {}, className }) {
           )
 
       }
-      <Switcher />
+      {!isMobile && <Switcher />}
     </header >
   );
 }

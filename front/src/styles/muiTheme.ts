@@ -7,8 +7,8 @@ export const muiTheme = createTheme(
     typography: {
       h2: {
         fontSize: '30px ! important',
-        Margin:'15px !important',
-        fontWeight:'bolder',
+        margin: '0.7em !important',
+        fontWeight: 'bolder',
         padding: '15px 15px 15px -2px !important',
 
       },
