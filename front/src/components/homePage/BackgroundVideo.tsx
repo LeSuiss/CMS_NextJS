@@ -1,13 +1,10 @@
-import React, { useLayoutEffect, useRef } from 'react';
+import React from 'react';
 import { i18n } from '@lingui/core';
 import { t } from '@lingui/macro';
 import {
   Box,
   Button,
-  Card,
-  Fade,
   Grid,
-  useMediaQuery,
 } from '@mui/material';
 import { useWindowSize } from '@utils/hooks';
 import styles from '../../styles/Home.module.scss';
@@ -34,7 +31,7 @@ function BackgroundVideo() {
         }
       }
       } variant="contained">
-        {i18n._(/* i18n: D */ t`Discover SAPEM`)}
+        {i18n._(/* i18n: D */ t`Découvrir SAPEM`)}
       </Button>
     </Box >
   );

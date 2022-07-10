@@ -1,7 +1,4 @@
-/* eslint-disable react/jsx-key */
-/* eslint-disable react/react-in-jsx-scope */
-/* eslint-disable import/prefer-default-export */
-export const videoSliderMessages =  [
+export const videoSliderMessages = [
   'when security prevails',
   'when fiability is required',
   'ask for SAPEM',

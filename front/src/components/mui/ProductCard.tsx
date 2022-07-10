@@ -1,5 +1,4 @@
 import Image from 'next/image';
-/* eslint-disable import/prefer-default-export */
 import * as React from 'react';
 // import { defineMessage }                    from '@lingui/macro';
 import FavoriteIcon from '@mui/icons-material/Favorite';
@@ -24,15 +23,36 @@ import { red } from '@mui/material/colors';
 '@mui/material/colors';
 '@mui/material/colors';
 '@mui/material/colors';
-export function ProductCard({ title = '',
-  subheader = '', productImageSrc, patented = true,
-}) {
+
+
+interface Props {
+  title: string,
+  subheader?: string
+  productImageSrc?: string,
+  labels?: {
+    fileName: string,
+    title: string
+  }[]
+}
+
+export function ProductCard({
+  title = '',
+  subheader = '',
+  productImageSrc,
+  labels = [
+    { fileName: "patented.jpg", title: "patented" },
+    { fileName: "armyLabel.jpg", title: "labellisé Armée Francaise" },
+    { fileName: "labelISO.jpg", title: "labellisé ISO 9001" },
+    { fileName: "labelIsoo.jpg", title: "labellisé ISO 9002" },
+  ]
+
+}: Props) {
 
   const theme = useTheme()
   return (
     <Card
       sx={{
-        maxWidth: 345, position: 'relative',
+        maxWidth: "345px", maxHeight: "400px", position: 'relative',
       }}
     >
       <CardHeader
@@ -58,17 +78,12 @@ export function ProductCard({ title = '',
           <div style={{ display: 'flex', margin: '0px', justifyContent: 'center', alignItems: 'center' }}>
             <div style={{ padding: 'min(5%, 10px)', display: 'flex', flexFlow: 'column', justifyContent: 'center', backgroundColor: 'white' }}>
               {
-                [
-                  { src: "patented.jpg", title: "patented" },
-                  { src: "armyLabel.jpg", title: "labellisé Armée Francaise" },
-                  { src: "labelISO.jpg", title: "labellisé ISO 9001" },
-                  { src: "labelIsoo.jpg", title: "labellisé ISO 9002" },
-                ]
-                  .map(({ title, src }) => <Tooltip key={'label_' + title} title={title} arrow placement='right'>
+                labels
+                  .map(({ title, fileName }) => <Tooltip key={'label_' + title} title={title} arrow placement='right'>
                     <div style={{ padding: '4px' }} aria-label="add to favorites" >
                       <Image
                         alt="patented"
-                        src={"/medias/products/label/" + src}
+                        src={"/medias/products/label/" + fileName}
                         height="40px"
                         width="40px"
                         objectFit='contain' />

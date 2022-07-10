@@ -1,16 +1,15 @@
+import clsx from 'clsx';
+import NextLink from 'next/link';
+import { useRouter } from 'next/router';
+import PropTypes from 'prop-types';
 /* eslint-disable react/forbid-prop-types */
 /* eslint-disable react/require-default-props */
 /* eslint-disable react/display-name */
 /* eslint-disable @typescript-eslint/no-unused-vars */
 /* eslint-disable react/jsx-filename-extension */
 import * as React from 'react';
-
 import MuiLink from '@mui/material/Link';
 import { styled } from '@mui/material/styles';
-import clsx from 'clsx';
-import NextLink from 'next/link';
-import { useRouter } from 'next/router';
-import PropTypes from 'prop-types';
 
 // Add support for the sx prop for consistency with the other branches.
 const Anchor = styled('a')({});

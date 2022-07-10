@@ -54,7 +54,7 @@ export default function BasicMenu({ linksToDisplay, isMobile }) {
       >
         {isMobile && < Switcher />}
         {linksToDisplay.map((item, index) => (
-          <>
+          <div key={item.nav.id ?? item.nav + index}>
             <MenuItem>
               <Link
                 key={item.nav.id ?? item.nav}
@@ -67,7 +67,7 @@ export default function BasicMenu({ linksToDisplay, isMobile }) {
             {index + 1 < linksToDisplay.length && (
               <Divider style={{ margin: 0 }} />
             )}
-          </>
+          </div>
         ))}
       </Menu>
     </div>

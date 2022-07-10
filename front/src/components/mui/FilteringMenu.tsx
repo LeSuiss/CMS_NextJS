@@ -4,64 +4,63 @@ import ArrowForwardIosSharpIcon from '@mui/icons-material/ArrowForwardIosSharp';
 import { Checkbox, FormControlLabel, FormGroup, styled, useTheme } from '@mui/material';
 import MuiAccordion, { AccordionProps } from '@mui/material/Accordion';
 import MuiAccordionDetails from '@mui/material/AccordionDetails';
-import MuiAccordionSummary, {
-  AccordionSummaryProps,
-} from '@mui/material/AccordionSummary';
+import MuiAccordionSummary, { AccordionSummaryProps } from '@mui/material/AccordionSummary';
 import Typography from '@mui/material/Typography';
-// interface filteringStructure{
-//   categoryName:string,
-
-// }
 
 export default function FilteringMenuAccordeon(
   { filteringStructure, setFilters }
 ) {
+  const [level1Open, setLevel1Open] = React.useState(Object.keys(filteringStructure).map(k => ({ [k]: true })))
   const [expanded, setExpanded] = React.useState(filteringStructure);
   const theme = useTheme()
 
   return (
     <div style={{ minWidth: '65%', maxHeight: '80vh', overflowY: 'auto' }}
     >
-      {Object?.entries(filteringStructure).map(([category, values]) =>
-        <Accordion
-          sx={{ width: '100%' }}
-          expanded={expanded[category]}
-          onChange={() => setExpanded(prevS => ({ ...prevS, [category]: !prevS[category] }))}>
-          <AccordionSummary
-            sx={{
-              backgroundColor: theme.palette.primary.light,
-              color: theme.palette.primary.contrastText,
-              '& svg': { color: theme.palette.primary.contrastText }
-            }} aria-controls="panel1d-content"
-            id="panel1d-header">
-            <Typography>{category}</Typography>
-          </AccordionSummary>
-          <AccordionDetails>
-            <FormGroup>
-              {Object.keys(values).map(x =>
-                <>
+      {/* {JSON.stringify(expanded)} */}
+      {Object?.entries(filteringStructure)
+        .map(([category, values], index) =>
+          <Accordion
+            key={category + index}
+            sx={{ width: '100%' }}
+            expanded={level1Open[category] ?? true}
+            onChange={() => setLevel1Open(prevS => ({ ...prevS, [category]: !prevS[category] }))}>
+            <AccordionSummary
+              sx={{
+                backgroundColor: theme.palette.primary.light,
+                color: theme.palette.primary.contrastText,
+                '& svg': { color: theme.palette.primary.contrastText }
+              }} aria-controls="panel1d-content"
+              id="panel1d-header">
+              <Typography>{category}</Typography>
+            </AccordionSummary>
+            <AccordionDetails>
+              <FormGroup>
+                {Object.keys(values)
+                  .map(x =>
 
-                  <FormControlLabel
-                    control={<Checkbox defaultChecked />}
-                    onChange={
-                      () => setFilters(p => {
-                        const xx = { ...p }
-                        xx[category][x] = !xx[category][x]
-                        return xx
-                      })
+                    <FormControlLabel
+                      key={'formControlLabel' + x}
+                      control={<Checkbox defaultChecked />}
+                      onChange={
+                        () => setFilters(p => {
+                          const xx = { ...p }
+                          xx[category][x] = !xx[category][x]
+                          return xx
+                        })
 
-                    }
-                    label={x}
-                  />
-                </>
-              )}
+                      }
+                      label={x}
+                    />
+
+                  )}
 
 
-            </FormGroup>
+              </FormGroup>
 
-          </AccordionDetails>
-        </Accordion>
-      )
+            </AccordionDetails>
+          </Accordion>
+        )
       }
 
 

@@ -14,61 +14,109 @@ msgstr ""
 "Plural-Forms: \n"
 
 #: src/components/layout/Footer.tsx:99
-msgid "0188246590"
-msgstr "0188246590"
+#~ msgid "0188246590"
+#~ msgstr "0188246590"
+
+#: src/pages/products.tsx:23
+msgid "A la pointe de l'innovation"
+msgstr "A la pointe de l'innovation"
 
 #: src/constants.ts:11
-msgid "A propos"
-msgstr "A propos"
+#~ msgid "A propos"
+#~ msgstr "A propos"
 
 #: src/constants.ts:11
 #~ msgid "About us"
 #~ msgstr "About us"
 
-#: src/components/layout/Footer.tsx:96
+#: src/components/layout/Footer.tsx:47
 msgid "CONTACT"
 msgstr "CONTACT"
 
-#: src/components/layout/Footer.tsx:103
-msgid "CONTACT US BY MAIL"
-msgstr "CONTACT US BY MAIL"
+#: src/components/layout/Footer.tsx:62
+#~ msgid "CONTACT US BY MAIL"
+#~ msgstr "CONTACT US BY MAIL"
 
 #: src/components/layout/Footer.tsx:103
 #~ msgid "CONTACTEZ NOUS PAR MAIL"
 #~ msgstr "CONTUS US TEST"
 
-#: src/components/layout/Footer.tsx:92
+#: src/components/layout/Footer.tsx:38
 msgid "COOKIES"
 msgstr "COOKIES"
+
+#: src/constants.ts:23
+msgid "Contact"
+msgstr "Contact"
 
 #: src/components/layout/Footer.tsx:115
 #~ msgid "Copyright © Sapem."
 #~ msgstr "Copyright © Sapem."
 
+#: src/components/homePage/BackgroundVideo.tsx:37
+#~ msgid "Discover SAPEM"
+#~ msgstr "Discover SAPEM"
+
+#: src/components/homePage/BackgroundVideo.tsx:37
+msgid "Découvrir SAPEM"
+msgstr "Découvrir SAPEM"
+
 #: src/constants.ts:7
 #~ msgid "Home"
 #~ msgstr "Home"
 
-#: src/components/layout/Footer.tsx:90
+#: src/components/homePage/TrustingBrands.tsx:15
+msgid "ILS NOUS FONT CONFIANCE"
+msgstr "ILS NOUS FONT CONFIANCE"
+
+#: src/components/layout/Footer.tsx:29
 msgid "INFORMATION"
 msgstr "INFORMATION"
 
-#: src/components/layout/Footer.tsx:91
-msgid "LEGAL NOTICE"
-msgstr "LEGAL"
+#: src/components/layout/Footer.tsx:35
+msgid "Information légales"
+msgstr "Information légales"
+
+#: src/constants.ts:11
+msgid "Innovation"
+msgstr "Innovation"
+
+#: src/components/layout/Footer.tsx:35
+#~ msgid "LEGAL NOTICE"
+#~ msgstr "LEGAL"
+
+#: src/components/layout/Footer.tsx:62
+msgid "Nous contacter"
+msgstr "Nous contacter"
+
+#: src/constants.ts:19
+msgid "Our team"
+msgstr "Our team"
 
 #: src/components/layout/index.tsx:121
-msgid "Pressing and Laundry"
-msgstr "Pressing and Laundry"
-
-#: src/components/layout/Footer.tsx:108
-msgid "TRACK OUR ACTIVITY"
-msgstr "RETROUVEZ NOUS"
-
-#: src/components/layout/index.tsx:124
-msgid "at Home"
-msgstr "at home fr"
+#~ msgid "Pressing and Laundry"
+#~ msgstr "Pressing and Laundry"
 
 #: src/constants.ts:15
-msgid "contactez nous"
-msgstr "contactez nous"
+msgid "Products"
+msgstr "Products"
+
+#: src/components/layout/Footer.tsx:69
+msgid "Retrouvez nous"
+msgstr "Retrouvez nous"
+
+#: src/components/layout/Footer.tsx:69
+#~ msgid "TRACK OUR ACTIVITY"
+#~ msgstr "RETROUVEZ NOUS"
+
+#: src/pages/products.tsx:23
+#~ msgid "We Overcome problems with disruptive innovations"
+#~ msgstr "We Overcome problems with disruptive innovations"
+
+#: src/components/layout/index.tsx:124
+#~ msgid "at Home"
+#~ msgstr "at home fr"
+
+#: src/constants.ts:15
+#~ msgid "contactez nous"
+#~ msgstr "contactez nous"

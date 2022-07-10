@@ -1,23 +1,17 @@
 import fs from 'fs'
 import path from 'path'
-import axios from 'axios'
-import _, { filter } from 'lodash'
 import type { GetStaticProps } from 'next'
-import Image from 'next/image'
 import * as React from 'react'
 import Layout from '@components/layout'
 import FilteringMenuAccordeon from '@components/mui/FilteringMenu'
 import { ProductCard } from '@components/mui/ProductCard'
 import { i18n } from '@lingui/core'
 import { t } from '@lingui/macro'
-import { PropaneSharp } from '@mui/icons-material'
-import { Button, Card, Divider, Grid } from '@mui/material'
+import { Divider, Grid } from '@mui/material'
 import Typography from '@mui/material/Typography'
-import { fetchApi } from '@utils/apiHandlers'
 import loadTranslation from '@utils/loadTranslation'
 import { fakeDataProducts } from '../../fakeDataProducts'
-import style from '../styles/Products.module.scss'
-import employees from './api/employees'
+
 export default function products(props) {
   const [filters, setFilters] = React.useState(props.filteringStructure)
 
@@ -26,14 +20,14 @@ export default function products(props) {
       <div className='.container_component'>
         <Typography variant="h2">
           {i18n._(
-          /* i18n: InnovationTitle */ t`We Overcome problems with disruptive innovations`
+          /* i18n: InnovationTitle */ t`A la pointe de l'innovation`
           )}
         </Typography>
         <Divider sx={{ marginBottom: '2em' }} className="titleDivider" />
 
-        <Grid container >
+        <Grid container margin={2}>
 
-          <Grid md={3} xs={12} item container display='flex' justifyContent='center'>
+          <Grid md={2} xs={12} item container display='flex' justifyContent='center'>
             <FilteringMenuAccordeon
               filteringStructure={props.filteringStructure}
               setFilters={setFilters}
@@ -46,17 +40,15 @@ export default function products(props) {
             {props.fakeDataProducts
               .filter(x =>
                 filters.family[x.family]
-                //   // && filters[x.category]
+                && filters.category[x.category]
               )
               .map((x, index) =>
                 <ProductCard
                   key={'product_' + x.name + index}
-                  patented={index % 2 === 0}
                   title={x.name}
                   subheader={`${x.family} / ${x.category}`}
-                  productImageSrc={`/products/${x.family}.jpeg`} />
+                  productImageSrc={`/medias/products/${x.family}.jpg`} />
               )}
-            <Card>f</Card>
           </Grid>
         </Grid>
       </div>

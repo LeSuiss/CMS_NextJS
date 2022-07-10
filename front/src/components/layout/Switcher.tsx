@@ -1,22 +1,15 @@
-/* eslint-disable no-underscore-dangle */
-/* eslint-disable max-len */
-/* eslint-disable no-eval */
-/* eslint-disable import/prefer-default-export */
-/* eslint-disable react/react-in-jsx-scope */
-// src/components/Switcher.tsx
-
-import { i18n } from '@lingui/core';
-import loadTranslation from '@utils/loadTranslation';
+import nextConfig from 'next.config';
 import { useRouter } from 'next/router';
 import ReactFlagSelect from 'react-flags-select';
-import nextConfig from 'next.config';
+import { i18n } from '@lingui/core';
+import loadTranslation from '@utils/loadTranslation';
 import { LANGUAGES } from '../../constants';
 
 function Switcher() {
-  const router                       = useRouter();
+  const router = useRouter();
   const labels = {};
   LANGUAGES
-    .filter((lang) =>  nextConfig.i18n.locales.includes(lang.locale))
+    .filter((lang) => nextConfig.i18n.locales.includes(lang.locale))
     .forEach((lang) => Object.assign(labels, { [lang.flag]: lang.locale }));
 
   const countries = LANGUAGES

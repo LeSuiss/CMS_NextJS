@@ -1,8 +1,7 @@
-import Image                                 from 'next/image'
-/* eslint-disable import/prefer-default-export */
-import * as React                            from 'react'
+import Image from 'next/image'
+import * as React from 'react'
 import { MailOutline, PhoneAndroidOutlined } from '@mui/icons-material'
-import LinkedInIcon                          from '@mui/icons-material/LinkedIn';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import {
   Avatar,
   Box,
@@ -14,11 +13,11 @@ import {
   Grid,
   Tooltip,
 } from '@mui/material'
-import { useTheme }                          from '@mui/material'
-import IconButton, { IconButtonProps }       from '@mui/material/IconButton'
-import Typography                            from '@mui/material/Typography'
-import { red }                               from '@mui/material/colors'
-import { color }                             from '@mui/system'
+import { useTheme } from '@mui/material'
+import IconButton, { IconButtonProps } from '@mui/material/IconButton'
+import Typography from '@mui/material/Typography'
+import { red } from '@mui/material/colors'
+import { color } from '@mui/system'
 interface Props {
   name: string
   functions: string

@@ -14,57 +14,101 @@ msgstr ""
 "Plural-Forms: \n"
 
 #: src/components/layout/Footer.tsx:99
-msgid "0188246590"
-msgstr "0188246590"
+#~ msgid "0188246590"
+#~ msgstr "0188246590"
+
+#: src/pages/products.tsx:23
+msgid "A la pointe de l'innovation"
+msgstr "Innovation is of paramount importance"
 
 #: src/constants.ts:11
-msgid "A propos"
-msgstr "about us"
+#~ msgid "A propos"
+#~ msgstr "about us"
 
 #: src/constants.ts:11
 #~ msgid "About us"
 #~ msgstr "About us"
 
-#: src/components/layout/Footer.tsx:96
+#: src/components/layout/Footer.tsx:47
 msgid "CONTACT"
 msgstr "CONTACT"
 
-#: src/components/layout/Footer.tsx:103
-msgid "CONTACT US BY MAIL"
-msgstr "CONTACT US BY MAIL"
+#: src/components/layout/Footer.tsx:62
+#~ msgid "CONTACT US BY MAIL"
+#~ msgstr "CONTACT US BY MAIL"
 
-#: src/components/layout/Footer.tsx:92
+#: src/components/layout/Footer.tsx:38
 msgid "COOKIES"
 msgstr "COOKIES"
+
+#: src/constants.ts:23
+msgid "Contact"
+msgstr "Contact"
 
 #: src/components/layout/Footer.tsx:115
 #~ msgid "Copyright © 5aSec-Services {0}."
 #~ msgstr "Copyright © 5aSec-Services {0}."
 
+#: src/components/homePage/BackgroundVideo.tsx:37
+#~ msgid "Discover SAPEM"
+#~ msgstr "Discover Sapem"
+
+#: src/components/homePage/BackgroundVideo.tsx:37
+msgid "Découvrir SAPEM"
+msgstr "Discover SAPEM"
+
 #: src/constants.ts:7
 #~ msgid "Home"
 #~ msgstr "Home"
 
-#: src/components/layout/Footer.tsx:90
+#: src/components/homePage/TrustingBrands.tsx:15
+msgid "ILS NOUS FONT CONFIANCE"
+msgstr "THEY TRUST OUR EXPERTISE"
+
+#: src/components/layout/Footer.tsx:29
 msgid "INFORMATION"
 msgstr "INFORMATION"
 
-#: src/components/layout/Footer.tsx:91
-msgid "LEGAL NOTICE"
-msgstr "LEGAL NOTICE"
+#: src/components/layout/Footer.tsx:35
+msgid "Information légales"
+msgstr "legal issues"
 
-#: src/components/layout/index.tsx:121
-msgid "Pressing and Laundry"
-msgstr "Pressing and Laundry"
+#: src/constants.ts:11
+msgid "Innovation"
+msgstr "Innovation"
 
-#: src/components/layout/Footer.tsx:108
-msgid "TRACK OUR ACTIVITY"
-msgstr "TRACK OUR ACTIVITY"
+#: src/components/layout/Footer.tsx:35
+#~ msgid "LEGAL NOTICE"
+#~ msgstr "LEGAL NOTICE"
 
-#: src/components/layout/index.tsx:124
-msgid "at Home"
-msgstr "at Home"
+#: src/components/layout/Footer.tsx:62
+msgid "Nous contacter"
+msgstr "contact us"
+
+#: src/constants.ts:19
+msgid "Our team"
+msgstr "Our Team"
 
 #: src/constants.ts:15
-msgid "contactez nous"
-msgstr "Contact us"
+msgid "Products"
+msgstr "Products"
+
+#: src/components/layout/Footer.tsx:69
+msgid "Retrouvez nous"
+msgstr "Track our Activity"
+
+#: src/components/layout/Footer.tsx:69
+#~ msgid "TRACK OUR ACTIVITY"
+#~ msgstr "TRACK OUR ACTIVITY"
+
+#: src/pages/products.tsx:23
+#~ msgid "We Overcome problems with disruptive innovations"
+#~ msgstr "We Overcome problems with disruptive innovations"
+
+#: src/components/layout/index.tsx:124
+#~ msgid "at Home"
+#~ msgstr "at Home"
+
+#: src/constants.ts:15
+#~ msgid "contactez nous"
+#~ msgstr "Contact us"
