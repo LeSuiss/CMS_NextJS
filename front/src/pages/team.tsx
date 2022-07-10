@@ -52,9 +52,9 @@ export default team
 export const getStaticProps: GetStaticProps = async (ctx) => {
   const translation = await loadTranslation(ctx.locale!)
 
-  const logoList = path.join(process.cwd(), '/public/medias/logo')
-  const brandsList = fs.readdirSync(logoList)
-  const employees = await getEmployees(ctx.locale)
+  const logoList = path.join(process.cwd(), '/public/medias/logo') ?? []
+  const brandsList = fs.readdirSync(logoList) ?? []
+  const employees = await getEmployees(ctx.locale) ?? []
 
   return {
     props: {
