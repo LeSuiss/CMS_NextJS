@@ -25,7 +25,6 @@ module.exports = {
   env: {
     browser: true,
     node: true,
-    "jest/globals": true
   },
   globals: {
     WebSocket: true

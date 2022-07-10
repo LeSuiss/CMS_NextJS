@@ -29,7 +29,7 @@ function team({ employees }) {
 
           {employees
             // .filter((x, i) => i === 0)
-            .map((e, index) => (
+            ?.map((e, index) => (
               <Grid key={e.email ?? 'employeeN°' + index} item md={3} sx={{ minWidth: '345px' }}>
                 <PortraitCard
                   name={e.email}
@@ -55,6 +55,7 @@ export const getStaticProps: GetStaticProps = async (ctx) => {
   const logoList = path.join(process.cwd(), '/public/medias/logo')
   const brandsList = fs.readdirSync(logoList)
   const employees = await getEmployees(ctx.locale)
+
   return {
     props: {
       brandsList,
