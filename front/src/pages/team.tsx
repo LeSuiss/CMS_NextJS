@@ -41,7 +41,6 @@ function team({ employees }) {
                 />
               </Grid>
             ))}
-          {JSON.stringify(employees[0], undefined, 6)}
         </Grid>
       </Layout>
     </div>
@@ -52,12 +51,12 @@ export default team
 export const getStaticProps: GetStaticProps = async (ctx) => {
   const translation = await loadTranslation(ctx.locale!)
 
-  const employees = await getEmployees(ctx.locale) ?? []
+  // const employees = await getEmployees(ctx.locale) ?? []
 
   return {
     props: {
       translation,
-      employees,
+      // employees,
     },
   }
 }
