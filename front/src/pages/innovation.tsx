@@ -1,7 +1,7 @@
 import fs from 'fs'
 import path from 'path'
 import axios from 'axios'
-import _, { filter } from 'lodash'
+import filter from 'lodash/filter'
 import type { GetStaticProps } from 'next'
 import Image from 'next/image'
 import * as React from 'react'

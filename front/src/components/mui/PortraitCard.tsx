@@ -14,10 +14,7 @@ import {
   Tooltip,
 } from '@mui/material'
 import { useTheme } from '@mui/material'
-import IconButton, { IconButtonProps } from '@mui/material/IconButton'
 import Typography from '@mui/material/Typography'
-import { red } from '@mui/material/colors'
-import { color } from '@mui/system'
 interface Props {
   name: string
   functions: string

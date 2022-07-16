@@ -1,29 +1,18 @@
-import Image from 'next/image';
-import * as React from 'react';
+import Image                           from 'next/image';
+import * as React                      from 'react';
 // import { defineMessage }                    from '@lingui/macro';
-import FavoriteIcon from '@mui/icons-material/Favorite';
-import LibraryBooksOutlinedIcon from '@mui/icons-material/LibraryBooksOutlined';
-import ShareIcon from '@mui/icons-material/Share';
 import {
-  Avatar,
-  Box,
   Card,
-  CardActions,
   CardContent,
   CardHeader,
   Divider,
   Grid,
   Tooltip,
+  Typography,
   useTheme,
-  useThemeProps,
-} from '@mui/material';
+  useThemeProps
+} from '@mui/material'
 import IconButton, { IconButtonProps } from '@mui/material/IconButton';
-import Typography from '@mui/material/Typography';
-import { red } from '@mui/material/colors';
-'@mui/material/colors';
-'@mui/material/colors';
-'@mui/material/colors';
-
 
 interface Props {
   title: string,
@@ -65,7 +54,7 @@ export function ProductCard({
         action={
           < Tooltip title={'download notice'} arrow placement='right' >
             <a href="tel: 01882461290" style={{ padding: '10px 5px' }}>
-              <Image alt="pdfLogo" src='/pdf.svg' width='30px' height="30px" layout='intrinsic' objectFit='contain'
+              <Image alt="pdfLogo" src='/pdf.svg' width='30px' height="30px" objectFit='contain'
               />
             </a>
           </Tooltip>
@@ -100,7 +89,6 @@ export function ProductCard({
                 height="200px"
                 width="386px"
                 alt={`product${title}`}
-                layout="intrinsic"
                 objectFit='contain'
               />
             }

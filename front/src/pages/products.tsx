@@ -1,19 +1,24 @@
-import fs from 'fs'
-import path from 'path'
-import type { GetStaticProps } from 'next'
-import * as React from 'react'
-import Layout from '@components/layout'
-import FilteringMenuAccordeon from '@components/mui/FilteringMenu'
-import { ProductCard } from '@components/mui/ProductCard'
-import { i18n } from '@lingui/core'
-import { t } from '@lingui/macro'
-import { Divider, Grid } from '@mui/material'
-import Typography from '@mui/material/Typography'
-import loadTranslation from '@utils/loadTranslation'
-import { fakeDataProducts } from '../../fakeDataProducts'
+import fs                            from 'fs'
+import path                          from 'path'
+import type { GetStaticProps }       from 'next'
+import * as React                    from 'react'
+import Layout                        from '@components/layout'
+import FilteringMenuAccordeon        from '@components/mui/FilteringMenu'
+import { ProductCard }               from '@components/mui/ProductCard'
+import { i18n }                      from '@lingui/core'
+import { t }                         from '@lingui/macro'
+import { Divider, Grid, Typography } from '@mui/material'
+import loadTranslation               from '@utils/loadTranslation'
+import { fakeDataProducts }          from '../../fakeDataProducts'
 
 export default function products(props) {
   const [filters, setFilters] = React.useState(props.filteringStructure)
+
+  const dataToDisplay = props.fakeDataProducts
+    .filter(x =>
+      filters.family[x.family]
+      && filters.category[x.category]
+    )
 
   return (
     <Layout>
@@ -34,25 +39,23 @@ export default function products(props) {
             />
 
           </Grid>
+          <Grid md={10} xs={12} item container  >
 
-          <Grid md={9} gap={4} container item direction="row" justifyContent="center">
+            <div >
+              {/* <ProductCard
+                key={'product_' + item.name + rowIndex + columnIndex}
+                title={item.name}
+                subheader={`${item.family} / ${item.category}`}
+                productImageSrc={`/medias/products/${item.family}.jpg`} />
 
-            {props.fakeDataProducts
-              .filter(x =>
-                filters.family[x.family]
-                && filters.category[x.category]
-              )
-              .map((x, index) =>
-                <ProductCard
-                  key={'product_' + x.name + index}
-                  title={x.name}
-                  subheader={`${x.family} / ${x.category}`}
-                  productImageSrc={`/medias/products/${x.family}.jpg`} />
-              )}
+            </div> */}
+
+            </div >
+
           </Grid>
         </Grid>
       </div>
-    </Layout>
+    </Layout >
   )
 }
 

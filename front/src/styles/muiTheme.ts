@@ -2,6 +2,9 @@
 import { createTheme } from '@mui/material';
 import _variables      from './_variables.module.scss';
 
+// light grey:#f8f8f8 
+// dark grey: #ecf0f1
+
 export const muiTheme = createTheme(
   {
     typography: {

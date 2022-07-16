@@ -1,19 +1,19 @@
-import fs from 'fs';
-import path from 'path';
+import fs                      from 'fs';
+import path                    from 'path';
 import type { GetStaticProps } from 'next';
-import React from 'react';
-import Layout from '@components/layout'
-import { PortraitCard } from '@components/mui/PortraitCard'
-import { i18n } from '@lingui/core';
-import { t } from '@lingui/macro';
+import React                   from 'react';
+import Layout                  from '@components/layout'
+import { PortraitCard }        from '@components/mui/PortraitCard'
+import { i18n }                from '@lingui/core';
+import { t }                   from '@lingui/macro';
 import {
   Divider,
   Grid,
   Typography,
-  useMediaQuery,
+  useMediaQuery
 } from '@mui/material'
-import { getEmployees } from '@utils/apiHandlers'
-import loadTranslation from '@utils/loadTranslation'
+import { getEmployees }        from '@utils/apiHandlers'
+import loadTranslation         from '@utils/loadTranslation'
 
 function team({ employees }) {
   // const isDesktop = useMediaQuery('(min-width:900px)')
