@@ -11,12 +11,16 @@ export interface Section {
   imageSrc: string
   title: string
   text: string
+  linkText: string
+  linkHref: string
   index?: number
 }
 function HomePageSection({
   imageSrc = '',
   title = '',
   text = '',
+  linkText = '',
+  linkHref,
   index,
 }: Section) {
   const isMobile = useMediaQuery('(max-width:900px)')
@@ -65,13 +69,7 @@ function HomePageSection({
                 '&:hover': { '& *': { color: theme.palette.primary.main } },
               }}
             >
-              <Link
-                href={
-                  NAVIGATION_STRUCTURE.filter((x) => x.link !== '/')[index].link
-                }
-              >
-                Learn More
-              </Link>
+              <Link href={linkHref}>{linkText}</Link>
             </Button>
           </div>
         </Grid>

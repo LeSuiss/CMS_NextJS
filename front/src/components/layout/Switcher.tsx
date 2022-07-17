@@ -44,6 +44,7 @@ function Switcher() {
           width: !isMobile ? 'auto' : '100%',
           height: !isMobile ? 'auto' : '36px',
           padding: '15px',
+          maxHeight: '100%',
         }}
         onClick={() => setIsModalOpen((p) => !p)}
       >
@@ -99,8 +100,8 @@ function Switcher() {
                 >
                   <Image
                     defaultValue={i18n.locale}
-                    width="40em"
-                    height="60em"
+                    width="40px"
+                    height="60px"
                     alt="selectedLang"
                     src={`/flags/${loc}.svg`}
                   />

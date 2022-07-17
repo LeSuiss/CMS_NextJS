@@ -25,7 +25,7 @@ export default function BasicMenu({ linksToDisplay, isMobile }) {
         id="basic-button"
         aria-controls="basic-menu"
         aria-haspopup="true"
-        aria-expanded={open ? 'true' : undefined}
+        aria-expanded={open ? 'true' : 'false'}
         onClick={handleClick}
       >
         {open ? (
