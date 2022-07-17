@@ -67,7 +67,7 @@ function Switcher() {
               position: 'absolute' as const,
               top: '50%',
               left: '50%',
-              transform: 'translate(-50%, -50%)',
+              // transform: 'translate(-50%, -50%)',
               display: 'flex',
               justifyContent: 'center',
               alignItem: 'center',
@@ -82,7 +82,7 @@ function Switcher() {
               Select your Language
             </Typography>
             {Object.keys(i18n._localeData).map((loc, index) => (
-              <>
+              <div key={'localeIs' + loc}>
                 <Button
                   sx={{
                     marginTop: 1,
@@ -108,7 +108,7 @@ function Switcher() {
                 {index !== Object.keys(i18n._localeData).length - 1 && (
                   <Divider />
                 )}
-              </>
+              </div>
             ))}
           </Box>
         </Card>

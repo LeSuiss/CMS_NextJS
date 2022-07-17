@@ -40,7 +40,7 @@ export default function BasicMenu({ linksToDisplay, isMobile }) {
           style: {
             width: '100%',
             maxWidth: '100%',
-            translateY: 220,
+            // translateY: 220,
             top: 2,
             marginTop: '1px',
           },
