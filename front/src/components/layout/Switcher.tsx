@@ -50,8 +50,8 @@ function Switcher() {
       >
         <Image
           defaultValue={i18n.locale}
-          width="20px"
-          height="30px"
+          width={20}
+          height={30}
           alt="selectedLang"
           src={`/flags/${i18n.locale}.svg`}
         />
