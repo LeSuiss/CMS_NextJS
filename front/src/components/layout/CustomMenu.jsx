@@ -52,7 +52,7 @@ export default function BasicMenu({ linksToDisplay, isMobile }) {
           'aria-labelledby': 'basic-button',
         }}
       >
-        {isMobile && < Switcher />}
+        {isMobile && <Switcher />}
         {linksToDisplay.map((item, index) => (
           <div key={item.nav.id ?? item.nav + index}>
             <MenuItem>

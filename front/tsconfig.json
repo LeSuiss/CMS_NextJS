@@ -51,7 +51,7 @@
         "./src/app/*"
       ],
       "@assets/*": [
-        "./src/assets/*"
+        "public/assets/*"
       ],
        "@@styles": [
         "./src/styles/*"
@@ -60,12 +60,17 @@
     "incremental": true
   },
   "exclude": [
-    "node_modules"
+    "node_modules",
+    "build"
   ],
   "include": [
     "**/*.ts",
     "**/*.tsx",
+    "**/*.js*", 
+    "**/*.jsx*", 
     "next-env.d.ts",
-    "next.config.js"
-  ]
+    "next.config.js",
+    ".eslintrc.js",  ]
+        // another includes
+    
 }

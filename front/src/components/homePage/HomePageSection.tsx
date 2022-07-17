@@ -7,7 +7,7 @@ import Typography from '@mui/material/Typography'
 import { NAVIGATION_STRUCTURE } from '../../constants'
 import styles from '../../styles/Home.module.scss'
 
-export interface section {
+export interface Section {
   imageSrc: string
   title: string
   text: string
@@ -18,16 +18,16 @@ function HomePageSection({
   title = '',
   text = '',
   index,
-}: section) {
+}: Section) {
   const isMobile = useMediaQuery('(max-width:900px)')
   const theme = useTheme()
   const imageOrder = !isMobile && index % 2 === 0 ? 1 : -1
   return (
-    <section >
+    <section>
       <Grid
         sx={{
           paddingTop: `${!isMobile ? '3%' : 0}`,
-          paddingBottom: `${!isMobile ? '3%' : 0}`
+          paddingBottom: `${!isMobile ? '3%' : 0}`,
         }}
         className={styles.sectionContainer}
         container
@@ -42,17 +42,36 @@ function HomePageSection({
           alignItems="center"
           sx={{ order: imageOrder === 1 ? 0 : 3 }}
         >
-
-          <Typography variant="h2" style={{ display: 'grid' }}>{i18n._(title).toUpperCase()}
+          <Typography variant="h2" style={{ display: 'grid' }}>
+            {i18n._(title).toUpperCase()}
             <div className="titleDivider" />
           </Typography>
           <p> {text} </p>
-          <div style={{ width: '100%', justifyContent: 'flex-end', alignItems: 'flex-end' }} >
-            <Button variant='contained' sx={{
-              '& *': { color: 'white', '&:hover': { color: theme.palette.primary.main, }, textDecoration: 'none' },
-              '&:hover': { '& *': { color: theme.palette.primary.main, } }
-            }}>
-              <Link href={NAVIGATION_STRUCTURE.filter(x => x.link !== '/')[index].link}>Learn More</Link>
+          <div
+            style={{
+              width: '100%',
+              justifyContent: 'flex-end',
+              alignItems: 'flex-end',
+            }}
+          >
+            <Button
+              variant="contained"
+              sx={{
+                '& *': {
+                  color: 'white',
+                  '&:hover': { color: theme.palette.primary.main },
+                  textDecoration: 'none',
+                },
+                '&:hover': { '& *': { color: theme.palette.primary.main } },
+              }}
+            >
+              <Link
+                href={
+                  NAVIGATION_STRUCTURE.filter((x) => x.link !== '/')[index].link
+                }
+              >
+                Learn More
+              </Link>
             </Button>
           </div>
         </Grid>
@@ -67,7 +86,7 @@ function HomePageSection({
           className={styles.imageContainer}
           style={{ order: imageOrder, minHeight: '200px' }}
         >
-          <Image alt="bgHome" src={imageSrc} layout="fill" objectFit='cover' />
+          <Image alt="bgHome" src={imageSrc} layout="fill" objectFit="cover" />
           {!isMobile && (
             <Grid
               item
@@ -84,7 +103,7 @@ function HomePageSection({
           )}
         </Grid>
       </Grid>
-    </section >
+    </section>
   )
 }
 

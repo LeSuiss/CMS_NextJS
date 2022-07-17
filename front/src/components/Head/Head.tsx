@@ -18,8 +18,6 @@ export function Head({
   author,
   ogTitle,
   ogDescription,
-  // ogUrl,
-  // ogImage,
 }: Props) {
   return (
     <NextHead>

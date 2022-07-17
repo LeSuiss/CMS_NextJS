@@ -13,7 +13,7 @@ import { I18nProvider } from '@lingui/react'
 import CssBaseline from '@mui/material/CssBaseline'
 import { ThemeProvider } from '@mui/material/styles'
 import { StylesProvider, createGenerateClassName } from '@mui/styles'
-import { GTAG } from '@utils/SEO&Co/GTAG'
+// import { GTAG } from '@utils/SEO&Co/GTAG'
 import createEmotionCache from '../createEmotionCache'
 import { muiTheme } from '../styles/muiTheme'
 import initTranslation from '../utils/lingui'
@@ -29,6 +29,7 @@ initTranslation(i18n)
 const clientSideEmotionCache = createEmotionCache()
 export const rootContext = createContext<{
   context?: any
+  // eslint-disable-next-line @typescript-eslint/ban-types
   dispatchContext?: Function
 }>({})
 

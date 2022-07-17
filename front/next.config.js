@@ -1,5 +1,6 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
-const path = require('path');
+const path = require('path')
+
 const withBundleAnalyzer = require('@next/bundle-analyzer')({
   enabled: process.env.ANALYZE === 'true',
 })
@@ -15,7 +16,7 @@ const nextConfig = {
     includePaths: [path.join(__dirname, 'styles')],
   },
   images: {
-    domains: ["res.cloudinary.com"],
+    domains: ['res.cloudinary.com'],
   },
   i18n: {
     locales: ['en', 'fr'],
@@ -25,12 +26,12 @@ const nextConfig = {
     config.module.rules.push({
       test: /\.po/,
       use: ['@lingui/loader'],
-    });
+    })
     if (!isServer) {
-      config.resolve.fallback.fs = false;
+      config.resolve.fallback.fs = false
     }
-    return config;
+    return config
   },
-};
+}
 
-module.exports = withBundleAnalyzer(nextConfig);
+module.exports = withBundleAnalyzer(nextConfig)

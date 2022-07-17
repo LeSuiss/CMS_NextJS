@@ -1,12 +1,7 @@
-import { i18n }             from '@lingui/core';
-/* eslint-disable import/prefer-default-export */
-import { defineMessage, t } from '@lingui/macro';
+import { defineMessage } from '@lingui/macro'
 
 export const NAVIGATION_STRUCTURE = [
-  {
-    nav: 'Home',
-    link: '/',
-  },
+  { nav: 'Home', link: '/' },
   {
     nav: defineMessage({ message: 'Innovation' }),
     link: '/innovation',
@@ -23,32 +18,15 @@ export const NAVIGATION_STRUCTURE = [
     nav: defineMessage({ message: 'Contact' }),
     link: '/contact',
   },
-];
+]
 
-export const LANGUAGES: { flag: string, name: string, locale: string }[] = [
+export const LANGUAGES: { name: string; locale: string }[] = [
   {
-    flag: 'GB',
     name: 'EN',
     locale: 'en',
   },
   {
-    flag: 'FR',
     name: 'FR',
     locale: 'fr',
   },
-  // {
-  //   flag: 'DE',
-  //   name: 'DE',
-  //   locale: 'de',
-  // },
-  // {
-  //   flag: 'IT',
-  //   name: 'IT',
-  //   locale: 'it',
-  // },
-  // {
-  //   flag: 'ES',
-  //   name: 'ES',
-  //   locale: 'es',
-  // },
-];
+]

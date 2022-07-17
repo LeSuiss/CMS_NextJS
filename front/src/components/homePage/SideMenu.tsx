@@ -1,7 +1,7 @@
-import React from 'react';
-import { i18n } from '@lingui/core';
-import { NAVIGATION_STRUCTURE } from '../../constants';
-import styles from '../../styles/Home.module.scss';
+import React from 'react'
+import { i18n } from '@lingui/core'
+import { NAVIGATION_STRUCTURE } from '../../constants'
+import styles from '../../styles/Home.module.scss'
 
 function SideMenu() {
   return (
@@ -13,7 +13,7 @@ function SideMenu() {
         </button>
       ))}
     </div>
-  );
+  )
 }
 
-export default SideMenu;
+export default SideMenu
