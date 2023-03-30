@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://sapem.vercel.app/</loc>
+  </url>
+
+  <url>
+    <loc>https://sapem.vercel.app/404</loc>
+  </url>
+
+  <url>
+    <loc>https://sapem.vercel.app/Contact</loc>
+  </url>
+
+  <url>
+    <loc>https://sapem.vercel.app/Innovation</loc>
+  </url>
+
+  <url>
+    <loc>https://sapem.vercel.app/Legal</loc>
+  </url>
+
+  <url>
+    <loc>https://sapem.vercel.app/Products</loc>
+  </url>
+
+  <url>
+    <loc>https://sapem.vercel.app/Team</loc>
+  </url>
+</urlset>

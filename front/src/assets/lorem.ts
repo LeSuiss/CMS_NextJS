@@ -1,0 +1,5 @@
+export const loremLong =
+  ' Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla velit diam, bibendum sodales egestas eget, scelerisque quis felis. Etiam vitae nunc molestie, pretium nibh et, imperdiet mi. Curabitur sed neque ut nulla tempus rhoncus. Nam feugiat, odio vitae aliquet aliquet, orci nulla dictum dolor, id euismod massa odio ac metus. Pellentesque quis eleifend sapien. Curabitur vel libero nec lorem hendrerit condimentum et eget erat. Aliquam et dolor dui. In posuere ante leo, id efficitur diam porttitor non. Nulla elementum, turpis eget porta feugiat, sem neque facilisis mauris, id luctus orci magna id velit. Nullam sed egestas lacus. Praesent sodales nibh ut enim egestas semper. Aenean faucibus lacinia leo quis laoreet. Nunc nunc orci, malesuada at auctor vel, dapibus non velit. In hac habitasse platea dictumst.'
+
+export const lorem =
+  ' Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla velit diam, bibendum sodales egestas eget, scelerisque quis felis. Etiam vitae nunc molestie, pretium nibh et, imperdiet mi. Curabitur sed neque ut nulla tempus rhoncus.'

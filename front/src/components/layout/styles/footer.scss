@@ -1,0 +1,39 @@
+.container_Footer {
+  display:flex;
+  align-items:center;
+  flex-flow: column;
+  // background-color: $redSapem;
+  transition: 0.2s;
+  * {
+    color: white !important;
+  }
+
+
+
+}
+
+.container_FooterContent {
+  padding: 10px;
+  @media (max-width: $breakPointMobile) {
+
+  }
+}
+
+.container_copyright {
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.cards {
+  text-align: center;
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.socialMediaIcons {
+  margin-right: 5px;
+  color: white;
+  border-radius: 50%;
+  // background-color: white;
+}

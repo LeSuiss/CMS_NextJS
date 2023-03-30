@@ -1,0 +1,15 @@
+
+//VARIABLES
+$headerHeight: 60px;
+$redSapem: rgb(194, 0, 43);
+$breakPointMobile: 600px;
+
+
+
+
+:export {
+headerHeight: $headerHeight;
+redSapem: $redSapem;
+breakPointMobile: $breakPointMobile;
+// timingOut: $timingOut;
+}

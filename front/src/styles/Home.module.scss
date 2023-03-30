@@ -1,0 +1,10 @@
+@import '_variables.module.scss';
+
+//LAYOUT
+@import './../components/layout/styles/header.scss';
+@import './../components/layout/styles/footer.scss';
+
+//PAGE
+@import './../components/homePage/styles/homePageSection.scss';
+@import './../components/homePage/styles/backgroundVideo.scss';
+

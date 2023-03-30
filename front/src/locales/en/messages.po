@@ -1,0 +1,286 @@
+msgid ""
+msgstr ""
+"POT-Creation-Date: 2023-01-29 16:10+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: @lingui/cli\n"
+"Language: en\n"
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Plural-Forms: \n"
+
+#: src/pages/index.tsx:275
+msgid "Adapter les produits au mieux des contraintes de l'utilisateur tout en garantissant à tout instant une sécurité optimale"
+msgstr ""
+
+#: src/pages/index.tsx:237
+msgid "Analyser"
+msgstr ""
+
+#: src/pages/index.tsx:293
+msgid ""
+"Approfondir la conception Intégration de l’électronique, définition du\n"
+"procédé de fabrication et des matériaux, modélisation 3D, simulation,\n"
+"réduction des coûts de fabrication"
+msgstr ""
+
+#: src/pages/Innovation.tsx:66
+msgid ""
+"BE2i Technologies intervient principalement en mode de\n"
+"sous-traitance: Assistance technique, forfait et offshoring.\n"
+"Nous assurons un suivi global des projets de la pré-étude\n"
+"jusqu'au prototype et pré série. Nous intervenons dans l'étude\n"
+"et la conception des projets dans les secteurs: Automobile,\n"
+"Aéronautique, Ferroviaire, Industrie Mécanique, Médical,\n"
+"Métrologie, Qualité. Nos expert vous accompagnera pour vos\n"
+"besoins de formations en qualité et/ou métrologie, conseils ou\n"
+"accompagnement pour certification accréditation , mise en place\n"
+"de nouveaux procédés, création de nouveaux produits BE2i\n"
+"Technologies s'engage à répondre au mieux à tous vos besoins par\n"
+"des solutions techniques complètes et innovantes adaptées, ainsi\n"
+"qu'un accompagnement personnalisé pour chaque phase de projet.\n"
+"Véritable partenaire de confiance nous vous accompagnons et vous\n"
+"assurons soutien et conseil dans chaque étape de votre projet."
+msgstr ""
+
+#: src/pages/index.tsx:242
+msgid "Bien comprendre le besoin État de l’art, rédaction du cahier des charges, benchmarking, reverse engineering, analyse fonctionnelle"
+msgstr ""
+
+#: src/pages/index.tsx:152
+msgid "CREER"
+msgstr "CREATE"
+
+#: src/components/layout/footer/Footer.tsx:28
+msgid "Catalogue Produit"
+msgstr ""
+
+#: src/pages/Contact.tsx:84
+#: src/pages/Contact.tsx:105
+#: src/pages/Contact.tsx:127
+#: src/pages/Contact.tsx:152
+msgid "Ce champ est requis"
+msgstr ""
+
+#: src/pages/404.tsx:18
+msgid "Cette page n'existe pas"
+msgstr ""
+
+#: src/components/layout/header/Switcher.tsx:88
+msgid "Choisissez votre langue"
+msgstr ""
+
+#: src/components/layout/footer/Footer.tsx:23
+msgid "Conditions générales de ventes"
+msgstr ""
+
+#: src/pages/Contact.tsx:45
+msgid "Contact"
+msgstr ""
+
+#: src/pages/index.tsx:154
+msgid "DEVELOPPER"
+msgstr ""
+
+#: src/pages/index.tsx:255
+msgid "Designer une solution"
+msgstr ""
+
+#: src/components/layout/footer/Footer.tsx:95
+msgid "Du lundi au vendredi de 8h à 17h"
+msgstr ""
+
+#: src/components/homePage/BackgroundVideo.tsx:61
+msgid "Découvrir SAPEM"
+msgstr ""
+
+#: src/pages/index.tsx:288
+msgid "Développement technique"
+msgstr ""
+
+#: src/pages/Contact.tsx:122
+#: src/pages/Contact.tsx:123
+msgid "Entreprise"
+msgstr ""
+
+#: src/pages/index.tsx:270
+msgid "Ergonomie"
+msgstr ""
+
+#: src/components/layout/footer/Footer.tsx:33
+msgid "Gérer les cookies"
+msgstr ""
+
+#: src/pages/index.tsx:156
+msgid "INNOVER"
+msgstr ""
+
+#: src/components/homePage/TrustingBrands.tsx:24
+msgid "Ils nous font confiance"
+msgstr ""
+
+#: src/pages/Innovation.tsx:26
+msgid "Innovation"
+msgstr ""
+
+#: src/pages/Team.tsx:97
+msgid "L'atelier"
+msgstr ""
+
+#: src/pages/Team.tsx:67
+msgid "Le Bureau"
+msgstr ""
+
+#: src/components/layout/footer/Footer.tsx:17
+msgid "Mention Légales"
+msgstr ""
+
+#: src/pages/Legal.tsx:26
+msgid "Mentions Légales"
+msgstr ""
+
+#: src/pages/Contact.tsx:79
+#: src/pages/Contact.tsx:81
+msgid "Nom"
+msgstr ""
+
+#: src/pages/Team.tsx:25
+msgid "Nos Equipes"
+msgstr ""
+
+#: src/pages/Products.tsx:73
+msgid "Nos Produits"
+msgstr ""
+
+#: src/pages/Team.tsx:52
+msgid ""
+"Notre équipe d'ingénieurs, de compagnons vous accompagne dans vos projets. Prototypage, devis, question technique, Notre équipe vous conseille et vous accompagne pour vous apporter des solutions\n"
+"personnalisées."
+msgstr ""
+
+#: src/pages/Contact.tsx:63
+msgid "Nous Contacter"
+msgstr ""
+
+#: src/pages/Contact.tsx:168
+#: src/pages/Contact.tsx:171
+msgid "Numero de téléphone"
+msgstr ""
+
+#: src/pages/Contact.tsx:144
+msgid "Position"
+msgstr ""
+
+#: src/pages/index.tsx:307
+msgid "Prototypage"
+msgstr ""
+
+#: src/pages/Contact.tsx:99
+#: src/pages/Contact.tsx:101
+msgid "Prénom"
+msgstr ""
+
+#: src/pages/index.tsx:345
+msgid "Présentation"
+msgstr ""
+
+#: src/pages/404.tsx:51
+msgid "Retournez à la page d'accueil"
+msgstr ""
+
+#: src/pages/index.tsx:352
+msgid ""
+"SAPEM est spécialisée dans le design et la conception technique de produits de levage répondant aux exigences de sécurité et de fiabilité de ses partenaires. SAPEM vous aide à concevoir des produits adaptés à vos contraintes. Nous mettons pour cela à votre disposition nos compétences transversales en ingénierie mécanique et design industriel.\n"
+"Rigueur, qualité et grande curiosité sont pour nous des motivations clés. Elles nous poussent à acquérir continuellement de nouvelles compétences et à comprendre avec précision les enjeux de votre projet. Nous prêtons également une grande attention à la qualité des relations avec nos clients."
+msgstr ""
+
+#: src/pages/Legal.tsx:39
+msgid "SAPEM: Société d'applications éléctriques et mécaniques."
+msgstr ""
+
+#: src/pages/Contact.tsx:176
+msgid "Saisir un numero valide"
+msgstr ""
+
+#: src/pages/Contact.tsx:197
+msgid "Saisir une adresse mail valide"
+msgstr ""
+
+#: src/pages/Contact.tsx:227
+msgid "Saisir votre message"
+msgstr ""
+
+#: src/pages/Legal.tsx:52
+msgid ""
+"Société anonyme à conseil d'administration, au capital social de\n"
+"203 062,09 €, dont le siège social est situé au LE BOURG, 58270\n"
+"CIZELY, immatriculée au Registre du Commerce et des Sociétés de\n"
+"Nevers sous le numéro 549 879 096 représentée par M Joel ARCHER\n"
+"agissant et ayant les pouvoirs nécessaires en tant que président\n"
+"du conseil d'administration."
+msgstr ""
+
+#: src/pages/index.tsx:260
+msgid "Travailler le produit. Recherches adaptées et optimisées. Adéquation du produits aux exigences de sécurité."
+msgstr ""
+
+#: src/pages/index.tsx:312
+msgid "Valider le produit dans ses moindres détails.Toutes les tailles de prototypes, itérations jusqu’à la validation du prototype"
+msgstr ""
+
+#: src/pages/404.tsx:43
+msgid "Vous avez demandé une page non repertoriée"
+msgstr ""
+
+#: src/pages/404.tsx:39
+msgid "erreur"
+msgstr ""
+
+#: src/pages/Contact.tsx:239
+msgid "j'accepte que mes données soient enregistrées par SAPEM et utilisées à des fins d'analyses et de démarchage commerciale"
+msgstr ""
+
+#: src/pages/Products.tsx:76
+msgid "notre catalogue"
+msgstr ""
+
+#: src/components/layout/footer/Footer.tsx:114
+msgid "par mail"
+msgstr ""
+
+#: src/pages/index.tsx:366
+msgid "partners"
+msgstr ""
+
+#: src/pages/index.tsx:374
+msgid "persons searching for disrupting innovations"
+msgstr ""
+
+#: src/pages/index.tsx:360
+msgid "projects"
+msgstr ""
+
+#: src/components/layout/footer/AuthorRow.tsx:41
+msgid "site realisé par Alexis ARCHER"
+msgstr ""
+
+#: src/pages/Contact.tsx:253
+msgid "soumettre"
+msgstr ""
+
+#: src/pages/api/contact.ts:37
+#: src/pages/api/contact.ts:46
+msgid "une erreur est survenue merci de réessayer plus tard"
+msgstr ""
+
+#: src/pages/Contact.tsx:222
+msgid "votre message"
+msgstr ""
+
+#: src/components/layout/footer/GridSection.tsx:13
+msgid "{title}"
+msgstr ""

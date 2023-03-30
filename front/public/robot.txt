@@ -1,0 +1,3 @@
+User - agent: *
+Allow: /
+Sitemap: https://sapem.vercel.app/sitemap.xml
