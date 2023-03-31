@@ -39,6 +39,7 @@ export default function BasicMenu({ linksToDisplay, isMobile }) {
         )}
       </Button>
       <Menu
+        fullWidth
         anchorEl={anchorEl}
         open={open}
         onClose={handleClose}
@@ -48,7 +49,7 @@ export default function BasicMenu({ linksToDisplay, isMobile }) {
 
         sx={{
           maxWidth: '100vw',
-          '& *': { maxWidth: '100vw', left: '0 !important' }
+          '& *': { maxWidth: '100vw !important', left: '0 !important' }
         }}
       >
         <Switcher />
