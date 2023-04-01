@@ -87,16 +87,16 @@ header{
   @keyframes slideInUp {
   from {
     transform: translate3d(0, 100%, 0);
-    visibility: visible;
   }
 
   to {
-    transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, 0, 0);
   }
 }
 @keyframes slideOutDown {
   from {
     transform: translate3d(0, 0, 0);
+    visibility: visible;
   }
 
   to {
@@ -106,12 +106,14 @@ header{
 }
 
 .slideOutDown {
-  animation-name: slideOutDown;
-    transition: 2s;
+  background-color: 'red !important';
+  animation: slideOutDown 2s normal; 
+  transition: 2s;
+  visibility: hidden;
 }
 
 
-.slideInUp {
+.slideInUp { 
   animation: slideInUp 2s normal;
   transition: 2s;
 }
