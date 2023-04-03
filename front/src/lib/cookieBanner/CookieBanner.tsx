@@ -73,7 +73,7 @@ export const CookieBanner = ({
       cookieName={cookieName}
       cookieValue={JSON.stringify(savedCoookies)}
       expires={150}
-      debug={process.env !== 'production'}
+      // debug={process.env !== 'production'}
       hideOnAccept={false}
       hideOnDecline={false}
       onAccept={() => setStatus('slideOutDown')}
