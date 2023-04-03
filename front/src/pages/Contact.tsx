@@ -1,5 +1,6 @@
 import {
   Alert,
+  AlertTitle,
   Button,
   Card,
   CardHeader,
@@ -11,15 +12,16 @@ import {
   TextField,
   useTheme,
 } from '@mui/material'
+import { I18n, i18n } from '@lingui/core'
+import { ToastContainer, toast } from 'react-toastify'
+import { defineMessage, t } from '@lingui/macro'
 
 import { CheckBox } from '@mui/icons-material'
 import { GetStaticProps } from 'next'
 import Layout from '../components/layout'
 import React from 'react'
 import axios from 'axios'
-import { i18n } from '@lingui/core'
 import loadTranslation from '../assets/utils/loadTranslation'
-import { t } from '@lingui/macro'
 import { useForm } from 'react-hook-form'
 
 export default function Contact() {
@@ -35,10 +37,20 @@ export default function Contact() {
     // trigger=> scan field and process with validation handlers
     await trigger()
     handleSubmit((data) => {
-      // try {
-      //   axios.post(process.env.API + '/prospects', { data: data })
-      // } catch (error) {}
-      return axios.post('api/contact', data).then((x) => alert(x))
+      const successMsg = defineMessage({
+        message: 'Votre message a bien été transmis',
+      })
+      const errorMsg = defineMessage({
+        message: 'Une erreur est survenue. Veuillez réessayer ultérieurement',
+      })
+
+      return axios
+        .post('api/contact', data)
+        .then((x) =>
+          x.status === 200
+            ? toast.success(i18n._(successMsg))
+            : toast.error(i18n._(errorMsg))
+        )
     })(e)
   }
 

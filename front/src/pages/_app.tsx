@@ -1,4 +1,5 @@
 import '../styles/styles.scss'
+import 'react-toastify/dist/ReactToastify.css'
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
 import '@fontsource/roboto/300.css'
@@ -8,6 +9,7 @@ import '@fontsource/roboto/700.css'
 
 import React, { createContext, useReducer, useRef } from 'react'
 import { StylesProvider, createGenerateClassName } from '@mui/styles'
+import { ToastContainer, toast } from 'react-toastify'
 
 import { CacheProvider } from '@emotion/react'
 import { CookieBanner } from '../lib'
@@ -74,6 +76,8 @@ export default function MyApp(props) {
             <StylesProvider generateClassName={generateClassName}>
               <CssBaseline />
               <Component {...pageProps} />
+              <ToastContainer />
+
               <CookieBanner
                 overAllMessage={i18n._(
                   /* i18n: cookie message */ t`SAPEM utilise des cookies d'éaméliorer votre experience utilisateur. `
