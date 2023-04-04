@@ -1,15 +1,9 @@
 // https://stackoverflow.com/questions/72530276/nodemailergoogle-disabled-the-less-secure-app-option-on-google-accounts-i-woul
 
-import { i18n } from '@lingui/core'
 import sendgrid from "@sendgrid/mail";
-import { t } from '@lingui/macro'
-
-// 
-
-
-sendgrid.setApiKey(process.env.SENDGRID_API_KEY);
 
 export default async function (req, res) {
+  sendgrid.setApiKey(process.env.SENDGRID_API_KEY);
   const mailData = {
     from: 'alexis.archer44@gmail.com',
     to: 'archer.alexis@hotmail.fr',
