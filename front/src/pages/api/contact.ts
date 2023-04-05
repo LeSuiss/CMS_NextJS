@@ -3,7 +3,7 @@
 import sendgrid from "@sendgrid/mail";
 
 const sendMail = async function (req, res) {
-  console.log(req, res)
+
   sendgrid.setApiKey(process.env.SENDGRID_API_KEY);
   const mailData = {
     from: 'alexis.archer44@gmail.com',
@@ -13,12 +13,11 @@ const sendMail = async function (req, res) {
   }
   try {
     await sendgrid.send(mailData);
-    return { success: true }
+    return res.status(200).json({ error: "" });
   } catch (error) {
     return res.status(error.statusCode || 500).json({ error: error.message });
   }
 
-  return res.status(200).json({ error: "" });
 }
 
 
