@@ -1,5 +1,6 @@
 // https://stackoverflow.com/questions/72530276/nodemailergoogle-disabled-the-less-secure-app-option-on-google-accounts-i-woul
 
+import emailjs from '@emailjs/browser';
 import sendgrid from "@sendgrid/mail";
 
 const sendMail = async function (req, res) {
@@ -12,7 +13,13 @@ const sendMail = async function (req, res) {
     html: JSON.stringify(req.body),
   }
   try {
-    await sendgrid.send(mailData);
+    await emailjs.send(
+      process.env.EMAIL_JS_SERVICE,
+      process.env.EMAIL_JS_TEMPLATE,
+      mailData, // the values in your EmailJS template
+      process.env.EMAIL_JS_USER
+    )
+    // await sendgrid.send(mailData);
     return res.status(200).json({ error: "" });
   } catch (error) {
     return res.status(error.statusCode || 500).json({ error: error.message });
