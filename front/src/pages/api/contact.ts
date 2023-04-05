@@ -20,7 +20,8 @@ const sendMail = async function (req, res) {
   return res.status(200).json({ error: "" });
 }
 
-export default allowCors(sendMail)
+
+export default sendMail
 
 //export default async function async(req, res) {
 //   console.log('hoho')

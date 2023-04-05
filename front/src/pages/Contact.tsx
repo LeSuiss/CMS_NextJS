@@ -13,13 +13,13 @@ import {
   useTheme,
 } from '@mui/material'
 import { I18n, i18n } from '@lingui/core'
+import React, { useState } from 'react'
 import { ToastContainer, toast } from 'react-toastify'
 import { defineMessage, t } from '@lingui/macro'
 
 import { CheckBox } from '@mui/icons-material'
 import { GetStaticProps } from 'next'
 import Layout from '../components/layout'
-import React from 'react'
 import axios from 'axios'
 import loadTranslation from '../assets/utils/loadTranslation'
 import { useForm } from 'react-hook-form'
@@ -32,11 +32,14 @@ export default function Contact() {
     formState: { errors, ...otherProps },
   } = useForm()
 
+  const [isSending, setIsSending] = useState(false)
+
   const onSubmit = async (e) => {
     e.preventDefault()
+    setIsSending(true)
     // trigger=> scan field and process with validation handlers
     await trigger()
-    handleSubmit((data) => {
+    await handleSubmit((data) => {
       const successMsg = defineMessage({
         message: 'Votre message a bien été transmis',
       })
@@ -51,7 +54,9 @@ export default function Contact() {
             ? toast.success(i18n._(successMsg))
             : toast.error(i18n._(errorMsg))
         )
+        .catch(() => toast.error(i18n._(errorMsg)))
     })(e)
+    setIsSending(false)
   }
 
   const theme = useTheme()
@@ -258,6 +263,7 @@ export default function Contact() {
                 </Stack>
                 <Stack padding={2} justifyContent="center" direction="column">
                   <Button
+                    disabled={isSending}
                     color="primary"
                     onClick={onSubmit}
                     variant="outlined"
