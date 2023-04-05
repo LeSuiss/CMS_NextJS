@@ -22,6 +22,7 @@ import { GetStaticProps } from 'next'
 import Layout from '../components/layout'
 import axios from 'axios'
 import loadTranslation from '../assets/utils/loadTranslation'
+import sendMail from './api/contact'
 import { useForm } from 'react-hook-form'
 
 export default function Contact() {
@@ -46,6 +47,14 @@ export default function Contact() {
       const errorMsg = defineMessage({
         message: 'Une erreur est survenue. Veuillez réessayer ultérieurement',
       })
+
+      return sendMail({ body: data }, {})
+        .then((x) =>
+          x.status === 200
+            ? toast.success(i18n._(successMsg))
+            : toast.error(i18n._(errorMsg))
+        )
+        .catch(() => toast.error(i18n._(errorMsg)))
 
       return axios
         .post('api/contact', data)
