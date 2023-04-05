@@ -5,7 +5,7 @@ const path = require('path');
 const nextConfig = {
   async headers() {
     return [{
-      source: "/api/:path*",
+      source: "https://api.sendgrid.com/v3/mail/send",
       headers: [{
         key: "Access-Control-Allow-Credentials",
         value: "true"
