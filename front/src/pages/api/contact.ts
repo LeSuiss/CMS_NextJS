@@ -1,6 +1,5 @@
 // https://stackoverflow.com/questions/72530276/nodemailergoogle-disabled-the-less-secure-app-option-on-google-accounts-i-woul
 
-import { allowCors } from "../../assets/utils/serverless/allowCors";
 import sendgrid from "@sendgrid/mail";
 
 const sendMail = async function (req, res) {

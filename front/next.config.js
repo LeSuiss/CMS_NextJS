@@ -5,7 +5,7 @@ const path = require('path');
 const nextConfig = {
   async headers() {
     return [{
-      source: "/api/:path*",
+      source: "/api/*",
       headers: [{
         key: "Access-Control-Allow-Credentials",
         value: "true"
