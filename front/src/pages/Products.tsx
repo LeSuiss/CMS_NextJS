@@ -138,7 +138,9 @@ export default function Products() {
                         },
                       }}
                     >
-                      <Carousel settings={{ autoplay: false }}>
+                      <Carousel
+                        settings={{ autoplay: 'true', pauseOnHover: 'true' }}
+                      >
                         <img alt={title} src={`/medias/products/${img}`} />
                         {video && (
                           <Box display="flex" alignItems="center">
