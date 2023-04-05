@@ -40,7 +40,7 @@ export default function Contact() {
     setIsSending(true)
     // trigger=> scan field and process with validation handlers
     await trigger()
-    await handleSubmit((data) => {
+    await handleSubmit(async (data) => {
       const successMsg = defineMessage({
         message: 'Votre message a bien été transmis',
       })
@@ -48,7 +48,7 @@ export default function Contact() {
         message: 'Une erreur est survenue. Veuillez réessayer ultérieurement',
       })
 
-      return sendMail({ body: data }, {})
+      await sendMail({ body: data }, {})
         .then((x) =>
           x.status === 200
             ? toast.success(i18n._(successMsg))

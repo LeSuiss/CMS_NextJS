@@ -13,7 +13,7 @@ const sendMail = async function (req, res) {
   }
   try {
     await sendgrid.send(mailData);
-    // return { success: true }
+    return { success: true }
   } catch (error) {
     return res.status(error.statusCode || 500).json({ error: error.message });
   }
