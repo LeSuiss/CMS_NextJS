@@ -8,7 +8,8 @@ const nextConfig = {
     CI: process.env.CI,
     API: process.env.API,
     BACKEND_URL: process.env.BACKEND_URL,
-    SENDGRID_API_KEY: process.env.SENDGRID_API_KEY
+    SENDGRID_API_KEY: process.env.SENDGRID_API_KEY,
+    NEXT_PUBLIC_GOOGLE_ANALYTICS: process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS
   },
   sassOptions: {
     includePaths: [path.join(__dirname, 'styles')],
