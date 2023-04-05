@@ -48,22 +48,22 @@ export default function Contact() {
         message: 'Une erreur est survenue. Veuillez réessayer ultérieurement',
       })
 
-      // await sendMail({ body: data }, {})
-      //   .then((x) =>
-      //     x.status === 200
-      //       ? toast.success(i18n._(successMsg))
-      //       : toast.error(i18n._(errorMsg))
-      //   )
-      //   .catch(() => toast.error(i18n._(errorMsg)))
-
-      return await axios
-        .post('api/contact', data)
+      await sendMail({ body: data }, {})
         .then((x) =>
           x.status === 200
             ? toast.success(i18n._(successMsg))
             : toast.error(i18n._(errorMsg))
         )
         .catch(() => toast.error(i18n._(errorMsg)))
+
+      // return await axios
+      //   .post('api/contact', data)
+      //   .then((x) =>
+      //     x.status === 200
+      //       ? toast.success(i18n._(successMsg))
+      //       : toast.error(i18n._(errorMsg))
+      //   )
+      //   .catch(() => toast.error(i18n._(errorMsg)))
     })(e)
     setIsSending(false)
   }
