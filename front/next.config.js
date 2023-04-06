@@ -26,8 +26,10 @@ const nextConfig = {
     CI: process.env.CI,
     API: process.env.API,
     BACKEND_URL: process.env.BACKEND_URL,
-    SENDGRID_API_KEY: process.env.SENDGRID_API_KEY,
-    NEXT_PUBLIC_GOOGLE_ANALYTICS: process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS
+    EMAIL_JS_SERVICE: process.env.EMAIL_JS_SERVICE,
+    EMAIL_JS_TEMPLATE: process.env.EMAIL_JS_TEMPLATE,
+    EMAIL_JS_USER: process.env.EMAIL_JS_USER,
+    NEXT_PUBLIC_PUBLIC_GOOGLE_ANALYTICS: process.env.NEXT_PUBLIC_PUBLIC_GOOGLE_ANALYTICS
   },
   sassOptions: {
     includePaths: [path.join(__dirname, 'styles')],

@@ -23,7 +23,6 @@ import Layout from '../components/layout'
 import axios from 'axios'
 import emailjs from '@emailjs/browser'
 import loadTranslation from '../assets/utils/loadTranslation'
-import sendMail from './api/contact'
 import { useForm } from 'react-hook-form'
 
 export default function Contact() {
@@ -48,17 +47,9 @@ export default function Contact() {
       const errorMsg = defineMessage({
         message: 'Une erreur est survenue. Veuillez réessayer ultérieurement',
       })
-
-      await sendMail({ body: data }, {})
-        .then((x) =>
-          x.status === 200
-            ? toast.success(i18n._(successMsg))
-            : toast.error(i18n._(errorMsg))
-        )
-        .catch(() => toast.error(i18n._(errorMsg)))
-
-      await axios
-        .post('api/contact', data)
+      await sendMail(data)
+        // await axios
+        //   .post('api/contact', data)
         .then((x) =>
           x.status === 200
             ? toast.success(i18n._(successMsg))
@@ -296,4 +287,35 @@ export const getStaticProps: GetStaticProps = async (ctx) => {
   const translation = await loadTranslation(ctx.locale)
 
   return { props: { translation } }
+}
+
+const sendMail = async function (data) {
+  console.log('hoh')
+  const mailData = {
+    from: 'alexis.archer44@gmail.com',
+    to: 'archer.alexis@hotmail.fr',
+    subject: `Message From toto`,
+    message: JSON.stringify(data),
+  }
+  try {
+    console.log(
+      'aaa',
+      process.env,
+      process.env.NEXT_PUBLIC_EMAIL_JS_SERVICE,
+      process.env.NEXT_PUBLIC_EMAIL_JS_TEMPLATE,
+      data,
+      process.env.NEXT_PUBLIC_EMAIL_JS_USER
+    )
+    await emailjs.send(
+      process.env.NEXT_PUBLIC_EMAIL_JS_SERVICE,
+      process.env.NEXT_PUBLIC_EMAIL_JS_TEMPLATE,
+      data,
+      process.env.NEXT_PUBLIC_EMAIL_JS_USER
+      // process.env.NEXT_PUBLIC_EMAIL_JS_USER
+    )
+    return { status: 200 }
+  } catch (error) {
+    console.log(error)
+    return { status: 500 }
+  }
 }

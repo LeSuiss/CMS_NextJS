@@ -64,7 +64,7 @@ export default function MyApp(props) {
   }
   return (
     <CacheProvider value={emotionCache}>
-      {/* {!!process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS && <GTAG />} */}
+      {/* {!!process.env.NEXT_PUBLIC_PUBLIC_GOOGLE_ANALYTICS && <GTAG />} */}
 
       <Head>
         <title>My page</title>

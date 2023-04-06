@@ -1,28 +1,29 @@
 // https://stackoverflow.com/questions/72530276/nodemailergoogle-disabled-the-less-secure-app-option-on-google-accounts-i-woul
 
 import emailjs from '@emailjs/browser';
-import sendgrid from "@sendgrid/mail";
 
 const sendMail = async function (req, res) {
-
-  sendgrid.setApiKey(process.env.SENDGRID_API_KEY);
+  console.log('hoh')
   const mailData = {
     from: 'alexis.archer44@gmail.com',
     to: 'archer.alexis@hotmail.fr',
     subject: `Message From toto`,
-    html: JSON.stringify(req.body),
+    ...req.body
   }
   try {
+    console.log('aaa', process.env, process.env.NEXT_PUBLIC_EMAIL_JS_SERVICE,
+      process.env.NEXT_PUBLIC_EMAIL_JS_TEMPLATE, process.env.NEXT_PUBLIC_EMAIL_JS_USER)
     await emailjs.send(
-      process.env.EMAIL_JS_SERVICE,
-      process.env.EMAIL_JS_TEMPLATE,
+      "service_egxauh5",
+      "template_i1gv91d",
       mailData, // the values in your EmailJS template
-      process.env.EMAIL_JS_USER
+      "cqX8SOqjxiQ7jR63E",
+      // process.env.NEXT_PUBLIC_EMAIL_JS_USER
     )
-    // await sendgrid.send(mailData);
-    return res.status(200).json({ error: "" });
+    return res.status(200)
   } catch (error) {
-    return res.status(error.statusCode || 500).json({ error: error.message });
+    console.log(error)
+    return res.status(500)
   }
 
 }
