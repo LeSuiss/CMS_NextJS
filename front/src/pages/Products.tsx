@@ -139,7 +139,10 @@ export default function Products() {
                       }}
                     >
                       <Carousel
-                        settings={{ autoplay: 'true', pauseOnHover: 'true' }}
+                        settings={{
+                          autoplay: isMobile ? 'false' : 'true',
+                          pauseOnHover: 'true',
+                        }}
                       >
                         <img alt={title} src={`/medias/products/${img}`} />
                         {video && (

@@ -123,6 +123,10 @@ header{
 .player-wrapper {
   width: auto; // Reset width
   height: auto; // Reset height
+  
+  video{
+    height:auto
+  }
 }
 .react-player {
   padding-top: 56.25%; // Percentage ratio for 16:9
