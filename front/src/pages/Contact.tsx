@@ -38,6 +38,7 @@ export default function Contact() {
   const onSubmit = async (e) => {
     e.preventDefault()
     setIsSending(true)
+
     // trigger=> scan field and process with validation handlers
     await trigger()
     await handleSubmit(async (data) => {
@@ -48,8 +49,6 @@ export default function Contact() {
         message: 'Une erreur est survenue. Veuillez réessayer ultérieurement',
       })
       await sendMail(data)
-        // await axios
-        //   .post('api/contact', data)
         .then((x) =>
           x.status === 200
             ? toast.success(i18n._(successMsg))
@@ -290,28 +289,12 @@ export const getStaticProps: GetStaticProps = async (ctx) => {
 }
 
 const sendMail = async function (data) {
-  console.log('hoh')
-  const mailData = {
-    from: 'alexis.archer44@gmail.com',
-    to: 'archer.alexis@hotmail.fr',
-    subject: `Message From toto`,
-    message: JSON.stringify(data),
-  }
   try {
-    console.log(
-      'aaa',
-      process.env,
-      process.env.NEXT_PUBLIC_EMAIL_JS_SERVICE,
-      process.env.NEXT_PUBLIC_EMAIL_JS_TEMPLATE,
-      data,
-      process.env.NEXT_PUBLIC_EMAIL_JS_USER
-    )
     await emailjs.send(
       process.env.NEXT_PUBLIC_EMAIL_JS_SERVICE,
       process.env.NEXT_PUBLIC_EMAIL_JS_TEMPLATE,
       data,
       process.env.NEXT_PUBLIC_EMAIL_JS_USER
-      // process.env.NEXT_PUBLIC_EMAIL_JS_USER
     )
     return { status: 200 }
   } catch (error) {
