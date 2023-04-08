@@ -8,6 +8,7 @@ import {
   Typography,
   useTheme,
 } from '@mui/material'
+import { Carousel, SectionBackground } from '../lib'
 import {
   WithBackground,
   WithBackgroundColorShape,
@@ -24,10 +25,11 @@ import { Head } from '../components/Head/Head'
 import Layout from '../components/layout'
 import React from 'react'
 import SearchIcon from '@mui/icons-material/Search'
-import { SectionBackground } from '../lib'
 import TaskAltIcon from '@mui/icons-material/TaskAlt'
+import TestimonialCard from '../lib/testimonialCard/TestimonialCard'
 import TipsAndUpdatesIcon from '@mui/icons-material/TipsAndUpdates'
 import TrustingBrands from '../components/homePage/TrustingBrands'
+import { faker } from '@faker-js/faker'
 import fs from 'fs'
 import { i18n } from '@lingui/core'
 import loadTranslation from '../assets/utils/loadTranslation'
@@ -37,7 +39,7 @@ import styles from '../styles/Home.module.scss'
 import { t } from '@lingui/macro'
 import { use100vh } from 'react-div-100vh'
 
-const Home = ({ brandsList }) => {
+const Home = ({ brandsList, testimonies }) => {
   const isMobile = useIsMobile()
 
   return (
@@ -60,6 +62,7 @@ const Home = ({ brandsList }) => {
         </Container>
 
         <TrustingBrands brandsList={brandsList} />
+        <Testimonies testimonies={testimonies} />
       </Layout>
     </>
   )
@@ -70,10 +73,17 @@ export const getStaticProps: GetStaticProps = async (ctx) => {
   const translation = await loadTranslation(ctx.locale)
   const logoList = path.join(process.cwd(), '/public/medias/logo')
   const brandsList = fs.readdirSync(logoList)
+  const testimonies = [...Array(10)].map(() => ({
+    name: faker.name.lastName(),
+    image: faker.image.avatar(),
+    project: faker.commerce.department(),
+    content: faker.lorem.paragraph(),
+  }))
   return {
     props: {
       brandsList,
       translation,
+      testimonies,
     },
   }
 }
@@ -375,4 +385,22 @@ const FewNumbersSection = () => (
       </Typography>
     </Grid>
   </Grid>
+)
+
+const Testimonies = ({ testimonies }) => (
+  <Stack width="100%" padding={3} marginBottom={5}>
+    <Carousel
+      settings={{
+        pauseOnHover: true,
+        pauseOnDotsHover: true,
+        pauseOnFocus: true,
+      }}
+    >
+      {testimonies.map((props) => (
+        <Stack width="100%">
+          <TestimonialCard {...props} />
+        </Stack>
+      ))}
+    </Carousel>
+  </Stack>
 )
