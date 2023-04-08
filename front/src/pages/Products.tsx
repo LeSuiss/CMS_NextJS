@@ -12,6 +12,7 @@ import React, { Component } from 'react'
 
 import type { GetStaticProps } from 'next'
 import Layout from '../components/layout'
+import Link from 'next/link'
 import ReactPlayer from 'react-player'
 import Slider from 'react-slick'
 import dynamic from 'next/dynamic'
@@ -81,9 +82,11 @@ export default function Products() {
       titleIsSticky
       title={i18n._(/* i18n: Nos Produits> titre */ t` Nos Produits`)}
       stickerToDisplay={
-        <Button color="info" variant="contained">
-          {i18n._(/* i18n:  */ t`notre catalogue`)}
-        </Button>
+        <a href={'/documents/catalogueProduits.pdf'} target={'_blank'}>
+          <Button color="info" variant="contained">
+            {i18n._(/* i18n:  */ t`notre catalogue`)}
+          </Button>
+        </a>
       }
     >
       <Stack

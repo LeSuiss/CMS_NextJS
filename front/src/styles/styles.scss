@@ -83,7 +83,10 @@ header{
   background: linear-gradient(to top left, lightgray, white 100%);
   }
 
-
+.doNotDisplay{
+  visibility: hidden !important;
+  transition: 2s;
+}
   @keyframes slideInUp {
   from {
     transform: translate3d(0, 100%, 0);
@@ -106,7 +109,6 @@ header{
 }
 
 .slideOutDown {
-  background-color: 'red !important';
   animation: slideOutDown 2s normal; 
   transition: 2s;
   visibility: hidden;

@@ -9,36 +9,37 @@ import Logo from '../Logo'
 import React from 'react'
 import { SocialMedias } from './SocialMedias'
 import { i18n } from '@lingui/core'
+import { rootContext } from '../../../pages/_app'
 import styles from '../../../styles/Home.module.scss'
 
-const footerLinks = [
-  {
-    title: defineMessage({
-      message: 'Mentions Légales',
-    }),
-    links: '/Legal',
-  },
-  {
-    title: defineMessage({ message: 'Conditions générales de ventes' }),
-    links: '/CGV.pdf',
-    isBlank: true,
-  },
-  {
-    title: defineMessage({ message: 'Catalogue Produit' }),
-    links: '/documents/catalogueProduits.pdf',
-    isBlank: true,
-  },
-  {
-    title: defineMessage({ message: 'Gérer les cookies' }),
-    links: '/',
-    cb: (e) => {
-      e.preventDefault()
-      return null
-    },
-  },
-]
-
 const Footer = () => {
+  const { context, dispatchContext } = React.useContext(rootContext)
+  const footerLinks = [
+    {
+      title: defineMessage({
+        message: 'Mentions Légales',
+      }),
+      links: '/Legal',
+    },
+    {
+      title: defineMessage({ message: 'Conditions générales de ventes' }),
+      links: '/CGV.pdf',
+      isBlank: true,
+    },
+    {
+      title: defineMessage({ message: 'Catalogue Produit' }),
+      links: '/documents/catalogueProduits.pdf',
+      isBlank: true,
+    },
+    {
+      title: defineMessage({ message: 'Gérer les cookies' }),
+      links: '/',
+      cb: (e) => {
+        return dispatchContext({ displayCookieBanner: true })
+      },
+    },
+  ]
+
   const theme: any = useTheme()
 
   return (
@@ -49,6 +50,7 @@ const Footer = () => {
         position: 'relative',
       }}
     >
+      {JSON.stringify(context)}
       <Grid
         container
         padding={2}

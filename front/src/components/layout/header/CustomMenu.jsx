@@ -39,7 +39,7 @@ export default function BasicMenu({ linksToDisplay, isMobile }) {
         )}
       </Button>
       <Menu
-        fullWidth
+        fullwidth
         anchorEl={anchorEl}
         open={open}
         onClose={handleClose}

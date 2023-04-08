@@ -7,6 +7,7 @@ import '@fontsource/roboto/400.css'
 import '@fontsource/roboto/500.css'
 import '@fontsource/roboto/700.css'
 
+import CookieConsent, { getCookieConsentValue } from 'react-cookie-consent'
 import React, { createContext, useReducer, useRef } from 'react'
 import { StylesProvider, createGenerateClassName } from '@mui/styles'
 import { ToastContainer, toast } from 'react-toastify'
@@ -51,8 +52,12 @@ export default function MyApp(props) {
       jssStyles.parentElement.removeChild(jssStyles)
     }
   }, [])
-
-  const [context, dispatchContext] = useReducer((state) => state, {})
+  const [context, dispatchContext] = useReducer(
+    (state, action) => ({ ...state, ...action }),
+    {
+      displayCookieBanner: undefined,
+    }
+  )
 
   if (pageProps.translation && firstRender.current) {
     // load the translations for the locale

@@ -12,11 +12,12 @@ import {
   Typography,
   styled,
 } from '@mui/material'
+import CookieConsent, { getCookieConsentValue } from 'react-cookie-consent'
+import React, { useContext } from 'react'
 import { Theme, useTheme } from '@mui/material/styles'
 
-import CookieConsent from 'react-cookie-consent'
-import React from 'react'
 import _ from 'lodash'
+import { rootContext } from '../../pages/_app'
 import { setContrastedBackground } from '../utils'
 
 const BootstrapDialog = styled(Dialog)(({ theme }) => ({
@@ -51,38 +52,55 @@ export const CookieBanner = ({
   overAllMessage = 'This WebSite intend to use Google Analytics cookies for better user experience. ',
   privacyPolicyUrl = '',
 }: CookieBannerProps) => {
-  const [open, setOpen] = React.useState(false)
-  const [status, setStatus] = React.useState('slideInUp')
+  const [modalIsOpen, setModalIsOpen] = React.useState(false)
+  const { context, dispatchContext } = React.useContext(rootContext)
 
   const [savedCoookies, setSavedCookies] = React.useState<{
     [key: string]: any
   }>(() => _.mapValues(cookies, () => true))
-  const handleClickOpen = () => {
-    setOpen(true)
-    setStatus('slideInUp')
-  }
-  const handleClose = () => {
-    setOpen(false)
-    setStatus('slideInDown')
-  }
-  const theme: Partial<Theme> = useTheme() as Theme
 
+  const handleClickOpen = () => {
+    setModalIsOpen(true)
+    dispatchContext({ displayCookieBanner: true })
+  }
+
+  const handleClose = () => {
+    setModalIsOpen(false)
+    dispatchContext({ displayCookieBanner: false })
+  }
+
+  const theme: Partial<Theme> = useTheme() as Theme
+  console.log(
+    getCookieConsentValue(cookieName),
+    getCookieConsentValue(cookieName) !== undefined,
+    context.displayCookieBanner === undefined
+  )
+  const shallDisplay =
+    getCookieConsentValue(cookieName) !== undefined &&
+    context.displayCookieBanner === undefined
   return (
     <CookieConsent
-      containerClasses={status}
+      containerClasses={
+        context.displayCookieBanner === true
+          ? 'slideInUp'
+          : context.displayCookieBanner === false
+          ? 'slideOutDown'
+          : ''
+      }
+      visible={
+        context.displayCookieBanner === undefined ? 'byCookieValue' : 'visible'
+      }
       cookieName={cookieName}
       cookieValue={JSON.stringify(savedCoookies)}
       expires={150}
-      // debug={process.env !== 'production'}
       hideOnAccept={false}
       hideOnDecline={false}
-      onAccept={() => setStatus('slideOutDown')}
-      onDecline={() => setStatus('slideOutDown')}
+      onAccept={() => dispatchContext({ displayCookieBanner: false })}
+      onDecline={() => dispatchContext({ displayCookieBanner: false })}
       location="bottom"
       buttonText="accept"
       declineButtonText="decline"
       style={{
-        display: 'flex',
         flexFlow: 'column',
         backgroundColor: theme.palette.secondary.light,
       }}
@@ -114,7 +132,7 @@ export const CookieBanner = ({
       <BootstrapDialog
         onClose={handleClose}
         aria-labelledby="customized-dialog-title"
-        open={open}
+        open={modalIsOpen}
       >
         {Object.entries(cookies)?.map(([key, explanation]) => (
           <>
