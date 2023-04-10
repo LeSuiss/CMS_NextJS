@@ -1,15 +1,19 @@
 import {
   Alert,
   AlertTitle,
+  Box,
   Button,
   Card,
+  CardContent,
   CardHeader,
   Checkbox,
   Container,
+  Divider,
   FormControlLabel,
   Grid,
   Stack,
   TextField,
+  Typography,
   useTheme,
 } from '@mui/material'
 import { I18n, i18n } from '@lingui/core'
@@ -20,19 +24,19 @@ import { defineMessage, t } from '@lingui/macro'
 import { CheckBox } from '@mui/icons-material'
 import { GetStaticProps } from 'next'
 import Layout from '../components/layout'
+import { SocialMedias } from '../components/layout/footer/SocialMedias'
 import axios from 'axios'
 import emailjs from '@emailjs/browser'
 import loadTranslation from '../assets/utils/loadTranslation'
 import { useForm } from 'react-hook-form'
 
-export default function Contact() {
+export default function Contact({}) {
   const {
     register,
     handleSubmit,
     trigger,
     formState: { errors, ...otherProps },
   } = useForm()
-
   const [isSending, setIsSending] = useState(false)
 
   const onSubmit = async (e) => {
@@ -69,211 +73,336 @@ export default function Contact() {
         sx={{ backgroundImage: 'url("/medias/bureau.jpeg")' }}
       >
         <Container maxWidth="lg">
-          <Card elevation={8}>
-            <CardHeader
-              sx={{
-                textAlign: 'center',
-                borderBottom: `${theme.palette.primary.main} solid 2px`,
-                width: '50%',
-                margin: 'auto',
-              }}
-              title={i18n._(/* i18n: Nous Contacter */ t`Nous Contacter`)}
-            />
-            <form>
+          <Card
+            elevation={8}
+            sx={{
+              display: 'flex',
+              justifyContent: 'space-around',
+              alignItems: 'flex-start',
+            }}
+          >
+            <Grid container alignItems="flex-start">
               <Grid
                 container
-                justifyContent="center"
-                alignItems="center"
                 columns={{ xs: 4, sm: 8, md: 12 }}
+                xs={12}
+                md={6}
                 padding={2}
               >
-                <Grid item xs={12} md={6} padding={2} justifyContent="center">
-                  <TextField
-                    variant="outlined"
-                    fullWidth
-                    color="secondary"
-                    type="text"
-                    placeholder={i18n._(/* i18n: prenom */ t`Nom`)}
-                    name="lastName"
-                    label={i18n._(/* i18n: error email lastName */ t`Nom`)}
-                    helperText={
-                      errors.lastName &&
-                      i18n._(/* i18n: error email msg */ t`Ce champ est requis`)
-                    }
-                    error={!!errors.lastName}
-                    {...register('lastName', {
-                      maxLength: 50,
-                      required: true,
-                    })}
-                  />
-                </Grid>
-                <Grid item xs={12} md={6} padding={2} justifyContent="center">
-                  <TextField
-                    fullWidth
-                    variant="outlined"
-                    color="secondary"
-                    type="text"
-                    placeholder={i18n._(/* i18n: nom */ t`Prénom`)}
-                    name="firstName"
-                    label={i18n._(/* i18n: error email firstName */ t`Prénom`)}
-                    helperText={
-                      errors.firstName &&
-                      i18n._(
-                        /* i18n: error email firstname */ t`Ce champ est requis`
-                      )
-                    }
-                    error={!!errors.firstName}
-                    {...register('firstName', {
-                      maxLength: 80,
-                      required: true,
-                    })}
-                  />
-                </Grid>
-                <Grid item xs={12} md={6} padding={2} justifyContent="center">
-                  <TextField
-                    variant="outlined"
-                    fullWidth
-                    color="secondary"
-                    type="text"
-                    name="company"
-                    placeholder={i18n._(/* i18n: entreprise */ t`Entreprise`)}
-                    label={i18n._(/* i18n: entreprise */ t`Entreprise`)}
-                    helperText={
-                      errors.company &&
-                      i18n._(
-                        /* i18n: error email company */ t`Ce champ est requis`
-                      )
-                    }
-                    error={!!errors.company}
-                    {...register('company', {
-                      maxLength: 80,
-                      required: true,
-                    })}
-                  />
-                </Grid>
-                <Grid item xs={12} md={6} padding={2} justifyContent="center">
-                  <TextField
-                    variant="outlined"
-                    fullWidth
-                    color="secondary"
-                    type="text"
-                    placeholder={i18n._(
-                      /* i18n: form>position in company */ t`Position`
-                    )}
-                    name="Position"
-                    label="Position"
-                    error={!!errors.position}
-                    helperText={
-                      errors.company &&
-                      i18n._(
-                        /* i18n: error email position */ t`Ce champ est requis`
-                      )
-                    }
-                    {...register('position', {
-                      maxLength: 50,
-                      required: true,
-                    })}
-                  />
-                </Grid>
-                <Grid item xs={12} md={6} padding={2} justifyContent="center">
-                  <TextField
-                    variant="outlined"
-                    fullWidth
-                    name="mobileNumber"
-                    color="secondary"
-                    label={i18n._(
-                      /* i18n: numero de téléphone */ t`Numero de téléphone`
-                    )}
-                    placeholder={i18n._(
-                      /* i18n: numero de téléphone */ t`Numero de téléphone`
-                    )}
-                    helperText={
-                      !!errors.mobileNumber &&
-                      i18n._(
-                        /* i18n: error email msg */ t`Saisir un numero valide`
-                      )
-                    }
-                    error={!!errors.mobileNumber}
-                    {...register('mobileNumber', {
-                      maxLength: 12,
-                      required: true,
-                    })}
-                  />
-                </Grid>
-                <Grid item xs={12} md={6} padding={2} justifyContent="center">
-                  <TextField
-                    error={!!errors.email}
-                    variant="outlined"
-                    fullWidth
-                    color="secondary"
-                    placeholder="email"
-                    label="email"
-                    helperText={
-                      !!errors.email &&
-                      i18n._(
-                        /* i18n: error email msg */ t`Saisir une adresse mail valide`
-                      )
-                    }
-                    {...register('email', {
-                      required: true,
-                    })}
-                  />
-                </Grid>
-                <Grid item xs={12} padding={1} justifyContent="center">
-                  <TextField
-                    sx={{
-                      color: theme.palette.secondary.main,
-                      padding: theme.spacing(1),
-                    }}
-                    variant="outlined"
-                    fullWidth
-                    multiline
-                    color="secondary"
-                    inputProps={{
-                      style: {
-                        minHeight: '200px',
-                      },
-                    }}
-                    error={!!errors.message}
-                    placeholder={i18n._(
-                      /* i18n: votre message */ t`votre message`
-                    )}
-                    helperText={
-                      !!errors.message &&
-                      i18n._(
-                        /* i18n: error email msg */ t`Saisir votre message`
-                      )
-                    }
-                    {...register('message', {
-                      required: true,
-                    })}
-                  />
-                </Grid>
-                <Stack width="100%" padding={2}>
-                  <FormControlLabel
-                    sx={{ '*': { textAlign: 'justify' } }}
-                    control={<Checkbox />}
-                    label={i18n._(
-                      /* i18n: rgpd j'accepte que mes données soient enregistrées par SAPEM et utilisées à des fins d'analyses et de démarchage commerciale*/ t`j'accepte que mes données soient enregistrées par SAPEM et utilisées à des fins d'analyses et de démarchage commerciale`
-                    )}
-                    {...register('rgpd', {
-                      required: true,
-                    })}
-                  />
-                </Stack>
-                <Stack padding={2} justifyContent="center" direction="column">
-                  <Button
-                    disabled={isSending}
-                    color="primary"
-                    onClick={onSubmit}
-                    variant="outlined"
-                    size="large"
+                <CardHeader
+                  sx={{
+                    textAlign: 'center',
+                    borderBottom: `${theme.palette.primary.main} solid 2px`,
+                    width: '50%',
+                    margin: 'auto',
+                  }}
+                  title={i18n._(/* i18n: Nous Contacter */ t`Nous Contacter`)}
+                />
+                <form>
+                  <Grid
+                    container
+                    justifyContent="center"
+                    alignItems="center"
+                    columns={{ xs: 4, sm: 8, md: 12 }}
+                    padding={2}
                   >
-                    {i18n._(/* i18n: soumettre */ t`soumettre`)}
-                  </Button>
-                </Stack>
+                    <Grid
+                      item
+                      xs={12}
+                      md={6}
+                      padding={2}
+                      justifyContent="center"
+                    >
+                      <TextField
+                        variant="outlined"
+                        fullWidth
+                        color="secondary"
+                        type="text"
+                        placeholder={i18n._(/* i18n: prenom */ t`Nom`)}
+                        name="lastName"
+                        label={i18n._(/* i18n: error email lastName */ t`Nom`)}
+                        helperText={
+                          errors.lastName &&
+                          i18n._(
+                            /* i18n: error email msg */ t`Ce champ est requis`
+                          )
+                        }
+                        error={!!errors.lastName}
+                        {...register('lastName', {
+                          maxLength: 50,
+                          required: true,
+                        })}
+                      />
+                    </Grid>
+                    <Grid
+                      item
+                      xs={12}
+                      md={6}
+                      padding={2}
+                      justifyContent="center"
+                    >
+                      <TextField
+                        fullWidth
+                        variant="outlined"
+                        color="secondary"
+                        type="text"
+                        placeholder={i18n._(/* i18n: nom */ t`Prénom`)}
+                        name="firstName"
+                        label={i18n._(
+                          /* i18n: error email firstName */ t`Prénom`
+                        )}
+                        helperText={
+                          errors.firstName &&
+                          i18n._(
+                            /* i18n: error email firstname */ t`Ce champ est requis`
+                          )
+                        }
+                        error={!!errors.firstName}
+                        {...register('firstName', {
+                          maxLength: 80,
+                          required: true,
+                        })}
+                      />
+                    </Grid>
+                    <Grid
+                      item
+                      xs={12}
+                      md={6}
+                      padding={2}
+                      justifyContent="center"
+                    >
+                      <TextField
+                        variant="outlined"
+                        fullWidth
+                        color="secondary"
+                        type="text"
+                        name="company"
+                        placeholder={i18n._(
+                          /* i18n: entreprise */ t`Entreprise`
+                        )}
+                        label={i18n._(/* i18n: entreprise */ t`Entreprise`)}
+                        helperText={
+                          errors.company &&
+                          i18n._(
+                            /* i18n: error email company */ t`Ce champ est requis`
+                          )
+                        }
+                        error={!!errors.company}
+                        {...register('company', {
+                          maxLength: 80,
+                          required: true,
+                        })}
+                      />
+                    </Grid>
+                    <Grid
+                      item
+                      xs={12}
+                      md={6}
+                      padding={2}
+                      justifyContent="center"
+                    >
+                      <TextField
+                        variant="outlined"
+                        fullWidth
+                        color="secondary"
+                        type="text"
+                        placeholder={i18n._(
+                          /* i18n: form>position in company */ t`Position`
+                        )}
+                        name="Position"
+                        label="Position"
+                        error={!!errors.position}
+                        helperText={
+                          errors.company &&
+                          i18n._(
+                            /* i18n: error email position */ t`Ce champ est requis`
+                          )
+                        }
+                        {...register('position', {
+                          maxLength: 50,
+                          required: true,
+                        })}
+                      />
+                    </Grid>
+                    <Grid
+                      item
+                      xs={12}
+                      md={6}
+                      padding={2}
+                      justifyContent="center"
+                    >
+                      <TextField
+                        variant="outlined"
+                        fullWidth
+                        name="mobileNumber"
+                        color="secondary"
+                        label={i18n._(
+                          /* i18n: numero de téléphone */ t`Numero de téléphone`
+                        )}
+                        placeholder={i18n._(
+                          /* i18n: numero de téléphone */ t`Numero de téléphone`
+                        )}
+                        helperText={
+                          !!errors.mobileNumber &&
+                          i18n._(
+                            /* i18n: error email msg */ t`Saisir un numero valide`
+                          )
+                        }
+                        error={!!errors.mobileNumber}
+                        {...register('mobileNumber', {
+                          maxLength: 12,
+                          required: true,
+                        })}
+                      />
+                    </Grid>
+                    <Grid
+                      item
+                      xs={12}
+                      md={6}
+                      padding={2}
+                      justifyContent="center"
+                    >
+                      <TextField
+                        error={!!errors.email}
+                        variant="outlined"
+                        fullWidth
+                        color="secondary"
+                        placeholder="email"
+                        label="email"
+                        helperText={
+                          !!errors.email &&
+                          i18n._(
+                            /* i18n: error email msg */ t`Saisir une adresse mail valide`
+                          )
+                        }
+                        {...register('email', {
+                          required: true,
+                        })}
+                      />
+                    </Grid>
+                    <Grid item xs={12} padding={1} justifyContent="center">
+                      <TextField
+                        sx={{
+                          color: theme.palette.secondary.main,
+                          padding: theme.spacing(1),
+                        }}
+                        variant="outlined"
+                        fullWidth
+                        multiline
+                        color="secondary"
+                        inputProps={{
+                          style: {
+                            minHeight: '200px',
+                          },
+                        }}
+                        error={!!errors.message}
+                        placeholder={i18n._(
+                          /* i18n: votre message */ t`votre message`
+                        )}
+                        helperText={
+                          !!errors.message &&
+                          i18n._(
+                            /* i18n: error email msg */ t`Saisir votre message`
+                          )
+                        }
+                        {...register('message', {
+                          required: true,
+                        })}
+                      />
+                    </Grid>
+                    <Stack width="100%" padding={2}>
+                      <FormControlLabel
+                        sx={{ '*': { textAlign: 'justify' } }}
+                        control={<Checkbox />}
+                        label={i18n._(
+                          /* i18n: rgpd j'accepte que mes données soient enregistrées par SAPEM et utilisées à des fins d'analyses et de démarchage commerciale*/ t`j'accepte que mes données soient enregistrées par SAPEM et utilisées à des fins d'analyses et de démarchage commerciale`
+                        )}
+                        {...register('rgpd', {
+                          required: true,
+                        })}
+                      />
+                    </Stack>
+                    <Stack
+                      padding={2}
+                      justifyContent="center"
+                      direction="column"
+                    >
+                      <Button
+                        disabled={isSending}
+                        color="primary"
+                        onClick={onSubmit}
+                        variant="outlined"
+                        size="large"
+                      >
+                        {i18n._(/* i18n: soumettre */ t`soumettre`)}
+                      </Button>
+                    </Stack>
+                  </Grid>
+                </form>
               </Grid>
-            </form>
+              <Grid
+                container
+                columns={{ xs: 4, sm: 8, md: 12 }}
+                xs={12}
+                md={6}
+                padding={2}
+              >
+                <CardHeader
+                  sx={{
+                    textAlign: 'center',
+                    borderBottom: `${theme.palette.primary.main} solid 2px`,
+                    width: '50%',
+                    margin: 'auto',
+                  }}
+                  title={i18n._(/* i18n: Nous retrouvez */ t`Nous retrouvez`)}
+                />
+                <CardContent>
+                  <Stack
+                    width="100%"
+                    display="flex"
+                    justifyContent="center"
+                    paddingY={2}
+                  >
+                    <Typography variant="h6" sx={{ fontStyle: 'italic' }}>
+                      {i18n._(/* i18n:en ligne */ t`En ligne`)}
+                    </Typography>
+                    <Divider sx={{ marginBottom: 2 }} />
+                    <Box sx={{ '& *': { color: 'black !important' } }}>
+                      <SocialMedias
+                        urls={[
+                          'https://www.linkedin.com/company/sapem-sa/',
+                          'https://www.youtube.com/channel/UCWNZviGlFwJzJkWHlDiSuhQ',
+                        ]}
+                      />
+                    </Box>
+                  </Stack>
+
+                  <Stack
+                    width="100%"
+                    display="flex"
+                    justifyContent="center"
+                    paddingY={2}
+                  >
+                    <Typography variant="h6" sx={{ fontStyle: 'italic' }}>
+                      {i18n._(/* i18n:sur site */ t`Sur Site`)}
+                    </Typography>
+                    <Divider sx={{ marginBottom: 2 }} />
+
+                    <iframe
+                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13718.16454710508!2d3.4815927080954348!3d46.98076985260767!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47f1b0bdc5492493%3A0xf43a88cde151475e!2sSAPEM!5e0!3m2!1sfr!2sfr!4v1681132846594!5m2!1sfr!2sfr"
+                      width="600"
+                      height="450"
+                      style={{
+                        margin: 'auto',
+                        maxWidth: '100%',
+                        maxHeight: '100%',
+                      }}
+                      loading="lazy"
+                    />
+                  </Stack>
+                </CardContent>
+              </Grid>
+            </Grid>
           </Card>
         </Container>
       </Stack>

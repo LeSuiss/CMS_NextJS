@@ -122,22 +122,22 @@ header{
 
 
 
-.player-wrapper {
-  width: auto; // Reset width
-  height: auto; // Reset height
+// .player-wrapper {
+//   width: auto; // Reset width
+//   height: auto; // Reset height
   
-  video{
-    height:auto
-  }
-}
-.react-player {
-  padding-top: 56.25%; // Percentage ratio for 16:9
-  position: relative; // Set to relative
-}
+//   video{
+//     height:auto
+//   }
+// }
+// .react-player {
+//   padding-top: 56.25%; // Percentage ratio for 16:9
+//   position: relative; // Set to relative
+// }
 
-.react-player > div {
-  position: absolute; // Scaling will occur since parent is relative now
-}
+// .react-player > div {
+//   position: absolute; // Scaling will occur since parent is relative now
+// }
 
 .backImage{
           background-attachment: fixed;
