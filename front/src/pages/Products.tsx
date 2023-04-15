@@ -32,7 +32,7 @@ const products = [
   {
     title: 'le retourneur x300',
     description: lorem,
-    img: [
+    imgs: [
       'Levage&RetournementPneumatique.jpg',
       'levage&RetournementPneumatique.mp4',
     ],
@@ -40,33 +40,33 @@ const products = [
   {
     title: 'le retourneur x300',
     description: lorem,
-    img: ['manipulateurMecanique.jpg', 'manipulateurMecanique.mp4'],
+    imgs: ['manipulateurMecanique.jpg', 'manipulateurMecanique.mp4'],
   },
   {
     title: 'le retourneur x300',
     description: lorem,
-    img: ['MANUTENTION.jpg', 'palonnierMonopoutre15T.mp4'],
+    imgs: ['MANUTENTION.jpg', 'palonnierMonopoutre15T.mp4'],
   },
   {
     title: 'le retourneur x300',
     description: lorem,
-    img: ['tableRotative.jpg', 'MANUTENTION.jpg', 'tableRotative.mp4'],
+    imgs: ['tableRotative.jpg', 'MANUTENTION.jpg', 'tableRotative.mp4'],
   },
   {
     title: 'le retourneur x300',
     description: lorem,
     video: 'bobine.mp4',
-    img: ['bobine1.webp'],
+    imgs: ['bobine1.webp'],
   },
   {
     title: 'le retourneur x300',
     description: lorem,
-    img: ['bobine.mp4', 'bobine1.webp'],
+    imgs: ['bobine.mp4', 'bobine1.webp'],
   },
   {
     title: 'le retourneur x300',
     description: lorem,
-    img: ['Levage&RetournementPneumatique.jpg'],
+    imgs: ['Levage&RetournementPneumatique.jpg'],
   },
 ]
 
@@ -106,7 +106,7 @@ export default function Products() {
             marginTop={4}
             marginBottom={10}
           >
-            {products.map(({ img, title, description }) => (
+            {products.map(({ imgs, title, description }) => (
               <Card elevation={8} key={title}>
                 <Grid container item padding={!isMobile && 2}>
                   <Grid item xs={12} md={6} padding={isMobile ? 3 : 0}>
@@ -139,18 +139,18 @@ export default function Products() {
                         customPaging: (i) => (
                           <a>
                             <img
-                              alt={img}
+                              alt={imgs}
                               src={
-                                img[i].endsWith('mp4')
+                                imgs[i].endsWith('mp4')
                                   ? '/medias/logo/logoVideos.jpg'
-                                  : `/medias/products/${img[i]}`
+                                  : `/medias/products/${imgs[i]}`
                               }
                             />
                           </a>
                         ),
                       }}
                     >
-                      {img.map((img) => (
+                      {imgs.map((img) => (
                         <Stack display="flex" alignItems="flex-end" key={img}>
                           {img.endsWith('mp4') ? (
                             <Box
