@@ -139,7 +139,7 @@ export default function Products() {
                         customPaging: (i) => (
                           <a>
                             <img
-                              alt={imgs}
+                              alt={imgs[i]}
                               src={
                                 imgs[i].endsWith('mp4')
                                   ? '/medias/logo/logoVideos.jpg'
