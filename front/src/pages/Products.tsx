@@ -106,7 +106,7 @@ export default function Products() {
             marginTop={4}
             marginBottom={10}
           >
-            {products.map(({ img, video, title, description }) => (
+            {products.map(({ img, title, description }) => (
               <Card elevation={8} key={title}>
                 <Grid container item padding={!isMobile && 2}>
                   <Grid item xs={12} md={6} padding={isMobile ? 3 : 0}>
@@ -177,6 +177,7 @@ export default function Products() {
                                 maxHeight: '300px',
                                 maxWidth: '100%',
                                 width: '100%',
+                                objectFit: 'contain',
                               }}
                               alt={title}
                               src={`/medias/products/${img}`}
