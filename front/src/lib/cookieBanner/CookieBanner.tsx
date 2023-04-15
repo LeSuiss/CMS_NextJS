@@ -8,6 +8,7 @@ import {
   Divider,
   IconButton,
   Slide,
+  Stack,
   Switch,
   Typography,
   styled,
@@ -44,7 +45,6 @@ interface CookieBannerProps {
 }
 export const CookieBanner = ({
   cookieName = 'sapemCookie',
-  locale = 'fr',
   cookies = {
     googleAnalytics: 'this is the explanation of google analytics',
     fb_pixel: 'this is the explanation of fb_pixel',
@@ -75,9 +75,6 @@ export const CookieBanner = ({
     getCookieConsentValue(cookieName) !== undefined,
     context.displayCookieBanner === undefined
   )
-  const shallDisplay =
-    getCookieConsentValue(cookieName) !== undefined &&
-    context.displayCookieBanner === undefined
   return (
     <CookieConsent
       containerClasses={
@@ -102,33 +99,36 @@ export const CookieBanner = ({
       declineButtonText="decline"
       style={{
         flexFlow: 'column',
-        backgroundColor: theme.palette.secondary.light,
+        backgroundColor: 'teal',
       }}
-      contentStyle={{ flex: 'none' }}
+      contentStyle={{ flex: 'none', width: '100%', padding: theme.spacing(0) }}
+      ButtonComponent={Button}
       flipButtons
       enableDeclineButton
     >
-      <Typography variant="h6"> COOKIES</Typography>
-      <Divider sx={{ color: 'white', borderTop: 'solid 1px white' }} />
-      <p>{overAllMessage}</p>
-      <ul style={{ listStyleType: 'disclosure-closed' }}>
-        {privacyPolicyUrl && (
-          <li>
-            <a
-              style={{ color: theme.palette?.primary.contrastText }}
-              href={privacyPolicyUrl}
-            >
-              discover our cookie policy
-            </a>
+      <Stack width="100%">
+        <Typography variant="h6"> COOKIES</Typography>
+        <Divider sx={{ color: 'white', borderTop: 'solid 1px white' }} />
+        <p>{overAllMessage}</p>
+        <ul style={{ listStyleType: 'disclosure-closed' }}>
+          {privacyPolicyUrl && (
+            <li>
+              <a
+                style={{ color: theme.palette?.primary.contrastText }}
+                href={privacyPolicyUrl}
+              >
+                discover our cookie policy
+              </a>
+            </li>
+          )}
+          <li
+            style={{ cursor: 'pointer', textDecoration: 'underline' }}
+            onClick={handleClickOpen}
+          >
+            set Cookies
           </li>
-        )}
-        <li
-          style={{ cursor: 'pointer', textDecoration: 'underline' }}
-          onClick={handleClickOpen}
-        >
-          set Cookies
-        </li>
-      </ul>
+        </ul>
+      </Stack>
       <BootstrapDialog
         onClose={handleClose}
         aria-labelledby="customized-dialog-title"

@@ -367,14 +367,13 @@ export default function Contact({}) {
                       {i18n._(/* i18n:en ligne */ t`En ligne`)}
                     </Typography>
                     <Divider sx={{ marginBottom: 2 }} />
-                    <Box sx={{ '& *': { color: 'black !important' } }}>
-                      <SocialMedias
-                        urls={[
-                          'https://www.linkedin.com/company/sapem-sa/',
-                          'https://www.youtube.com/channel/UCWNZviGlFwJzJkWHlDiSuhQ',
-                        ]}
-                      />
-                    </Box>
+                    <SocialMedias
+                      whiteIcons={false}
+                      urls={[
+                        'https://www.linkedin.com/company/sapem-sa/',
+                        'https://www.youtube.com/channel/UCWNZviGlFwJzJkWHlDiSuhQ',
+                      ]}
+                    />
                   </Stack>
 
                   <Stack

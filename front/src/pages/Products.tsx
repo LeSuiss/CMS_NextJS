@@ -12,7 +12,6 @@ import React, { Component } from 'react'
 
 import type { GetStaticProps } from 'next'
 import Layout from '../components/layout'
-import Link from 'next/link'
 import ReactPlayer from 'react-player'
 import Slider from 'react-slick'
 import dynamic from 'next/dynamic'
@@ -33,43 +32,41 @@ const products = [
   {
     title: 'le retourneur x300',
     description: lorem,
-    img: 'Levage&RetournementPneumatique.jpg',
-    video: 'levage&RetournementPneumatique.mp4',
+    img: [
+      'Levage&RetournementPneumatique.jpg',
+      'levage&RetournementPneumatique.mp4',
+    ],
   },
   {
     title: 'le retourneur x300',
     description: lorem,
-    img: 'manipulateurMecanique.jpg',
-    video: 'manipulateurMecanique.mp4',
+    img: ['manipulateurMecanique.jpg', 'manipulateurMecanique.mp4'],
   },
   {
     title: 'le retourneur x300',
     description: lorem,
-    img: 'MANUTENTION.jpg',
-    video: 'palonnierMonopoutre15T.mp4',
+    img: ['MANUTENTION.jpg', 'palonnierMonopoutre15T.mp4'],
   },
   {
     title: 'le retourneur x300',
     description: lorem,
-    img: 'tableRotative.jpg',
-    video: 'tableRotative.mp4',
+    img: ['tableRotative.jpg', 'MANUTENTION.jpg', 'tableRotative.mp4'],
   },
   {
     title: 'le retourneur x300',
     description: lorem,
     video: 'bobine.mp4',
-    img: 'bobine1.webp',
+    img: ['bobine1.webp'],
   },
   {
     title: 'le retourneur x300',
     description: lorem,
-    img: 'bobine.mp4',
-    // video: 'bobine1.webp',
+    img: ['bobine.mp4', 'bobine1.webp'],
   },
   {
     title: 'le retourneur x300',
     description: lorem,
-    img: 'Levage&RetournementPneumatique.jpg',
+    img: ['Levage&RetournementPneumatique.jpg'],
   },
 ]
 
@@ -82,7 +79,11 @@ export default function Products() {
       titleIsSticky
       title={i18n._(/* i18n: Nos Produits> titre */ t` Nos Produits`)}
       stickerToDisplay={
-        <a href={'/documents/catalogueProduits.pdf'} target={'_blank'}>
+        <a
+          href={'/documents/catalogueProduits.pdf'}
+          target={'_blank'}
+          rel="noreferrer"
+        >
           <Button color="info" variant="contained">
             {i18n._(/* i18n:  */ t`notre catalogue`)}
           </Button>
@@ -98,74 +99,97 @@ export default function Products() {
         paddingY={6}
       >
         <Container maxWidth="lg">
-          <Stack justifyContent="center" className="slickRemove">
-            <Grid container gap={3} marginTop={4} marginBottom={10}>
-              {products.map(({ img, video, title, description }) => (
-                <Card elevation={8} key={title}>
-                  <Grid
-                    container
-                    item
-                    padding={!isMobile && 2}
-                    paddingBottom={8}
-                  >
-                    <Grid item xs={12} md={6} padding={isMobile ? 3 : 0}>
-                      <Typography
-                        variant="h4"
-                        marginBottom={2}
-                        borderBottom={`${theme.palette.primary.main} 2px solid`}
-                      >
-                        {title}
-                      </Typography>
-                      <Typography
-                        variant="body1"
-                        textAlign="justify"
-                        padding={1}
-                      >
-                        {description}
-                      </Typography>
-                    </Grid>
+          <Grid
+            className="slickRemove"
+            container
+            gap={5}
+            marginTop={4}
+            marginBottom={10}
+          >
+            {products.map(({ img, video, title, description }) => (
+              <Card elevation={8} key={title}>
+                <Grid container item padding={!isMobile && 2}>
+                  <Grid item xs={12} md={6} padding={isMobile ? 3 : 0}>
+                    <Typography
+                      variant="h4"
+                      marginBottom={2}
+                      borderBottom={`${theme.palette.primary.main} 2px solid`}
+                    >
+                      {title}
+                    </Typography>
+                    <Typography variant="body1" textAlign="justify" padding={1}>
+                      {description}
+                    </Typography>
+                  </Grid>
 
-                    <Grid
-                      item
-                      xs={12}
-                      md={6}
-                      minHeight="400px"
-                      justifyContent="center"
-                      padding={2}
-                      alignItems="center"
-                      sx={{
-                        '& *': {
-                          boxSizing: 'initial !important',
-                          maxWidth: '3000% !important',
-                          maxHeight: '400px',
-                        },
+                  <Grid
+                    item
+                    xs={12}
+                    md={6}
+                    minHeight="400px"
+                    justifyContent="center"
+                    padding={2}
+                    alignItems="center"
+                  >
+                    <Carousel
+                      settings={{
+                        autoplay: isMobile ? 'false' : 'true',
+                        pauseOnHover: 'true',
+                        dotsClass: 'slick-dots slick-thumb',
+                        customPaging: (i) => (
+                          <a>
+                            <img
+                              alt={img}
+                              src={
+                                img[i].endsWith('mp4')
+                                  ? '/medias/logo/logoVideos.jpg'
+                                  : `/medias/products/${img[i]}`
+                              }
+                            />
+                          </a>
+                        ),
                       }}
                     >
-                      <Carousel
-                        settings={{
-                          autoplay: isMobile ? 'false' : 'true',
-                          pauseOnHover: 'true',
-                        }}
-                      >
-                        <img alt={title} src={`/medias/products/${img}`} />
-                        {video && (
-                          <Box display="flex" alignItems="center">
-                            <ReactPlayer
-                              type="video/mp4"
-                              playbackRate={10}
-                              controls
-                              url={`/medias/products/${video}`}
-                              width="100%"
+                      {img.map((img) => (
+                        <Stack display="flex" alignItems="flex-end" key={img}>
+                          {img.endsWith('mp4') ? (
+                            <Box
+                              display="flex"
+                              alignItems="center"
+                              sx={{
+                                minHeight: '300px',
+                                maxHeight: '300px',
+                                width: '100%',
+                              }}
+                            >
+                              <ReactPlayer
+                                type="video/mp4"
+                                playbackRate={10}
+                                controls
+                                url={`/medias/products/${img}`}
+                                width="100%"
+                              />
+                            </Box>
+                          ) : (
+                            <img
+                              style={{
+                                minHeight: '300px',
+                                maxHeight: '300px',
+                                maxWidth: '100%',
+                                width: '100%',
+                              }}
+                              alt={title}
+                              src={`/medias/products/${img}`}
                             />
-                          </Box>
-                        )}
-                      </Carousel>
-                    </Grid>
+                          )}
+                        </Stack>
+                      ))}
+                    </Carousel>
                   </Grid>
-                </Card>
-              ))}
-            </Grid>
-          </Stack>
+                </Grid>
+              </Card>
+            ))}
+          </Grid>
         </Container>
       </Stack>
     </Layout>

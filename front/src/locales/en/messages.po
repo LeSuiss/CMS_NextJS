@@ -75,7 +75,7 @@ msgid "Choisissez votre langue"
 msgstr ""
 
 #: src/components/layout/footer/Footer.tsx:23
-msgid "Conditions générales de ventes"
+msgid "Conditions générales"
 msgstr ""
 
 #: src/pages/Contact.tsx:45

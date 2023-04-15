@@ -139,6 +139,35 @@ header{
 //   position: absolute; // Scaling will occur since parent is relative now
 // }
 
+.slick-thumb {
+  position:relative !important;
+  margin:0px !important;
+  bottom: 0px !important;
+}
+.slick-thumb li {
+  width: 60px !important;
+  height: 45px !important;
+}
+
+.slick-thumb img {
+  max-width: 100% !important;
+  margin: 0 0 1.45rem !important;
+  margin-bottom: 1.45rem !important;
+  padding: 0 !important;
+}
+.slick-track{
+  display: flex !important;
+  align-items: flex-end !important;
+}
+
+.slick-thumb li{
+&:not(.slick-active) {
+  filter:grayscale(100%)
+}
+&.slick-active {
+  filter: grayscale(0) 
+}}
+
 .backImage{
           background-attachment: fixed;
           background-size: cover;

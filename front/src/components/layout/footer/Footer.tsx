@@ -13,7 +13,7 @@ import { rootContext } from '../../../pages/_app'
 import styles from '../../../styles/Home.module.scss'
 
 const Footer = () => {
-  const { context, dispatchContext } = React.useContext(rootContext)
+  const { dispatchContext } = React.useContext(rootContext)
   const footerLinks = [
     {
       title: defineMessage({
@@ -22,7 +22,7 @@ const Footer = () => {
       links: '/Legal',
     },
     {
-      title: defineMessage({ message: 'Conditions générales de ventes' }),
+      title: defineMessage({ message: 'Conditions générales ' }),
       links: '/CGV.pdf',
       isBlank: true,
     },
@@ -34,9 +34,7 @@ const Footer = () => {
     {
       title: defineMessage({ message: 'Gérer les cookies' }),
       links: '/',
-      cb: (e) => {
-        return dispatchContext({ displayCookieBanner: true })
-      },
+      cb: (e) => dispatchContext({ displayCookieBanner: true }),
     },
   ]
 
@@ -50,7 +48,6 @@ const Footer = () => {
         position: 'relative',
       }}
     >
-      {JSON.stringify(context)}
       <Grid
         container
         padding={2}
