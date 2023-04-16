@@ -9,7 +9,7 @@ interface CarouselProps {
 
 /** for examples: https://react-slick.neostack.com/docs/example/custom-paging */
 export class Carousel extends Component<CarouselProps> {
-  settings: any
+  settings: Settings
 
   constructor(props: CarouselProps) {
     super(props)
@@ -17,14 +17,15 @@ export class Carousel extends Component<CarouselProps> {
   }
 
   render() {
-    const settings = {
+    const settings: Settings = {
       dots: true,
       infinite: true,
       speed: 500,
       slidesToShow: 1,
       slidesToScroll: 1,
       autoplay: true,
-
+      pauseOnFocus: true,
+      pauseOnHover: true,
       ...this.settings,
     }
     return (

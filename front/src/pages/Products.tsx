@@ -133,8 +133,8 @@ export default function Products() {
                   >
                     <Carousel
                       settings={{
-                        autoplay: isMobile ? 'false' : 'true',
-                        pauseOnHover: 'true',
+                        autoplay: !isMobile,
+                        pauseOnHover: true,
                         dotsClass: 'slick-dots slick-thumb',
                         customPaging: (i) => (
                           <a>
