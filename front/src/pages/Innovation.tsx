@@ -5,7 +5,6 @@ import {
   Container,
   Stack,
   Typography,
-  useTheme,
 } from '@mui/material'
 
 import Image from 'next/legacy/image'
@@ -14,6 +13,7 @@ import React from 'react'
 import { i18n } from '@lingui/core'
 import { t } from '@lingui/macro'
 import { useIsMobile } from '../assets/utils/hooks'
+import { useTheme } from '../../node_modules/@mui/material'
 
 export default function Innovation() {
   const theme = useTheme()

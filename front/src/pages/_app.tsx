@@ -7,17 +7,16 @@ import '@fontsource/roboto/400.css'
 import '@fontsource/roboto/500.css'
 import '@fontsource/roboto/700.css'
 
-import CookieConsent, { getCookieConsentValue } from 'react-cookie-consent'
 import React, { createContext, useReducer, useRef } from 'react'
 import { StylesProvider, createGenerateClassName } from '@mui/styles'
-import { ToastContainer, toast } from 'react-toastify'
 
 import { CacheProvider } from '@emotion/react'
-import { CookieBanner } from '../lib'
+// import { CookieBanner } from '../lib'
 import CssBaseline from '@mui/material/CssBaseline'
 import Head from 'next/head'
 import { I18nProvider } from '@lingui/react'
 import { ThemeProvider } from '@mui/material/styles'
+import { ToastContainer } from 'react-toastify'
 // import { GTAG } from '@utils/SEO&Co/GTAG'
 import createEmotionCache from '../createEmotionCache'
 import { i18n } from '@lingui/core'
@@ -82,12 +81,6 @@ export default function MyApp(props) {
               <CssBaseline />
               <Component {...pageProps} />
               <ToastContainer />
-
-              <CookieBanner
-                overAllMessage={i18n._(
-                  /* i18n: cookie message */ t`SAPEM utilise des cookies d'éaméliorer votre experience utilisateur. `
-                )}
-              />
             </StylesProvider>
           </ThemeProvider>
         </rootContext.Provider>

@@ -1,5 +1,5 @@
 // import PhoneIphoneIcon from '@mui/icons-material/PhoneIphone'
-import { Box, Button, Stack, useTheme } from '@mui/material'
+import { Box, Button, Stack } from '@mui/material'
 import { Divider, Grid, Typography } from '@mui/material'
 import { defineMessage, t } from '@lingui/macro'
 
@@ -11,6 +11,7 @@ import { SocialMedias } from './SocialMedias'
 import { i18n } from '@lingui/core'
 import { rootContext } from '../../../pages/_app'
 import styles from '../../../styles/Home.module.scss'
+import { useTheme } from '../../../../node_modules/@mui/material'
 
 const Footer = () => {
   const { dispatchContext } = React.useContext(rootContext)

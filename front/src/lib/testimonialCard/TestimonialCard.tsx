@@ -1,9 +1,9 @@
 //Styles
-import { Grid, styled } from '@mui/material'
-
+import { Grid } from '@mui/material'
 //Material components
 import PropTypes from 'prop-types'
 import React from 'react'
+import { styled } from '../../../node_modules/@mui/material'
 
 const GridStyled = styled(Grid)(({ theme }) => ({
   minHeight: 200,
@@ -20,15 +20,12 @@ const GridStyled = styled(Grid)(({ theme }) => ({
   paddingBottom: 20,
   [theme.breakpoints.down('md')]: {
     minHeight: 280,
-    width: 330,
   },
   [theme.breakpoints.down('sm')]: {
     minHeight: 260,
-    width: 310,
   },
   [theme.breakpoints.down('xs')]: {
     minHeight: 240,
-    width: 290,
   },
 
   '& .avatarContainer': {

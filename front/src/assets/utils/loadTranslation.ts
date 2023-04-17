@@ -1,14 +1,7 @@
 async function loadTranslation(locale: string, isProduction = true) {
   let data;
 
-  if (isProduction) {
-    data = await import(`../../locales/${locale}/messages`);
-  } else {
-    data = await import(
-      `@lingui/loader!../../locales/${locale}/messages.po`
-    );
-  }
-
+  data = await import(`../../../locales/${locale}/messages.js`);
   return data.messages;
 }
 export default loadTranslation;

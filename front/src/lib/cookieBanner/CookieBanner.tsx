@@ -1,5 +1,4 @@
 import {
-  Box,
   Button,
   Dialog,
   DialogActions,
@@ -7,11 +6,9 @@ import {
   DialogTitle,
   Divider,
   IconButton,
-  Slide,
   Stack,
   Switch,
   Typography,
-  styled,
 } from '@mui/material'
 import CookieConsent, { getCookieConsentValue } from 'react-cookie-consent'
 import React, { useContext } from 'react'
@@ -20,6 +17,7 @@ import { Theme, useTheme } from '@mui/material/styles'
 import _ from 'lodash'
 import { rootContext } from '../../pages/_app'
 import { setContrastedBackground } from '../utils'
+import { styled } from '../../../node_modules/@mui/material'
 
 const BootstrapDialog = styled(Dialog)(({ theme }) => ({
   '& .MuiDialogContent-root': {

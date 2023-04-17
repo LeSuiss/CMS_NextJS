@@ -5,7 +5,6 @@ import {
   Container,
   Stack,
   Typography,
-  useTheme,
 } from '@mui/material'
 
 import type { GetStaticProps } from 'next'
@@ -16,6 +15,7 @@ import generateEmployees from './api/employees'
 import { i18n } from '@lingui/core'
 import loadTranslation from '../assets/utils/loadTranslation'
 import { t } from '@lingui/macro'
+import { useTheme } from '../../node_modules/@mui/material'
 
 function Team({ employees }) {
   const theme = useTheme()

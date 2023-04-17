@@ -1,4 +1,4 @@
-import { colors, createTheme, responsiveFontSizes } from '@mui/material'
+import { createTheme, responsiveFontSizes } from '../../node_modules/@mui/material'
 
 const theme: any = createTheme({
   palette: {

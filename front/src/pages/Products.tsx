@@ -6,7 +6,6 @@ import {
   Grid,
   Stack,
   Typography,
-  useTheme,
 } from '@mui/material'
 import React, { Component } from 'react'
 
@@ -21,6 +20,7 @@ import loadTranslation from '../assets/utils/loadTranslation'
 import { lorem } from '../assets/lorem'
 import { t } from '@lingui/macro'
 import { useIsMobile } from '../assets/utils/hooks'
+import { useTheme } from '../../node_modules/@mui/material'
 
 const Carousel = dynamic(
   import('../lib/carousel/Carousel').then((x) => x.Carousel),

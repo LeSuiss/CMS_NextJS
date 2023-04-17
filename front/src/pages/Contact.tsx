@@ -14,7 +14,6 @@ import {
   Stack,
   TextField,
   Typography,
-  useTheme,
 } from '@mui/material'
 import { I18n, i18n } from '@lingui/core'
 import React, { useState } from 'react'
@@ -29,6 +28,7 @@ import axios from 'axios'
 import emailjs from '@emailjs/browser'
 import loadTranslation from '../assets/utils/loadTranslation'
 import { useForm } from 'react-hook-form'
+import { useTheme } from '../../node_modules/@mui/material'
 
 export default function Contact({}) {
   const {

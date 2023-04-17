@@ -3,23 +3,16 @@
 const path = require('path');
 
 const nextConfig = {
-  async headers() {
-    return [{
-      source: "/api.sendgrid.com/v3/mail/send",
-      headers: [{
-        key: "Access-Control-Allow-Credentials",
-        value: "true"
-      }, {
-        key: "Access-Control-Allow-Origin",
-        value: "*"
-      }, {
-        key: "Access-Control-Allow-Methods",
-        value: "GET,OPTIONS,PATCH,DELETE,POST,PUT"
-      }, {
-        key: "Access-Control-Allow-Headers",
-        value: "X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version"
-      },]
-    }]
+  experimental: {
+    swcPlugins: [
+      ['@lingui/swc-plugin', {
+        // the same options as in .swcrc
+      }],
+    ],
+  },
+  i18n: {
+    locales: ['en', 'fr'],
+    defaultLocale: 'fr',
   },
   reactStrictMode: true,
   env: {
@@ -30,6 +23,20 @@ const nextConfig = {
     EMAIL_JS_TEMPLATE: process.env.EMAIL_JS_TEMPLATE,
     EMAIL_JS_USER: process.env.EMAIL_JS_USER,
     NEXT_PUBLIC_PUBLIC_GOOGLE_ANALYTICS: process.env.NEXT_PUBLIC_PUBLIC_GOOGLE_ANALYTICS
+  },
+  modularizeImports: {
+    "@mui/material": {
+      transform: "@mui/material/{{member}}"
+    },
+    "@mui/icons-material": {
+      transform: "@mui/icons-material/{{member}}"
+    },
+    "@mui/styles": {
+      transform: "@mui/styles/{{member}}"
+    },
+    "@mui/lab": {
+      transform: "@mui/lab/{{member}}"
+    }
   },
   sassOptions: {
     includePaths: [path.join(__dirname, 'styles')],
@@ -42,29 +49,13 @@ const nextConfig = {
       hostname: "**",
     },],
   },
-  i18n: {
-    locales: ['en', 'fr'],
-    defaultLocale: 'fr',
-  },
-
-  webpack: (config, {
-    isServer
-  }) => {
-    config.module.rules.push({
-      test: /\.po/,
-      use: ['@lingui/loader'],
-    })
 
 
 
-    if (!isServer) {
-      config.resolve.fallback.fs = false
-    }
-
-    return config
-  },
 
 
 }
+
+
 
 module.exports = nextConfig

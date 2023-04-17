@@ -14,7 +14,7 @@ import { MailOutline, PhoneAndroidOutlined } from '@mui/icons-material'
 import Image from 'next/image'
 import LinkedInIcon from '@mui/icons-material/LinkedIn'
 import Typography from '@mui/material/Typography'
-import { useTheme } from '@mui/material'
+import { useTheme } from '../../../node_modules/@mui/material'
 
 interface Props {
   name: string

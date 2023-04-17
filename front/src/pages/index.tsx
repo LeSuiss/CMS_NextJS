@@ -1,13 +1,4 @@
-import {
-  Box,
-  Container,
-  Divider,
-  Grid,
-  IconButton,
-  Stack,
-  Typography,
-  useTheme,
-} from '@mui/material'
+import { Box, Container, Divider, Grid, Stack, Typography } from '@mui/material'
 import { Carousel, SectionBackground } from '../lib'
 import {
   WithBackground,
@@ -17,7 +8,6 @@ import { useIsMobile, useWindowSize } from '../assets/utils/hooks'
 
 import ConstructionIcon from '@mui/icons-material/Construction'
 import EngineeringIcon from '@mui/icons-material/Engineering'
-import ExpandCircleDownOutlinedIcon from '@mui/icons-material/ExpandCircleDownOutlined'
 import type { GetStaticProps } from 'next'
 import GroupIcon from '@mui/icons-material/Group'
 import { HEADER_HEIGHT } from '../config/constants'
@@ -38,6 +28,7 @@ import path from 'path'
 import styles from '../styles/Home.module.scss'
 import { t } from '@lingui/macro'
 import { use100vh } from 'react-div-100vh'
+import { useTheme } from '../../node_modules/@mui/material'
 
 const Home = ({ brandsList, testimonies }) => {
   const isMobile = useIsMobile()
