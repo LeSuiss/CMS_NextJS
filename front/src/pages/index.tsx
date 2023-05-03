@@ -27,7 +27,6 @@ import { lorem } from '../assets/lorem'
 import path from 'path'
 import styles from '../styles/Home.module.scss'
 import { t } from '@lingui/macro'
-import { use100vh } from 'react-div-100vh'
 import { useTheme } from '../../node_modules/@mui/material'
 
 const Home = ({ brandsList, testimonies }) => {
