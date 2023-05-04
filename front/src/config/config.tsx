@@ -9,7 +9,7 @@ export const sectionsData = [
     title: 'we are experts',
     imageSrc: '/medias/bgHome.webp',
     linkText: "en apprendre d'avantage sur notre buerau d'études",
-    linkHref: '/Team',
+    linkHref: '/Team', 
     text: (
       <>
         <p>

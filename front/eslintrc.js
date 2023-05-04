@@ -1,6 +1,5 @@
 module.exports = {
-  extends: ["next"
-  ],
+  extends: ["next", "prettier"],
   plugins: ['@typescript-eslint', 'prettier', 'react-hooks'],
   parser: '@typescript-eslint/parser',
   parserOptions: {

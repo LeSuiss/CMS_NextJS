@@ -6,20 +6,20 @@ import {
   Divider,
   Stack,
   Typography,
-} from '@mui/material'
+} from '@mui/material';
 
-import type { GetStaticProps } from 'next'
-import Layout from '../components/layout'
-import React from 'react'
-import { i18n } from '@lingui/core'
-import loadTranslation from '../assets/utils/loadTranslation'
-import { t } from '@lingui/macro'
-import { useIsMobile } from '../assets/utils/hooks'
+import type { GetStaticProps } from 'next';
+import Layout from '../components/layout';
+import React from 'react';
+import { i18n } from '@lingui/core';
+import loadTranslation from '../assets/utils/loadTranslation';
+import { t } from '@lingui/macro';
+import { useIsMobile } from '../assets/utils/hooks';
 
 export default function Legal() {
-  const isMobile = useIsMobile()
+  const isMobile = useIsMobile();
 
-  const layoutPadding = !isMobile ? 8 : 3
+  const layoutPadding = !isMobile ? 8 : 3;
 
   return (
     <Layout title={i18n._(/* i18n: Mentions Légales */ t`Mentions Légales`)}>
@@ -57,15 +57,15 @@ export default function Legal() {
         </Container>
       </Stack>
     </Layout>
-  )
+  );
 }
 
 export const getStaticProps: GetStaticProps = async (ctx) => {
-  const translation = await loadTranslation(ctx.locale)
+  const translation = await loadTranslation(ctx.locale);
 
   return {
     props: {
       translation,
     },
-  }
-}
+  };
+};
