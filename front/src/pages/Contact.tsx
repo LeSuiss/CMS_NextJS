@@ -1,7 +1,4 @@
 import {
-  Alert,
-  AlertTitle,
-  Box,
   Button,
   Card,
   CardContent,
@@ -14,56 +11,54 @@ import {
   Stack,
   TextField,
   Typography,
-} from '@mui/material'
-import { I18n, i18n } from '@lingui/core'
-import React, { useState } from 'react'
-import { ToastContainer, toast } from 'react-toastify'
-import { defineMessage, t } from '@lingui/macro'
+} from '@mui/material';
+import { GOOGLE_MAP_LOCATION, SOCIAL_MEDIAS_LINKS }   from '../config';
+import { defineMessage, t }                           from '@lingui/macro';
 
-import { CheckBox } from '@mui/icons-material'
-import { GetStaticProps } from 'next'
-import Layout from '../components/layout'
-import { SocialMedias } from '../components/layout/footer/SocialMedias'
-import axios from 'axios'
-import emailjs from '@emailjs/browser'
-import loadTranslation from '../assets/utils/loadTranslation'
-import { useForm } from 'react-hook-form'
-import { useTheme } from '../../node_modules/@mui/material'
+import { GetStaticProps }                             from 'next';
+import Layout                                         from '../components/layout';
+import { SocialMedias }                               from '../components/layout/footer/SocialMedias';
+import emailjs                                        from '@emailjs/browser';
+import { i18n }                                       from '@lingui/core';
+import loadTranslation                                from '../utils/loadTranslation';
+import { toast }                                      from 'react-toastify';
+import { useForm }                                    from 'react-hook-form';
+import { useState }                                   from 'react';
+import { useTheme }                                   from '../../node_modules/@mui/material';
 
 export default function Contact({}) {
   const {
     register,
     handleSubmit,
     trigger,
-    formState: { errors, ...otherProps },
-  } = useForm()
-  const [isSending, setIsSending] = useState(false)
+    formState: { errors },
+  } = useForm();
+  const [isSending, setIsSending] = useState(false);
 
   const onSubmit = async (e) => {
-    e.preventDefault()
-    setIsSending(true)
+    e.preventDefault();
+    setIsSending(true);
 
-    // trigger=> scan field and process with validation handlers
-    await trigger()
+    await trigger();
     await handleSubmit(async (data) => {
       const successMsg = defineMessage({
         message: 'Votre message a bien été transmis',
-      })
+      });
       const errorMsg = defineMessage({
         message: 'Une erreur est survenue. Veuillez réessayer ultérieurement',
-      })
+      });
       await sendMail(data)
         .then((x) =>
           x.status === 200
             ? toast.success(i18n._(successMsg))
             : toast.error(i18n._(errorMsg))
         )
-        .catch(() => toast.error(i18n._(errorMsg)))
-    })(e)
-    setIsSending(false)
-  }
+        .catch(() => toast.error(i18n._(errorMsg)));
+    })(e);
+    setIsSending(false);
+  };
 
-  const theme = useTheme()
+  const theme = useTheme();
   return (
     <Layout title={i18n._(/* i18n: Contact */ t`Contact`)}>
       <Stack
@@ -369,10 +364,7 @@ export default function Contact({}) {
                     <Divider sx={{ marginBottom: 2 }} />
                     <SocialMedias
                       whiteIcons={false}
-                      urls={[
-                        'https://www.linkedin.com/company/sapem-sa/',
-                        'https://www.youtube.com/channel/UCWNZviGlFwJzJkWHlDiSuhQ',
-                      ]}
+                      urls={SOCIAL_MEDIAS_LINKS}
                     />
                   </Stack>
 
@@ -388,7 +380,7 @@ export default function Contact({}) {
                     <Divider sx={{ marginBottom: 2 }} />
 
                     <iframe
-                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13718.16454710508!2d3.4815927080954348!3d46.98076985260767!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47f1b0bdc5492493%3A0xf43a88cde151475e!2sSAPEM!5e0!3m2!1sfr!2sfr!4v1681132846594!5m2!1sfr!2sfr"
+                      src={GOOGLE_MAP_LOCATION}
                       width="600"
                       height="450"
                       style={{
@@ -406,15 +398,15 @@ export default function Contact({}) {
         </Container>
       </Stack>
     </Layout>
-  )
+  );
 }
 
 export const getStaticProps: GetStaticProps = async (ctx) => {
-  i18n.activate(ctx.locale)
-  const translation = await loadTranslation(ctx.locale)
+  i18n.activate(ctx.locale);
+  const translation = await loadTranslation(ctx.locale);
 
-  return { props: { translation } }
-}
+  return { props: { translation } };
+};
 
 const sendMail = async function (data) {
   try {
@@ -423,10 +415,10 @@ const sendMail = async function (data) {
       process.env.NEXT_PUBLIC_EMAIL_JS_TEMPLATE,
       data,
       process.env.NEXT_PUBLIC_EMAIL_JS_USER
-    )
-    return { status: 200 }
+    );
+    return { status: 200 };
   } catch (error) {
-    console.log(error)
-    return { status: 500 }
+    console.log(error);
+    return { status: 500 };
   }
-}
+};

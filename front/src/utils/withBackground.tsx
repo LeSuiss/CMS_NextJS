@@ -1,18 +1,18 @@
-import { Box } from '@mui/material'
-import { Carousel } from '../../lib'
-import { HEADER_HEIGHT } from '../../config'
-import Image from 'next/image'
-import React from 'react'
-import { useTheme } from '../../../node_modules/@mui/material'
+import { Box } from '@mui/material';
+import { Carousel } from '../lib';
+import { HEADER_HEIGHT } from '../config';
+import Image from 'next/image';
+import React from 'react';
+import { useTheme } from '../../node_modules/@mui/material';
 
 interface WithBackgroundProps {
-  negativeMargin?: number
-  url?: string[]
-  opacity: string | number
-  addedColor?: string
-  addedColorOpacity?: string | number
-  children?: any
-  sx?: any
+  negativeMargin?: number;
+  url?: string[];
+  opacity: string | number;
+  addedColor?: string;
+  addedColorOpacity?: string | number;
+  children?: any;
+  sx?: any;
 }
 export const WithBackground = ({
   negativeMargin,
@@ -23,7 +23,7 @@ export const WithBackground = ({
   children,
   sx,
 }: WithBackgroundProps) => {
-  const theme = useTheme()
+  const theme = useTheme();
 
   return (
     <Box
@@ -79,15 +79,15 @@ export const WithBackground = ({
         ))}
       </Carousel>
     </Box>
-  )
-}
+  );
+};
 
 interface WithBackgroundColorShapeProps {
-  negativeMargin?: number
-  addedColor?: string
-  addedColorOpacity?: string | number
-  children?: any
-  sx?: any
+  negativeMargin?: number;
+  addedColor?: string;
+  addedColorOpacity?: string | number;
+  children?: any;
+  sx?: any;
 }
 export const WithBackgroundColorShape = ({
   negativeMargin = 0,
@@ -95,7 +95,7 @@ export const WithBackgroundColorShape = ({
   children,
   sx,
 }: WithBackgroundColorShapeProps) => {
-  const theme = useTheme()
+  const theme = useTheme();
   return (
     <>
       <div
@@ -116,5 +116,5 @@ export const WithBackgroundColorShape = ({
         {children}
       </div>
     </>
-  )
-}
+  );
+};

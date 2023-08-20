@@ -8,42 +8,5 @@
     position: relative;
     }
 
- 
-  h2{
-    // margin:50px;
-    padding:3px;
-    margin:6px;
-    display: flex;
-    align-items: center;
-  }
-  p{
-    text-align: justify;
-    padding:10px;
-  }
-  button{
-    margin:5px;
-    bottom: 10px;
-    right:5px;
-    background-color:$redSapem;
-    // border:solid black 1Px;
-    box-sizing: border-box;
-
-    color:white;
-    float:right;
-    justify-self: flex-end;
-    border:$redSapem solid 1px ;
-    margin:30px;
-    &:hover{
-      color:$redSapem !important;
-      background-color: transparent;
-    }
-  }
-  
-   .contentContainer{
-    display:flex;
-    flex-flow: column;
-    align-items: baseline;
-    width: 100vw;
-  }
 }
 

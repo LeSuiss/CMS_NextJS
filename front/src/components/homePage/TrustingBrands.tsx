@@ -1,15 +1,26 @@
-import { Box, Grid, Stack, Typography } from '@mui/material'
+import { Box, Grid, Stack, Typography } from '@mui/material';
 
-import Image from 'next/legacy/image'
-import React from 'react'
-import { i18n } from '@lingui/core'
-import styles from '../../styles/Home.module.scss'
-import { t } from '@lingui/macro'
+import Image                            from 'next/legacy/image';
+import React                            from 'react';
+import { i18n }                         from '@lingui/core';
+import { styled }                       from '../../../node_modules/@mui/material';
+import styles                           from '../../styles/Home.module.scss';
+import { t }                            from '@lingui/macro';
+
+const GridWithStyle = styled(Grid)(({ theme }) => ({
+  '& img': {
+    objectFit: 'contain',
+    mixBlendMode: 'darken',
+    aspectRatio: '1/1',
+    height: '70px',
+    width: '70px',
+  },
+}));
 
 // www.lejdc.fr/nevers-58000/actualites/dix-huit-entreprises-de-la-nievre-a-l-honneur-aux-5es-trophees-des-reussites_13996541/
 function TrustingBrands(props: any) {
   return (
-    <Grid
+    <GridWithStyle
       container
       justifyContent="center"
       className={`${styles.sectionContainer} ${styles.trustingBrands}`}
@@ -36,26 +47,16 @@ function TrustingBrands(props: any) {
         md={8}
         justifyContent="center"
         paddingTop={3}
+        spacing={2}
       >
         {props?.brandsList?.map((x) => (
-          <Grid
-            item
-            md={2}
-            key={`logo${x}`}
-            className={styles.logo}
-            textAlign="center"
-          >
-            <Image
-              height={70}
-              width={100}
-              alt={`logo${x}`}
-              src={`/medias/logo/${x}`}
-            />
+          <Grid item key={`logo${x}`} textAlign="center">
+            <img style={{}} alt={`logo${x}`} src={`/medias/logo/${x}`} />
           </Grid>
         ))}
       </Grid>
-    </Grid>
-  )
+    </GridWithStyle>
+  );
 }
 
-export default TrustingBrands
+export default TrustingBrands;

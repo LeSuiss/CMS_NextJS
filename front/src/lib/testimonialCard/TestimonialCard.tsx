@@ -1,9 +1,9 @@
 //Styles
-import { Grid } from '@mui/material'
+import { Grid } from '@mui/material';
 //Material components
-import PropTypes from 'prop-types'
-import React from 'react'
-import { styled } from '../../../node_modules/@mui/material'
+import PropTypes from 'prop-types';
+import React from 'react';
+import { styled } from '../../../node_modules/@mui/material';
 
 const GridStyled = styled(Grid)(({ theme }) => ({
   minHeight: 200,
@@ -146,7 +146,7 @@ const GridStyled = styled(Grid)(({ theme }) => ({
       },
     },
   },
-}))
+}));
 
 const TestimonialCard = (props) => {
   return (
@@ -186,8 +186,8 @@ const TestimonialCard = (props) => {
         </Grid>
       </Grid>
     </GridStyled>
-  )
-}
+  );
+};
 
 TestimonialCard.propTypes = {
   name: PropTypes.string.isRequired,
@@ -195,6 +195,6 @@ TestimonialCard.propTypes = {
   content: PropTypes.string.isRequired,
   project: PropTypes.string.isRequired,
   className: PropTypes.string,
-}
+};
 
-export default TestimonialCard
+export default TestimonialCard;

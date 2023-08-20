@@ -1,21 +1,20 @@
-import { Box, Tab, Tabs } from '@mui/material'
+import { Box, Tab, Tabs } from '@mui/material';
 
-import CustomMenu from './CustomMenu'
-import Link from 'next/link'
-import Logo from '../Logo'
-import React from 'react'
-import Switcher from './Switcher'
-import { i18n } from '@lingui/core'
-import { useIsMobile } from '../../../assets/utils/hooks'
+import CustomMenu from './CustomMenu';
+import Link from 'next/link';
+import Logo from '../Logo';
+import React from 'react';
+import Switcher from './Switcher';
+import { i18n } from '@lingui/core';
+import { useIsMobile } from '../../../utils/hooks';
 
-function Header({ navigationStructure, style = {}, className }) {
-  const isMobile = useIsMobile()
+function Header({ navigationStructure, className }) {
+  const isMobile = useIsMobile();
 
   return (
     <Box
       component="header"
       className={`mainContainerHeader ${className}`}
-      style={style}
       padding={0.1}
     >
       <Box
@@ -26,7 +25,7 @@ function Header({ navigationStructure, style = {}, className }) {
         }}
       />
       {isMobile ? (
-        <CustomMenu isMobile={isMobile} linksToDisplay={navigationStructure} />
+        <CustomMenu linksToDisplay={navigationStructure} />
       ) : (
         <Tabs value={0}>
           {navigationStructure.map((page) => (
@@ -45,7 +44,7 @@ function Header({ navigationStructure, style = {}, className }) {
       )}
       {!isMobile && <Switcher />}
     </Box>
-  )
+  );
 }
 
-export default Header
+export default Header;

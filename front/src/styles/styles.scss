@@ -8,7 +8,7 @@
 
   *:not([class*="slick"]){
     max-width: 100vw ;
-    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif !important  ;
+    // font-family: !important  ;
   }
 
 
@@ -18,6 +18,8 @@ header{
   position:absolute;
   top:0;
   left:0;
+
+
 }
 
 // 3. LAYOUT
@@ -121,23 +123,6 @@ header{
 }
 
 
-
-// .player-wrapper {
-//   width: auto; // Reset width
-//   height: auto; // Reset height
-  
-//   video{
-//     height:auto
-//   }
-// }
-// .react-player {
-//   padding-top: 56.25%; // Percentage ratio for 16:9
-//   position: relative; // Set to relative
-// }
-
-// .react-player > div {
-//   position: absolute; // Scaling will occur since parent is relative now
-// }
 
 .slick-thumb {
   position:relative !important;

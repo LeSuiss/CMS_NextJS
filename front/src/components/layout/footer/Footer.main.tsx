@@ -1,20 +1,21 @@
 // import PhoneIphoneIcon from '@mui/icons-material/PhoneIphone'
-import { Box, Button, Stack } from '@mui/material'
-import { Divider, Grid, Typography } from '@mui/material'
-import { defineMessage, t } from '@lingui/macro'
+import { Box, Button, Stack }        from '@mui/material';
+import { Divider, Grid, Typography } from '@mui/material';
+import { defineMessage, t }          from '@lingui/macro';
 
-import { AuthorRow } from './AuthorRow'
-import { GridSection } from './GridSection'
-import Logo from '../Logo'
-import React from 'react'
-import { SocialMedias } from './SocialMedias'
-import { i18n } from '@lingui/core'
-import { rootContext } from '../../../pages/_app'
-import styles from '../../../styles/Home.module.scss'
-import { useTheme } from '../../../../node_modules/@mui/material'
+import { AuthorRow }                 from './AuthorRow';
+import { GridSection }               from './GridSection';
+import Logo                          from '../Logo';
+import React                         from 'react';
+import { SOCIAL_MEDIAS_LINKS }       from '../../../config';
+import { SocialMedias }              from './SocialMedias';
+import { i18n }                      from '@lingui/core';
+import { rootContext }               from '../../../pages/_app';
+import styles                        from '../../../styles/Home.module.scss';
+import { useTheme }                  from '../../../../node_modules/@mui/material';
 
 const Footer = () => {
-  const { dispatchContext } = React.useContext(rootContext)
+  const { dispatchContext } = React.useContext(rootContext);
   const footerLinks = [
     {
       title: defineMessage({
@@ -37,9 +38,9 @@ const Footer = () => {
       links: '/',
       cb: (e) => dispatchContext({ displayCookieBanner: true }),
     },
-  ]
+  ];
 
-  const theme: any = useTheme()
+  const theme: any = useTheme();
 
   return (
     <footer
@@ -51,13 +52,14 @@ const Footer = () => {
     >
       <Grid
         container
-        padding={2}
         item
         md={9}
         sm={12}
-        display="flex"
-        justifyContent="center"
+        padding={2}
+        margin={0}
+        justifyContent="space-around"
         alignItems="center"
+        spacing={3}
         letterSpacing="1px"
         width="100%"
       >
@@ -66,10 +68,7 @@ const Footer = () => {
         </Grid>
 
         <SocialMedias
-          urls={[
-            'https://www.linkedin.com/company/sapem-sa/',
-            'https://www.youtube.com/channel/UCWNZviGlFwJzJkWHlDiSuhQ',
-          ]}
+          urls={SOCIAL_MEDIAS_LINKS}
         />
 
         <Grid item container md={4} sm={12}>
@@ -77,10 +76,9 @@ const Footer = () => {
             item
             container
             md={12}
-            display="flex"
-            direction="column"
-            justifyContent="center"
             alignItems="center"
+            flexDirection="column"
+            whiteSpace="nowrap"
           >
             <Typography variant="h6" padding={0} textAlign="center">
               {i18n._(
@@ -136,7 +134,7 @@ const Footer = () => {
 
       <AuthorRow theme={theme} />
     </footer>
-  )
-}
+  );
+};
 
-export default Footer
+export default Footer;

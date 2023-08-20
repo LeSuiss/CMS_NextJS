@@ -1,10 +1,10 @@
-import { Box, Divider, Stack, Typography } from '@mui/material'
-import React, { useEffect, useLayoutEffect } from 'react'
+import { Box, Divider, Stack, Typography } from '@mui/material';
+import React, { useEffect, useLayoutEffect } from 'react';
 
-import Footer from './footer/Footer'
-import Header from './header/Header'
-import { NAVIGATION_STRUCTURE } from '../../config'
-import { useIsMobile } from '../../assets/utils/hooks'
+import Footer from './footer/Footer.main';
+import Header from './header/Header';
+import { NAVIGATION_STRUCTURE } from '../../config';
+import { useIsMobile } from '../../utils/hooks';
 
 function Layout({
   children,
@@ -14,35 +14,34 @@ function Layout({
   titleIsSticky = true,
   stickerToDisplay = null,
 }) {
-  const isMobile = useIsMobile()
+  const isMobile = useIsMobile();
   /* Method that will fix header after a specific scrollable */
   const isSticky = () => {
-    const header = document.querySelector('.header-section')
-    const scrollTop = document.querySelector('.container_component').scrollTop
-    const condition = scrollTop >= 250
-    console.log(scrollTop)
+    const header = document.querySelector('.header-section');
+    const scrollTop = document.querySelector('.container_component').scrollTop;
+    const condition = scrollTop >= 250;
     if (true) {
-      const titleToResize = document.querySelector('.shallTitleBeSticky')
+      const titleToResize = document.querySelector('.shallTitleBeSticky');
       condition && !!titleToResize
         ? titleToResize?.classList.add('titleIsSticky')
-        : titleToResize?.classList.remove('titleIsSticky')
+        : titleToResize?.classList.remove('titleIsSticky');
     }
 
     return condition
       ? header.classList.add('is-sticky')
-      : header.classList.remove('is-sticky')
-  }
+      : header.classList.remove('is-sticky');
+  };
 
   useEffect(() => {
     document
       .querySelector('.container_component')
-      .addEventListener('scroll', isSticky)
+      .addEventListener('scroll', isSticky);
     return () => {
       document
         .querySelector('.container_component')
-        .removeEventListener('scroll', isSticky)
-    }
-  }, [])
+        .removeEventListener('scroll', isSticky);
+    };
+  }, []);
 
   return (
     <div className={`container_GlobalLayoutPage ${className}`}>
@@ -97,7 +96,7 @@ function Layout({
         <Footer />
       </Box>
     </div>
-  )
+  );
 }
 
-export default Layout
+export default Layout;

@@ -1,41 +1,50 @@
 import {
   Box,
   Button,
-  Card,
-  ClickAwayListener,
+  Dialog,
+  DialogActions,
   Divider,
-  Modal,
   Slide,
   Typography,
-} from '@mui/material'
+} from '@mui/material';
 
-import Image from 'next/image'
-import { LANGUAGES } from '../../../config/constants'
-import { i18n } from '@lingui/core'
-import loadTranslation from '../../../assets/utils/loadTranslation'
-import nextConfig from '../../../../next.config.js'
-import { t } from '@lingui/macro'
-import { useIsMobile } from '../../../assets/utils/hooks'
-import { useRouter } from 'next/router'
-import { useState } from 'react'
+import Image from 'next/image';
+import { LANGUAGES } from '../../../config/constants';
+import { i18n } from '@lingui/core';
+import loadTranslation from '../../../utils/loadTranslation';
+import nextConfig from '../../../../next.config.js';
+import { t } from '@lingui/macro';
+import { useIsMobile } from '../../../utils/hooks';
+import { useRouter } from 'next/router';
+import React, { useState } from 'react';
+import { TransitionProps } from '@mui/material/transitions';
+
+const TransitionComponent = React.forwardRef(function Transition(
+  props: TransitionProps & {
+    children: React.ReactElement<any, any>;
+  },
+  ref: React.Ref<unknown>
+) {
+  return <Slide direction="down" timeout={400} ref={ref} {...props} />;
+});
 
 function Switcher() {
-  const isMobile = useIsMobile()
-  const [isModalOpen, setIsModalOpen] = useState(false)
-  const router = useRouter()
-  const labels = {}
+  const isMobile = useIsMobile();
+  const [isDialogOpen, setIsDialogOpen] = useState(false);
+  const router = useRouter();
+  const labels = {};
   LANGUAGES.filter((lang) =>
     nextConfig.i18n.locales.includes(lang.locale)
-  ).forEach((lang) => Object.assign(labels, { [lang.locale]: lang.locale }))
+  ).forEach((lang) => Object.assign(labels, { [lang.locale]: lang.locale }));
 
   const handleSelect = async (choice) => {
     const convertedValue = LANGUAGES.filter((x) => x.locale === choice)[0]
-      .locale
-    const message = await loadTranslation(convertedValue)
-    router.push(router.pathname, {}, { locale: convertedValue })
-    await i18n.load(convertedValue, message)
-    await i18n.activate(convertedValue)
-  }
+      .locale;
+    const message = await loadTranslation(convertedValue);
+    router.push(router.pathname, {}, { locale: convertedValue });
+    await i18n.load(convertedValue, message);
+    await i18n.activate(convertedValue);
+  };
 
   return (
     <>
@@ -50,7 +59,7 @@ function Switcher() {
           justifyContent: 'start',
           width: !isMobile ? 'auto' : '100%',
         }}
-        onClick={() => setIsModalOpen((p) => !p)}
+        onClick={() => setIsDialogOpen((p) => !p)}
       >
         <Image
           defaultValue={i18n.locale}
@@ -63,68 +72,77 @@ function Switcher() {
           {i18n.locale.toUpperCase()}
         </Typography>
       </Button>
-      <Modal
-        open={isModalOpen}
+      <Dialog
+        keepMounted
+        open={isDialogOpen}
+        TransitionComponent={TransitionComponent}
         aria-labelledby="modal-modal-title"
         aria-describedby="modal-modal-description"
-        sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}
+        sx={{
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center',
+        }}
       >
-        <Slide direction="down" in={isModalOpen} timeout={400}>
-          <Card>
-            <Box
-              sx={{
-                display: 'flex',
-                justifyContent: 'center',
-                alignItem: 'center',
-                flexFlow: 'column',
-                bgcolor: 'background.paper',
-                boxShadow: 24,
-                p: 4,
-              }}
-            >
-              <Typography
-                sx={{ textAlign: 'center', paddingBottom: '20px' }}
-                variant="h5"
+        <Box
+          sx={{
+            bgcolor: 'background.paper',
+            display: 'flex',
+            justifyContent: 'center',
+            alignItem: 'center',
+            flexFlow: 'column',
+            p: 4,
+          }}
+        >
+          <Typography
+            sx={{ textAlign: 'center', paddingBottom: '20px' }}
+            variant="h5"
+          >
+            {i18n._(
+              /* i18n: select your language */ t`Choisissez votre langue`
+            )}
+          </Typography>
+          {Object.keys((i18n as any)._localeData).map((loc, index) => (
+            <div key={'localeIs' + loc}>
+              <Button
+                sx={{
+                  marginTop: 1,
+                  marginBottom: 1,
+                  width: '100%',
+                  left: '0',
+                  border: 'none !important',
+                }}
+                variant="outlined"
+                onClick={() => {
+                  handleSelect(loc);
+                  setIsDialogOpen(false);
+                }}
               >
-                {i18n._(
-                  /* i18n: select your language */ t`Choisissez votre langue`
-                )}
-              </Typography>
-              {Object.keys(i18n._localeData).map((loc, index) => (
-                <div key={'localeIs' + loc}>
-                  <Button
-                    sx={{
-                      marginTop: 1,
-                      marginBottom: 1,
-                      width: '100%',
-                      left: '0',
-                      border: 'none !important',
-                    }}
-                    variant="outlined"
-                    onClick={() => {
-                      handleSelect(loc)
-                      setIsModalOpen(false)
-                    }}
-                  >
-                    <Image
-                      defaultValue={i18n.locale}
-                      width={40}
-                      height={60}
-                      alt="selectedLang"
-                      src={`/flags/${loc}.svg`}
-                    />
-                  </Button>
-                  {index !== Object.keys(i18n._localeData).length - 1 && (
-                    <Divider />
-                  )}
-                </div>
-              ))}
-            </Box>
-          </Card>
-        </Slide>
-      </Modal>
+                <Image
+                  defaultValue={i18n.locale}
+                  width={40}
+                  height={60}
+                  alt="selectedLang"
+                  src={`/flags/${loc}.svg`}
+                />
+              </Button>
+              {index !== Object.keys((i18n as any)._localeData).length - 1 && (
+                <Divider />
+              )}
+            </div>
+          ))}
+        </Box>
+        <DialogActions>
+          <Button
+            onClick={() => setIsDialogOpen(false)}
+            sx={{ marginRight: 'auto' }}
+          >
+            {i18n._(/* i18n: select your language */ t`Annuler`)}
+          </Button>
+        </DialogActions>
+      </Dialog>
     </>
-  )
+  );
 }
 
-export default Switcher
+export default Switcher;

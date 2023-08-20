@@ -1,7 +1,7 @@
 interface SectionBackgroundProps {
-  url: string | ImageDataSettings
-  children?: any
-  style?: any
+  url: string | ImageDataSettings;
+  children?: any;
+  style?: any;
 }
 
 export const SectionBackground = ({
@@ -23,5 +23,5 @@ export const SectionBackground = ({
     >
       {children}
     </section>
-  )
-}
+  );
+};

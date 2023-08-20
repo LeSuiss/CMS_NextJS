@@ -5,21 +5,19 @@ import {
   Container,
   Stack,
   Typography,
-} from '@mui/material'
+} from '@mui/material';
 
-import Image from 'next/legacy/image'
-import Layout from '../components/layout'
-import React from 'react'
-import { i18n } from '@lingui/core'
-import { t } from '@lingui/macro'
-import { useIsMobile } from '../assets/utils/hooks'
-import { useTheme } from '../../node_modules/@mui/material'
+import Image from 'next/legacy/image';
+import Layout from '../components/layout';
+import React from 'react';
+import { i18n } from '@lingui/core';
+import { t } from '@lingui/macro';
+import { useTheme } from '../../node_modules/@mui/material';
+import { GetStaticProps } from 'next';
+import loadTranslation from '../utils/loadTranslation';
 
 export default function Innovation() {
-  const theme = useTheme()
-  const isMobile = useIsMobile()
-
-  const layoutPadding = !isMobile ? 8 : 3
+  const theme = useTheme();
 
   return (
     <Layout title={i18n._(/* i18n: Innovation */ t`Innovation`)}>
@@ -36,17 +34,15 @@ export default function Innovation() {
                 borderBottom: `${theme.palette.primary.main} 2px solid`,
               }}
             />
-            <CardContent sx={{ padding: 4 }}>
+            <CardContent>
               <Typography variant="body1">
-                <p>
-                  SAPEM est une société de services spécialisée dans
-                  l'ingénierie industrielle et l'innovation technologique
-                  indépendante. SAPEM intervient grace à un bureau d'études
-                  d'ingénierie industrielle, intervenant dans la conduite des
-                  affaires en matière d'ingénierie: étude des projets
-                  techniques, recherche industrielle, ainsi que la conception et
-                  l'innovation des produits et process.
-                </p>
+                SAPEM est une société de services spécialisée dans l'ingénierie
+                industrielle et l'innovation technologique indépendante. SAPEM
+                intervient grace à un bureau d'études d'ingénierie industrielle,
+                intervenant dans la conduite des affaires en matière
+                d'ingénierie: étude des projets techniques, recherche
+                industrielle, ainsi que la conception et l'innovation des
+                produits et process.
               </Typography>
             </CardContent>
           </Card>
@@ -81,5 +77,15 @@ export default function Innovation() {
         </Container>
       </Stack>
     </Layout>
-  )
+  );
 }
+
+export const getStaticProps: GetStaticProps = async (ctx) => {
+  const translation = await loadTranslation(ctx.locale);
+
+  return {
+    props: {
+      translation,
+    },
+  };
+};

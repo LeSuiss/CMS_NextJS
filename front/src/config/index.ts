@@ -1,3 +1,2 @@
-export * from './config'
-export * from './constants'
-export * from './navigationStructure'
+export * from './constants';
+export * from './navigationStructure';

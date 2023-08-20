@@ -1,12 +1,13 @@
 // https://stackoverflow.com/questions/72530276/nodemailergoogle-disabled-the-less-secure-app-option-on-google-accounts-i-woul
 
-import emailjs from '@emailjs/browser';
+import { MAILING_DESTINATARY } from '../../config';
+import emailjs                 from '@emailjs/browser';
 
 const sendMail = async function (req, res) {
   console.log('hoh')
   const mailData = {
     from: 'alexis.archer44@gmail.com',
-    to: 'archer.alexis@hotmail.fr',
+    to: MAILING_DESTINATARY,
     subject: `Message From toto`,
     ...req.body
   }

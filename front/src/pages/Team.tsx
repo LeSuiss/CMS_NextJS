@@ -5,20 +5,20 @@ import {
   Container,
   Stack,
   Typography,
-} from '@mui/material'
+} from '@mui/material';
 
-import type { GetStaticProps } from 'next'
-import Layout from '../components/layout'
-import { PortraitCard } from '../components/innovation/PortraitCard'
-import React from 'react'
-import generateEmployees from './api/employees'
-import { i18n } from '@lingui/core'
-import loadTranslation from '../assets/utils/loadTranslation'
-import { t } from '@lingui/macro'
-import { useTheme } from '../../node_modules/@mui/material'
+import type { GetStaticProps } from 'next';
+import Layout from '../components/layout';
+import { PortraitCard } from '../components/innovation/PortraitCard';
+import React from 'react';
+import generateEmployees from './api/employees';
+import { i18n } from '@lingui/core';
+import loadTranslation from '../utils/loadTranslation';
+import { t } from '@lingui/macro';
+import { useTheme } from '../../node_modules/@mui/material';
 
 function Team({ employees }) {
-  const theme = useTheme()
+  const theme = useTheme();
   return (
     <Layout title={i18n._(/* i18n: Nos Equipes */ t` Nos Equipes`)}>
       <Stack
@@ -76,17 +76,17 @@ function Team({ employees }) {
         </Container>
       </Stack>
     </Layout>
-  )
+  );
 }
-export default Team
+export default Team;
 
 export const getStaticProps: GetStaticProps = async (ctx) => {
-  const translation = await loadTranslation(ctx.locale)
-  console.log(generateEmployees[0])
+  const translation = await loadTranslation(ctx.locale);
+  console.log(generateEmployees[0]);
   return {
     props: {
       translation,
       employees: generateEmployees,
     },
-  }
-}
+  };
+};

@@ -12,9 +12,9 @@ import type { GetStaticProps } from 'next';
 import Layout from '../components/layout';
 import React from 'react';
 import { i18n } from '@lingui/core';
-import loadTranslation from '../assets/utils/loadTranslation';
+import loadTranslation from '../utils/loadTranslation';
 import { t } from '@lingui/macro';
-import { useIsMobile } from '../assets/utils/hooks';
+import { useIsMobile } from '../utils/hooks';
 
 export default function Legal() {
   const isMobile = useIsMobile();
@@ -28,7 +28,7 @@ export default function Legal() {
         sx={{ backgroundImage: 'url("/medias/legalBG.jpg")' }}
         className="backImage"
       >
-        <Container maxWidth="lg" sx={{ opacity: 0.95 }}>
+        <Container maxWidth="md" sx={{ opacity: 0.95 }}>
           <Card sx={{ minHeight: '50vh' }}>
             <CardHeader
               title={i18n._(

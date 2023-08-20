@@ -1,4 +1,4 @@
-import * as React from 'react'
+import * as React from 'react';
 
 import {
   Card,
@@ -8,23 +8,23 @@ import {
   Divider,
   Grid,
   Stack,
-} from '@mui/material'
-import { MailOutline, PhoneAndroidOutlined } from '@mui/icons-material'
+} from '@mui/material';
+import { MailOutline, PhoneAndroidOutlined } from '@mui/icons-material';
 
-import Image from 'next/image'
-import LinkedInIcon from '@mui/icons-material/LinkedIn'
-import Typography from '@mui/material/Typography'
-import { useTheme } from '../../../node_modules/@mui/material'
+import Image from 'next/image';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import Typography from '@mui/material/Typography';
+import { useTheme } from '../../../node_modules/@mui/material';
 
 interface Props {
-  name: string
-  job: string
-  image: string
-  email: string
-  phone: string | number
-  description?: string
-  linkedin?: string
-  contact?: string[]
+  name: string;
+  job: string;
+  image: string;
+  email: string;
+  phone: string | number;
+  description?: string;
+  linkedin?: string;
+  contact?: string[];
 }
 
 export function PortraitCard({
@@ -36,8 +36,7 @@ export function PortraitCard({
   phone,
   linkedin,
 }: Props) {
-  const theme = useTheme()
-  console.log(image)
+  const theme = useTheme();
   return (
     <Card sx={{ maxWidth: '250px' }}>
       {/* header */}
@@ -121,5 +120,5 @@ export function PortraitCard({
         </Grid>
       </CardActions>
     </Card>
-  )
+  );
 }

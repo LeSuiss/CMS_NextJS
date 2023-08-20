@@ -6,28 +6,28 @@ import {
   Grid,
   Stack,
   Typography,
-} from '@mui/material'
-import React, { Component } from 'react'
+} from '@mui/material';
+import React, { Component } from 'react';
 
-import type { GetStaticProps } from 'next'
-import Layout from '../components/layout'
-import ReactPlayer from 'react-player'
-import Slider from 'react-slick'
-import dynamic from 'next/dynamic'
-import { fakeDataProducts } from '../assets/fakeDataProducts'
-import { i18n } from '@lingui/core'
-import loadTranslation from '../assets/utils/loadTranslation'
-import { lorem } from '../assets/lorem'
-import { t } from '@lingui/macro'
-import { useIsMobile } from '../assets/utils/hooks'
-import { useTheme } from '../../node_modules/@mui/material'
+import type { GetStaticProps } from 'next';
+import Layout from '../components/layout';
+import ReactPlayer from 'react-player';
+import Slider from 'react-slick';
+import dynamic from 'next/dynamic';
+import { fakeDataProducts } from '../assets/fakeDataProducts';
+import { i18n } from '@lingui/core';
+import loadTranslation from '../utils/loadTranslation';
+import { lorem } from '../assets/lorem';
+import { t } from '@lingui/macro';
+import { useIsMobile } from '../utils/hooks';
+import { useTheme } from '../../node_modules/@mui/material';
 
 const Carousel = dynamic(
   import('../lib/carousel/Carousel').then((x) => x.Carousel),
   {
     ssr: false,
   }
-)
+);
 const products = [
   {
     title: 'le retourneur x300',
@@ -68,11 +68,11 @@ const products = [
     description: lorem,
     imgs: ['Levage&RetournementPneumatique.jpg'],
   },
-]
+];
 
 export default function Products() {
-  const theme = useTheme()
-  const isMobile = useIsMobile()
+  const theme = useTheme();
+  const isMobile = useIsMobile();
 
   return (
     <Layout
@@ -194,20 +194,20 @@ export default function Products() {
         </Container>
       </Stack>
     </Layout>
-  )
+  );
 }
 
 export const getStaticProps: GetStaticProps = async (ctx) => {
-  i18n.activate(ctx.locale)
-  const translation = await loadTranslation(ctx.locale)
+  i18n.activate(ctx.locale);
+  const translation = await loadTranslation(ctx.locale);
 
   return {
     props: {
       translation,
       fakeDataProducts,
     },
-  }
-}
+  };
+};
 
 export class SimpleSlider extends Component {
   render() {
@@ -217,7 +217,7 @@ export class SimpleSlider extends Component {
       speed: 500,
       slidesToShow: 1,
       slidesToScroll: 1,
-    }
+    };
     return (
       <div>
         <h2> Single Item</h2>
@@ -242,6 +242,6 @@ export class SimpleSlider extends Component {
           </div>
         </Slider>
       </div>
-    )
+    );
   }
 }

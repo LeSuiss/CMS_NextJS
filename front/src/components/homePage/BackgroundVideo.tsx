@@ -1,17 +1,17 @@
-import { Box, Button, Grid, useTheme } from '@mui/material'
+import { Box, Button, Grid, useTheme } from '@mui/material';
 
-import { HEADER_HEIGHT } from '../../config'
-import React from 'react'
-import { WithBackgroundColorShape } from '../../assets/utils/withBackground'
-import { i18n } from '@lingui/core'
-import styles from '../../styles/Home.module.scss'
-import { t } from '@lingui/macro'
-import { useWindowSize } from '../../assets/utils/hooks'
-import { videoSliderMessages } from '../../config/config'
+import { HEADER_HEIGHT } from '../../config';
+import React from 'react';
+import { WithBackgroundColorShape } from '../../utils/withBackground';
+import { i18n } from '@lingui/core';
+import styles from '../../styles/Home.module.scss';
+import { t } from '@lingui/macro';
+import { useWindowSize } from '../../utils/hooks';
+import { videoSliderMessages } from '../../lib/homePageSections/config';
 
 function BackgroundVideo() {
-  const { height } = useWindowSize()
-  const theme = useTheme()
+  const { height } = useWindowSize();
+  const theme = useTheme();
   return (
     <Box
       item
@@ -53,7 +53,7 @@ function BackgroundVideo() {
                   ((height - HEADER_HEIGHT * 0.8) * index) / 100
                 ),
               index * 3.5
-            )
+            );
           }
         }}
         variant="contained"
@@ -61,7 +61,7 @@ function BackgroundVideo() {
         {i18n._(/* i18n: D */ t`Découvrir SAPEM`)}
       </Button>
     </Box>
-  )
+  );
 }
 
-export default BackgroundVideo
+export default BackgroundVideo;

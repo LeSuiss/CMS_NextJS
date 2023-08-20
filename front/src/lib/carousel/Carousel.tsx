@@ -1,19 +1,19 @@
-import React, { Component } from 'react'
-import Slider, { Settings } from 'react-slick'
+import React, { Component } from 'react';
+import Slider, { Settings } from 'react-slick';
 
-import { Box } from '@mui/material'
+import { Box } from '@mui/material';
 
 interface CarouselProps {
-  settings?: Settings
+  settings?: Settings;
 }
 
 /** for examples: https://react-slick.neostack.com/docs/example/custom-paging */
 export class Carousel extends Component<CarouselProps> {
-  settings: Settings
+  settings: Settings;
 
   constructor(props: CarouselProps) {
-    super(props)
-    this.settings = this.props.settings
+    super(props);
+    this.settings = this.props.settings;
   }
 
   render() {
@@ -26,12 +26,13 @@ export class Carousel extends Component<CarouselProps> {
       autoplay: true,
       pauseOnFocus: true,
       pauseOnHover: true,
+
       ...this.settings,
-    }
+    };
     return (
-      <Box className="slick-slider">
+      <Box className="slick-slider" paddingBottom={4}>
         <Slider {...settings}>{this.props.children}</Slider>
       </Box>
-    )
+    );
   }
 }

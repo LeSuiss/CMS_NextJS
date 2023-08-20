@@ -1,16 +1,15 @@
-import { Box, Button, Card, Container, Stack, Typography } from '@mui/material'
+import { Box, Button, Card, Container, Stack, Typography } from '@mui/material';
 
-import type { GetStaticProps } from 'next'
-import Layout from '../components/layout'
-import Link from 'next/link'
-import React from 'react'
-import { i18n } from '@lingui/core'
-import loadTranslation from '../assets/utils/loadTranslation'
-import { t } from '@lingui/macro'
-import { useIsMobile } from '../assets/utils/hooks'
+import { i18n } from '@lingui/core';
+import { t } from '@lingui/macro';
+import type { GetStaticProps } from 'next';
+import Link from 'next/link';
+import Layout from '../components/layout';
+import { useIsMobile } from '../utils/hooks';
+import loadTranslation from '../utils/loadTranslation';
 
 export default function Legal() {
-  const layoutPadding = !useIsMobile ? 8 : 3
+  const layoutPadding = !useIsMobile ? 8 : 3;
 
   return (
     <Layout
@@ -53,14 +52,14 @@ export default function Legal() {
         </Container>
       </Stack>
     </Layout>
-  )
+  );
 }
 
 export const getStaticProps: GetStaticProps = async (ctx) => {
-  const translation = await loadTranslation(ctx.locale)
+  const translation = await loadTranslation(ctx.locale);
   return {
     props: {
       translation,
     },
-  }
-}
+  };
+};

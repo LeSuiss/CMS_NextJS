@@ -1,19 +1,19 @@
-import { Grid, Paper, Stack, Typography } from '@mui/material'
+import { Grid, Paper, Stack, Typography } from '@mui/material';
 
-import Image from 'next/image'
-import Link from 'next/link'
-import React from 'react'
-import { i18n } from '@lingui/core'
-import styles from '../../styles/Home.module.scss'
-import { useIsMobile } from '../../assets/utils/hooks'
+import Image from 'next/image';
+import Link from 'next/link';
+import React from 'react';
+import { i18n } from '@lingui/core';
+import styles from '../../styles/Home.module.scss';
+import { useIsMobile } from '../../utils/hooks';
 
 export interface Section {
-  imageSrc: string
-  title: string
-  text: any
-  linkText: string
-  linkHref: string
-  index?: number
+  imageSrc: string;
+  title: string;
+  text: any;
+  linkText: string;
+  linkHref: string;
+  index?: number;
 }
 function HomePageSection({
   imageSrc = '',
@@ -23,9 +23,9 @@ function HomePageSection({
   linkHref,
   index,
 }: Section) {
-  const isMobile = useIsMobile()
-  const imageOrder = !isMobile && index % 2 === 0 ? -10 : 10
-  const contentOrder = !isMobile && index % 2 === 0 ? 10 : -10
+  const isMobile = useIsMobile();
+  const imageOrder = !isMobile && index % 2 === 0 ? -10 : 10;
+  const contentOrder = !isMobile && index % 2 === 0 ? 10 : -10;
 
   return (
     <section className={styles.test}>
@@ -95,7 +95,7 @@ function HomePageSection({
         </Grid>
       </Grid>
     </section>
-  )
+  );
 }
 
-export default HomePageSection
+export default HomePageSection;

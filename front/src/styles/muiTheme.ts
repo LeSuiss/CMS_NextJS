@@ -1,6 +1,14 @@
-import { createTheme, responsiveFontSizes } from '../../node_modules/@mui/material'
+import {
+  createTheme,
+  responsiveFontSizes,
+} from '../../node_modules/@mui/material';
 
 const theme: any = createTheme({
+  typography: {
+    allVariants: {
+      fontFamily: 'Roboto, Cambria, Cochin, Georgia, Times, Serif',
+    },
+  },
   palette: {
     primary: {
       main: 'rgb(194, 0, 43)',
@@ -10,7 +18,6 @@ const theme: any = createTheme({
     },
     divider: 'rgba(168,66,66,0.12)',
   },
-})
-
+});
 
 export const muiTheme = responsiveFontSizes(theme);

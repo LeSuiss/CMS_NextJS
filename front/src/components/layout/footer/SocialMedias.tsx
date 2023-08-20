@@ -1,10 +1,10 @@
-import { Box, IconButton, Stack } from '@mui/material'
-import { Facebook, Instagram, LinkedIn, YouTube } from '@mui/icons-material'
+import { Box, IconButton, Stack } from '@mui/material';
+import { Facebook, Instagram, LinkedIn, YouTube } from '@mui/icons-material';
 
-import React from 'react'
-import styles from '../../../styles/Home.module.scss'
+import React from 'react';
+import styles from '../../../styles/Home.module.scss';
 
-export function SocialMedias({ urls = ['toto'], whiteIcons = true }) {
+export function SocialMedias({ urls, whiteIcons = true }) {
   const possibleMedias = {
     linkedin: {
       url: urls?.filter((url) => url.includes('linkedin'))[0],
@@ -44,7 +44,7 @@ export function SocialMedias({ urls = ['toto'], whiteIcons = true }) {
         <Instagram fontSize="large" className={styles.socialMediaIcons} />
       ),
     },
-  }
+  };
 
   return (
     <Stack
@@ -53,8 +53,8 @@ export function SocialMedias({ urls = ['toto'], whiteIcons = true }) {
       sx={{ '& *': { maxHeight: '40px' } }}
     >
       {Object.values(possibleMedias)
-        .filter(({ url }) => url)
-        .map(({ url, displayIcon }) => (
+        ?.filter(({ url }) => url)
+        ?.map(({ url, displayIcon }) => (
           <div key={url}>
             {!!url && (
               <a key={url} target="_blank" href={url} rel="noreferrer">
@@ -64,5 +64,5 @@ export function SocialMedias({ urls = ['toto'], whiteIcons = true }) {
           </div>
         ))}
     </Stack>
-  )
+  );
 }
