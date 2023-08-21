@@ -62,10 +62,5 @@ export default function Legal() {
 
 export const getStaticProps: GetStaticProps = async (ctx) => {
   const translation = await loadTranslation(ctx.locale);
-
-  return {
-    props: {
-      translation,
-    },
-  };
+  return { props: { translation } };
 };

@@ -7,20 +7,22 @@ import {
   Typography,
 } from '@mui/material';
 
+import { GetStaticProps } from 'next';
 import Image from 'next/legacy/image';
 import Layout from '../components/layout';
 import React from 'react';
 import { i18n } from '@lingui/core';
+import loadTranslation from '../utils/loadTranslation';
 import { t } from '@lingui/macro';
 import { useTheme } from '../../node_modules/@mui/material';
-import { GetStaticProps } from 'next';
-import loadTranslation from '../utils/loadTranslation';
 
 export default function Innovation() {
   const theme = useTheme();
 
+
   return (
-    <Layout title={i18n._(/* i18n: Innovation */ t`Innovation`)}>
+    <Layout 
+    title={i18n._(/* i18n: Innovation */ t`Innovation`)}>
       <Stack
         padding={1}
         className="backImage"

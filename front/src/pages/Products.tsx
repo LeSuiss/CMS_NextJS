@@ -201,14 +201,8 @@ export const getStaticProps: GetStaticProps = async (ctx) => {
   i18n.activate(ctx.locale);
   const translation = await loadTranslation(ctx.locale);
 
-  return {
-    props: {
-      translation,
-      fakeDataProducts,
-    },
-  };
+  return { props: { translation, fakeDataProducts } };
 };
-
 export class SimpleSlider extends Component {
   render() {
     const settings = {
