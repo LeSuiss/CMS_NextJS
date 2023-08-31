@@ -13,13 +13,13 @@ import {
 import CookieConsent, { getCookieConsentValue } from 'react-cookie-consent';
 import React, { useContext } from 'react';
 import { Theme, useTheme } from '@mui/material/styles';
-import { t } from '@lingui/macro';
-import { i18n } from '@lingui/core';
 
 import _ from 'lodash';
+import { i18n } from '@lingui/core';
 import { rootContext } from '../../pages/_app';
 import { setContrastedBackground } from '../utils';
 import { styled } from '../../../node_modules/@mui/material';
+import { t } from '@lingui/macro';
 
 const BootstrapDialog = styled(Dialog)(({ theme }) => ({
   '& .MuiDialogContent-root': {
@@ -200,7 +200,7 @@ export const CookieBanner = ({
           <Button
             color="primary"
             variant="contained"
-            padding={2}
+            sx={{ p: 2 }}
             onClick={handleClose}
           >
             Save changes

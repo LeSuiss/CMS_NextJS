@@ -33,6 +33,7 @@
     "@mui/material": "^5.5.0",
     "@mui/styles": "^5.5.0",
     "@next/font": "^13.2.4",
+    "@storybook/react": "^7.4.0",
     "axios": "^0.24.0",
     "clsx": "latest",
     "cross-env": "^7.0.3",
