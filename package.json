@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "@storybook/react": "^7.4.0"
+  }
+}
