@@ -4,6 +4,7 @@ import {
   WithBackgroundColorShape,
 } from '../../utils/withBackground';
 import { useIsMobile, useWindowSize } from '../../utils/hooks';
+
 import { HEADER_HEIGHT } from '../../config/constants';
 import React from 'react';
 import { i18n } from '@lingui/core';
@@ -21,16 +22,6 @@ export const HomePageFirstLookAt = () => {
     '/medias/homePageSlider/test.jpg',
     '/medias/homePageSlider/test2.jpg',
   ];
-
-  const scrollToSkipIntro = () => {
-    for (let index = 0; index < 100; index++) {
-      setTimeout(
-        () =>
-          window.scrollTo(0, ((height - HEADER_HEIGHT * 0.8) * index) / 100),
-        index * 3.5
-      );
-    }
-  };
 
   return (
     <Box
@@ -77,8 +68,9 @@ export const HomePageFirstLookAt = () => {
         >
           <Typography
             variant="h2"
-            padding={!isMobile ? 4 : 0}
+            padding="2rem"
             sx={{
+              textAlign: isMobile && 'center',
               color: 'white',
               lineHeight: '1.5em',
               fontWeight: 'bolder !important',
@@ -100,7 +92,6 @@ export const HomePageFirstLookAt = () => {
             Solutions de levage & Ingénieurerie
           </Typography>
         </Grid>
-
         {!isMobile && (
           <Grid
             md={6}

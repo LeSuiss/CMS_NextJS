@@ -8,6 +8,7 @@ import {
   Typography,
 } from '@mui/material';
 
+import { FAQ } from '../lib/faq/FAQ';
 import type { GetStaticProps } from 'next';
 import Layout from '../components/layout';
 import React from 'react';
@@ -15,7 +16,6 @@ import { i18n } from '@lingui/core';
 import loadTranslation from '../utils/loadTranslation';
 import { t } from '@lingui/macro';
 import { useIsMobile } from '../utils/hooks';
-import { FAQ } from '../lib/faq/FAQ';
 
 const FAQitems = [
   {
@@ -35,12 +35,10 @@ const FAQitems = [
 export default function Legal() {
   const isMobile = useIsMobile();
 
-  const layoutPadding = !isMobile ? 8 : 3;
-
   return (
     <Layout title={i18n._(/* i18n: FAQ */ t`FAQ`)}>
       <Stack
-        padding={layoutPadding}
+        paddingY="1em"
         sx={{ backgroundImage: 'url("/medias/FAQ.jpg")' }}
         className="backImage"
       >
