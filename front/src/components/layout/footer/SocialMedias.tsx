@@ -1,6 +1,7 @@
 import { Box, IconButton, Stack } from '@mui/material';
 import { Facebook, Instagram, LinkedIn, YouTube } from '@mui/icons-material';
 
+import Link from 'next/link';
 import React from 'react';
 import styles from '../../../styles/Home.module.scss';
 
@@ -57,9 +58,9 @@ export function SocialMedias({ urls, whiteIcons = true }) {
         ?.map(({ url, displayIcon }) => (
           <div key={url}>
             {!!url && (
-              <a key={url} target="_blank" href={url} rel="noreferrer">
+              <Link key={url} target="_blank" href={url} rel="noreferrer">
                 <Box>{displayIcon()}</Box>
-              </a>
+              </Link>
             )}
           </div>
         ))}

@@ -27,7 +27,11 @@ function Header({ navigationStructure, className }) {
       {isMobile ? (
         <CustomMenu linksToDisplay={navigationStructure} />
       ) : (
-        <Tabs value={0} sx={{ '& a': { margin: 'auto' } }}>
+        <Tabs
+          value={0}
+          aria-label="tabs menu"
+          sx={{ '& a': { margin: 'auto' } }}
+        >
           {navigationStructure.map((page) => (
             <Link
               passHref={true}

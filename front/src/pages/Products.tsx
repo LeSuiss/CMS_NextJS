@@ -112,8 +112,8 @@ export default function Products() {
                 <Grid container item padding={!isMobile && 2}>
                   <Typography
                     variant="h4"
-                    marginBottom={2}
                     width="100%"
+                    marginBottom={2}
                     borderBottom={`${theme.palette.primary.main} 2px solid`}
                   >
                     {title}
@@ -136,7 +136,6 @@ export default function Products() {
                     <Paper sx={{ p: 1, backgroundColor: 'whitesmoke' }}>
                       <Carousel
                         settings={{
-                          autoplay: !isMobile,
                           pauseOnHover: true,
                           dotsClass: 'slick-dots slick-thumb',
                           customPaging: (i) => (
@@ -166,15 +165,17 @@ export default function Products() {
                                 }}
                               >
                                 <ReactPlayer
-                                  type="video/mp4"
-                                  playbackRate={10}
                                   controls
                                   url={`/medias/products/${img}`}
+                                  type="video/mp4"
+                                  playbackRate={10}
                                   width="100%"
                                 />
                               </Box>
                             ) : (
                               <img
+                                alt={title}
+                                src={`/medias/products/${img}`}
                                 style={{
                                   minHeight: '300px',
                                   maxHeight: '300px',
@@ -182,8 +183,6 @@ export default function Products() {
                                   width: '100%',
                                   objectFit: 'contain',
                                 }}
-                                alt={title}
-                                src={`/medias/products/${img}`}
                               />
                             )}
                           </Stack>
