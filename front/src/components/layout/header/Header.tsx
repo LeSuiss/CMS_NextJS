@@ -27,7 +27,7 @@ function Header({ navigationStructure, className }) {
       {isMobile ? (
         <CustomMenu linksToDisplay={navigationStructure} />
       ) : (
-        <Tabs value={0}>
+        <Tabs value={0} sx={{ '& a': { margin: 'auto' } }}>
           {navigationStructure.map((page) => (
             <Link
               passHref={true}
@@ -36,7 +36,10 @@ function Header({ navigationStructure, className }) {
             >
               <Tab
                 label={i18n._(page.nav)}
-                sx={{ fontWeight: 'bolder', fontSize: '16px' }}
+                sx={{
+                  fontWeight: 'bolder',
+                  fontSize: '16px',
+                }}
               />
             </Link>
           ))}

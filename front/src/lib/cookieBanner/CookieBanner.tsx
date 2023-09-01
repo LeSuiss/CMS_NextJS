@@ -84,7 +84,6 @@ export const CookieBanner = ({
 
   const handleClickOpen = () => {
     setModalIsOpen(true);
-    dispatchContext({ displayCookieBanner: true });
   };
 
   const handleClose = () => {
@@ -110,8 +109,8 @@ export const CookieBanner = ({
       }
       style={{
         flexFlow: 'column',
-        backgroundColor: 'black',
-        opacity: '0.85',
+        backgroundColor: 'darkblue',
+        paddingLeft: '20px',
       }}
       visible={
         context.displayCookieBanner === undefined ? 'byCookieValue' : 'visible'
@@ -121,15 +120,19 @@ export const CookieBanner = ({
       location="bottom"
       ButtonComponent={Button}
       disableButtonStyles
-      buttonStyle={{ margin: '10px' }}
+      buttonStyle={{ margin: '20px' }}
       buttonText="accept"
       declineButtonText="decline"
-      customButtonProps={{ color: 'info', variant: 'outlined' }}
+      customButtonProps={{ color: 'info', variant: 'contained', margin: 2 }}
       customDeclineButtonProps={{
         color: 'error',
-        variant: 'outlined',
+        variant: 'contained',
       }}
-      contentStyle={{ flex: 'none', width: '100%', padding: theme.spacing(0) }}
+      contentStyle={{
+        flex: 'none',
+        width: '100%',
+        marginLeft: '-10px',
+      }}
       enableDeclineButton
     >
       <Stack width="100%">
@@ -197,12 +200,7 @@ export const CookieBanner = ({
           ))}
         </DialogContent>
         <DialogActions sx={{ alignSelf: 'flex-end', padding: 2 }}>
-          <Button
-            color="primary"
-            variant="contained"
-            sx={{ p: 2 }}
-            onClick={handleClose}
-          >
+          <Button variant="outlined" onClick={handleClose}>
             Save changes
           </Button>
         </DialogActions>

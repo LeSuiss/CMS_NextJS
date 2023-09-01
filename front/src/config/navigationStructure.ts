@@ -20,7 +20,7 @@ export const NAVIGATION_STRUCTURE = [
     seoDescription: '',
   },
   {
-    nav: defineMessage({ message: 'Notre Equipe' }),
+    nav: defineMessage({ message: 'Equipe' }),
     link: '/Team',
     seoTitle: '',
     seoDescription: '',

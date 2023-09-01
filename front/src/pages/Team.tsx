@@ -45,7 +45,35 @@ function Team({ employees }) {
           </Card>
 
           <Card>
-            {console.log(employees)}
+            <CardHeader
+              title={i18n._(/* i18n: Contact summary */ t`La direction`)}
+            />
+            <CardContent>
+              <Stack
+                width="100%"
+                display="flex"
+                justifyContent="space-around"
+                alignItems="baseline"
+                spacing={2}
+                sx={{ flexFlow: 'wrap' }}
+              >
+                {employees?.slice(0, 5).map((e, index) => (
+                  <Stack key={e.email ?? 'employeeN°' + index}>
+                    <PortraitCard
+                      name={e.firstName + ' ' + e.lastName}
+                      description={e.description}
+                      job={e.job}
+                      image={e.portrait}
+                      email={e.email}
+                      phone={e.phone}
+                    />
+                  </Stack>
+                ))}
+              </Stack>
+            </CardContent>
+          </Card>
+
+          <Card>
             <CardHeader
               title={i18n._(/* i18n: Contact summary */ t`L'atelier`)}
             />
@@ -58,7 +86,7 @@ function Team({ employees }) {
                 spacing={2}
                 sx={{ flexFlow: 'wrap' }}
               >
-                {employees?.slice(0, 20).map((e, index) => (
+                {employees?.slice(10, 20).map((e, index) => (
                   <Stack key={e.email ?? 'employeeN°' + index}>
                     <PortraitCard
                       name={e.firstName + ' ' + e.lastName}
