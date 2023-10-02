@@ -2,6 +2,43 @@ import Head from 'next/head';
 import PropTypes from 'prop-types';
 import React from 'react';
 
+export interface SeoProps {
+  title: string;
+  description: string;
+  type: string;
+  url: string;
+  image: string;
+  createdAt?: string;
+  updatedAt?: string;
+}
+
+const SeoHead = (
+  props: SeoProps = {
+    url: '/',
+    type: '',
+    title: '',
+    description: '',
+    image: '/logoHead.png',
+  }
+) => {
+  const { title, description, image } = props;
+  return (
+    <Head>
+      <title>{title} </title>
+      <link rel="icon" href={props.image} />
+      <meta name="viewport" content="initial-scale=1, width=device-width" />
+      <meta itemProp="name" content={title} />
+      <meta name="description" content={description} />
+      <meta itemProp="image" content={image} />
+      {socialTags(props).map(({ name, content }) => {
+        return <meta key={name} name={name} content={content} />;
+      })}
+    </Head>
+  );
+};
+
+export default SeoHead;
+
 const socialTags = ({
   type,
   url,
@@ -37,39 +74,3 @@ const socialTags = ({
 
   return metaTags;
 };
-
-interface SeoProps {
-  title: string;
-  description: string;
-  type: string;
-  url: string;
-  image: string;
-  createdAt?: string;
-  updatedAt?: string;
-}
-
-const Seo = (
-  props: SeoProps = {
-    url: '/',
-    type: '',
-    title: '',
-    description: '',
-    image: '',
-  }
-) => {
-  const { title, description, image } = props;
-  return (
-    <Head>
-      <title>{title} | App</title>
-      <meta name="description" content={description} />
-      <meta itemProp="name" content={title} />
-      <meta itemProp="description" content={description} />
-      <meta itemProp="image" content={image} />
-      {socialTags(props).map(({ name, content }) => {
-        return <meta key={name} name={name} content={content} />;
-      })}
-    </Head>
-  );
-};
-
-export default Seo;

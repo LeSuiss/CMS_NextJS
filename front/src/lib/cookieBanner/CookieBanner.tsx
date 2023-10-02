@@ -16,10 +16,10 @@ import { Theme, useTheme } from '@mui/material/styles';
 
 import _ from 'lodash';
 import { i18n } from '@lingui/core';
-import { rootContext } from '../../pages/_app';
 import { setContrastedBackground } from '../utils';
 import { styled } from '../../../node_modules/@mui/material';
 import { t } from '@lingui/macro';
+import { useRootContext } from '../../pages/_app';
 
 const BootstrapDialog = styled(Dialog)(({ theme }) => ({
   '& .MuiDialogContent-root': {
@@ -76,7 +76,7 @@ export const CookieBanner = ({
   privacyPolicyUrl = '',
 }: CookieBannerProps) => {
   const [modalIsOpen, setModalIsOpen] = React.useState(false);
-  const { context, dispatchContext } = React.useContext(rootContext);
+  const { context, dispatchContext } = useRootContext();
 
   const [savedCoookies, setSavedCookies] = React.useState<{
     [key: string]: any;

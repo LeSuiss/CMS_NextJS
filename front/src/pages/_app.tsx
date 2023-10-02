@@ -7,6 +7,7 @@ import React, { createContext, useReducer, useRef } from 'react';
 import { StylesProvider, createGenerateClassName } from '@mui/styles';
 
 import { CacheProvider } from '@emotion/react';
+import { CookieBanner } from '../lib';
 import CssBaseline from '@mui/material/CssBaseline';
 import Head from 'next/head';
 import { I18nProvider } from '@lingui/react';
@@ -17,7 +18,6 @@ import { i18n } from '@lingui/core';
 import initTranslation from '../utils/lingui';
 import { muiTheme } from '../styles/muiTheme';
 import { useRouter } from 'next/router';
-import { CookieBanner } from '../lib';
 
 const generateClassName = createGenerateClassName({
   productionPrefix: 'c',
@@ -66,10 +66,6 @@ export default function MyApp(props) {
     <CacheProvider value={emotionCache}>
       {/* {!!process.env.NEXT_PUBLIC_PUBLIC_GOOGLE_ANALYTICS && <GTAG />} */}
 
-      <Head>
-        <title>My page</title>
-        <meta name="viewport" content="initial-scale=1, width=device-width" />
-      </Head>
       <I18nProvider i18n={i18n}>
         <rootContext.Provider value={{ context, dispatchContext }}>
           <ThemeProvider theme={muiTheme}>
@@ -85,3 +81,5 @@ export default function MyApp(props) {
     </CacheProvider>
   );
 }
+
+export const useRootContext = () => React.useContext(rootContext);

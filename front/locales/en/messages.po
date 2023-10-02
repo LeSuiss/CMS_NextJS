@@ -6,27 +6,37 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: @lingui/cli\n"
 "Language: en\n"
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Plural-Forms: \n"
 
-#: src/config/navigationStructure.ts:4
+#: src/config/navigationStructure.ts:5
 msgid "Accueil"
 msgstr "Home"
 
-#: src/pages/index.tsx:289
+#: src/components/homePage/IconPresentation.tsx:71
 msgid "Adapter les produits au mieux des contraintes de l'utilisateur tout en garantissant à tout instant une sécurité optimale"
 msgstr ""
 
-#: src/pages/index.tsx:251
+#: src/components/homePage/IconPresentation.tsx:33
 msgid "Analyser"
 msgstr ""
 
-#: src/pages/index.tsx:307
+#: src/components/layout/header/Switcher.tsx:140
+msgid "Annuler"
+msgstr ""
+
+#: src/components/homePage/IconPresentation.tsx:89
 msgid ""
 "Approfondir la conception Intégration de l’électronique, définition du\n"
 "procédé de fabrication et des matériaux, modélisation 3D, simulation,\n"
 "réduction des coûts de fabrication"
 msgstr ""
 
-#: src/pages/Innovation.tsx:63
+#: src/pages/Innovation.tsx:61
 msgid ""
 "BE2i Technologies intervient principalement en mode de\n"
 "sous-traitance: Assistance technique, forfait et offshoring.\n"
@@ -45,51 +55,55 @@ msgid ""
 "assurons soutien et conseil dans chaque étape de votre projet."
 msgstr ""
 
-#: src/pages/index.tsx:256
+#: src/components/homePage/IconPresentation.tsx:38
 msgid "Bien comprendre le besoin État de l’art, rédaction du cahier des charges, benchmarking, reverse engineering, analyse fonctionnelle"
 msgstr ""
 
-#: src/pages/index.tsx:163
+#: src/components/homePage/HomePageFirstLookAt.tsx:79
 msgid "CREER"
 msgstr ""
 
-#: src/components/layout/footer/Footer.tsx:30
+#: src/components/layout/footer/Footer.main.tsx:32
 msgid "Catalogue Produit"
 msgstr ""
 
-#: src/pages/Contact.tsx:127
-#: src/pages/Contact.tsx:157
-#: src/pages/Contact.tsx:187
-#: src/pages/Contact.tsx:218
+#: src/pages/Contact.tsx:126
+#: src/pages/Contact.tsx:156
+#: src/pages/Contact.tsx:186
+#: src/pages/Contact.tsx:217
 msgid "Ce champ est requis"
 msgstr ""
 
-#: src/pages/404.tsx:17
+#: src/pages/404.tsx:16
 msgid "Cette page n'existe pas"
 msgstr ""
 
-#: src/components/layout/header/Switcher.tsx:90
+#: src/components/layout/header/Switcher.tsx:102
 msgid "Choisissez votre langue"
 msgstr ""
 
-#: src/components/layout/footer/Footer.tsx:25
+#: src/components/layout/footer/Footer.main.tsx:27
 msgid "Conditions générales "
 msgstr ""
 
-#: src/config/navigationStructure.ts:18
-#: src/pages/Contact.tsx:68
+#: src/config/navigationStructure.ts:29
+#: src/pages/Contact.tsx:67
 msgid "Contact"
 msgstr ""
 
-#: src/pages/index.tsx:165
+#: src/lib/cookieBanner/CookieBanner.tsx:174
+msgid "Customize your cookies"
+msgstr ""
+
+#: src/components/homePage/HomePageFirstLookAt.tsx:81
 msgid "DEVELOPPER"
 msgstr ""
 
-#: src/pages/index.tsx:269
+#: src/components/homePage/IconPresentation.tsx:51
 msgid "Designer une solution"
 msgstr ""
 
-#: src/components/layout/footer/Footer.tsx:86
+#: src/components/layout/footer/Footer.main.tsx:85
 msgid "Du lundi au vendredi de 8h à 17h"
 msgstr ""
 
@@ -97,51 +111,74 @@ msgstr ""
 msgid "Découvrir SAPEM"
 msgstr ""
 
-#: src/pages/index.tsx:302
+#: src/components/homePage/IconPresentation.tsx:84
 msgid "Développement technique"
 msgstr ""
 
-#: src/pages/Contact.tsx:367
+#: src/pages/Contact.tsx:366
 msgid "En ligne"
 msgstr ""
 
-#: src/pages/Contact.tsx:181
-#: src/pages/Contact.tsx:183
+#: src/pages/Contact.tsx:180
+#: src/pages/Contact.tsx:182
 msgid "Entreprise"
 msgstr ""
 
-#: src/pages/index.tsx:284
+#: src/config/navigationStructure.ts:23
+msgid "Equipe"
+msgstr ""
+
+#: src/components/homePage/IconPresentation.tsx:66
 msgid "Ergonomie"
 msgstr ""
 
-#: src/components/layout/footer/Footer.tsx:35
+#: src/config/navigationStructure.ts:35
+#: src/pages/FAQ.tsx:39
+msgid "FAQ"
+msgstr ""
+
+#: src/pages/FAQ.tsx:22
+#: src/pages/FAQ.tsx:26
+#: src/pages/FAQ.tsx:30
+msgid "Foire Aux Questions"
+msgstr ""
+
+#: src/components/layout/footer/Footer.main.tsx:37
 msgid "Gérer les cookies"
 msgstr ""
 
-#: src/pages/index.tsx:167
+#: src/components/homePage/HomePageFirstLookAt.tsx:83
 msgid "INNOVER"
 msgstr ""
 
-#: src/components/homePage/TrustingBrands.tsx:24
+#: src/components/homePage/TrustingBrands.tsx:35
 msgid "Ils nous font confiance"
 msgstr ""
 
-#: src/config/navigationStructure.ts:6
+#: src/config/navigationStructure.ts:11
 #: src/pages/Innovation.tsx:25
 msgid "Innovation"
 msgstr ""
 
-#: src/pages/Team.tsx:50
+#: src/pages/Team.tsx:78
 msgid "L'atelier"
 msgstr ""
 
-#: src/components/layout/footer/Footer.tsx:19
+#: src/pages/Team.tsx:49
+msgid "La direction"
+msgstr ""
+
+#: src/pages/FAQ.tsx:49
+msgid "Les réponses à vos questions"
+msgstr ""
+
+#: src/components/layout/footer/Footer.main.tsx:21
 #: src/pages/Legal.tsx:25
 msgid "Mentions Légales"
 msgstr ""
 
-#: src/pages/Contact.tsx:121
-#: src/pages/Contact.tsx:123
+#: src/pages/Contact.tsx:120
+#: src/pages/Contact.tsx:122
 msgid "Nom"
 msgstr ""
 
@@ -149,13 +186,13 @@ msgstr ""
 msgid "Nos Equipes"
 msgstr ""
 
-#: src/pages/Products.tsx:80
+#: src/pages/Products.tsx:81
 msgid "Nos Produits"
 msgstr ""
 
 #: src/config/navigationStructure.ts:14
-msgid "Notre Equipe"
-msgstr ""
+#~ msgid "Notre Equipe"
+#~ msgstr ""
 
 #: src/pages/Team.tsx:42
 msgid ""
@@ -163,63 +200,71 @@ msgid ""
 "personnalisées."
 msgstr ""
 
-#: src/pages/Contact.tsx:99
+#: src/pages/Contact.tsx:98
 msgid "Nous Contacter"
 msgstr ""
 
-#: src/pages/Contact.tsx:357
+#: src/pages/Contact.tsx:356
 msgid "Nous retrouvez"
 msgstr ""
 
-#: src/pages/Contact.tsx:240
-#: src/pages/Contact.tsx:243
+#: src/pages/Contact.tsx:239
+#: src/pages/Contact.tsx:242
 msgid "Numero de téléphone"
 msgstr ""
 
-#: src/pages/Contact.tsx:210
+#: src/pages/Contact.tsx:209
 msgid "Position"
 msgstr ""
 
-#: src/config/navigationStructure.ts:10
+#: src/config/navigationStructure.ts:17
 msgid "Produits"
 msgstr ""
 
-#: src/pages/index.tsx:321
+#: src/components/homePage/IconPresentation.tsx:103
 msgid "Prototypage"
 msgstr ""
 
-#: src/pages/Contact.tsx:149
-#: src/pages/Contact.tsx:152
+#: src/pages/Contact.tsx:148
+#: src/pages/Contact.tsx:151
 msgid "Prénom"
 msgstr ""
 
-#: src/pages/index.tsx:353
+#: src/components/homePage/FewNumbersSection.tsx:13
 msgid "Présentation"
 msgstr ""
 
-#: src/pages/404.tsx:46
+#: src/pages/404.tsx:45
 msgid "Retournez à la page d'accueil"
 msgstr ""
 
 #: src/pages/index.tsx:360
-msgid ""
-"SAPEM est spécialisée dans le design et la conception technique de produits de levage répondant aux exigences de sécurité et de fiabilité de ses partenaires. SAPEM vous aide à concevoir des produits adaptés à vos contraintes. Nous mettons pour cela à votre disposition nos compétences transversales en ingénierie mécanique et design industriel.\n"
-"Rigueur, qualité et grande curiosité sont pour nous des motivations clés. Elles nous poussent à acquérir continuellement de nouvelles compétences et à comprendre avec précision les enjeux de votre projet. Nous prêtons également une grande attention à la qualité des relations avec nos clients."
+#~ msgid ""
+#~ "SAPEM est spécialisée dans le design et la conception technique de produits de levage répondant aux exigences de sécurité et de fiabilité de ses partenaires. SAPEM vous aide à concevoir des produits adaptés à vos contraintes. Nous mettons pour cela à votre disposition nos compétences transversales en ingénierie mécanique et design industriel.\n"
+#~ "Rigueur, qualité et grande curiosité sont pour nous des motivations clés. Elles nous poussent à acquérir continuellement de nouvelles compétences et à comprendre avec précision les enjeux de votre projet. Nous prêtons également une grande attention à la qualité des relations avec nos clients."
+#~ msgstr ""
+
+#: src/components/homePage/FewNumbersSection.tsx:21
+msgid "SAPEM est spécialisée dans le design et la conception technique de produits de levage répondant aux exigences de sécurité et de fiabilité de ses partenaires. SAPEM vous aide à concevoir des produits adaptés à vos contraintes. Nous mettons pour cela à votre disposition nos compétences transversales en ingénierie mécanique et design industriel. Rigueur, qualité et grande curiosité sont pour nous des motivations clés. Elles nous poussent à acquérir continuellement de nouvelles compétences et à comprendre avec précision les enjeux de votre projet. Nous prêtons également une grande attention à la qualité des relations avec nos clients."
 msgstr ""
+
+#: src/pages/index.tsx:27
+msgid "SAPEM les professionnels du levage"
+msgstr "SAPEM the lifting professionals"
 
 #: src/pages/Legal.tsx:35
 msgid "SAPEM: Société d'applications éléctriques et mécaniques."
 msgstr ""
 
-#: src/pages/Contact.tsx:248
+#: src/pages/Contact.tsx:247
 msgid "Saisir un numero valide"
 msgstr ""
 
-#: src/pages/Contact.tsx:275
+#: src/pages/Contact.tsx:274
 msgid "Saisir une adresse mail valide"
 msgstr ""
 
-#: src/pages/Contact.tsx:305
+#: src/pages/Contact.tsx:304
 msgid "Saisir votre message"
 msgstr ""
 
@@ -233,67 +278,77 @@ msgid ""
 "du conseil d'administration."
 msgstr ""
 
-#: src/pages/Contact.tsx:386
+#: src/pages/Contact.tsx:382
 msgid "Sur Site"
 msgstr ""
 
-#: src/pages/index.tsx:274
+#: src/components/homePage/IconPresentation.tsx:56
 msgid "Travailler le produit. Recherches adaptées et optimisées. Adéquation du produits aux exigences de sécurité."
 msgstr ""
 
-#: src/pages/Contact.tsx:52
+#: src/pages/Contact.tsx:51
 msgid "Une erreur est survenue. Veuillez réessayer ultérieurement"
 msgstr ""
 
-#: src/pages/index.tsx:326
+#: src/components/homePage/IconPresentation.tsx:108
 msgid "Valider le produit dans ses moindres détails.Toutes les tailles de prototypes, itérations jusqu’à la validation du prototype"
 msgstr ""
 
-#: src/pages/Contact.tsx:49
+#: src/pages/Contact.tsx:48
 msgid "Votre message a bien été transmis"
 msgstr ""
 
-#: src/pages/404.tsx:38
+#: src/pages/404.tsx:37
 msgid "Vous avez demandé une page non repertoriée"
 msgstr ""
 
-#: src/pages/404.tsx:34
+#: src/pages/404.tsx:33
 msgid "erreur"
 msgstr ""
 
-#: src/pages/Contact.tsx:318
+#: src/pages/Contact.tsx:317
 msgid "j'accepte que mes données soient enregistrées par SAPEM et utilisées à des fins d'analyses et de démarchage commerciale"
 msgstr ""
 
-#: src/pages/Products.tsx:88
+#: src/pages/Products.tsx:89
 msgid "notre catalogue"
 msgstr ""
 
-#: src/components/layout/footer/Footer.tsx:107
+#: src/components/layout/footer/Footer.main.tsx:106
 msgid "par mail"
 msgstr ""
 
-#: src/pages/index.tsx:374
+#: src/components/homePage/FewNumbersSection.tsx:41
 msgid "partners"
 msgstr ""
 
-#: src/pages/index.tsx:382
+#: src/components/homePage/FewNumbersSection.tsx:49
 msgid "persons searching for disrupting innovations"
 msgstr ""
 
-#: src/pages/index.tsx:368
+#: src/components/homePage/FewNumbersSection.tsx:35
 msgid "projects"
 msgstr ""
 
-#: src/components/layout/footer/AuthorRow.tsx:41
+#: src/components/homePage/HomePageFirstLookAt.tsx:117
+msgid "quand la sécurité prime"
+msgstr "When security prevails"
+
+#: src/pages/FAQ.tsx:23
+#: src/pages/FAQ.tsx:27
+#: src/pages/FAQ.tsx:31
+msgid "réponse"
+msgstr ""
+
+#: src/components/layout/footer/AuthorRow.tsx:42
 msgid "site realisé par Alexis ARCHER"
 msgstr ""
 
-#: src/pages/Contact.tsx:337
+#: src/pages/Contact.tsx:336
 msgid "soumettre"
 msgstr ""
 
-#: src/pages/Contact.tsx:300
+#: src/pages/Contact.tsx:299
 msgid "votre message"
 msgstr ""
 

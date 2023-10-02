@@ -12,19 +12,23 @@ import {
   TextField,
   Typography,
 } from '@mui/material';
-import { GOOGLE_MAP_LOCATION, SOCIAL_MEDIAS_LINKS }   from '../config';
-import { defineMessage, t }                           from '@lingui/macro';
+import {
+  COMPANY_NAME,
+  GOOGLE_MAP_LOCATION,
+  SOCIAL_MEDIAS_LINKS,
+} from '../config';
+import { defineMessage, t } from '@lingui/macro';
 
-import { GetStaticProps }                             from 'next';
-import Layout                                         from '../components/layout';
-import { SocialMedias }                               from '../components/layout/footer/SocialMedias';
-import emailjs                                        from '@emailjs/browser';
-import { i18n }                                       from '@lingui/core';
-import loadTranslation                                from '../utils/loadTranslation';
-import { toast }                                      from 'react-toastify';
-import { useForm }                                    from 'react-hook-form';
-import { useState }                                   from 'react';
-import { useTheme }                                   from '../../node_modules/@mui/material';
+import { GetStaticProps } from 'next';
+import Layout from '../components/layout';
+import { SocialMedias } from '../components/layout/footer/SocialMedias';
+import emailjs from '@emailjs/browser';
+import { i18n } from '@lingui/core';
+import loadTranslation from '../utils/loadTranslation';
+import { toast } from 'react-toastify';
+import { useForm } from 'react-hook-form';
+import { useState } from 'react';
+import { useTheme } from '../../node_modules/@mui/material';
 
 export default function Contact({}) {
   const {
@@ -380,6 +384,7 @@ export default function Contact({}) {
                     <Divider sx={{ marginBottom: 2 }} />
 
                     <iframe
+                      title={`${COMPANY_NAME} map`}
                       src={GOOGLE_MAP_LOCATION}
                       width="600"
                       height="450"

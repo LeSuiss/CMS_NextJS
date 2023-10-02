@@ -5,23 +5,20 @@ import {
 } from '../../utils/withBackground';
 import { useIsMobile, useWindowSize } from '../../utils/hooks';
 
+import { GetStaticProps } from 'next';
 import { HEADER_HEIGHT } from '../../config/constants';
 import React from 'react';
 import { i18n } from '@lingui/core';
+import loadTranslation from '../../utils/loadTranslation';
+import { readdir } from 'fs/promises';
 import styles from '../../styles/Home.module.scss';
 import { t } from '@lingui/macro';
 import { useTheme } from '../../../node_modules/@mui/material';
 
-export const HomePageFirstLookAt = () => {
+export const HomePageFirstLookAt = ({ homePageSlider }) => {
   const isMobile = useIsMobile();
-  const height = useWindowSize().height;
 
   const theme = useTheme();
-  const backgroundSliders = [
-    '/medias/homePageSlider/laser.jpg',
-    '/medias/homePageSlider/test.jpg',
-    '/medias/homePageSlider/test2.jpg',
-  ];
 
   return (
     <Box
@@ -29,7 +26,7 @@ export const HomePageFirstLookAt = () => {
       sx={isMobile && { height: '400px', '& *': { maxHeight: '400px' } }}
     >
       <WithBackground
-        url={backgroundSliders}
+        url={homePageSlider}
         opacity={1}
         addedColor="black"
         addedColorOpacity={0.3}
@@ -54,7 +51,7 @@ export const HomePageFirstLookAt = () => {
         container
         sx={{
           zIndex: 9999999999999,
-          '& h2': { textShadow: '2px 2px black', fontSize: '50px !important' },
+          '& h2': { textShadow: '2px 2px black', fontSize: '3rem !important' },
         }}
       >
         <Grid
@@ -68,7 +65,6 @@ export const HomePageFirstLookAt = () => {
         >
           <Typography
             variant="h2"
-            padding="2rem"
             sx={{
               textAlign: isMobile && 'center',
               color: 'white',
@@ -113,7 +109,9 @@ export const HomePageFirstLookAt = () => {
               SAPEM
             </Typography>
             <Typography variant="h2" color="white" textAlign="center">
-              "quand la sécurité prime"
+              {i18n._(
+                /* i18n: quand la sécurité prime*/ t`quand la sécurité prime`
+              )}
             </Typography>
           </Grid>
         )}

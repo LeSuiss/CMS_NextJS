@@ -29,6 +29,7 @@ const Carousel = dynamic(
     ssr: false,
   }
 );
+
 const products = [
   {
     title: 'le retourneur x300',
@@ -112,6 +113,7 @@ export default function Products() {
                 <Grid container item padding={!isMobile && 2}>
                   <Typography
                     variant="h4"
+                    padding={1}
                     width="100%"
                     marginBottom={2}
                     borderBottom={`${theme.palette.primary.main} 2px solid`}

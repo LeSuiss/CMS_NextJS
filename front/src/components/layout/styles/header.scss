@@ -8,47 +8,47 @@ $primary: $redSapem;
   box-shadow: 1px 1px 3px 1px grey;
   padding: 0px;
   position: sticky;
-  width:100vw;
-  z-index: 999; 
+  width: 100vw;
+  z-index: 999;
   top: 0px;
   grid-area: header;
   max-height: 100px;
-  height:$headerHeight;
+  height: $headerHeight;
   display: flex;
   justify-content: space-between;
   align-items: center;
   text-align: center;
 
-  >*{
-    display:flex;
+  > * {
+    display: flex;
     align-items: center;
   }
-  *[role='tablist']{
+  *[role='tablist'] {
     height: 70%;
     a {
-    color: $primary !important;
-    font-size: 1.2em;
-    opacity: 1 !important;
-    transition: 0.1s;
-    z-index: 99999;
-    border-bottom: solid 2px $secondary;
+      color: $primary !important;
+      font-size: 1.2em;
+      opacity: 1 !important;
+      transition: 0.1s;
+      z-index: 99999;
+      border-bottom: solid 2px $secondary;
 
-      &:hover{
-      font-weight: bolder;
-      border-bottom: solid 2px $primary !important;
+      &:hover {
+        font-weight: bolder;
+        border-bottom: solid 2px $primary !important;
+      }
     }
   }
-  }
-  
+
   //flagSelect
   > :last-child * {
     z-index: 99999;
     height: auto;
-    border:none;
-     .ReactFlagsSelect-module_selectBtn__19wW7::after {
+    border: none;
+    .ReactFlagsSelect-module_selectBtn__19wW7::after {
       margin-left: -3px;
       margin-top: 4px;
-      border:none;
+      border: none;
     }
     ul {
       margin-top: 5px;
@@ -68,35 +68,35 @@ $primary: $redSapem;
     width: 150px !important;
   }
   > div:last-of-type {
-          max-height: 100%;          
-          *{ max-height: 100% }
+    max-height: 100%;
+    * {
+      max-height: 100%;
+    }
   }
 }
-.is-sticky{
-& img{margin-left: -20px;
+.is-sticky {
+  & img {
+    margin-left: -20px;
+    transition: 0.7s;
+  }
+  height: calc($headerHeight * 0.8);
   transition: 0.7s;
-}
-  height:calc($headerHeight*0.8);
-  transition: 0.7s;
-  &>*{
+  & > * {
     transform: scale(0.9);
-      transition: 0.7s;
-
+    transition: 0.7s;
   }
 }
 
-.titleIsSticky{
-
+.titleIsSticky {
   transition: 0.7s;
   animation-duration: 0.7s;
-  & * *:not(.MuiDivider-root){
+  & * *:not(.MuiDivider-root) {
     max-height: 100%;
     transform: scale(0.9);
     transition: 0.7s;
-  
   }
 
-  >*:nth-child(1) *{
-    transform:scale(0.9)
+  > *:nth-child(1) * {
+    transform: scale(0.9);
   }
 }

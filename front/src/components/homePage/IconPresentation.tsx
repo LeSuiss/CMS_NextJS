@@ -1,4 +1,5 @@
-import { Box, Divider, Grid, Typography, Container } from '@mui/material';
+import { Box, Container, Divider, Grid, Typography } from '@mui/material';
+
 import ConstructionIcon from '@mui/icons-material/Construction';
 import EngineeringIcon from '@mui/icons-material/Engineering';
 import GroupIcon from '@mui/icons-material/Group';

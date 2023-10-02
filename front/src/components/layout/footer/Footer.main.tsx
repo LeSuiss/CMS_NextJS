@@ -1,21 +1,21 @@
 // import PhoneIphoneIcon from '@mui/icons-material/PhoneIphone'
-import { Box, Button, Stack }        from '@mui/material';
+import { Box, Button, Stack } from '@mui/material';
 import { Divider, Grid, Typography } from '@mui/material';
-import { defineMessage, t }          from '@lingui/macro';
+import { defineMessage, t } from '@lingui/macro';
+import { rootContext, useRootContext } from '../../../pages/_app';
 
-import { AuthorRow }                 from './AuthorRow';
-import { GridSection }               from './GridSection';
-import Logo                          from '../Logo';
-import React                         from 'react';
-import { SOCIAL_MEDIAS_LINKS }       from '../../../config';
-import { SocialMedias }              from './SocialMedias';
-import { i18n }                      from '@lingui/core';
-import { rootContext }               from '../../../pages/_app';
-import styles                        from '../../../styles/Home.module.scss';
-import { useTheme }                  from '../../../../node_modules/@mui/material';
+import { AuthorRow } from './AuthorRow';
+import { GridSection } from './GridSection';
+import Logo from '../Logo';
+import React from 'react';
+import { SOCIAL_MEDIAS_LINKS } from '../../../config';
+import { SocialMedias } from './SocialMedias';
+import { i18n } from '@lingui/core';
+import styles from '../../../styles/Home.module.scss';
+import { useTheme } from '../../../../node_modules/@mui/material';
 
 const Footer = () => {
-  const { dispatchContext } = React.useContext(rootContext);
+  const { dispatchContext } = useRootContext();
   const footerLinks = [
     {
       title: defineMessage({
@@ -67,9 +67,7 @@ const Footer = () => {
           <Logo />
         </Grid>
 
-        <SocialMedias
-          urls={SOCIAL_MEDIAS_LINKS}
-        />
+        <SocialMedias urls={SOCIAL_MEDIAS_LINKS} />
 
         <Grid item container md={4} sm={12}>
           <Grid

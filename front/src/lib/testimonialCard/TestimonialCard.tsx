@@ -1,6 +1,4 @@
-//Styles
 import { Grid } from '@mui/material';
-//Material components
 import PropTypes from 'prop-types';
 import React from 'react';
 import { styled } from '../../../node_modules/@mui/material';

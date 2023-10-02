@@ -1,11 +1,11 @@
 import { Box, Grid, Stack, Typography } from '@mui/material';
 
-import Image                            from 'next/legacy/image';
-import React                            from 'react';
-import { i18n }                         from '@lingui/core';
-import { styled }                       from '../../../node_modules/@mui/material';
-import styles                           from '../../styles/Home.module.scss';
-import { t }                            from '@lingui/macro';
+import Image from 'next/legacy/image';
+import React from 'react';
+import { i18n } from '@lingui/core';
+import { styled } from '../../../node_modules/@mui/material';
+import styles from '../../styles/Home.module.scss';
+import { t } from '@lingui/macro';
 
 const GridWithStyle = styled(Grid)(({ theme }) => ({
   '& img': {
@@ -51,7 +51,7 @@ function TrustingBrands(props: any) {
       >
         {props?.brandsList?.map((x) => (
           <Grid item key={`logo${x}`} textAlign="center">
-            <img style={{}} alt={`logo${x}`} src={`/medias/logo/${x}`} />
+            <img style={{}} alt={`logo${x}`} src={x} />
           </Grid>
         ))}
       </Grid>
