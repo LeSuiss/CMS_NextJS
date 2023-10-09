@@ -1,13 +1,13 @@
-import { Grid, Link, Typography } from '@mui/material'
+import { Grid, Link, Typography } from '@mui/material';
 
-import React from 'react'
-import { i18n } from '@lingui/core'
-import { t } from '@lingui/macro'
+import React from 'react';
+import { i18n } from '@lingui/core';
+import { t } from '@lingui/macro';
 
 export function GridSection({ title, links, isBlank = false, cb = null }) {
   return (
     <Grid item xs={12} md={2} container textAlign="center">
-      <Typography variant="h6" flex={1}>
+      <Typography variant="subtitle2" flex={1}>
         {typeof links === 'object' &&
           i18n._(
             /* i18n: Footer>SiteInformation>InformationTitle> */ t`${title}`
@@ -37,5 +37,5 @@ export function GridSection({ title, links, isBlank = false, cb = null }) {
           )}
       </Grid>
     </Grid>
-  )
+  );
 }

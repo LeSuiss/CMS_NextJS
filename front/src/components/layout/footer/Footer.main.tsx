@@ -1,6 +1,7 @@
 // import PhoneIphoneIcon from '@mui/icons-material/PhoneIphone'
 import { Box, Button, Stack } from '@mui/material';
 import { Divider, Grid, Typography } from '@mui/material';
+import { MAILING_DESTINATARY, SOCIAL_MEDIAS_LINKS } from '../../../config';
 import { defineMessage, t } from '@lingui/macro';
 import { rootContext, useRootContext } from '../../../pages/_app';
 
@@ -8,7 +9,6 @@ import { AuthorRow } from './AuthorRow';
 import { GridSection } from './GridSection';
 import Logo from '../Logo';
 import React from 'react';
-import { SOCIAL_MEDIAS_LINKS } from '../../../config';
 import { SocialMedias } from './SocialMedias';
 import { i18n } from '@lingui/core';
 import styles from '../../../styles/Home.module.scss';
@@ -84,7 +84,7 @@ const Footer = () => {
               )}
             </Typography>
             <Stack direction="row" alignItems="center">
-              <Typography variant="h6" sx={{ paddingBottom: '0px' }}>
+              <Typography variant="subtitle1" sx={{ paddingBottom: '0px' }}>
                 <a
                   className={styles.container_socialMediaRow}
                   href="tel: 01 88 24 61 90"
@@ -95,10 +95,10 @@ const Footer = () => {
               <Box component="span" margin={1}>
                 ou
               </Box>
-              <Typography variant="h6">
+              <Typography variant="subtitle1">
                 <a
                   className={styles.container_socialMediaRow}
-                  href="mailto: archer.alexis@hotmail.fr"
+                  href={`mailto:${MAILING_DESTINATARY}`}
                 >
                   {i18n._(
                     /* i18n: Footer>SiteInformation>par mail */ t`par mail`

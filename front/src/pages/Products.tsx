@@ -1,4 +1,5 @@
 import {
+  Avatar,
   Box,
   Button,
   Card,
@@ -114,21 +115,13 @@ export default function Products() {
                         {imgs.map((img) => (
                           <Stack display="flex" alignItems="flex-end" key={img}>
                             {img.endsWith('mp4') ? (
-                              <Box
-                                display="flex"
-                                alignItems="center"
-                                sx={{
-                                  minHeight: '300px',
-                                  maxHeight: '300px',
-                                  width: '100%',
-                                }}
-                              >
+                              <Box display="flex" alignItems="center">
                                 <ReactPlayer
                                   controls
                                   url={`/medias/products/${img}`}
                                   type="video/mp4"
                                   playbackRate={10}
-                                  width="100%"
+                                  maxWidth="100%"
                                 />
                               </Box>
                             ) : (
