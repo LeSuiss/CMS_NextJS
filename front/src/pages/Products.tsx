@@ -8,12 +8,11 @@ import {
   Stack,
   Typography,
 } from '@mui/material';
-import React, { Component } from 'react';
 
 import type { GetStaticProps } from 'next';
 import Layout from '../components/layout';
+import React from 'react';
 import ReactPlayer from 'react-player';
-import Slider from 'react-slick';
 import dynamic from 'next/dynamic';
 import { fakeDataProducts } from '../assets/fakeDataProducts';
 import { i18n } from '@lingui/core';
@@ -29,48 +28,6 @@ const Carousel = dynamic(
     ssr: false,
   }
 );
-
-const products = [
-  {
-    title: 'le retourneur x300',
-    description: lorem,
-    imgs: [
-      'Levage&RetournementPneumatique.jpg',
-      'levage&RetournementPneumatique.mp4',
-    ],
-  },
-  {
-    title: 'le retourneur x300',
-    description: lorem,
-    imgs: ['manipulateurMecanique.jpg', 'manipulateurMecanique.mp4'],
-  },
-  {
-    title: 'le retourneur x300',
-    description: lorem,
-    imgs: ['MANUTENTION.jpg', 'palonnierMonopoutre15T.mp4'],
-  },
-  {
-    title: 'le retourneur x300',
-    description: lorem,
-    imgs: ['tableRotative.jpg', 'MANUTENTION.jpg', 'tableRotative.mp4'],
-  },
-  {
-    title: 'le retourneur x300',
-    description: lorem,
-    video: 'bobine.mp4',
-    imgs: ['bobine1.webp'],
-  },
-  {
-    title: 'le retourneur x300',
-    description: lorem,
-    imgs: ['bobine.mp4', 'bobine1.webp'],
-  },
-  {
-    title: 'le retourneur x300',
-    description: lorem,
-    imgs: ['Levage&RetournementPneumatique.jpg'],
-  },
-];
 
 export default function Products() {
   const theme = useTheme();
@@ -208,39 +165,45 @@ export const getStaticProps: GetStaticProps = async (ctx) => {
 
   return { props: { translation, fakeDataProducts } };
 };
-export class SimpleSlider extends Component {
-  render() {
-    const settings = {
-      dots: true,
-      infinite: true,
-      speed: 500,
-      slidesToShow: 1,
-      slidesToScroll: 1,
-    };
-    return (
-      <div>
-        <h2> Single Item</h2>
-        <Slider {...settings}>
-          <div>
-            <h3>1</h3>
-          </div>
-          <div>
-            <h3>2</h3>
-          </div>
-          <div>
-            <h3>3</h3>
-          </div>
-          <div>
-            <h3>4</h3>
-          </div>
-          <div>
-            <h3>5</h3>
-          </div>
-          <div>
-            <h3>6</h3>
-          </div>
-        </Slider>
-      </div>
-    );
-  }
-}
+
+const products = [
+  {
+    title: 'le retourneur x300',
+    description: lorem,
+    imgs: [
+      'Levage&RetournementPneumatique.jpg',
+      'levage&RetournementPneumatique.mp4',
+    ],
+  },
+  {
+    title: 'le retourneur x300',
+    description: lorem,
+    imgs: ['manipulateurMecanique.jpg', 'manipulateurMecanique.mp4'],
+  },
+  {
+    title: 'le retourneur x300',
+    description: lorem,
+    imgs: ['MANUTENTION.jpg', 'palonnierMonopoutre15T.mp4'],
+  },
+  {
+    title: 'le retourneur x300',
+    description: lorem,
+    imgs: ['tableRotative.jpg', 'MANUTENTION.jpg', 'tableRotative.mp4'],
+  },
+  {
+    title: 'le retourneur x300',
+    description: lorem,
+    video: 'bobine.mp4',
+    imgs: ['bobine1.webp'],
+  },
+  {
+    title: 'le retourneur x300',
+    description: lorem,
+    imgs: ['bobine.mp4', 'bobine1.webp'],
+  },
+  {
+    title: 'le retourneur x300',
+    description: lorem,
+    imgs: ['Levage&RetournementPneumatique.jpg'],
+  },
+];

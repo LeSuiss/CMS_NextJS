@@ -20,6 +20,7 @@ import {
 import { defineMessage, t } from '@lingui/macro';
 
 import { GetStaticProps } from 'next';
+import { Iframe } from '../lib';
 import Layout from '../components/layout';
 import { SocialMedias } from '../components/layout/footer/SocialMedias';
 import emailjs from '@emailjs/browser';
@@ -81,13 +82,7 @@ export default function Contact({}) {
             }}
           >
             <Grid container alignItems="flex-start">
-              <Grid
-                container
-                columns={{ xs: 4, sm: 8, md: 12 }}
-                xs={12}
-                md={6}
-                padding={2}
-              >
+              <Grid container columns={{ xs: 4, sm: 8, md: 12 }} xs={12} md={6}>
                 <CardHeader
                   sx={{
                     textAlign: 'center',
@@ -103,7 +98,7 @@ export default function Contact({}) {
                     justifyContent="center"
                     alignItems="center"
                     columns={{ xs: 4, sm: 8, md: 12 }}
-                    padding={2}
+                    paddingY={2}
                   >
                     <Grid
                       item
@@ -339,13 +334,7 @@ export default function Contact({}) {
                   </Grid>
                 </form>
               </Grid>
-              <Grid
-                container
-                columns={{ xs: 4, sm: 8, md: 12 }}
-                xs={12}
-                md={6}
-                padding={2}
-              >
+              <Grid item columns={{ xs: 4, sm: 8, md: 12 }} xs={12} md={6}>
                 <CardHeader
                   sx={{
                     textAlign: 'center',
@@ -375,6 +364,7 @@ export default function Contact({}) {
                   <Stack
                     width="100%"
                     display="flex"
+                    flexDirection="column"
                     justifyContent="center"
                     paddingY={2}
                   >
@@ -383,18 +373,20 @@ export default function Contact({}) {
                     </Typography>
                     <Divider sx={{ marginBottom: 2 }} />
 
-                    <iframe
-                      title={`${COMPANY_NAME} map`}
-                      src={GOOGLE_MAP_LOCATION}
-                      width="600"
-                      height="450"
+                    <div
                       style={{
-                        margin: 'auto',
-                        maxWidth: '100%',
-                        maxHeight: '100%',
+                        position: 'relative',
+                        overflow: 'hidden',
+                        width: '100%',
+                        minHeight: '200px',
+                        aspectRatio: '4/3',
                       }}
-                      loading="lazy"
-                    />
+                    >
+                      <Iframe
+                        companyName={COMPANY_NAME}
+                        googleMapLocation={GOOGLE_MAP_LOCATION}
+                      />
+                    </div>
                   </Stack>
                 </CardContent>
               </Grid>
