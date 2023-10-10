@@ -36,27 +36,24 @@ export default function Legal() {
   const isMobile = useIsMobile();
 
   return (
-    <Layout title={i18n._(/* i18n: FAQ */ t`FAQ`)}>
-      <Stack
-        paddingY="1em"
-        sx={{ backgroundImage: 'url("/medias/FAQ.jpg")' }}
-        className="backImage"
-      >
-        <Container maxWidth="lg">
-          <Card sx={{ minHeight: '50vh' }}>
-            <CardHeader
-              title={i18n._(
-                /* i18n: Les réponses à vos questions */ t`Les réponses à vos questions`
-              )}
-            />
-            <Divider />
+    <Layout
+      title={i18n._(/* i18n: FAQ */ t`FAQ`)}
+      backgroundImageUrl="/medias/FAQ.jpg"
+    >
+      <Container maxWidth="lg">
+        <Card sx={{ minHeight: '50vh' }}>
+          <CardHeader
+            title={i18n._(
+              /* i18n: Les réponses à vos questions */ t`Les réponses à vos questions`
+            )}
+          />
+          <Divider />
 
-            <CardContent>
-              <FAQ faqList={FAQitems} />
-            </CardContent>
-          </Card>
-        </Container>
-      </Stack>
+          <CardContent>
+            <FAQ faqList={FAQitems} />
+          </CardContent>
+        </Card>
+      </Container>
     </Layout>
   );
 }

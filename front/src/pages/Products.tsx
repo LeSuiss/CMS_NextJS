@@ -38,6 +38,7 @@ export default function Products() {
     <Layout
       titleIsSticky
       title={i18n._(/* i18n: Nos Produits> titre */ t` Nos Produits`)}
+      backgroundImageUrl="https://cdn.pixabay.com/photo/2014/06/17/16/53/blueprint-370588_960_720.jpg"
       stickerToDisplay={
         <a
           href={'/documents/catalogueProduits.pdf'}
@@ -50,104 +51,95 @@ export default function Products() {
         </a>
       }
     >
-      <Stack
-        sx={{
-          backgroundImage:
-            'url("https://cdn.pixabay.com/photo/2014/06/17/16/53/blueprint-370588_960_720.jpg")',
-        }}
-        className="backImage"
-        paddingY={6}
-      >
-        <Container maxWidth="lg">
-          <Grid
-            className="slickRemove"
-            container
-            gap={5}
-            marginTop={4}
-            marginBottom={10}
-          >
-            {products.map(({ imgs, title, description }) => (
-              <Card elevation={8} key={title}>
-                <Grid container item padding={!isMobile && 2}>
-                  <Typography
-                    variant="h4"
-                    padding={1}
-                    width="100%"
-                    marginBottom={2}
-                    borderBottom={`${theme.palette.primary.main} 2px solid`}
-                  >
-                    {title}
+      <Container maxWidth="lg">
+        <Grid
+          className="slickRemove"
+          container
+          gap={5}
+          marginTop={4}
+          marginBottom={10}
+        >
+          {products.map(({ imgs, title, description }) => (
+            <Card elevation={8} key={title}>
+              <Grid container item padding={!isMobile && 2}>
+                <Typography
+                  variant="h4"
+                  padding={1.5}
+                  width="100%"
+                  marginBottom={2}
+                  borderBottom={`${theme.palette.primary.main} 2px solid`}
+                >
+                  {title}
+                </Typography>
+                <Grid item xs={12} md={6} padding={isMobile ? 3 : 1}>
+                  <Typography variant="body1" textAlign="justify" padding={1}>
+                    {description}
                   </Typography>
-                  <Grid item xs={12} md={6} padding={isMobile ? 3 : 1}>
-                    <Typography variant="body1" textAlign="justify" padding={1}>
-                      {description}
-                    </Typography>
-                  </Grid>
-
-                  <Grid
-                    item
-                    xs={12}
-                    md={6}
-                    minHeight="400px"
-                    justifyContent="center"
-                    padding={2}
-                    alignItems="center"
-                  >
-                    <Paper sx={{ p: 1, backgroundColor: 'whitesmoke' }}>
-                      <Carousel
-                        settings={{
-                          pauseOnHover: true,
-                          dotsClass: 'slick-dots slick-thumb',
-                          customPaging: (i) => (
-                            <a>
-                              <img
-                                alt={imgs[i]}
-                                src={
-                                  imgs[i].endsWith('mp4')
-                                    ? '/medias/logo/logoVideos.jpg'
-                                    : `/medias/products/${imgs[i]}`
-                                }
-                              />
-                            </a>
-                          ),
-                        }}
-                      >
-                        {imgs.map((img) => (
-                          <Stack display="flex" alignItems="flex-end" key={img}>
-                            {img.endsWith('mp4') ? (
-                              <Box display="flex" alignItems="center">
-                                <ReactPlayer
-                                  controls
-                                  url={`/medias/products/${img}`}
-                                  type="video/mp4"
-                                  playbackRate={10}
-                                  maxWidth="100%"
-                                />
-                              </Box>
-                            ) : (
-                              <img
-                                alt={title}
-                                src={`/medias/products/${img}`}
-                                style={{
-                                  minHeight: '300px',
-                                  maxHeight: '300px',
-                                  maxWidth: '100%',
-                                  width: '100%',
-                                  objectFit: 'contain',
-                                }}
-                              />
-                            )}
-                          </Stack>
-                        ))}
-                      </Carousel>
-                    </Paper>
-                  </Grid>
                 </Grid>
-              </Card>
-            ))}
-          </Grid>
-        </Container>
-      </Stack>
+
+                <Grid
+                  item
+                  xs={12}
+                  md={6}
+                  minHeight="400px"
+                  justifyContent="center"
+                  padding={2}
+                  alignItems="center"
+                >
+                  <Paper sx={{ p: 1, backgroundColor: 'whitesmoke' }}>
+                    <Carousel
+                      settings={{
+                        pauseOnHover: true,
+                        dotsClass: 'slick-dots slick-thumb',
+                        customPaging: (i) => (
+                          <a>
+                            <img
+                              alt={imgs[i]}
+                              src={
+                                imgs[i].endsWith('mp4')
+                                  ? '/medias/logo/logoVideos.jpg'
+                                  : `/medias/products/${imgs[i]}`
+                              }
+                            />
+                          </a>
+                        ),
+                      }}
+                    >
+                      {imgs.map((img) => (
+                        <Stack display="flex" alignItems="flex-end" key={img}>
+                          {img.endsWith('mp4') ? (
+                            <Box display="flex" alignItems="center">
+                              <ReactPlayer
+                                controls
+                                url={`/medias/products/${img}`}
+                                type="video/mp4"
+                                playbackRate={10}
+                                maxWidth="100%"
+                              />
+                            </Box>
+                          ) : (
+                            <img
+                              alt={title}
+                              src={`/medias/products/${img}`}
+                              style={{
+                                minHeight: '300px',
+                                maxHeight: '300px',
+                                maxWidth: '100%',
+                                width: '100%',
+                                objectFit: 'contain',
+                              }}
+                            />
+                          )}
+                        </Stack>
+                      ))}
+                    </Carousel>
+                  </Paper>
+                </Grid>
+              </Grid>
+            </Card>
+          ))}
+        </Grid>
+      </Container>
     </Layout>
   );
 }

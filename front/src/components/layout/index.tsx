@@ -15,10 +15,12 @@ interface LayoutProps {
   sx?: any;
   titleIsSticky?: any;
   stickerToDisplay?: any;
+  backgroundImageUrl?: string;
 }
 function Layout({
   children,
   className = '',
+  backgroundImageUrl,
   seo,
   title = undefined,
   sx = null,
@@ -104,7 +106,17 @@ function Layout({
               ...sx,
             }}
           >
-            {children}
+            {backgroundImageUrl ? (
+              <Stack
+                padding={3}
+                sx={{ backgroundImage: `url("${backgroundImageUrl}")` }}
+                className="backImage"
+              >
+                {children}
+              </Stack>
+            ) : (
+              <>{children}</>
+            )}
           </Box>
           <Footer />
         </Box>
