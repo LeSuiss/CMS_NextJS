@@ -17,20 +17,20 @@ export interface SeoProps {
 
 const SeoHead = () => {
   const { route } = useRouter();
-  const { link, seo: configSeo } = NAVIGATION.find(
-    ({ link }) => link === route
-  );
+  const config = NAVIGATION.find((nav) => nav?.link === route);
 
   return (
     <Head>
-      <title>{i18n._(configSeo.title)} </title>
+      <title>{i18n._(config?.seo?.title)} </title>
       <link rel="icon" href={'/assets/logoHead.png'} />
       <meta itemProp="image" content={'/assets/logoHead.png'} />
-      <meta itemProp="name" content={i18n._(configSeo.title)} />
-      <meta name="description" content={i18n._(configSeo.description)} />
-      {socialTags({ ...configSeo, url: link }).map(({ name, content }) => {
-        return <meta key={name} name={name} content={content} />;
-      })}
+      <meta itemProp="name" content={i18n._(config?.seo?.title)} />
+      <meta name="description" content={i18n._(config?.seo?.description)} />
+      {socialTags({ ...config?.seo, url: config?.link }).map(
+        ({ name, content }) => {
+          return <meta key={name} name={name} content={content} />;
+        }
+      )}
       <meta name="viewport" content="initial-scale=1, width=device-width" />
     </Head>
   );
