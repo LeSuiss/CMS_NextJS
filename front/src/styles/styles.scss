@@ -1,4 +1,4 @@
-@import '_variables.module.scss';
+@import '../config/styles/variables.module';
 @import '../components/layout/styles/header.scss';
 
 legend {
@@ -37,7 +37,7 @@ header {
 
   //2. FOOTER
   footer {
-    background-color: $redSapem !important;
+    background-color: $primary !important;
     z-index: 10;
     width: 100vw;
 
@@ -63,7 +63,7 @@ header {
 }
 
 .titleDivider {
-  background-color: $redSapem;
+  background-color: $primary;
   height: 3px;
   width: 100%;
 }

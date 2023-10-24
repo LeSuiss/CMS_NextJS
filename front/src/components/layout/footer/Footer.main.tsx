@@ -55,19 +55,26 @@ const Footer = () => {
         item
         md={9}
         sm={12}
-        padding={2}
         margin={0}
+        padding={1}
         justifyContent="space-around"
         alignItems="center"
         spacing={3}
         letterSpacing="1px"
         width="100%"
       >
-        <Grid xs={12} md={4} display="flex" justifyContent="center">
+        <Grid
+          xs={12}
+          md={4}
+          display="flex"
+          justifyContent="center"
+          alignItems="center"
+        >
           <Logo />
         </Grid>
-
-        <SocialMedias urls={SOCIAL_MEDIAS_LINKS} />
+        <Grid item>
+          <SocialMedias urls={SOCIAL_MEDIAS_LINKS} />
+        </Grid>
 
         <Grid item container md={4} sm={12}>
           <Grid
@@ -124,6 +131,7 @@ const Footer = () => {
         className={styles.container_FooterContent}
         justifyContent="center"
         alignItems="center"
+        padding={1}
       >
         {footerLinks.map((x, i) => (
           <GridSection key={'footgrid' + i} {...x} />

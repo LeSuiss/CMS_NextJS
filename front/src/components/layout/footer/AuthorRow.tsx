@@ -1,9 +1,9 @@
 import { Divider, Grid, Typography } from '@mui/material';
 
-import { MAILING_DESTINATARY }       from '../../../config';
-import React                         from 'react';
-import { i18n }                      from '@lingui/core';
-import { t }                         from '@lingui/macro';
+import { MAILING_DESTINATARY } from '../../../config';
+import React from 'react';
+import { i18n } from '@lingui/core';
+import { t } from '@lingui/macro';
 
 export function AuthorRow({ theme }) {
   return (
@@ -43,8 +43,7 @@ export function AuthorRow({ theme }) {
           )}
         </Typography>
         <Typography variant="body1">
-          
-          <a href={`mailto:${MAILING_DESTINATARY}`}>email me</a>
+          <a href={`mailto:archer.alexis@hotmail.fr`}>email me</a>
           <span> {' / '}</span> <a href="phoneto:0761297272">07 61 29 72 72</a>
         </Typography>
         <p>devis sur demande</p>

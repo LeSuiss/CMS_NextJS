@@ -1,6 +1,6 @@
 import { defineMessage } from '@lingui/macro';
 
-export const NAVIGATION_STRUCTURE = [
+export const NAVIGATION = [
   {
     nav: defineMessage({ message: 'Accueil' }),
     link: '/',

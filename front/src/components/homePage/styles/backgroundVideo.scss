@@ -1,5 +1,4 @@
-@import '../../../styles/variables.module';
-
+@import '../../../config/styles/variables.module';
 
 .playerWrapper {
   height: calc(100vh - $headerHeight);
@@ -11,7 +10,7 @@
   opacity: 0.8;
 }
 
-.reactPlayer { 
+.reactPlayer {
   position: absolute;
   z-index: -10000;
 }
@@ -31,7 +30,7 @@
 
 .skipIntroButton {
   position: absolute !important;
-  bottom:10%;
+  bottom: 10%;
   $marginBottomButton: min(-60px, -10px);
   height: 40px;
   width: 230px;

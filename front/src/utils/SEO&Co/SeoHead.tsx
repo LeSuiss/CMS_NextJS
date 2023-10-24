@@ -18,7 +18,7 @@ const SeoHead = (
     type: '',
     title: '',
     description: '',
-    image: '/logoHead.png',
+    image: '/assets/logoHead.png',
   }
 ) => {
   const { title, description, image } = props;

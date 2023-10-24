@@ -1,4 +1,4 @@
-@import '_variables.module.scss';
+@import '../config/styles/variables.module';
 
 //LAYOUT
 @import './../components/layout/styles/header.scss';
@@ -7,4 +7,3 @@
 //PAGE
 @import './../components/homePage/styles/homePageSection.scss';
 @import './../components/homePage/styles/backgroundVideo.scss';
-

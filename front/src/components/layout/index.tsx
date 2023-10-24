@@ -1,10 +1,10 @@
-import { Box, Divider, Stack, Typography } from '@mui/material';
+import { Box, Container, Divider, Stack, Typography } from '@mui/material';
 import React, { useEffect, useLayoutEffect } from 'react';
 import SeoHead, { SeoProps } from '../../utils/SEO&Co/SeoHead';
 
 import Footer from './footer/Footer.main';
 import Header from './header/Header';
-import { NAVIGATION_STRUCTURE } from '../../config';
+import { NAVIGATION } from '../../config';
 import { useIsMobile } from '../../utils/hooks';
 
 interface LayoutProps {
@@ -16,11 +16,13 @@ interface LayoutProps {
   titleIsSticky?: any;
   stickerToDisplay?: any;
   backgroundImageUrl?: string;
+  removeLgContainer?: boolean;
 }
 function Layout({
   children,
   className = '',
   backgroundImageUrl,
+  removeLgContainer = false,
   seo,
   title = undefined,
   sx = null,
@@ -60,10 +62,7 @@ function Layout({
     <>
       <SeoHead {...seo} />
       <div className={`container_GlobalLayoutPage ${className}`}>
-        <Header
-          navigationStructure={NAVIGATION_STRUCTURE}
-          className="header-section"
-        />
+        <Header navigationStructure={NAVIGATION} className="header-section" />
 
         <Box className="container_component">
           {title && (
@@ -112,7 +111,11 @@ function Layout({
                 sx={{ backgroundImage: `url("${backgroundImageUrl}")` }}
                 className="backImage"
               >
-                {children}
+                {removeLgContainer ? (
+                  <>{children}</>
+                ) : (
+                  <Container maxWidth="lg">{children}</Container>
+                )}
               </Stack>
             ) : (
               <>{children}</>

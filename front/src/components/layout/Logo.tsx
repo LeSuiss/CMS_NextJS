@@ -6,7 +6,11 @@ import React from 'react';
 
 function Logo() {
   return (
-    <Link href="/" passHref={true} style={{ height: '100%' }}>
+    <Link
+      href="/"
+      passHref={true}
+      style={{ height: '100%', display: 'flex', alignItems: 'center' }}
+    >
       <Image alt="logoSapem" src={logo} style={{ maxHeight: '100%' }} />
     </Link>
   );

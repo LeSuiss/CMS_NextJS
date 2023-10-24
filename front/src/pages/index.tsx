@@ -22,6 +22,7 @@ const Home = ({ brandsList, testimonies, homePageSlider }) => {
   return (
     <Layout
       titleIsSticky={false}
+      removeLgContainer
       seo={
         {
           title: i18n._(

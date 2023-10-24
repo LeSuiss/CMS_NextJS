@@ -1,3 +1,4 @@
+import { COMPANY_COLORS, COMPANY_FONTS } from '../config/styles/styles';
 import {
   createTheme,
   responsiveFontSizes,
@@ -6,15 +7,15 @@ import {
 const theme: any = createTheme({
   typography: {
     allVariants: {
-      fontFamily: 'Roboto, Cambria, Cochin, Georgia, Times, Serif',
+      fontFamily: COMPANY_FONTS,
     },
   },
   palette: {
     primary: {
-      main: 'rgb(194, 0, 43)',
+      main: COMPANY_COLORS.main,
     },
     secondary: {
-      main: '#9d9d9d',
+      main: COMPANY_COLORS.secondary,
     },
     divider: 'rgba(168,66,66,0.12)',
   },

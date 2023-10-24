@@ -1,0 +1,12 @@
+//VARIABLES
+$headerHeight: 60px;
+$primary: rgb(13, 105, 170);
+$secondary: #9d9d9d;
+$breakPointMobile: 600px;
+
+:export {
+  headerHeight: $headerHeight;
+  primary: $primary;
+  secondary: $secondary;
+  breakPointMobile: $breakPointMobile;
+}

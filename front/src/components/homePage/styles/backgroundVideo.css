@@ -1,1 +1,37 @@
-:export{headerHeight:60px;redSapem:#c2002b;breakPointMobile:600px}.playerWrapper{height:calc(100vh - $headerHeight);width:100dvw;object-fit:cover;position:relative;display:flex !important;justify-content:Center;opacity:0.8}.reactPlayer{position:absolute;z-index:-10000}.slogan{position:absolute;height:100%;width:100%;padding:20px;display:flex;align-items:center;justify-content:center;color:whitesmoke;text-shadow:2px 2px 2px #6e2020}.skipIntroButton{position:absolute !important;bottom:10%;height:40px;width:230px;left:calc(50% - 115px);padding:10px 40px !important}
+:export {
+  headerHeight: 60px;
+  primary: #34aa36;
+  breakPointMobile: 600px;
+}
+.playerWrapper {
+  height: calc(100vh - $headerHeight);
+  width: 100dvw;
+  object-fit: cover;
+  position: relative;
+  display: flex !important;
+  justify-content: Center;
+  opacity: 0.8;
+}
+.reactPlayer {
+  position: absolute;
+  z-index: -10000;
+}
+.slogan {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: whitesmoke;
+  text-shadow: 2px 2px 2px #6e2020;
+}
+.skipIntroButton {
+  position: absolute !important;
+  bottom: 10%;
+  height: 40px;
+  width: 230px;
+  left: calc(50% - 115px);
+  padding: 10px 40px !important;
+}

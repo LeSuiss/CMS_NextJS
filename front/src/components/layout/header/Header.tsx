@@ -1,4 +1,5 @@
 import { Box, Tab, Tabs } from '@mui/material';
+import { Theme, useTheme } from '../../../../node_modules/@mui/material';
 
 import CustomMenu from './CustomMenu';
 import Link from 'next/link';
@@ -8,8 +9,27 @@ import Switcher from './Switcher';
 import { i18n } from '@lingui/core';
 import { useIsMobile } from '../../../utils/hooks';
 
+const _styles = (theme: Theme) => ({
+  tabs: {
+    opacity: 1,
+    color: theme.palette.primary.main,
+    fontWeight: 'bolder',
+    fontSize: '16px',
+    height: '100%',
+    borderBottom: `solid 2px rgba(0,0,0,0)`,
+
+    '&:hover': {
+      boxSizing: 'border-box',
+      borderBottom: `solid 2px ${theme.palette.primary.main}`,
+      color: theme.palette.primary.main,
+    },
+  },
+});
+
 function Header({ navigationStructure, className }) {
   const isMobile = useIsMobile();
+  const theme = useTheme();
+  const styles = _styles(theme);
 
   return (
     <Box
@@ -17,13 +37,7 @@ function Header({ navigationStructure, className }) {
       className={`mainContainerHeader ${className}`}
       padding={0.1}
     >
-      <Box
-        component={Logo}
-        sx={{
-          '& a': { height: '100%' },
-          '& img': { height: '8%' },
-        }}
-      />
+      <Box component={Logo} />
       {isMobile ? (
         <CustomMenu linksToDisplay={navigationStructure} />
       ) : (
@@ -38,13 +52,7 @@ function Header({ navigationStructure, className }) {
               key={page.nav.id ?? page.nav}
               href={page.link}
             >
-              <Tab
-                label={i18n._(page.nav)}
-                sx={{
-                  fontWeight: 'bolder',
-                  fontSize: '16px',
-                }}
-              />
+              <Tab label={i18n._(page.nav)} sx={styles.tabs} />
             </Link>
           ))}
         </Tabs>

@@ -10,7 +10,7 @@ import MenuItem from '@mui/material/MenuItem';
 import MenuOpenIcon from '@mui/icons-material/MenuOpen';
 import Switcher from './Switcher';
 
-export default function CustomMenu({ linksToDisplay }) {
+export default function CustomMenu({ linksToDisplay: navLinks }) {
   const [anchorEl, setAnchorEl] = React.useState(null);
   const open = Boolean(anchorEl);
 
@@ -22,7 +22,7 @@ export default function CustomMenu({ linksToDisplay }) {
   };
 
   return (
-    <Box className="desktopMenu" height="100%">
+    <Box className="desktopMenu">
       <Button onClick={handleClick}>
         {open ? (
           <MenuOpenIcon className="mobileMenuIcon" fontSize="large" />
@@ -34,13 +34,10 @@ export default function CustomMenu({ linksToDisplay }) {
         anchorEl={anchorEl}
         open={open}
         onClose={handleClose}
-        sx={{
-          maxWidth: '100vw',
-          '& *': { maxWidth: '100vw !important', left: '0 !important' },
-        }}
+        sx={extendsMenuToFullWidth}
       >
         <Switcher />
-        {linksToDisplay.map((item, index) => (
+        {navLinks.map((item, index) => (
           <div key={item.nav.id ?? item.nav + index} style={{ width: '100vw' }}>
             <Link
               key={item.nav.id ?? item.nav}
@@ -50,12 +47,15 @@ export default function CustomMenu({ linksToDisplay }) {
             >
               <MenuItem>{item.nav.id ?? item.nav}</MenuItem>
             </Link>
-            {index + 1 < linksToDisplay.length && (
-              <Divider style={{ margin: 0 }} />
-            )}
+            {index + 1 < navLinks.length && <Divider style={{ margin: 0 }} />}
           </div>
         ))}
       </Menu>
     </Box>
   );
 }
+
+const extendsMenuToFullWidth = {
+  maxWidth: '100vw',
+  '& *': { maxWidth: '100vw !important', left: '0 !important' },
+};

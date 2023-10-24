@@ -1,12 +1,4 @@
-import {
-  Card,
-  CardContent,
-  CardHeader,
-  Container,
-  Divider,
-  Stack,
-  Typography,
-} from '@mui/material';
+import { Card, CardContent, CardHeader, Divider } from '@mui/material';
 
 import { FAQ } from '../lib/faq/FAQ';
 import type { GetStaticProps } from 'next';
@@ -15,7 +7,6 @@ import React from 'react';
 import { i18n } from '@lingui/core';
 import loadTranslation from '../utils/loadTranslation';
 import { t } from '@lingui/macro';
-import { useIsMobile } from '../utils/hooks';
 
 const FAQitems = [
   {
@@ -33,27 +24,23 @@ const FAQitems = [
 ];
 
 export default function Legal() {
-  const isMobile = useIsMobile();
-
   return (
     <Layout
       title={i18n._(/* i18n: FAQ */ t`FAQ`)}
       backgroundImageUrl="/medias/FAQ.jpg"
     >
-      <Container maxWidth="lg">
-        <Card sx={{ minHeight: '50vh' }}>
-          <CardHeader
-            title={i18n._(
-              /* i18n: Les réponses à vos questions */ t`Les réponses à vos questions`
-            )}
-          />
-          <Divider />
+      <Card sx={{ minHeight: '50vh' }}>
+        <CardHeader
+          title={i18n._(
+            /* i18n: Les réponses à vos questions */ t`Les réponses à vos questions`
+          )}
+        />
+        <Divider />
 
-          <CardContent>
-            <FAQ faqList={FAQitems} />
-          </CardContent>
-        </Card>
-      </Container>
+        <CardContent>
+          <FAQ faqList={FAQitems} />
+        </CardContent>
+      </Card>
     </Layout>
   );
 }

@@ -24,36 +24,35 @@ export default function Innovation() {
       title={i18n._(/* i18n: Innovation */ t`Innovation`)}
       backgroundImageUrl="/medias/bgBE.webp"
     >
-      <Container maxWidth="lg" sx={{ opacity: 0.95 }}>
-        <Card sx={{ marginY: theme.spacing(5) }}>
-          <CardHeader
-            title="Présentation"
-            sx={{
-              borderBottom: `${theme.palette.primary.main} 2px solid`,
-            }}
-          />
-          <CardContent>
-            <Typography variant="body1">
-              SAPEM est une société de services spécialisée dans l'ingénierie
-              industrielle et l'innovation technologique indépendante. SAPEM
-              intervient grace à un bureau d'études d'ingénierie industrielle,
-              intervenant dans la conduite des affaires en matière d'ingénierie:
-              étude des projets techniques, recherche industrielle, ainsi que la
-              conception et l'innovation des produits et process.
-            </Typography>
-          </CardContent>
-        </Card>
-        <Card sx={{ marginY: theme.spacing(5) }}>
-          <CardHeader
-            title=" Notre offre"
-            sx={{
-              marginTop: 1,
-              borderBottom: `${theme.palette.primary.main} 2px solid`,
-            }}
-          />
-          <CardContent sx={{ padding: 4 }}>
-            <Typography>
-              {i18n._(/* i18n:  */ t`BE2i Technologies intervient principalement en mode de
+      <Card sx={{ marginY: theme.spacing(5) }}>
+        <CardHeader
+          title="Présentation"
+          sx={{
+            borderBottom: `${theme.palette.primary.main} 2px solid`,
+          }}
+        />
+        <CardContent>
+          <Typography variant="body1">
+            SAPEM est une société de services spécialisée dans l'ingénierie
+            industrielle et l'innovation technologique indépendante. SAPEM
+            intervient grace à un bureau d'études d'ingénierie industrielle,
+            intervenant dans la conduite des affaires en matière d'ingénierie:
+            étude des projets techniques, recherche industrielle, ainsi que la
+            conception et l'innovation des produits et process.
+          </Typography>
+        </CardContent>
+      </Card>
+      <Card sx={{ marginY: theme.spacing(5) }}>
+        <CardHeader
+          title=" Notre offre"
+          sx={{
+            marginTop: 1,
+            borderBottom: `${theme.palette.primary.main} 2px solid`,
+          }}
+        />
+        <CardContent sx={{ padding: 4 }}>
+          <Typography>
+            {i18n._(/* i18n:  */ t`BE2i Technologies intervient principalement en mode de
                 sous-traitance: Assistance technique, forfait et offshoring.
                 Nous assurons un suivi global des projets de la pré-étude
                 jusqu'au prototype et pré série. Nous intervenons dans l'étude
@@ -68,10 +67,9 @@ export default function Innovation() {
                 qu'un accompagnement personnalisé pour chaque phase de projet.
                 Véritable partenaire de confiance nous vous accompagnons et vous
                 assurons soutien et conseil dans chaque étape de votre projet.`)}
-            </Typography>
-          </CardContent>
-        </Card>
-      </Container>
+          </Typography>
+        </CardContent>
+      </Card>
     </Layout>
   );
 }

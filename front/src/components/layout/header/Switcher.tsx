@@ -7,17 +7,17 @@ import {
   Slide,
   Typography,
 } from '@mui/material';
+import React, { useState } from 'react';
 
 import Image from 'next/image';
-import { LANGUAGES } from '../../../config/constants';
+import { LANGUAGES } from '../../../config/company-config';
+import { TransitionProps } from '@mui/material/transitions';
 import { i18n } from '@lingui/core';
 import loadTranslation from '../../../utils/loadTranslation';
 import nextConfig from '../../../../next.config.js';
 import { t } from '@lingui/macro';
 import { useIsMobile } from '../../../utils/hooks';
 import { useRouter } from 'next/router';
-import React, { useState } from 'react';
-import { TransitionProps } from '@mui/material/transitions';
 
 const TransitionComponent = React.forwardRef(function Transition(
   props: TransitionProps & {
@@ -136,6 +136,7 @@ function Switcher() {
           <Button
             onClick={() => setIsDialogOpen(false)}
             sx={{ marginRight: 'auto' }}
+            color="error"
           >
             {i18n._(/* i18n: select your language */ t`Annuler`)}
           </Button>

@@ -6,8 +6,8 @@ import { t } from '@lingui/macro';
 
 export function GridSection({ title, links, isBlank = false, cb = null }) {
   return (
-    <Grid item xs={12} md={2} container textAlign="center">
-      <Typography variant="subtitle2" flex={1}>
+    <Grid item xs={12} md={3} container textAlign="center">
+      <Typography variant="subtitle1" flex={1}>
         {typeof links === 'object' &&
           i18n._(
             /* i18n: Footer>SiteInformation>InformationTitle> */ t`${title}`

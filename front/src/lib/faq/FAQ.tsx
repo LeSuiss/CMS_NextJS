@@ -1,4 +1,3 @@
-import { ExpandMoreRounded } from '@mui/icons-material';
 import {
   Accordion,
   AccordionDetails,
@@ -8,6 +7,9 @@ import {
   Typography,
 } from '@mui/material';
 import React, { useState } from 'react';
+
+import { COMPANY_COLORS } from '../../config/styles/styles';
+import { ExpandMoreRounded } from '@mui/icons-material';
 
 type Props = {
   faqList: {
@@ -42,7 +44,7 @@ export const FAQ = ({ faqList = [] }: Props) => {
           <AccordionSummary
             sx={{ backgroundColor: 'whitesmoke' }}
             expandIcon={
-              <ExpandMoreRounded style={{ color: 'hsl(14, 88%, 65%)' }} />
+              <ExpandMoreRounded style={{ color: COMPANY_COLORS.main }} />
             }
           >
             <Typography>{faq.question}</Typography>
