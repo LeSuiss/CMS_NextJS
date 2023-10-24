@@ -75,11 +75,9 @@ function Layout({
             <Box
               className="shallTitleBeSticky"
               sx={{
-                boxSizing: 'content-box',
                 width: '100%',
                 backgroundColor: 'white',
                 ...(titleIsSticky && {
-                  zIndex: 99,
                   position: isMobile ? '' : 'fixed',
                 }),
               }}
@@ -107,10 +105,9 @@ function Layout({
             sx={{
               flexGrow: 1,
               backgroundImage: `url("${backgroundImageUrl}")`,
-              ...(titleIsSticky &&
-                !isMobile && {
-                  paddingTop: '48px',
-                }),
+              display: 'flex',
+              flexDirection: 'column',
+              justifyContent: 'center',
               ...sx,
             }}
           >
