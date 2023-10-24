@@ -28,7 +28,8 @@ header {
   grid-template-areas:
     'header header header'
     'mainPage mainPage mainPage';
-  overflow: hidden;
+  overflow-y: auto;
+  overflow-x: hidden;
 
   .BackgroundImage {
     opacity: 0.85;
@@ -58,7 +59,6 @@ header {
     height: 100vh;
     overflow-y: scroll;
     overflow-x: hidden;
-    padding-bottom: $headerHeight * 0.7;
   }
 }
 

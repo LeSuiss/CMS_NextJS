@@ -12,6 +12,8 @@ import { useIsMobile } from '../../../utils/hooks';
 const _styles = (theme: Theme) => ({
   tabs: {
     opacity: 1,
+    backgroundColor: 'white',
+
     color: theme.palette.primary.main,
     fontWeight: 'bolder',
     fontSize: '16px',
