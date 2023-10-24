@@ -15,7 +15,6 @@ export const NAVIGATION: NavigationProps[] = [
     seo: {
       image: '/',
       type: '',
-      description: '',
       title: defineMessage({
         message: 'SAPEM les professionnels du levage',
       }),
