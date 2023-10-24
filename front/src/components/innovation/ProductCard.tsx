@@ -94,9 +94,8 @@ export function ProductCard({
                     <Image
                       alt="patented"
                       src={'/medias/products/label/' + fileName}
-                      height="40px"
-                      width="40px"
-                      objectFit="contain"
+                      height={40}
+                      width={40}
                     />
                   </div>
                 </Tooltip>
@@ -105,10 +104,9 @@ export function ProductCard({
             {!!productImageSrc && productImageSrc !== 'undefined' && (
               <Image
                 src={productImageSrc}
-                height="200px"
-                width="386px"
+                height={200}
+                width={386}
                 alt={`product${title}`}
-                objectFit="contain"
               />
             )}
           </div>
