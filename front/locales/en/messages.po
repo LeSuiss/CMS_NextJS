@@ -13,7 +13,7 @@ msgstr ""
 "Language-Team: \n"
 "Plural-Forms: \n"
 
-#: src/config/navigationStructure.ts:5
+#: src/config/navigation.ts:14
 msgid "Accueil"
 msgstr "Home"
 
@@ -25,7 +25,7 @@ msgstr ""
 msgid "Analyser"
 msgstr ""
 
-#: src/components/layout/header/Switcher.tsx:140
+#: src/components/layout/header/Switcher.tsx:141
 msgid "Annuler"
 msgstr ""
 
@@ -36,7 +36,7 @@ msgid ""
 "réduction des coûts de fabrication"
 msgstr ""
 
-#: src/pages/Innovation.tsx:61
+#: src/pages/Innovation.tsx:55
 msgid ""
 "BE2i Technologies intervient principalement en mode de\n"
 "sous-traitance: Assistance technique, forfait et offshoring.\n"
@@ -59,7 +59,7 @@ msgstr ""
 msgid "Bien comprendre le besoin État de l’art, rédaction du cahier des charges, benchmarking, reverse engineering, analyse fonctionnelle"
 msgstr ""
 
-#: src/components/homePage/HomePageFirstLookAt.tsx:79
+#: src/components/homePage/HomePageFirstLookAt.tsx:75
 msgid "CREER"
 msgstr ""
 
@@ -67,10 +67,10 @@ msgstr ""
 msgid "Catalogue Produit"
 msgstr ""
 
-#: src/pages/Contact.tsx:126
-#: src/pages/Contact.tsx:156
-#: src/pages/Contact.tsx:186
-#: src/pages/Contact.tsx:217
+#: src/pages/Contact.tsx:110
+#: src/pages/Contact.tsx:131
+#: src/pages/Contact.tsx:153
+#: src/pages/Contact.tsx:178
 msgid "Ce champ est requis"
 msgstr ""
 
@@ -86,8 +86,8 @@ msgstr ""
 msgid "Conditions générales "
 msgstr ""
 
-#: src/config/navigationStructure.ts:29
-#: src/pages/Contact.tsx:67
+#: src/config/navigation.ts:44
+#: src/pages/Contact.tsx:69
 msgid "Contact"
 msgstr ""
 
@@ -95,7 +95,7 @@ msgstr ""
 msgid "Customize your cookies"
 msgstr ""
 
-#: src/components/homePage/HomePageFirstLookAt.tsx:81
+#: src/components/homePage/HomePageFirstLookAt.tsx:77
 msgid "DEVELOPPER"
 msgstr ""
 
@@ -103,7 +103,7 @@ msgstr ""
 msgid "Designer une solution"
 msgstr ""
 
-#: src/components/layout/footer/Footer.main.tsx:85
+#: src/components/layout/footer/Footer.main.tsx:90
 msgid "Du lundi au vendredi de 8h à 17h"
 msgstr ""
 
@@ -115,16 +115,16 @@ msgstr ""
 msgid "Développement technique"
 msgstr ""
 
-#: src/pages/Contact.tsx:366
+#: src/pages/Contact.tsx:305
 msgid "En ligne"
 msgstr ""
 
-#: src/pages/Contact.tsx:180
-#: src/pages/Contact.tsx:182
+#: src/pages/Contact.tsx:148
+#: src/pages/Contact.tsx:149
 msgid "Entreprise"
 msgstr ""
 
-#: src/config/navigationStructure.ts:23
+#: src/config/navigation.ts:39
 msgid "Equipe"
 msgstr ""
 
@@ -132,14 +132,14 @@ msgstr ""
 msgid "Ergonomie"
 msgstr ""
 
-#: src/config/navigationStructure.ts:35
-#: src/pages/FAQ.tsx:39
+#: src/config/navigation.ts:49
+#: src/pages/FAQ.tsx:29
 msgid "FAQ"
 msgstr ""
 
-#: src/pages/FAQ.tsx:22
-#: src/pages/FAQ.tsx:26
-#: src/pages/FAQ.tsx:30
+#: src/pages/FAQ.tsx:13
+#: src/pages/FAQ.tsx:17
+#: src/pages/FAQ.tsx:21
 msgid "Foire Aux Questions"
 msgstr ""
 
@@ -147,7 +147,7 @@ msgstr ""
 msgid "Gérer les cookies"
 msgstr ""
 
-#: src/components/homePage/HomePageFirstLookAt.tsx:83
+#: src/components/homePage/HomePageFirstLookAt.tsx:79
 msgid "INNOVER"
 msgstr ""
 
@@ -155,38 +155,38 @@ msgstr ""
 msgid "Ils nous font confiance"
 msgstr ""
 
-#: src/config/navigationStructure.ts:11
-#: src/pages/Innovation.tsx:25
+#: src/config/navigation.ts:30
+#: src/pages/Innovation.tsx:24
 msgid "Innovation"
 msgstr ""
 
-#: src/pages/Team.tsx:78
+#: src/pages/Team.tsx:65
 msgid "L'atelier"
 msgstr ""
 
-#: src/pages/Team.tsx:49
+#: src/pages/Team.tsx:36
 msgid "La direction"
 msgstr ""
 
-#: src/pages/FAQ.tsx:49
+#: src/pages/FAQ.tsx:35
 msgid "Les réponses à vos questions"
 msgstr ""
 
 #: src/components/layout/footer/Footer.main.tsx:21
-#: src/pages/Legal.tsx:25
+#: src/pages/Legal.tsx:26
 msgid "Mentions Légales"
 msgstr ""
 
-#: src/pages/Contact.tsx:120
-#: src/pages/Contact.tsx:122
+#: src/pages/Contact.tsx:105
+#: src/pages/Contact.tsx:107
 msgid "Nom"
 msgstr ""
 
-#: src/pages/Team.tsx:23
+#: src/pages/Team.tsx:24
 msgid "Nos Equipes"
 msgstr ""
 
-#: src/pages/Products.tsx:81
+#: src/pages/Products.tsx:40
 msgid "Nos Produits"
 msgstr ""
 
@@ -194,30 +194,30 @@ msgstr ""
 #~ msgid "Notre Equipe"
 #~ msgstr ""
 
-#: src/pages/Team.tsx:42
+#: src/pages/Team.tsx:29
 msgid ""
 "Notre équipe d'ingénieurs, de compagnons vous accompagne dans vos projets. Prototypage, devis, question technique, Notre équipe vous conseille et vous accompagne pour vous apporter des solutions\n"
 "personnalisées."
 msgstr ""
 
-#: src/pages/Contact.tsx:98
+#: src/pages/Contact.tsx:89
 msgid "Nous Contacter"
 msgstr ""
 
-#: src/pages/Contact.tsx:356
+#: src/pages/Contact.tsx:295
 msgid "Nous retrouvez"
 msgstr ""
 
-#: src/pages/Contact.tsx:239
-#: src/pages/Contact.tsx:242
+#: src/pages/Contact.tsx:194
+#: src/pages/Contact.tsx:197
 msgid "Numero de téléphone"
 msgstr ""
 
-#: src/pages/Contact.tsx:209
+#: src/pages/Contact.tsx:170
 msgid "Position"
 msgstr ""
 
-#: src/config/navigationStructure.ts:17
+#: src/config/navigation.ts:35
 msgid "Produits"
 msgstr ""
 
@@ -225,8 +225,8 @@ msgstr ""
 msgid "Prototypage"
 msgstr ""
 
-#: src/pages/Contact.tsx:148
-#: src/pages/Contact.tsx:151
+#: src/pages/Contact.tsx:125
+#: src/pages/Contact.tsx:127
 msgid "Prénom"
 msgstr ""
 
@@ -234,7 +234,7 @@ msgstr ""
 msgid "Présentation"
 msgstr ""
 
-#: src/pages/404.tsx:45
+#: src/pages/404.tsx:41
 msgid "Retournez à la page d'accueil"
 msgstr ""
 
@@ -249,26 +249,26 @@ msgid "SAPEM est spécialisée dans le design et la conception technique de prod
 msgstr ""
 
 #: src/pages/index.tsx:27
-msgid "SAPEM les professionnels du levage"
-msgstr "SAPEM the lifting professionals"
+#~ msgid "SAPEM les professionnels du levage"
+#~ msgstr "SAPEM the lifting professionals"
 
-#: src/pages/Legal.tsx:35
+#: src/pages/Legal.tsx:32
 msgid "SAPEM: Société d'applications éléctriques et mécaniques."
 msgstr ""
 
-#: src/pages/Contact.tsx:247
+#: src/pages/Contact.tsx:202
 msgid "Saisir un numero valide"
 msgstr ""
 
-#: src/pages/Contact.tsx:274
+#: src/pages/Contact.tsx:223
 msgid "Saisir une adresse mail valide"
 msgstr ""
 
-#: src/pages/Contact.tsx:304
+#: src/pages/Contact.tsx:253
 msgid "Saisir votre message"
 msgstr ""
 
-#: src/pages/Legal.tsx:48
+#: src/pages/Legal.tsx:45
 msgid ""
 "Société anonyme à conseil d'administration, au capital social de\n"
 "203 062,09 €, dont le siège social est situé au LE BOURG, 58270\n"
@@ -278,7 +278,7 @@ msgid ""
 "du conseil d'administration."
 msgstr ""
 
-#: src/pages/Contact.tsx:382
+#: src/pages/Contact.tsx:319
 msgid "Sur Site"
 msgstr ""
 
@@ -286,7 +286,7 @@ msgstr ""
 msgid "Travailler le produit. Recherches adaptées et optimisées. Adéquation du produits aux exigences de sécurité."
 msgstr ""
 
-#: src/pages/Contact.tsx:51
+#: src/pages/Contact.tsx:52
 msgid "Une erreur est survenue. Veuillez réessayer ultérieurement"
 msgstr ""
 
@@ -294,27 +294,27 @@ msgstr ""
 msgid "Valider le produit dans ses moindres détails.Toutes les tailles de prototypes, itérations jusqu’à la validation du prototype"
 msgstr ""
 
-#: src/pages/Contact.tsx:48
+#: src/pages/Contact.tsx:49
 msgid "Votre message a bien été transmis"
 msgstr ""
 
-#: src/pages/404.tsx:37
+#: src/pages/404.tsx:33
 msgid "Vous avez demandé une page non repertoriée"
 msgstr ""
 
-#: src/pages/404.tsx:33
+#: src/pages/404.tsx:29
 msgid "erreur"
 msgstr ""
 
-#: src/pages/Contact.tsx:317
+#: src/pages/Contact.tsx:266
 msgid "j'accepte que mes données soient enregistrées par SAPEM et utilisées à des fins d'analyses et de démarchage commerciale"
 msgstr ""
 
-#: src/pages/Products.tsx:89
+#: src/pages/Products.tsx:49
 msgid "notre catalogue"
 msgstr ""
 
-#: src/components/layout/footer/Footer.main.tsx:106
+#: src/components/layout/footer/Footer.main.tsx:111
 msgid "par mail"
 msgstr ""
 
@@ -330,13 +330,13 @@ msgstr ""
 msgid "projects"
 msgstr ""
 
-#: src/components/homePage/HomePageFirstLookAt.tsx:117
+#: src/components/homePage/HomePageFirstLookAt.tsx:113
 msgid "quand la sécurité prime"
 msgstr "When security prevails"
 
-#: src/pages/FAQ.tsx:23
-#: src/pages/FAQ.tsx:27
-#: src/pages/FAQ.tsx:31
+#: src/pages/FAQ.tsx:14
+#: src/pages/FAQ.tsx:18
+#: src/pages/FAQ.tsx:22
 msgid "réponse"
 msgstr ""
 
@@ -344,11 +344,11 @@ msgstr ""
 msgid "site realisé par Alexis ARCHER"
 msgstr ""
 
-#: src/pages/Contact.tsx:336
+#: src/pages/Contact.tsx:281
 msgid "soumettre"
 msgstr ""
 
-#: src/pages/Contact.tsx:299
+#: src/pages/Contact.tsx:248
 msgid "votre message"
 msgstr ""
 

@@ -1,10 +1,13 @@
+import { MessageDescriptor, i18n } from '@lingui/core';
+
 import Head from 'next/head';
-import PropTypes from 'prop-types';
+import { NAVIGATION } from '../../config';
 import React from 'react';
+import { useRouter } from 'next/router';
 
 export interface SeoProps {
-  title: string;
-  description: string;
+  title: string | MessageDescriptor;
+  description: string | MessageDescriptor;
   type: string;
   url: string;
   image: string;
@@ -12,27 +15,23 @@ export interface SeoProps {
   updatedAt?: string;
 }
 
-const SeoHead = (
-  props: SeoProps = {
-    url: '/',
-    type: '',
-    title: '',
-    description: '',
-    image: '/assets/logoHead.png',
-  }
-) => {
-  const { title, description, image } = props;
+const SeoHead = () => {
+  const { route } = useRouter();
+  const { link, seo: configSeo } = NAVIGATION.find(
+    ({ link }) => link === route
+  );
+
   return (
     <Head>
-      <title>{title} </title>
-      <link rel="icon" href={props.image} />
-      <meta name="viewport" content="initial-scale=1, width=device-width" />
-      <meta itemProp="name" content={title} />
-      <meta name="description" content={description} />
-      <meta itemProp="image" content={image} />
-      {socialTags(props).map(({ name, content }) => {
+      <title>{i18n._(configSeo.title)} </title>
+      <link rel="icon" href={'/assets/logoHead.png'} />
+      <meta itemProp="image" content={'/assets/logoHead.png'} />
+      <meta itemProp="name" content={i18n._(configSeo.title)} />
+      <meta name="description" content={i18n._(configSeo.description)} />
+      {socialTags({ ...configSeo, url: link }).map(({ name, content }) => {
         return <meta key={name} name={name} content={content} />;
       })}
+      <meta name="viewport" content="initial-scale=1, width=device-width" />
     </Head>
   );
 };

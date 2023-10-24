@@ -5,10 +5,11 @@ import SeoHead, { SeoProps } from '../../utils/SEO&Co/SeoHead';
 import Footer from './footer/Footer.main';
 import Header from './header/Header';
 import { NAVIGATION } from '../../config';
+import { i18n } from '@lingui/core';
 import { useIsMobile } from '../../utils/hooks';
+import { useRouter } from 'next/router';
 
 interface LayoutProps {
-  seo?: SeoProps;
   children: any;
   className?: any;
   title?: any;
@@ -23,7 +24,6 @@ function Layout({
   className = '',
   backgroundImageUrl,
   removeLgContainer = false,
-  seo,
   title = undefined,
   sx = null,
   titleIsSticky = true,
@@ -60,7 +60,7 @@ function Layout({
 
   return (
     <>
-      <SeoHead {...seo} />
+      <SeoHead />
       <div className={`container_GlobalLayoutPage ${className}`}>
         <Header navigationStructure={NAVIGATION} className="header-section" />
 

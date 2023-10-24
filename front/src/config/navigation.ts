@@ -1,40 +1,53 @@
+import { MessageDescriptor } from '@lingui/core';
+import { SeoProps } from '../utils/SEO&Co/SeoHead';
 import { defineMessage } from '@lingui/macro';
 
-export const NAVIGATION = [
+interface NavigationProps {
+  nav: MessageDescriptor;
+  link: string;
+  seo: Omit<SeoProps, 'url'>;
+}
+
+export const NAVIGATION: NavigationProps[] = [
   {
-    nav: defineMessage({ message: 'Accueil' }),
     link: '/',
-    seoTitle: '',
-    seoDescription: '',
+    nav: defineMessage({ message: 'Accueil' }),
+    seo: {
+      image: '/',
+      type: '',
+      description: '',
+      // title: defineMessage({
+      //   message: 'SAPEM les professionnels du levage',
+      // }),
+      // description: defineMessage({
+      //   message:
+      //     'Expert du levage depuis 40 ans. Nous accompagnons nos clients dans la construction de solution sur mesures et la resolution de problèmes complexes.',
+      // }),
+    },
   },
   {
-    nav: defineMessage({ message: 'Innovation' }),
     link: '/Innovation',
-    seoTitle: '',
-    seoDescription: '',
+    nav: defineMessage({ message: 'Innovation' }),
+    seo: { title: '', description: '', image: '/', type: '' },
   },
   {
-    nav: defineMessage({ message: 'Produits' }),
     link: '/Products',
-    seoTitle: '',
-    seoDescription: '',
+    nav: defineMessage({ message: 'Produits' }),
+    seo: { title: '', description: '', image: '/', type: '' },
   },
   {
     nav: defineMessage({ message: 'Equipe' }),
     link: '/Team',
-    seoTitle: '',
-    seoDescription: '',
+    seo: { title: '', description: '', image: '/', type: '' },
   },
   {
     nav: defineMessage({ message: 'Contact' }),
     link: '/Contact',
-    seoTitle: '',
-    seoDescription: '',
+    seo: { title: '', description: '', image: '/', type: '' },
   },
   {
     nav: defineMessage({ message: 'FAQ' }),
     link: '/FAQ',
-    seoTitle: '',
-    seoDescription: '',
+    seo: { title: '', description: '', image: '/', type: '' },
   },
 ];

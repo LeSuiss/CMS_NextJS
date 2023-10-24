@@ -52,13 +52,7 @@ export function ProductCard({
         action={
           <Tooltip title={'download notice'} arrow placement="right">
             <a href="tel: 01882461290" style={{ padding: '10px 5px' }}>
-              <Image
-                alt="pdfLogo"
-                src="/pdf.svg"
-                width="30px"
-                height="30px"
-                objectFit="contain"
-              />
+              <Image alt="pdfLogo" src="/pdf.svg" width={30} height={30} />
             </a>
           </Tooltip>
         }
