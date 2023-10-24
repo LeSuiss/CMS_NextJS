@@ -354,4 +354,4 @@ msgstr ""
 
 #: src/components/layout/footer/GridSection.tsx:13
 msgid "{title}"
-msgstr ""
+msgstr "title"

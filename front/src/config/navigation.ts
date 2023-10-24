@@ -16,13 +16,13 @@ export const NAVIGATION: NavigationProps[] = [
       image: '/',
       type: '',
       description: '',
-      // title: defineMessage({
-      //   message: 'SAPEM les professionnels du levage',
-      // }),
-      // description: defineMessage({
-      //   message:
-      //     'Expert du levage depuis 40 ans. Nous accompagnons nos clients dans la construction de solution sur mesures et la resolution de problèmes complexes.',
-      // }),
+      title: defineMessage({
+        message: 'SAPEM les professionnels du levage',
+      }),
+      description: defineMessage({
+        message:
+          'Expert du levage depuis 40 ans. Nous accompagnons nos clients dans la construction de solution sur mesures et la resolution de problèmes complexes.',
+      }),
     },
   },
   {
