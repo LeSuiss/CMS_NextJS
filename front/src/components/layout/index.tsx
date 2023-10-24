@@ -77,6 +77,7 @@ function Layout({
               sx={{
                 width: '100%',
                 backgroundColor: 'white',
+                zIndex: 99,
                 ...(titleIsSticky && {
                   position: isMobile ? '' : 'fixed',
                 }),
@@ -105,6 +106,7 @@ function Layout({
             sx={{
               flexGrow: 1,
               backgroundImage: `url("${backgroundImageUrl}")`,
+              paddingTop: titleIsSticky ? '48px' : '',
               display: 'flex',
               flexDirection: 'column',
               justifyContent: 'center',
