@@ -21,11 +21,17 @@ const SeoHead = () => {
 
   return (
     <Head>
-      <title>{i18n._(config?.seo?.title)} </title>
+      <title>{config?.seo?.title && i18n._(config?.seo?.title)} </title>
       <link rel="icon" href={'/assets/logoHead.png'} />
       <meta itemProp="image" content={'/assets/logoHead.png'} />
-      <meta itemProp="name" content={i18n._(config?.seo?.title)} />
-      <meta name="description" content={i18n._(config?.seo?.description)} />
+      <meta
+        itemProp="name"
+        content={config?.seo?.title && i18n._(config?.seo?.title)}
+      />
+      <meta
+        name="description"
+        content={config?.seo?.description && i18n._(config?.seo?.description)}
+      />
       {socialTags({ ...config?.seo, url: config?.link }).map(
         ({ name, content }) => {
           return <meta key={name} name={name} content={content} />;
