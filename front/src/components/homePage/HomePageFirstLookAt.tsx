@@ -65,12 +65,10 @@ export const HomePageFirstLookAt = ({ homePageSlider }) => {
         >
           <Typography
             variant="h2"
-            sx={{
-              textAlign: isMobile && 'center',
-              color: 'white',
-              lineHeight: '1.5em',
-              fontWeight: 'bolder !important',
-            }}
+            fontWeight="bolder"
+            lineHeight="1.5em"
+            color="white"
+            textAlign={isMobile ? 'center' : 'left'}
           >
             {i18n._(/* i18n: Créer */ t`CREER`)}
             <br />

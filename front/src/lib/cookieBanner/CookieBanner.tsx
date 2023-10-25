@@ -109,7 +109,7 @@ export const CookieBanner = ({
       }
       style={{
         flexFlow: 'column',
-        backgroundColor: 'darkblue',
+        backgroundColor: 'lightslategray',
         paddingLeft: '20px',
       }}
       visible={
