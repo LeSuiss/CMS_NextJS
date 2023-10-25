@@ -28,6 +28,8 @@ export const Carousel = ({ settings, children }: CarouselProps) => {
     autoplay: true,
     pauseOnFocus: true,
     pauseOnHover: true,
+    arrows: false,
+
     ...settings,
   };
 

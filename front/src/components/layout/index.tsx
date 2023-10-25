@@ -74,8 +74,8 @@ function Layout({
           {title && (
             <Box
               className="shallTitleBeSticky"
+              width="100%"
               sx={{
-                width: '100%',
                 backgroundColor: 'white',
                 zIndex: 99,
                 ...(titleIsSticky && {
@@ -87,7 +87,6 @@ function Layout({
                 direction="row"
                 justifyContent="space-between"
                 alignItems="center"
-                padding={1}
               >
                 <Typography variant="h5">{title}</Typography>
                 <Box
@@ -106,7 +105,7 @@ function Layout({
             sx={{
               flexGrow: 1,
               backgroundImage: `url("${backgroundImageUrl}")`,
-              paddingTop: titleIsSticky ? '48px' : '',
+              paddingTop: titleIsSticky && !isMobile ? '48px' : '',
               display: 'flex',
               flexDirection: 'column',
               justifyContent: 'center',
@@ -114,7 +113,7 @@ function Layout({
             }}
           >
             {backgroundImageUrl ? (
-              <Stack padding={3}>
+              <Stack>
                 {removeLgContainer ? (
                   <>{children}</>
                 ) : (
