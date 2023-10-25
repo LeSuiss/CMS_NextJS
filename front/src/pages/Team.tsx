@@ -43,6 +43,7 @@ function Team({ employees }) {
             justifyContent="space-around"
             alignItems="baseline"
             spacing={2}
+            gap={1}
             sx={{ flexFlow: 'wrap' }}
           >
             {employees?.slice(0, 5).map((e, index) => (
@@ -69,6 +70,7 @@ function Team({ employees }) {
             display="flex"
             justifyContent="space-around"
             alignItems="baseline"
+            gap={1}
             spacing={2}
             sx={{ flexFlow: 'wrap' }}
           >
