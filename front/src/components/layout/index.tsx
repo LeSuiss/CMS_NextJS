@@ -87,6 +87,7 @@ function Layout({
                 direction="row"
                 justifyContent="space-between"
                 alignItems="center"
+                p={1}
               >
                 <Typography variant="h5">{title}</Typography>
                 <Box

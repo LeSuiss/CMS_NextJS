@@ -1,13 +1,13 @@
-import * as assets from '../../assets/media'
+import * as assets from '../../assets/media';
 
-import { Meta, Story } from '@storybook/react'
+import { Meta, Story } from '@storybook/react';
 
-import { Carousel } from './Carousel'
+import { Carousel } from './Carousel';
 
 export default {
   title: 'Components/Carousel',
   component: Carousel,
-} as Meta
+} as Meta;
 
 export const withImages: Story = (args) => (
   <Carousel settings={{ speed: 150 }}>
@@ -18,14 +18,14 @@ export const withImages: Story = (args) => (
     <div>fdsaa</div>
     <div>fds</div>
   </Carousel>
-)
+);
 
 export const withCustomPaging: Story = (args) => {
-  const slides = [1, 2, 3, 'fds'].map((x) => <div>{x}</div>)
+  const slides = [1, 2, 3, 'fds'].map((x) => <div>{x}</div>);
 
   return (
     <Carousel settings={{ speed: 150, customPaging: (i) => slides[i] }}>
       {slides}
     </Carousel>
-  )
-}
+  );
+};

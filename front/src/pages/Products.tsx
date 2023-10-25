@@ -18,7 +18,7 @@ import dynamic from 'next/dynamic';
 import { fakeDataProducts } from '../assets/fakeDataProducts';
 import { i18n } from '@lingui/core';
 import loadTranslation from '../utils/loadTranslation';
-import { lorem } from '../assets/lorem';
+import { lorem } from '../utils/lorem';
 import { t } from '@lingui/macro';
 import { useIsMobile } from '../utils/hooks';
 import { useTheme } from '../../node_modules/@mui/material';
@@ -70,7 +70,7 @@ export default function Products() {
               >
                 {title}
               </Typography>
-              <Grid item xs={12} md={6} padding={isMobile ? 3 : 1}>
+              <Grid item xs={12} md={6} padding={!isMobile ? 3 : 1}>
                 <Typography variant="body1" textAlign="justify" padding={1}>
                   {description}
                 </Typography>
