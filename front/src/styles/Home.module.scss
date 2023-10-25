@@ -1,8 +1,8 @@
 @import '../config/styles/variables.module';
 
 //LAYOUT
-@import './../components/layout/styles/header.scss';
-@import './../components/layout/styles/footer.scss';
+@import './../components/layout/header/header.scss';
+@import './../components/layout/footer/footer.scss';
 
 //PAGE
 @import './../components/homePage/styles/homePageSection.scss';

@@ -34,12 +34,7 @@ export const Carousel = ({ settings, children }: CarouselProps) => {
   };
 
   return (
-    <Box
-      className="slick-slider"
-      paddingBottom={4}
-      onMouseEnter={pause}
-      onMouseLeave={play}
-    >
+    <Box className="slick-slider" onMouseEnter={pause} onMouseLeave={play}>
       <Slider {..._settings} ref={(slider) => (sliderRef = slider)}>
         {children}
       </Slider>

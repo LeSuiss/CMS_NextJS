@@ -5,7 +5,7 @@ import React from 'react';
 import TestimonialCard from '../../lib/testimonialCard/TestimonialCard';
 
 export const Testimonies = ({ testimonies }) => (
-  <Grid container paddingTop={3} paddingBottom={5} justifyContent="center">
+  <Grid container marginY={1} paddingBottom={8} justifyContent="center">
     <Grid item md={8} sm={11}>
       <Carousel
         settings={{

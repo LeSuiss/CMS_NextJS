@@ -6,7 +6,13 @@ import { t } from '@lingui/macro';
 
 export const FewNumbersSection = () => (
   <Container maxWidth="lg">
-    <Grid container justifyContent="center" alignItems="stretch" paddingY={3}>
+    <Grid
+      container
+      justifyContent="center"
+      alignItems="stretch"
+      paddingY={3}
+      gap={2}
+    >
       <Grid item container md={12} textAlign="center" justifyContent="center">
         <Box maxWidth="500px">
           <Typography variant="h2" textAlign="center" paddingBottom={3}>
@@ -25,6 +31,7 @@ export const FewNumbersSection = () => (
       <Grid
         item
         md={4}
+        gap={2}
         display="flex"
         flexDirection="column"
         justifyContent="space-around"

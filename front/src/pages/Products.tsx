@@ -1,9 +1,7 @@
 import {
-  Avatar,
   Box,
   Button,
   Card,
-  Container,
   Grid,
   Paper,
   Stack,
@@ -51,13 +49,7 @@ export default function Products() {
         </a>
       }
     >
-      <Grid
-        className="slickRemove"
-        container
-        gap={5}
-        marginTop={4}
-        marginBottom={10}
-      >
+      <Grid className="slickRemove" container gap={5}>
         {products.map(({ imgs, title, description }) => (
           <Card elevation={8} key={title}>
             <Grid container item padding={!isMobile && 2}>
@@ -80,7 +72,6 @@ export default function Products() {
                 item
                 xs={12}
                 md={6}
-                minHeight="400px"
                 justifyContent="center"
                 padding={2}
                 alignItems="center"
@@ -114,6 +105,7 @@ export default function Products() {
                               type="video/mp4"
                               playbackRate={10}
                               maxWidth="100%"
+                              height="auto"
                             />
                           </Box>
                         ) : (

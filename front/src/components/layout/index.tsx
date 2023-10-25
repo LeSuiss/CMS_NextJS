@@ -66,10 +66,8 @@ function Layout({
 
         <Box
           className="container_component"
-          sx={{
-            display: 'flex',
-            flexDirection: 'column',
-          }}
+          display="flex"
+          flexDirection="column"
         >
           {title && (
             <Box
@@ -113,17 +111,13 @@ function Layout({
               ...sx,
             }}
           >
-            {backgroundImageUrl ? (
-              <Stack>
-                {removeLgContainer ? (
-                  <>{children}</>
-                ) : (
-                  <Container maxWidth="lg">{children}</Container>
-                )}
-              </Stack>
-            ) : (
-              <>{children}</>
+            {backgroundImageUrl && removeLgContainer && <>children</>}
+            {backgroundImageUrl && !removeLgContainer && (
+              <Container maxWidth="lg" sx={{ py: isMobile ? 2 : 5 }}>
+                {children}
+              </Container>
             )}
+            {!backgroundImageUrl && <>{children}</>}
           </Box>
           <Footer />
         </Box>
