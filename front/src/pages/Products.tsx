@@ -76,7 +76,12 @@ export default function Products() {
                 padding={2}
                 alignItems="center"
               >
-                <Paper sx={{ p: 1, backgroundColor: 'whitesmoke' }}>
+                <Paper
+                  sx={{
+                    p: 1,
+                    backgroundColor: 'whitesmoke',
+                  }}
+                >
                   <Carousel
                     settings={{
                       pauseOnHover: true,
@@ -96,7 +101,7 @@ export default function Products() {
                     }}
                   >
                     {imgs.map((img) => (
-                      <Stack display="flex" alignItems="flex-end" key={img}>
+                      <Stack height="100%" key={img}>
                         {img.endsWith('mp4') ? (
                           <Box display="flex" alignItems="center">
                             <ReactPlayer
