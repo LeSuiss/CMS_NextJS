@@ -57,63 +57,56 @@ const Footer = () => {
         sm={12}
         margin={0}
         padding={1}
-        justifyContent="space-around"
+        gap={2}
+        justifyContent="center"
         alignItems="center"
         spacing={3}
         letterSpacing="1px"
         width="100%"
       >
-        <Grid
-          xs={12}
-          md={4}
-          display="flex"
-          justifyContent="center"
-          alignItems="center"
-        >
+        <Grid xs={12} lg={3} display="flex" justifyContent="center">
           <Logo />
         </Grid>
-        <Grid item>
+        <Grid xs={12} lg={3} display="flex" justifyContent="center">
           <SocialMedias urls={SOCIAL_MEDIAS_LINKS} />
         </Grid>
 
-        <Grid item container md={4} sm={12}>
-          <Grid
-            item
-            container
-            md={12}
-            alignItems="center"
-            flexDirection="column"
-            whiteSpace="nowrap"
-          >
-            <Typography variant="h6" padding={0} textAlign="center">
-              {i18n._(
-                /* i18n: Footer>SiteInformation>horaires d'ouverture */ t`Du lundi au vendredi de 8h à 17h`
-              )}
+        <Grid
+          xs={12}
+          lg={3}
+          display="flex"
+          flexDirection="column"
+          justifyContent="center"
+          alignItems="center"
+        >
+          <Typography variant="h6" textAlign="center">
+            {i18n._(
+              /* i18n: Footer>SiteInformation>horaires d'ouverture */ t`Du lundi au vendredi de 8h à 17h`
+            )}
+          </Typography>
+          <Stack direction="row" alignItems="center">
+            <Typography variant="subtitle1" sx={{ paddingBottom: '0px' }}>
+              <a
+                className={styles.container_socialMediaRow}
+                href="tel: 01 88 24 61 90"
+              >
+                01882461290
+              </a>
             </Typography>
-            <Stack direction="row" alignItems="center">
-              <Typography variant="subtitle1" sx={{ paddingBottom: '0px' }}>
-                <a
-                  className={styles.container_socialMediaRow}
-                  href="tel: 01 88 24 61 90"
-                >
-                  01882461290
-                </a>
-              </Typography>
-              <Box component="span" margin={1}>
-                ou
-              </Box>
-              <Typography variant="subtitle1">
-                <a
-                  className={styles.container_socialMediaRow}
-                  href={`mailto:${MAILING_DESTINATARY}`}
-                >
-                  {i18n._(
-                    /* i18n: Footer>SiteInformation>par mail */ t`par mail`
-                  )}
-                </a>
-              </Typography>
-            </Stack>
-          </Grid>
+            <Box component="span" margin={1}>
+              ou
+            </Box>
+            <Typography variant="subtitle1">
+              <a
+                className={styles.container_socialMediaRow}
+                href={`mailto:${MAILING_DESTINATARY}`}
+              >
+                {i18n._(
+                  /* i18n: Footer>SiteInformation>par mail */ t`par mail`
+                )}
+              </a>
+            </Typography>
+          </Stack>
         </Grid>
       </Grid>
       <Divider

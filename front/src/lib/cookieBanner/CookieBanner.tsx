@@ -88,7 +88,6 @@ export const CookieBanner = ({
 
   const handleClose = () => {
     setModalIsOpen(false);
-    dispatchContext({ displayCookieBanner: false });
   };
 
   const theme: Partial<Theme> = useTheme() as Theme;
