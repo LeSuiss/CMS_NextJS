@@ -28,16 +28,21 @@ export const Carousel = ({ settings, children }: CarouselProps) => {
     autoplay: true,
     pauseOnFocus: true,
     pauseOnHover: true,
-    pauseOnDotsHover:true,
+    pauseOnDotsHover: true,
     arrows: false,
-    swipeToSlide:true,
-    
+    swipeToSlide: true,
+
     ...settings,
-  } satisfies Settings;
+  };
 
-
-  return(
-    <Box  className="slick-slider" onMouseEnter={pause} onMouseLeave={play} onTouchStart={pause} >
+  return (
+    <Box
+      sx={{ "& *:is(.slick-list) *[class^='slick-']": { margin: 'auto' } }}
+      className="slick-slider"
+      onMouseEnter={pause}
+      onMouseLeave={play}
+      onTouchStart={pause}
+    >
       <Slider {...enhancedSettings} ref={(slider) => (sliderRef = slider)}>
         {children}
       </Slider>
