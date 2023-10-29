@@ -37,11 +37,12 @@ export const Carousel = ({ settings, children }: CarouselProps) => {
 
   return (
     <Box
-      sx={{ "& *:is(.slick-list) *[class^='slick-']": { margin: 'auto' } }}
       className="slick-slider"
       onMouseEnter={pause}
       onMouseLeave={play}
       onTouchStart={pause}
+      // center image/video on slick
+      sx={{ "& *:is(.slick-list) *[class^='slick-']": { marginY: 'auto' } }}
     >
       <Slider {...enhancedSettings} ref={(slider) => (sliderRef = slider)}>
         {children}
