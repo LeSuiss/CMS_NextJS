@@ -30,7 +30,7 @@ const FAQitems = [
   },
 ];
 
-export default function FAQ() {
+export default function Faq() {
   return (
     <Layout
       title={i18n._(/* i18n: FAQ */ t`FAQ`)}
