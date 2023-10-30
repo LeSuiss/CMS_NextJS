@@ -52,40 +52,37 @@ const Footer = () => {
     >
       <Grid
         container
-        item
         md={9}
-        sm={12}
-        margin={0}
-        padding={1}
-        gap={2}
+        xs={12}
+        marginY={2}
         justifyContent="center"
         alignItems="center"
-        spacing={3}
         letterSpacing="1px"
+        rowGap={2}
         width="100%"
       >
-        <Grid xs={12} lg={3} display="flex" justifyContent="center">
+        <Grid xs={12} lg={4} display="flex" justifyContent="center">
           <Logo />
         </Grid>
-        <Grid xs={12} lg={3} display="flex" justifyContent="center">
+        <Grid xs={12} lg={4} display="flex" justifyContent="center">
           <SocialMedias urls={SOCIAL_MEDIAS_LINKS} />
         </Grid>
 
         <Grid
           xs={12}
-          lg={3}
+          lg={4}
           display="flex"
           flexDirection="column"
           justifyContent="center"
           alignItems="center"
         >
-          <Typography variant="h6" textAlign="center">
+          <Typography variant="body1" textAlign="center">
             {i18n._(
               /* i18n: Footer>SiteInformation>horaires d'ouverture */ t`Du lundi au vendredi de 8h à 17h`
             )}
           </Typography>
           <Stack direction="row" alignItems="center">
-            <Typography variant="subtitle1" sx={{ paddingBottom: '0px' }}>
+            <Typography variant="body2">
               <a
                 className={styles.container_socialMediaRow}
                 href="tel: 01 88 24 61 90"
@@ -111,20 +108,20 @@ const Footer = () => {
       </Grid>
       <Divider
         sx={{
+          margin: theme.spacing(1),
           width: `${(8 / 12) * 100}%`,
           backgroundColor: theme.palette.primary.contrastText,
           height: '2px',
-          border: 'solid white 1px',
         }}
       />
       <Grid
         container
-        item
+        xs={12}
         md={8}
+        marginY={2}
         className={styles.container_FooterContent}
         justifyContent="center"
         alignItems="center"
-        padding={1}
       >
         {footerLinks.map((x, i) => (
           <GridSection key={'footgrid' + i} {...x} />

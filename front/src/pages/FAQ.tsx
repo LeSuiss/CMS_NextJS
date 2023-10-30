@@ -6,24 +6,31 @@ import Layout from '../components/layout';
 import React from 'react';
 import { i18n } from '@lingui/core';
 import loadTranslation from '../utils/loadTranslation';
+import { lorem } from '../utils/lorem';
 import { t } from '@lingui/macro';
 
 const FAQitems = [
   {
-    question: i18n._(/* i18n:  Foire Aux Questions */ t`Foire Aux Questions`),
-    answer: i18n._(/* i18n:  réponse */ t`réponse`),
+    question: i18n._(/* i18n:  Foire Aux Questions */ t`${lorem}`),
+    answer: i18n._(
+      /* i18n:  Foire Aux Questions */ t`${lorem + lorem + lorem}`
+    ),
   },
   {
-    question: i18n._(/* i18n:  Foire Aux Questions */ t`Foire Aux Questions`),
-    answer: i18n._(/* i18n:  réponse */ t`réponse`),
+    question: i18n._(/* i18n:  Foire Aux Questions */ t`${lorem}`),
+    answer: i18n._(
+      /* i18n:  Foire Aux Questions */ t`${lorem + lorem + lorem}`
+    ),
   },
   {
-    question: i18n._(/* i18n:  Foire Aux Questions */ t`Foire Aux Questions`),
-    answer: i18n._(/* i18n:  réponse */ t`réponse`),
+    question: i18n._(/* i18n:  Foire Aux Questions */ t`${lorem}`),
+    answer: i18n._(
+      /* i18n:  Foire Aux Questions */ t`${lorem + lorem + lorem}`
+    ),
   },
 ];
 
-export default function Legal() {
+export default function FAQ() {
   return (
     <Layout
       title={i18n._(/* i18n: FAQ */ t`FAQ`)}
