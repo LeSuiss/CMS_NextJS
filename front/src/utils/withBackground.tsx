@@ -1,9 +1,9 @@
-import { Box }           from '@mui/material';
-import { Carousel }      from '../lib';
+import { Box } from '@mui/material';
+import { Carousel } from '../lib';
 import { HEADER_HEIGHT } from '../config';
-import Image             from 'next/image';
-import React             from 'react';
-import { useTheme }      from '../../node_modules/@mui/material';
+import Image from 'next/image';
+import React from 'react';
+import { useTheme } from '../../node_modules/@mui/material';
 
 interface WithBackgroundProps {
   negativeMargin?: number;
@@ -58,7 +58,7 @@ export const WithBackground = ({
           autoplaySpeed: 5500,
         }}
       >
-        {url?.map((x) => (
+        {url?.map((x, i) => (
           <Box
             sx={{
               position: 'relative',
@@ -68,6 +68,7 @@ export const WithBackground = ({
             }}
           >
             <Image
+              priority={i === 1}
               style={{
                 objectFit: 'cover',
               }}

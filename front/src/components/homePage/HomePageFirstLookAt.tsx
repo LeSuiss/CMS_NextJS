@@ -3,16 +3,13 @@ import {
   WithBackground,
   WithBackgroundColorShape,
 } from '../../utils/withBackground';
-import { useIsMobile, useWindowSize } from '../../utils/hooks';
 
-import { GetStaticProps } from 'next';
 import { HEADER_HEIGHT } from '../../config/constants';
 import React from 'react';
 import { i18n } from '@lingui/core';
-import loadTranslation from '../../utils/loadTranslation';
-import { readdir } from 'fs/promises';
 import styles from '../../styles/Home.module.scss';
 import { t } from '@lingui/macro';
+import { useIsMobile } from '../../utils/hooks';
 import { useTheme } from '../../../node_modules/@mui/material';
 
 export const HomePageFirstLookAt = ({ homePageSlider }) => {
