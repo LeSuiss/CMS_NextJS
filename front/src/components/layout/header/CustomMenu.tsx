@@ -9,6 +9,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 import MenuOpenIcon from '@mui/icons-material/MenuOpen';
 import Switcher from './Switcher';
+import { i18n } from '@lingui/core';
 
 export default function CustomMenu({ linksToDisplay: navLinks }) {
   const [anchorEl, setAnchorEl] = React.useState(null);
@@ -45,9 +46,9 @@ export default function CustomMenu({ linksToDisplay: navLinks }) {
               href={item.link}
               style={{ textDecoration: 'none' }}
             >
-              <MenuItem>{item.nav.id ?? item.nav}</MenuItem>
+              <MenuItem>{i18n._(item.nav.id ?? item.nav)}</MenuItem>
             </Link>
-            {index + 1 < navLinks.length && <Divider style={{ margin: 0 }} />}
+            {index + 1 < navLinks.length && <Divider sx={{ margin: 0 }} />}
           </div>
         ))}
       </Menu>
