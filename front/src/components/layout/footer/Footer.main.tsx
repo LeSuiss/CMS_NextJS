@@ -3,7 +3,6 @@ import { Box, Button, Stack } from '@mui/material';
 import { Divider, Grid, Typography } from '@mui/material';
 import { MAILING_DESTINATARY, SOCIAL_MEDIAS_LINKS } from '../../../config';
 import { defineMessage, t } from '@lingui/macro';
-import { rootContext, useRootContext } from '../../../pages/_app';
 
 import { AuthorRow } from './AuthorRow';
 import { GridSection } from './GridSection';
@@ -12,10 +11,11 @@ import React from 'react';
 import { SocialMedias } from './SocialMedias';
 import { i18n } from '@lingui/core';
 import styles from '../../../styles/Home.module.scss';
+import { useRootContext } from '..';
 import { useTheme } from '../../../../node_modules/@mui/material';
 
 const Footer = () => {
-  const { dispatchContext } = useRootContext();
+  const { context } = useRootContext();
   const footerLinks = [
     {
       title: defineMessage({
@@ -36,7 +36,10 @@ const Footer = () => {
     {
       title: defineMessage({ message: 'Gérer les cookies' }),
       links: '/',
-      cb: (e) => dispatchContext({ displayCookieBanner: true }),
+      cb: () => {
+        console.log(context);
+        return context?.value?.openCookieBanner;
+      },
     },
   ];
 

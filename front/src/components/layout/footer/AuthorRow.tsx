@@ -46,7 +46,7 @@ export function AuthorRow({ theme }) {
           <a href={`mailto:archer.alexis@hotmail.fr`}>email me</a>
           <span> {' / '}</span> <a href="phoneto:0761297272">07 61 29 72 72</a>
         </Typography>
-        <p>devis sur demande</p>
+        <Typography>devis sur demande</Typography>
       </Grid>
     </>
   );

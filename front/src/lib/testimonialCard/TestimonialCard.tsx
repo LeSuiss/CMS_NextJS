@@ -66,7 +66,7 @@ const GridStyled = styled(Grid)(({ theme }) => ({
       margin: 0,
       fontSize: '3.5rem',
       fontWeight: 700,
-      color: '#fda12e',
+      color: theme.palette.secondary.main,
       [theme.breakpoints.down('md')]: {
         fontSize: '3rem',
       },
@@ -86,11 +86,11 @@ const GridStyled = styled(Grid)(({ theme }) => ({
       '&:before': {
         content: `"\\201C"`,
         fontSize: '2rem',
-        color: '#fda12e',
+        color: theme.palette.secondary.main,
       },
       '&:after': {
         content: `"\\201D"`,
-        color: '#fda12e',
+        color: theme.palette.secondary.main,
         fontSize: '2rem',
         position: 'absolute',
       },
@@ -117,7 +117,7 @@ const GridStyled = styled(Grid)(({ theme }) => ({
     margin: '15px 0px 10px 0px',
     '& h3': {
       margin: 0,
-      color: '#fda12e',
+      color: theme.palette.secondary.main,
       fontSize: '1.3rem',
       [theme.breakpoints.down('md')]: {
         fontSize: '1.2rem',

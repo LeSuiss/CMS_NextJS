@@ -29,6 +29,7 @@ export const WithBackground = ({
     <Box
       sx={{
         position: 'absolute',
+        overflow: 'hidden',
         top: '0',
         left: '0',
         height: '100%',
@@ -49,7 +50,15 @@ export const WithBackground = ({
               ...sx,
             }}
           >
-            <Image priority={i === 1} fill alt={x} src={x} />
+            <Image
+              priority={i === 1}
+              style={{
+                objectFit: 'cover',
+              }}
+              fill
+              alt={x}
+              src={x}
+            />
           </Box>
         ))}
       </Carousel>

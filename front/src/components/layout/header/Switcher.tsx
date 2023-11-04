@@ -48,6 +48,7 @@ function Switcher() {
   return (
     <>
       <Button
+        fullWidth
         sx={{
           height: '36px',
           padding: '15px',
@@ -56,7 +57,6 @@ function Switcher() {
           textAlgin: 'left',
           display: 'flex',
           justifyContent: 'start',
-          width: !isMobile() ? 'auto' : '100%',
         }}
         onClick={() => setIsDialogOpen((p) => !p)}
       >

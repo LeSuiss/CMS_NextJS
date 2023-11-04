@@ -36,7 +36,8 @@ function Header({ navigationStructure, className }) {
     <Box
       component="header"
       className={`mainContainerHeader ${className}`}
-      padding={0.1}
+      paddingY={0.1}
+      paddingX={2}
     >
       <Box component={Logo} />
       {isMobile ? (
