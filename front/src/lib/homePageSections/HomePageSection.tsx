@@ -4,8 +4,8 @@ import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
 import { i18n } from '@lingui/core';
+import { isMobile } from '../../utils/hooks';
 import styles from '../../styles/Home.module.scss';
-import { useIsMobile } from '../../utils/hooks';
 
 export interface Section {
   imageSrc: string;
@@ -23,9 +23,8 @@ function HomePageSection({
   linkHref,
   index,
 }: Section) {
-  const isMobile = useIsMobile();
-  const imageOrder = !isMobile && index % 2 === 0 ? -10 : 10;
-  const contentOrder = !isMobile && index % 2 === 0 ? 10 : -10;
+  const imageOrder = !isMobile() && index % 2 === 0 ? -10 : 10;
+  const contentOrder = !isMobile() && index % 2 === 0 ? 10 : -10;
 
   return (
     <section className={styles.test}>
@@ -37,8 +36,8 @@ function HomePageSection({
       </Grid>
       <Grid
         sx={{
-          paddingTop: `${!isMobile ? '3%' : 0}`,
-          paddingBottom: `${!isMobile ? '3%' : 0}`,
+          paddingTop: `${!isMobile() ? '3%' : 0}`,
+          paddingBottom: `${!isMobile() ? '3%' : 0}`,
           border: 'solid blue 5px',
         }}
         className={styles.sectionContainer}
@@ -74,11 +73,11 @@ function HomePageSection({
           sx={{ order: imageOrder, border: 'solid green 5px' }}
         >
           <Paper
-            style={isMobile ? { height: '150px' } : { paddingTop: '100%' }}
+            style={isMobile() ? { height: '150px' } : { paddingTop: '100%' }}
           >
             <Image style={{ zIndex: 3 }} alt="bgHome" src={imageSrc} />
           </Paper>
-          {!isMobile && (
+          {!isMobile() && (
             <Grid
               item
               style={{

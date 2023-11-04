@@ -7,7 +7,7 @@ import Logo from '../Logo';
 import React from 'react';
 import Switcher from './Switcher';
 import { i18n } from '@lingui/core';
-import { useIsMobile } from '../../../utils/hooks';
+import { isMobile } from '../../../utils/hooks';
 
 const _styles = (theme: Theme) => ({
   tabs: {
@@ -29,7 +29,6 @@ const _styles = (theme: Theme) => ({
 });
 
 function Header({ navigationStructure, className }) {
-  const isMobile = useIsMobile();
   const theme = useTheme();
   const styles = _styles(theme);
 

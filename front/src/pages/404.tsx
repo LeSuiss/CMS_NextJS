@@ -6,11 +6,8 @@ import Link from 'next/link';
 import { i18n } from '@lingui/core';
 import loadTranslation from '../utils/loadTranslation';
 import { t } from '@lingui/macro';
-import { useIsMobile } from '../utils/hooks';
 
 export default function Legal() {
-  const layoutPadding = !useIsMobile ? 8 : 3;
-
   return (
     <Layout
       title={i18n._(/* i18n: Mentions Légales */ t`Cette page n'existe pas`)}

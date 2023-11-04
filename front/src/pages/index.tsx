@@ -8,17 +8,15 @@ import { Testimonies } from '../components/homePage/Testimonies';
 import TrustingBrands from '../components/homePage/TrustingBrands';
 import { faker } from '@faker-js/faker';
 import { getListOfFilesUrlFromFolder } from '../utils/serverless/fileSystem';
+import { isMobile } from '../utils/hooks';
 import loadTranslation from '../utils/loadTranslation';
-import { useIsMobile } from '../utils/hooks';
 
 const Home = ({ brandsList, testimonies, homePageSlider }) => {
-  const isMobile = useIsMobile();
-
   return (
     <Layout titleIsSticky={false} removeLgContainer>
       <HomePageFirstLookAt homePageSlider={homePageSlider} />
       <FewNumbersSection />
-      {!isMobile && (
+      {!isMobile() && (
         <SectionBackground
           url={'/medias/bgHome.webp'}
           style={{ height: '350px' }}

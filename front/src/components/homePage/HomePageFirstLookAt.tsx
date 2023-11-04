@@ -1,26 +1,21 @@
 import { Box, Grid, Typography } from '@mui/material';
-import {
-  WithBackground,
-  WithBackgroundColorShape,
-} from '../../utils/withBackground';
 
 import { HEADER_HEIGHT } from '../../config/constants';
 import React from 'react';
+import { WithBackground } from '../../utils/withBackground';
 import { i18n } from '@lingui/core';
+import { isMobile } from '../../utils/hooks';
 import styles from '../../styles/Home.module.scss';
 import { t } from '@lingui/macro';
-import { useIsMobile } from '../../utils/hooks';
 import { useTheme } from '../../../node_modules/@mui/material';
 
 export const HomePageFirstLookAt = ({ homePageSlider }) => {
-  const isMobile = useIsMobile();
-
   const theme = useTheme();
 
   return (
     <Box
       className={`${styles.playerWrapper} slickRemove`}
-      sx={isMobile && { height: '400px', '& *': { maxHeight: '400px' } }}
+      sx={isMobile() && { height: '400px', '& *': { maxHeight: '400px' } }}
     >
       <WithBackground
         url={homePageSlider}
@@ -28,17 +23,7 @@ export const HomePageFirstLookAt = ({ homePageSlider }) => {
         addedColor="black"
         addedColorOpacity={0.3}
         sx={
-          isMobile
-            ? { height: '400px', '& *': { height: '400px' } }
-            : { height: `calc(100vh - ${HEADER_HEIGHT}px)` }
-        }
-      />
-
-      <WithBackgroundColorShape
-        addedColorOpacity={0.975}
-        addedColor={theme.palette.primary.main}
-        sx={
-          isMobile
+          isMobile()
             ? { height: '400px', '& *': { height: '400px' } }
             : { height: `calc(100vh - ${HEADER_HEIGHT}px)` }
         }
@@ -58,14 +43,14 @@ export const HomePageFirstLookAt = ({ homePageSlider }) => {
           padding="3%"
           direction="column"
           justifyContent="center"
-          alignItems={isMobile ? 'center' : 'flex-start'}
+          alignItems={isMobile() ? 'center' : 'flex-start'}
         >
           <Typography
             variant="h2"
             fontWeight="bolder"
             lineHeight="1.5em"
             color="white"
-            textAlign={isMobile ? 'center' : 'left'}
+            textAlign={isMobile() ? 'center' : 'left'}
           >
             {i18n._(/* i18n: Créer */ t`CREER`)}
             <br />
@@ -83,7 +68,7 @@ export const HomePageFirstLookAt = ({ homePageSlider }) => {
             Solutions de levage & Ingénieurerie
           </Typography>
         </Grid>
-        {!isMobile && (
+        {!isMobile() && (
           <Grid
             md={6}
             item

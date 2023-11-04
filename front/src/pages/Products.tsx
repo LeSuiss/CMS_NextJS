@@ -15,10 +15,10 @@ import ReactPlayer from 'react-player';
 import dynamic from 'next/dynamic';
 import { fakeDataProducts } from '../assets/fakeDataProducts';
 import { i18n } from '@lingui/core';
+import { isMobile } from '../utils/hooks';
 import loadTranslation from '../utils/loadTranslation';
 import { lorem } from '../utils/lorem';
 import { t } from '@lingui/macro';
-import { useIsMobile } from '../utils/hooks';
 import { useTheme } from '../../node_modules/@mui/material';
 
 const Carousel = dynamic(
@@ -30,7 +30,6 @@ const Carousel = dynamic(
 
 export default function Products() {
   const theme = useTheme();
-  const isMobile = useIsMobile();
 
   return (
     <Layout
@@ -52,7 +51,7 @@ export default function Products() {
       <Grid className="slickRemove" container gap={5}>
         {products.map(({ imgs, title, description }) => (
           <Card elevation={8} key={title}>
-            <Grid container item padding={!isMobile && 2}>
+            <Grid container item padding={!isMobile() && 2}>
               <Typography
                 variant="h4"
                 padding={1.5}
@@ -62,7 +61,7 @@ export default function Products() {
               >
                 {title}
               </Typography>
-              <Grid item xs={12} md={6} padding={!isMobile ? 3 : 1}>
+              <Grid item xs={12} md={6} padding={!isMobile() ? 3 : 1}>
                 <Typography variant="body1" textAlign="justify" padding={1}>
                   {description}
                 </Typography>

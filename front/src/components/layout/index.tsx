@@ -5,9 +5,7 @@ import SeoHead, { SeoProps } from '../../utils/SEO&Co/SeoHead';
 import Footer from './footer/Footer.main';
 import Header from './header/Header';
 import { NAVIGATION } from '../../config';
-import { i18n } from '@lingui/core';
-import { useIsMobile } from '../../utils/hooks';
-import { useRouter } from 'next/router';
+import { isMobile } from '../../utils/hooks';
 
 interface LayoutProps {
   children: any;
@@ -29,7 +27,6 @@ function Layout({
   titleIsSticky = true,
   stickerToDisplay = null,
 }: LayoutProps) {
-  const isMobile = useIsMobile();
   /* Method that will fix header after a specific scrollable */
   const isSticky = () => {
     const header = document.querySelector('.header-section');

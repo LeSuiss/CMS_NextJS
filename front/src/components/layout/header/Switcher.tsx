@@ -13,10 +13,10 @@ import Image from 'next/image';
 import { LANGUAGES } from '../../../config/company-config';
 import { TransitionProps } from '@mui/material/transitions';
 import { i18n } from '@lingui/core';
+import { isMobile } from '../../../utils/hooks';
 import loadTranslation from '../../../utils/loadTranslation';
 import nextConfig from '../../../../next.config.js';
 import { t } from '@lingui/macro';
-import { useIsMobile } from '../../../utils/hooks';
 import { useRouter } from 'next/router';
 
 const TransitionComponent = React.forwardRef(function Transition(
@@ -29,7 +29,6 @@ const TransitionComponent = React.forwardRef(function Transition(
 });
 
 function Switcher() {
-  const isMobile = useIsMobile();
   const [isDialogOpen, setIsDialogOpen] = useState(false);
   const router = useRouter();
   const labels = {};
@@ -57,7 +56,7 @@ function Switcher() {
           textAlgin: 'left',
           display: 'flex',
           justifyContent: 'start',
-          width: !isMobile ? 'auto' : '100%',
+          width: !isMobile() ? 'auto' : '100%',
         }}
         onClick={() => setIsDialogOpen((p) => !p)}
       >

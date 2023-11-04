@@ -3,13 +3,14 @@ import { useEffect, useState } from 'react';
 import { MOBILE_BREAKPOINT } from '../config';
 import { useMediaQuery } from '@mui/material';
 
-export function useIsMobile() {
+function useIsMobile() {
   return useMediaQuery(
     MOBILE_BREAKPOINT
       ? `(max-width:${MOBILE_BREAKPOINT}px)`
       : '(max-width:900px)'
   );
 }
+export const isMobile = () => useIsMobile();
 
 export function useWindowSize() {
   // Initialize state with undefined width/height so server and client renders match
