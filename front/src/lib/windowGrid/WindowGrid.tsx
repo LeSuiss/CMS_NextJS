@@ -1,8 +1,6 @@
-import { Divider, Grid } from "@mui/material";
-
-import AutoSizer from "react-virtualized-auto-sizer";
-import { FixedSizeGrid } from "react-window";
-import React from "react";
+import AutoSizer from 'react-virtualized-auto-sizer';
+import { FixedSizeGrid } from 'react-window';
+import React from 'react';
 
 export interface WindowGridProps {
   columnCount: number /**test of comment **/;
@@ -15,32 +13,32 @@ const WindowGrid = ({
   columnCount,
   dataToDisplay,
   CompoToDisplay,
-  rowHeight
+  rowHeight,
 }: WindowGridProps) => {
   return (
     <div
       style={{
-        flex: "1 1 auto",
-        position: "relative",
-        border: "solid blue 1px",
-        minHeight: "80vh"
+        flex: '1 1 auto',
+        position: 'relative',
+        border: 'solid blue 1px',
+        minHeight: '80vh',
       }}
     >
       <AutoSizer
         style={{
-          height: "100%",
-          width: "100%",
-          position: "absolute",
-          top: "0",
-          left: "0"
+          height: '100%',
+          width: '100%',
+          position: 'absolute',
+          top: '0',
+          left: '0',
         }}
       >
         {({ height, width }) => (
           <FixedSizeGrid
             style={{
-              border: "solid blue 8px",
-              display: "grid",
-              gridAutoColumns: 3
+              border: 'solid blue 8px',
+              display: 'grid',
+              gridAutoColumns: 3,
             }}
             height={height}
             rowHeight={rowHeight ?? 350}
@@ -64,10 +62,9 @@ const WindowGrid = ({
                 <div
                   style={{
                     ...style,
-                    border: "solid 2px red",
                     left: (style.left as number) + (columnIndex + 1) * gutter,
                     top: (style.top as number) + (rowIndex + 0.5) * gutter,
-                    height: style.height as number
+                    height: style.height as number,
                   }}
                 >
                   <CompoToDisplay />

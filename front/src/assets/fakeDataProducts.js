@@ -1,4 +1,3 @@
-/* eslint-disable import/prefer-default-export */
 export const fakeDataProducts = [
   {
     name: 'SANGLE A MAIL.ACIER CMU 2, 00 t',
@@ -258,4 +257,4 @@ export const fakeDataProducts = [
     category: " 'ELINGUES'",
     price: 2,
   },
-]
+];

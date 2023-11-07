@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/ban-ts-comment */
 // @ts-ignore
 import { primary, secondary } from './_variables.module.scss';
 

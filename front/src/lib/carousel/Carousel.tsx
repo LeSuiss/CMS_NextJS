@@ -1,7 +1,7 @@
-import React, { Component } from 'react';
 import Slider, { Settings } from 'react-slick';
 
 import { Box } from '@mui/material';
+import React from 'react';
 
 interface CarouselProps {
   settings?: Settings;

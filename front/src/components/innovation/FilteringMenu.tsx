@@ -1,19 +1,21 @@
-import { cloneDeep } from 'lodash'
-import * as React from 'react'
-import ArrowForwardIosSharpIcon from '@mui/icons-material/ArrowForwardIosSharp'
+import * as React from 'react';
+
 import {
   Checkbox,
   FormControlLabel,
   FormGroup,
   styled,
   useTheme,
-} from '@mui/material'
-import MuiAccordion, { AccordionProps } from '@mui/material/Accordion'
-import MuiAccordionDetails from '@mui/material/AccordionDetails'
+} from '@mui/material';
+import MuiAccordion, { AccordionProps } from '@mui/material/Accordion';
 import MuiAccordionSummary, {
   AccordionSummaryProps,
-} from '@mui/material/AccordionSummary'
-import Typography from '@mui/material/Typography'
+} from '@mui/material/AccordionSummary';
+
+import ArrowForwardIosSharpIcon from '@mui/icons-material/ArrowForwardIosSharp';
+import MuiAccordionDetails from '@mui/material/AccordionDetails';
+import Typography from '@mui/material/Typography';
+import { cloneDeep } from 'lodash';
 
 const Accordion = styled((props: AccordionProps) => (
   <MuiAccordion disableGutters elevation={0} square {...props} />
@@ -25,7 +27,7 @@ const Accordion = styled((props: AccordionProps) => (
   '&:before': {
     display: 'none',
   },
-}))
+}));
 
 const AccordionSummary = styled((props: AccordionSummaryProps) => (
   <MuiAccordionSummary
@@ -44,19 +46,19 @@ const AccordionSummary = styled((props: AccordionSummaryProps) => (
   '& .MuiAccordionSummary-content': {
     marginLeft: theme.spacing(1),
   },
-}))
+}));
 
 const AccordionDetails = styled(MuiAccordionDetails)(({ theme }) => ({
   padding: theme.spacing(2),
   borderTop: '1px solid rgba(0, 0, 0, .125)',
-}))
+}));
 
 export const FilteringMenuAccordeon = ({ filteringStructure, setFilters }) => {
   const [level1Open, setLevel1Open] = React.useState(
     Object.keys(filteringStructure).map((k) => ({ [k]: true }))
-  )
+  );
   // const [expanded, setExpanded] = React.useState(filteringStructure)
-  const theme = useTheme()
+  const theme = useTheme();
 
   return (
     <div style={{ minWidth: '65%', maxHeight: '80dvh', overflowY: 'auto' }}>
@@ -92,9 +94,9 @@ export const FilteringMenuAccordeon = ({ filteringStructure, setFilters }) => {
                   control={<Checkbox defaultChecked />}
                   onChange={() =>
                     setFilters((p) => {
-                      const xx = cloneDeep(p)
-                      xx[category][x] = !xx[category][x]
-                      return xx
+                      const xx = cloneDeep(p);
+                      xx[category][x] = !xx[category][x];
+                      return xx;
                     })
                   }
                   label={x}
@@ -105,5 +107,5 @@ export const FilteringMenuAccordeon = ({ filteringStructure, setFilters }) => {
         </Accordion>
       ))}
     </div>
-  )
-}
+  );
+};

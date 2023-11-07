@@ -4,7 +4,7 @@ import React from 'react';
 import { i18n } from '@lingui/core';
 import { t } from '@lingui/macro';
 
-export function GridSection({ title, links, isBlank = false, cb = null }) {
+export function GridSection({ title, links, isBlank = false, cb = null }: any) {
   return (
     <Grid item xs={12} md={3} container textAlign="center">
       <Typography variant="subtitle1" flex={1}>

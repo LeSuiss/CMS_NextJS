@@ -9,7 +9,7 @@ import styles from '../../styles/Home.module.scss';
 import { t } from '@lingui/macro';
 import { useTheme } from '../../../node_modules/@mui/material';
 
-export const HomePageFirstLookAt = ({ homePageSlider }) => {
+export const HomePageFirstLookAt = ({ homePageSlider }: any) => {
   const theme = useTheme();
 
   return (
@@ -19,9 +19,6 @@ export const HomePageFirstLookAt = ({ homePageSlider }) => {
     >
       <WithBackground
         url={homePageSlider}
-        opacity={1}
-        addedColor="black"
-        addedColorOpacity={0.3}
         sx={
           isMobile()
             ? { height: '400px', '& *': { height: '400px' } }

@@ -1,11 +1,10 @@
 import { Divider, Grid, Typography } from '@mui/material';
 
-import { MAILING_DESTINATARY } from '../../../config';
 import React from 'react';
 import { i18n } from '@lingui/core';
 import { t } from '@lingui/macro';
 
-export function AuthorRow({ theme }) {
+export function AuthorRow({ theme }: any) {
   return (
     <>
       <Divider

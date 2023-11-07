@@ -7,10 +7,9 @@ interface User {
   firstName: string;
   lastName: string;
   phone: string;
-  description: string
-  job: string
+  description: string;
+  job: string;
 }
-
 
 function createRandomUser(): User {
   const firstName = faker.name.firstName();
@@ -20,7 +19,6 @@ function createRandomUser(): User {
     lastName,
   ]);
 
-
   return {
     _id: faker.datatype.uuid(),
     portrait: faker.image.avatar(),
@@ -29,10 +27,10 @@ function createRandomUser(): User {
     firstName,
     lastName,
     phone: faker.phone.imei(),
-    description: faker.lorem.paragraph()
+    description: faker.lorem.paragraph(),
   };
 }
 
-const generateEmployees = [...Array(100)].map(x => createRandomUser())
+const generateEmployees = [...Array(100)].map((x) => createRandomUser());
 
-export default generateEmployees
+export default generateEmployees;

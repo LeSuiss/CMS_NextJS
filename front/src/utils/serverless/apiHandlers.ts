@@ -1,6 +1,3 @@
-import React, { useState } from 'react';
-
-/* eslint-disable prettier/prettier */
 import axios from 'axios';
 
 export const produceApi =

@@ -1,9 +1,9 @@
-import { Box, Grid, Theme, Typography } from "@mui/material";
+import { Box, Grid, Theme, Typography } from '@mui/material';
 
-import { FormatQuote } from "@mui/icons-material";
-import React from "react";
+import { FormatQuote } from '@mui/icons-material';
+import React from 'react';
 // import { FormatQuote } from '@mui/icons-material'
-import { useTheme } from "@emotion/react";
+import { useTheme } from '@emotion/react';
 
 export interface TestimonyProps {
   message: string;
@@ -18,7 +18,7 @@ export const Testimony = ({
   authorPortraitImgSrc,
   authorName,
   authorTitle,
-  style
+  style,
 }: TestimonyProps) => {
   const theme = useTheme() as Theme;
 
@@ -26,14 +26,14 @@ export const Testimony = ({
     <Grid
       container
       style={{
-        width: "100%",
+        width: '100%',
         backgroundColor: theme.palette.primary.main,
         color: theme.palette.primary.contrastText,
-        height: "max(100%, 300px)",
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-        ...style
+        height: 'max(100%, 300px)',
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        ...style,
       }}
     >
       <Grid
@@ -41,40 +41,40 @@ export const Testimony = ({
         container
         md={8}
         sx={{
-          height: "100%",
+          height: '100%',
           padding: 2,
-          margin: "auto",
-          display: "flex",
-          justifyContent: "center"
+          margin: 'auto',
+          display: 'flex',
+          justifyContent: 'center',
         }}
       >
         <Grid
           item
           md={3}
           sx={{
-            maxHeight: "50%",
-            display: "flex",
-            justifyContent: "center",
-            position: "relative"
+            maxHeight: '50%',
+            display: 'flex',
+            justifyContent: 'center',
+            position: 'relative',
           }}
         >
           <img
             alt={`${authorName}_TestimonyPortrait`}
             style={{
-              borderRadius: "100%",
-              aspectRatio: "1",
-              maxWidth: "200px",
-              maxHeight: "200px"
+              borderRadius: '100%',
+              aspectRatio: '1',
+              maxWidth: '200px',
+              maxHeight: '200px',
             }}
             src={authorPortraitImgSrc}
           />
           <Box
             sx={{
-              height: "40px",
-              width: "40px",
-              position: "absolute",
-              right: "1%",
-              top: "1%"
+              height: '40px',
+              width: '40px',
+              position: 'absolute',
+              right: '1%',
+              top: '1%',
             }}
             component={FormatQuote}
           />
@@ -84,14 +84,14 @@ export const Testimony = ({
           md={9}
           sx={{
             padding: 3,
-            display: "flex",
-            alignItems: "center",
-            textAlign: "justify",
-            flexFlow: "column"
+            display: 'flex',
+            alignItems: 'center',
+            textAlign: 'justify',
+            flexFlow: 'column',
           }}
         >
-          <Typography variant="body1">"{message}"</Typography>
-          <p style={{ alignSelf: "flex-end", marginBottom: 0 }}>
+          <Typography variant="body1">{message}</Typography>
+          <p style={{ alignSelf: 'flex-end', marginBottom: 0 }}>
             <Typography variant="body1">
               {authorName}, {authorTitle}
             </Typography>

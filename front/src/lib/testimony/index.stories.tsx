@@ -1,6 +1,7 @@
 import { Meta, Story } from '@storybook/react';
-import { Testimony, TestimonyProps } from './Testimony';
 
+import React from 'react';
+import { Testimony } from './Testimony';
 import { lorem } from '../../utils/lorem';
 
 export default {

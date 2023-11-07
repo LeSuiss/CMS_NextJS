@@ -1,4 +1,4 @@
-import Script from 'next/script'
+import React from 'react';
 
 export const GTAG = () => (
   <>
@@ -18,4 +18,4 @@ export const GTAG = () => (
                 `}
     </Script> */}
   </>
-)
+);

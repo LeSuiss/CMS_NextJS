@@ -1,6 +1,5 @@
 import { Box, Grid, Stack, Typography } from '@mui/material';
 
-import Image from 'next/legacy/image';
 import React from 'react';
 import { i18n } from '@lingui/core';
 import { styled } from '../../../node_modules/@mui/material';

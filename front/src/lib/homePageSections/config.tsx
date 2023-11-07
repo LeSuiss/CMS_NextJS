@@ -1,15 +1,17 @@
+import React from 'react';
+
 export const videoSliderMessages = [
   'when security prevails',
   'when fiability is required',
   'ask for SAPEM',
-]
+];
 
 export const sectionsData = [
   {
     title: 'we are experts',
     imageSrc: '/medias/bgHome.webp',
     linkText: "en apprendre d'avantage sur notre buerau d'études",
-    linkHref: '/Team', 
+    linkHref: '/Team',
     text: (
       <>
         <p>
@@ -43,4 +45,4 @@ export const sectionsData = [
     linkText: 'Discover our experts',
     linkHref: '/Products',
   },
-]
+];
