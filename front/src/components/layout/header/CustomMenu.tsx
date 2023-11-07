@@ -11,7 +11,13 @@ import MenuOpenIcon from '@mui/icons-material/MenuOpen';
 import Switcher from './Switcher';
 import { i18n } from '@lingui/core';
 
-export default function CustomMenu({ linksToDisplay: navLinks }) {
+interface CustomMenuProps {
+  linksToDisplay: any;
+}
+
+export default function CustomMenu({
+  linksToDisplay: navLinks,
+}: CustomMenuProps) {
   const [anchorEl, setAnchorEl] = React.useState(null);
   const open = Boolean(anchorEl);
 

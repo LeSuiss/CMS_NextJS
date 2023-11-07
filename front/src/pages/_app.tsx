@@ -9,7 +9,6 @@ import { StylesProvider, createGenerateClassName } from '@mui/styles';
 import { CacheProvider } from '@emotion/react';
 import { CookieBanner } from '../lib';
 import CssBaseline from '@mui/material/CssBaseline';
-import Head from 'next/head';
 import { I18nProvider } from '@lingui/react';
 import { ThemeProvider } from '@mui/material/styles';
 import { ToastContainer } from 'react-toastify';
@@ -30,10 +29,10 @@ initTranslation(i18n);
 const clientSideEmotionCache = createEmotionCache();
 export const rootContext = createContext<{
   context?: any;
-  dispatchContext?: Function;
+  dispatchContext?: (arg: any) => void;
 }>({});
 
-export default function MyApp(props) {
+export default function MyApp(props: any) {
   const { Component, emotionCache = clientSideEmotionCache, pageProps } = props;
   const router = useRouter();
   const firstRender = useRef(true);

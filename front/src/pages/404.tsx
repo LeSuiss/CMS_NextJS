@@ -1,8 +1,9 @@
-import { Box, Button, Card, Container, Stack, Typography } from '@mui/material';
+import { Box, Button, Card, Stack, Typography } from '@mui/material';
 
 import type { GetStaticProps } from 'next';
 import Layout from '../components/layout';
 import Link from 'next/link';
+import React from 'react';
 import { i18n } from '@lingui/core';
 import loadTranslation from '../utils/loadTranslation';
 import { t } from '@lingui/macro';

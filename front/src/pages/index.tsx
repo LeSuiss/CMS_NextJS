@@ -3,6 +3,7 @@ import type { GetStaticProps } from 'next';
 import { HomePageFirstLookAt } from '../components/homePage/HomePageFirstLookAt';
 import { IconPresentation } from '../components/homePage/IconPresentation';
 import Layout from '../components/layout';
+import React from 'react';
 import { SectionBackground } from '../lib';
 import { Testimonies } from '../components/homePage/Testimonies';
 import TrustingBrands from '../components/homePage/TrustingBrands';
@@ -11,7 +12,7 @@ import { getListOfFilesUrlFromFolder } from '../utils/serverless/fileSystem';
 import { isMobile } from '../utils/hooks';
 import loadTranslation from '../utils/loadTranslation';
 
-const Home = ({ brandsList, testimonies, homePageSlider }) => {
+const Home = ({ brandsList, testimonies, homePageSlider }: any) => {
   return (
     <Layout titleIsSticky={false} removeLgContainer>
       <HomePageFirstLookAt homePageSlider={homePageSlider} />

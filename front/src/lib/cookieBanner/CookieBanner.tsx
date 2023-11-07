@@ -10,10 +10,10 @@ import {
   Switch,
   Typography,
 } from '@mui/material';
-import CookieConsent, { getCookieConsentValue } from 'react-cookie-consent';
-import React, { useContext } from 'react';
 import { Theme, useTheme } from '@mui/material/styles';
 
+import CookieConsent from 'react-cookie-consent';
+import React from 'react';
 import _ from 'lodash';
 import { i18n } from '@lingui/core';
 import { setContrastedBackground } from '../utils';

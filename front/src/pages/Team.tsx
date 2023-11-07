@@ -17,7 +17,7 @@ import loadTranslation from '../utils/loadTranslation';
 import { t } from '@lingui/macro';
 import { useTheme } from '../../node_modules/@mui/material';
 
-function Team({ employees }) {
+function Team({ employees }: any) {
   const theme = useTheme();
   return (
     <Layout

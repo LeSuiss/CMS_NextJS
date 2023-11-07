@@ -4,7 +4,6 @@ import {
   CardContent,
   CardHeader,
   Checkbox,
-  Container,
   Divider,
   FormControlLabel,
   Grid,
@@ -22,6 +21,7 @@ import { defineMessage, t } from '@lingui/macro';
 import { GetStaticProps } from 'next';
 import { Iframe } from '../lib';
 import Layout from '../components/layout';
+import React from 'react';
 import { SocialMedias } from '../components/layout/footer/SocialMedias';
 import emailjs from '@emailjs/browser';
 import { i18n } from '@lingui/core';

@@ -1,7 +1,5 @@
-async function loadTranslation(locale: string, isProduction = true) {
-  let data;
-
-  data = await import(`../../locales/${locale}/messages.js`);
+async function loadTranslation(locale: string) {
+  const data = await import(`../../locales/${locale}/messages.js`);
   return data.messages;
 }
 export default loadTranslation;
