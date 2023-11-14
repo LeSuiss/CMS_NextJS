@@ -1,4 +1,4 @@
-import { Box, IconButton, Stack } from '@mui/material';
+import { Box, Stack } from '@mui/material';
 import { Facebook, Instagram, LinkedIn, YouTube } from '@mui/icons-material';
 
 import Link from 'next/link';

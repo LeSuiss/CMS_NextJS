@@ -174,7 +174,7 @@ export const CookieBanner = ({
         </BootstrapDialogTitle>
         <DialogContent>
           {Object.entries(cookies)?.map(([key, explanation]) => (
-            <Stack paddingBottom={2}>
+            <Stack paddingBottom={2} key={key}>
               <Typography variant="body1" gutterBottom paddingTop={3}>
                 {explanation}
               </Typography>

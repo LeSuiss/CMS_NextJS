@@ -19,13 +19,6 @@ const theme: any = createTheme({
     },
     divider: 'rgba(168,66,66,0.12)',
   },
-  components: {
-    MuiTypography: {
-      variants: {
-        body1: {},
-      },
-    },
-  },
 });
 
 export const muiTheme = responsiveFontSizes(theme);

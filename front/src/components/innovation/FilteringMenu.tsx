@@ -53,7 +53,10 @@ const AccordionDetails = styled(MuiAccordionDetails)(({ theme }) => ({
   borderTop: '1px solid rgba(0, 0, 0, .125)',
 }));
 
-export const FilteringMenuAccordeon = ({ filteringStructure, setFilters }) => {
+export const FilteringMenuAccordeon = ({
+  filteringStructure,
+  setFilters,
+}: any) => {
   const [level1Open, setLevel1Open] = React.useState(
     Object.keys(filteringStructure).map((k) => ({ [k]: true }))
   );

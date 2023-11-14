@@ -48,7 +48,7 @@ function Switcher() {
   return (
     <>
       <Button
-        fullWidth
+        fullWidth={isMobile()}
         sx={{
           height: '36px',
           padding: '15px',

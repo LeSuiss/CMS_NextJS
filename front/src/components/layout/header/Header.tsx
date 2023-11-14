@@ -40,13 +40,13 @@ function Header({ navigationStructure, className }) {
       paddingX={2}
     >
       <Box component={Logo} />
-      {isMobile ? (
+      {isMobile() ? (
         <CustomMenu linksToDisplay={navigationStructure} />
       ) : (
         <Tabs
           value={0}
           aria-label="tabs menu"
-          sx={{ '& a': { margin: 'auto' } }}
+          sx={{ '& a': { margin: 'auto' }, flexGrow: 1 }}
         >
           {navigationStructure.map((page) => (
             <Link
@@ -59,7 +59,7 @@ function Header({ navigationStructure, className }) {
           ))}
         </Tabs>
       )}
-      {!isMobile && <Switcher />}
+      {!isMobile() && <Switcher />}
     </Box>
   );
 }
