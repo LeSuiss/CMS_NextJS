@@ -7,7 +7,7 @@ import styles from '../../../styles/Home.module.scss';
 
 interface SocialMediasProps {
   urls: string[];
-  whiteIcons: boolean;
+  whiteIcons?: boolean;
 }
 export function SocialMedias({ urls, whiteIcons = true }: SocialMediasProps) {
   const possibleMedias = {

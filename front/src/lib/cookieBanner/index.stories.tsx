@@ -1,6 +1,7 @@
 import { Meta, Story } from '@storybook/react';
 
 import { CookieBanner } from './CookieBanner';
+import React from 'react';
 
 export default {
   title: 'SEO/banner',

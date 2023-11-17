@@ -1,8 +1,7 @@
-import { Box, Button, Grid, useTheme } from '@mui/material';
+import { Box, Button, Grid } from '@mui/material';
 
 import { HEADER_HEIGHT } from '../../config';
 import React from 'react';
-import { WithBackgroundColorShape } from '../../utils/withBackground';
 import { i18n } from '@lingui/core';
 import styles from '../../styles/Home.module.scss';
 import { t } from '@lingui/macro';
@@ -11,7 +10,6 @@ import { videoSliderMessages } from '../../lib/homePageSections/config';
 
 function BackgroundVideo() {
   const { height } = useWindowSize();
-  const theme = useTheme();
   return (
     <Box
       item
@@ -21,10 +19,6 @@ function BackgroundVideo() {
       display={{ xs: 'none', md: 'block' }}
       className={styles.playerWrapper}
     >
-      <WithBackgroundColorShape
-        addedColorOpacity={0.975}
-        addedColor={theme.palette.primary.main}
-      />
       <video
         autoPlay
         muted

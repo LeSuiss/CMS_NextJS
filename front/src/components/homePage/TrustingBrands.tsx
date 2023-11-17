@@ -6,7 +6,7 @@ import { styled } from '../../../node_modules/@mui/material';
 import styles from '../../styles/Home.module.scss';
 import { t } from '@lingui/macro';
 
-const GridWithStyle = styled(Grid)(({ theme }) => ({
+const GridWithStyle = styled(Grid)(() => ({
   '& img': {
     objectFit: 'contain',
     mixBlendMode: 'darken',
