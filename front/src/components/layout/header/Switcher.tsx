@@ -37,12 +37,13 @@ function Switcher() {
   ).forEach((lang) => Object.assign(labels, { [lang.locale]: lang.locale }));
 
   const handleSelect = async (choice) => {
-    const convertedValue = LANGUAGES.filter((x) => x.locale === choice)[0]
-      .locale;
-    const message = await loadTranslation(convertedValue);
-    router.push(router.pathname, {}, { locale: convertedValue });
-    await i18n.load(convertedValue, message);
-    await i18n.activate(convertedValue);
+    const convertedValue = LANGUAGES.find((x) => x.locale === choice)?.locale;
+    if (convertedValue) {
+      const message = await loadTranslation(convertedValue);
+      router.push(router.pathname, {}, { locale: convertedValue });
+      await i18n.load(convertedValue, message);
+      await i18n.activate(convertedValue);
+    }
   };
 
   return (

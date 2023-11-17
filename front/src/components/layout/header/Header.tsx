@@ -4,6 +4,7 @@ import { Theme, useTheme } from '../../../../node_modules/@mui/material';
 import CustomMenu from './CustomMenu';
 import Link from 'next/link';
 import Logo from '../Logo';
+import { NavigationProps } from '../../../config';
 import React from 'react';
 import Switcher from './Switcher';
 import { i18n } from '@lingui/core';
@@ -27,8 +28,11 @@ const _styles = (theme: Theme) => ({
     },
   },
 });
-
-function Header({ navigationStructure, className }) {
+interface HeaderProps {
+  navigationStructure: NavigationProps;
+  className;
+}
+function Header({ navigationStructure, className }: HeaderProps) {
   const theme = useTheme();
   const styles = _styles(theme);
 

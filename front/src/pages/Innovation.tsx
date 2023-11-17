@@ -1,14 +1,6 @@
-import {
-  Card,
-  CardContent,
-  CardHeader,
-  Container,
-  Stack,
-  Typography,
-} from '@mui/material';
+import { Card, CardContent, CardHeader, Typography } from '@mui/material';
 
 import { GetStaticProps } from 'next';
-import Image from 'next/legacy/image';
 import Layout from '../components/layout';
 import React from 'react';
 import { i18n } from '@lingui/core';

@@ -14,8 +14,8 @@ import { Theme, useTheme } from '@mui/material/styles';
 
 import CookieConsent from 'react-cookie-consent';
 import React from 'react';
-import _ from 'lodash';
 import { i18n } from '@lingui/core';
+import { mapValues } from 'lodash';
 import { setContrastedBackground } from '../utils';
 import { styled } from '../../../node_modules/@mui/material';
 import { t } from '@lingui/macro';
@@ -80,7 +80,7 @@ export const CookieBanner = ({
 
   const [savedCoookies, setSavedCookies] = React.useState<{
     [key: string]: any;
-  }>(() => _.mapValues(cookies, () => true));
+  }>(() => mapValues(cookies, () => true));
 
   const handleClickOpen = () => {
     setModalIsOpen(true);

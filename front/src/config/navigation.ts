@@ -2,7 +2,7 @@ import { MessageDescriptor } from '@lingui/core';
 import { SeoProps } from '../utils/SEO&Co/SeoHead';
 import { defineMessage } from '@lingui/macro';
 
-interface NavigationProps {
+export interface NavigationProps {
   nav: MessageDescriptor;
   link: string;
   seo: Omit<SeoProps, 'url'>;

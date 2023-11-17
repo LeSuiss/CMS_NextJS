@@ -1,3 +1,5 @@
+import React from 'react';
+
 interface IframeProps {
   companyName: string;
   googleMapLocation: string;

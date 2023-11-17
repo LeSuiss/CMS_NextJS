@@ -5,7 +5,11 @@ import Link from 'next/link';
 import React from 'react';
 import styles from '../../../styles/Home.module.scss';
 
-export function SocialMedias({ urls, whiteIcons = true }) {
+interface SocialMediasProps {
+  urls: string[];
+  whiteIcons: boolean;
+}
+export function SocialMedias({ urls, whiteIcons = true }: SocialMediasProps) {
   const possibleMedias = {
     linkedin: {
       url: urls?.filter((url) => url.includes('linkedin'))[0],
