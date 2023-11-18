@@ -18,5 +18,6 @@ module.exports = {
       },
     ],
     '@typescript-eslint/no-explicit-any': 'warn',
+    'react/jsx-key': 'warn',
   },
 };
