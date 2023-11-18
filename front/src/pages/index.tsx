@@ -1,5 +1,6 @@
 import { FewNumbersSection } from '../components/homePage/FewNumbersSection';
 import type { GetStaticProps } from 'next';
+import { Grid } from '@mui/material';
 import { HomePageFirstLookAt } from '../components/homePage/HomePageFirstLookAt';
 import { IconPresentation } from '../components/homePage/IconPresentation';
 import Layout from '../components/layout';
@@ -15,17 +16,19 @@ import loadTranslation from '../utils/loadTranslation';
 const Home = ({ brandsList, testimonies, homePageSlider }: any) => {
   return (
     <Layout titleIsSticky={false} removeLgContainer>
-      <HomePageFirstLookAt homePageSlider={homePageSlider} />
-      <FewNumbersSection />
-      {!isMobile() && (
-        <SectionBackground
-          url={'/medias/bgHome.webp'}
-          style={{ height: '350px' }}
-        />
-      )}
-      <IconPresentation />
-      <TrustingBrands brandsList={brandsList} />
-      <Testimonies testimonies={testimonies} />
+      <Grid container gap={3}>
+        <HomePageFirstLookAt homePageSlider={homePageSlider} />
+        <FewNumbersSection />
+        {!isMobile() && (
+          <SectionBackground
+            url={'/medias/bgHome.webp'}
+            style={{ height: '350px' }}
+          />
+        )}
+        <IconPresentation />
+        <TrustingBrands brandsList={brandsList} />
+        <Testimonies testimonies={testimonies} />
+      </Grid>
     </Layout>
   );
 };

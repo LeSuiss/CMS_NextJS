@@ -35,6 +35,8 @@ export const WithBackground = ({ url, sx }: WithBackgroundProps) => {
             }}
           >
             <Image
+              loading="lazy"
+              placeholder=""
               priority={i === 0}
               style={{
                 objectFit: 'cover',

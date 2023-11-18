@@ -5,14 +5,8 @@ import { i18n } from '@lingui/core';
 import { t } from '@lingui/macro';
 
 export const FewNumbersSection = () => (
-  <Container maxWidth="lg">
-    <Grid
-      container
-      justifyContent="center"
-      alignItems="stretch"
-      paddingY={3}
-      gap={2}
-    >
+  <Container maxWidth="xl">
+    <Grid container justifyContent="center" alignItems="stretch" gap={2}>
       <Grid item container md={12} textAlign="center" justifyContent="center">
         <Box maxWidth="500px">
           <Typography variant="h2" textAlign="center" paddingBottom={3}>
@@ -21,7 +15,7 @@ export const FewNumbersSection = () => (
           </Typography>
         </Box>
       </Grid>
-      <Grid item md={4}>
+      <Grid item md={4} display="flex" alignItems="center">
         <Typography textAlign="justify">
           {i18n._(
             /* i18n:  */ t`SAPEM est spécialisée dans le design et la conception technique de produits de levage répondant aux exigences de sécurité et de fiabilité de ses partenaires. SAPEM vous aide à concevoir des produits adaptés à vos contraintes. Nous mettons pour cela à votre disposition nos compétences transversales en ingénierie mécanique et design industriel. Rigueur, qualité et grande curiosité sont pour nous des motivations clés. Elles nous poussent à acquérir continuellement de nouvelles compétences et à comprendre avec précision les enjeux de votre projet. Nous prêtons également une grande attention à la qualité des relations avec nos clients.`

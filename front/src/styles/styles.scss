@@ -5,11 +5,10 @@ legend {
   z-index: 9888 !important;
   background-color: white;
 }
-
-*:not([class*='slick'], video) {
-  max-width: 100vw !important;
+body {
+  overflow-x: hidden;
+  max-width: 100dvw !important;
   font-display: swap;
-  // font-family: !important  ;
 }
 
 //1. HEADER

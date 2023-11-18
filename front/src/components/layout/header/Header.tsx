@@ -50,11 +50,12 @@ function Header({ navigationStructure, className }: HeaderProps) {
         <Tabs
           value={0}
           aria-label="tabs menu"
+          role="tablist"
           sx={{ '& a': { margin: 'auto' }, flexGrow: 1 }}
         >
           {navigationStructure.map((page) => (
             <Link key={page.link} passHref={true} href={page.link}>
-              <Tab label={i18n._(page.nav)} sx={styles.tabs} />
+              <Tab label={i18n._(page.nav)} sx={styles.tabs} role="tab" />
             </Link>
           ))}
         </Tabs>
