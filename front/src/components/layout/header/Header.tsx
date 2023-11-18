@@ -29,7 +29,7 @@ const _styles = (theme: Theme) => ({
   },
 });
 interface HeaderProps {
-  navigationStructure: NavigationProps;
+  navigationStructure: NavigationProps[];
   className;
 }
 function Header({ navigationStructure, className }: HeaderProps) {
@@ -53,11 +53,7 @@ function Header({ navigationStructure, className }: HeaderProps) {
           sx={{ '& a': { margin: 'auto' }, flexGrow: 1 }}
         >
           {navigationStructure.map((page) => (
-            <Link
-              passHref={true}
-              key={page.nav.id ?? page.nav}
-              href={page.link}
-            >
+            <Link key={page.link} passHref={true} href={page.link}>
               <Tab label={i18n._(page.nav)} sx={styles.tabs} />
             </Link>
           ))}
