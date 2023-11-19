@@ -54,7 +54,7 @@ function Header({ navigationStructure, className }: HeaderProps) {
               key={page.link}
               passHref={true}
               href={page.link}
-              aria-label={`${page.seo.description}`}
+              aria-label={`${i18n._(page.nav.id ?? page.nav)}`}
             >
               <Tab label={i18n._(page.nav)} sx={styles.tabs} role="tab" />
             </Link>
