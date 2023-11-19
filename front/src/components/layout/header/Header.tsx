@@ -17,6 +17,7 @@ const _styles = (theme: Theme) => ({
 
     color: theme.palette.primary.main,
     fontWeight: 'bolder',
+
     fontSize: '16px',
     height: '100%',
     borderBottom: `solid 2px rgba(0,0,0,0)`,
@@ -47,12 +48,7 @@ function Header({ navigationStructure, className }: HeaderProps) {
       {isMobile() ? (
         <CustomMenu linksToDisplay={navigationStructure} />
       ) : (
-        <Tabs
-          value={0}
-          aria-label="tabs menu"
-          role="tablist"
-          sx={{ '& a': { margin: 'auto' }, flexGrow: 1 }}
-        >
+        <Tabs value={0} aria-label="tabs menu" role="tablist">
           {navigationStructure.map((page) => (
             <Link key={page.link} passHref={true} href={page.link}>
               <Tab label={i18n._(page.nav)} sx={styles.tabs} role="tab" />

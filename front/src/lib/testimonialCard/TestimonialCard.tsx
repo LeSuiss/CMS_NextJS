@@ -1,4 +1,5 @@
 import { Grid } from '@mui/material';
+import Image from 'next/image';
 import PropTypes from 'prop-types';
 import React from 'react';
 import { styled } from '../../../node_modules/@mui/material';
@@ -156,9 +157,11 @@ const TestimonialCard = (props) => {
         )}
       >
         {props.image ? (
-          <img
+          <Image
             className={['avatar', 'testimonial-avatar'].join(' ')}
             src={props.image}
+            width="200"
+            height="200"
             alt="Avatar"
           />
         ) : (

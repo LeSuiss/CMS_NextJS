@@ -9,28 +9,7 @@ import loadTranslation from '../utils/loadTranslation';
 import { lorem } from '../utils/lorem';
 import { t } from '@lingui/macro';
 
-const FAQitems = [
-  {
-    question: i18n._(/* i18n:  Foire Aux Questions */ t`${lorem}`),
-    answer: i18n._(
-      /* i18n:  Foire Aux Questions */ t`${lorem + lorem + lorem}`
-    ),
-  },
-  {
-    question: i18n._(/* i18n:  Foire Aux Questions */ t`${lorem}`),
-    answer: i18n._(
-      /* i18n:  Foire Aux Questions */ t`${lorem + lorem + lorem}`
-    ),
-  },
-  {
-    question: i18n._(/* i18n:  Foire Aux Questions */ t`${lorem}`),
-    answer: i18n._(
-      /* i18n:  Foire Aux Questions */ t`${lorem + lorem + lorem}`
-    ),
-  },
-];
-
-export default function Faq() {
+export default function Faq({ FAQitems }) {
   return (
     <Layout
       title={i18n._(/* i18n: FAQ */ t`FAQ`)}
@@ -53,11 +32,33 @@ export default function Faq() {
 }
 
 export const getStaticProps: GetStaticProps = async (ctx) => {
+  const FAQitems = [
+    {
+      question: i18n._(/* i18n:  Foire Aux Questions */ t`${lorem}`),
+      answer: i18n._(
+        /* i18n:  Foire Aux Questions */ t`${lorem + lorem + lorem}`
+      ),
+    },
+    {
+      question: i18n._(/* i18n:  Foire Aux Questions */ t`${lorem}`),
+      answer: i18n._(
+        /* i18n:  Foire Aux Questions */ t`${lorem + lorem + lorem}`
+      ),
+    },
+    {
+      question: i18n._(/* i18n:  Foire Aux Questions */ t`${lorem}`),
+      answer: i18n._(
+        /* i18n:  Foire Aux Questions */ t`${lorem + lorem + lorem}`
+      ),
+    },
+  ];
+
   const translation = await loadTranslation(ctx.locale);
 
   return {
     props: {
       translation,
+      FAQitems,
     },
   };
 };

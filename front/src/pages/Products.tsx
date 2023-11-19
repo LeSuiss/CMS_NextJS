@@ -9,6 +9,7 @@ import {
 } from '@mui/material';
 
 import type { GetStaticProps } from 'next';
+import Image from 'next/image';
 import Layout from '../components/layout';
 import React from 'react';
 import ReactPlayer from 'react-player';
@@ -87,7 +88,9 @@ export default function Products() {
                       dotsClass: 'slick-dots slick-thumb',
                       customPaging: (i) => (
                         <a>
-                          <img
+                          <Image
+                            width="60"
+                            height="60"
                             alt={imgs[i]}
                             src={
                               imgs[i].endsWith('mp4')
@@ -113,7 +116,9 @@ export default function Products() {
                             />
                           </Box>
                         ) : (
-                          <img
+                          <Image
+                            width="300"
+                            height="300"
                             alt={title}
                             src={`/medias/products/${img}`}
                             style={{

@@ -1,6 +1,7 @@
 import { Box, Stack } from '@mui/material';
 import { Facebook, Instagram, LinkedIn, YouTube } from '@mui/icons-material';
 
+import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
 import styles from '../../../styles/Home.module.scss';
@@ -17,7 +18,7 @@ export function SocialMedias({ urls, whiteIcons = true }: SocialMediasProps) {
         whiteIcons ? (
           <LinkedIn fontSize="large" className={styles.socialMediaIcons} />
         ) : (
-          <img
+          <Image
             src="/medias/logo/linkedinLogoFull.png"
             alt="Logo"
             className={styles.socialMediaIcons}
@@ -30,7 +31,7 @@ export function SocialMedias({ urls, whiteIcons = true }: SocialMediasProps) {
         whiteIcons ? (
           <YouTube fontSize="large" className={styles.socialMediaIcons} />
         ) : (
-          <img
+          <Image
             src="/medias/logo/youtubeLogoFull.png"
             alt="Logo"
             className={styles.socialMediaIcons}

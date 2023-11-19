@@ -1,6 +1,7 @@
 import { Box, Grid, Theme, Typography } from '@mui/material';
 
 import { FormatQuote } from '@mui/icons-material';
+import Image from 'next/image';
 import React from 'react';
 // import { FormatQuote } from '@mui/icons-material'
 import { useTheme } from '@emotion/react';
@@ -58,7 +59,7 @@ export const Testimony = ({
             position: 'relative',
           }}
         >
-          <img
+          <Image
             alt={`${authorName}_TestimonyPortrait`}
             style={{
               borderRadius: '100%',

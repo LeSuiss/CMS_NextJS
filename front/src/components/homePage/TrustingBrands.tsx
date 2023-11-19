@@ -1,5 +1,6 @@
 import { Box, Grid, Stack, Typography } from '@mui/material';
 
+import Image from 'next/image';
 import React from 'react';
 import { i18n } from '@lingui/core';
 import { styled } from '../../../node_modules/@mui/material';
@@ -49,8 +50,8 @@ function TrustingBrands(props: any) {
         spacing={2}
       >
         {props?.brandsList?.map((x) => (
-          <Grid item key={`logo${x}`} textAlign="center">
-            <img style={{}} alt={`logo${x}`} src={x} />
+          <Grid item key={`logo${x}`} textAlign="center" height="50px">
+            <Image width="70" height="70" alt={`logo${x}`} src={`/${x}`} />
           </Grid>
         ))}
       </Grid>
