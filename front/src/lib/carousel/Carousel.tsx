@@ -33,7 +33,7 @@ export const Carousel = ({ settings, children }: CarouselProps) => {
     swipeToSlide: true,
     useTransform: false,
     ...settings,
-  } satisfies Settings;
+  };
 
   return (
     <Box
