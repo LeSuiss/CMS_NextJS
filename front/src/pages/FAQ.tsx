@@ -15,7 +15,7 @@ export default function Faq({ FAQitems }) {
       title={i18n._(/* i18n: FAQ */ t`FAQ`)}
       backgroundImageUrl="/medias/FAQ.jpg"
     >
-      <Card sx={{ minHeight: '50vh' }}>
+      <Card>
         <CardHeader
           title={i18n._(
             /* i18n: Les réponses à vos questions */ t`Les réponses à vos questions`

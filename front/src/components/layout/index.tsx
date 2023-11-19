@@ -60,11 +60,7 @@ function Layout({
       <div className={`container_GlobalLayoutPage ${className}`}>
         <Header navigationStructure={NAVIGATION} className="header-section" />
 
-        <Box
-          className="container_component"
-          display="flex"
-          flexDirection="column"
-        >
+        <Box className="container_component">
           {title && (
             <Box
               className="shallTitleBeSticky"
@@ -95,16 +91,18 @@ function Layout({
               <Divider className="titleDivider" />
             </Box>
           )}
-          <Box
+          <Stack
+            direction="column"
+            flexGrow={1}
             className="backImage"
             sx={{
-              flexGrow: 1,
+              ...sx,
               backgroundImage: `url("${backgroundImageUrl}")`,
               paddingTop: titleIsSticky && !isMobile ? '48px' : '',
               display: 'flex',
               flexDirection: 'column',
+              flexGrow: '1',
               justifyContent: 'center',
-              ...sx,
             }}
           >
             {backgroundImageUrl && removeLgContainer && <>children</>}
@@ -114,7 +112,7 @@ function Layout({
               </Container>
             )}
             {!backgroundImageUrl && <>{children}</>}
-          </Box>
+          </Stack>
           <Footer />
         </Box>
       </div>
