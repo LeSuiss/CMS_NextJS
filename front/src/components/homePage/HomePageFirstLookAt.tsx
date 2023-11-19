@@ -1,4 +1,4 @@
-import { Box, Grid, Typography } from '@mui/material';
+import { Box, Grid, Slide, Typography } from '@mui/material';
 
 import { HEADER_HEIGHT } from '../../config/constants';
 import React from 'react';
@@ -50,6 +50,7 @@ export const HomePageFirstLookAt = ({ homePageSlider }: any) => {
             textAlign={isMobile() ? 'center' : 'left'}
           >
             {i18n._(/* i18n: Créer */ t`CREER`)}
+
             <br />
             {i18n._(/* i18n: Développer */ t`DEVELOPPER`)}
             <br />
@@ -68,13 +69,12 @@ export const HomePageFirstLookAt = ({ homePageSlider }: any) => {
         {!isMobile() && (
           <Grid
             md={6}
+            padding="3%"
             item
             container
             direction="column"
             justifyContent="center"
             alignItems="center"
-            paddingBottom={10}
-            paddingTop={10}
           >
             <Typography
               variant="h2"

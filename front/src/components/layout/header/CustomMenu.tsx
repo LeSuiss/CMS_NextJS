@@ -30,7 +30,7 @@ export default function CustomMenu({
 
   return (
     <Box className="desktopMenu">
-      <Button onClick={handleClick}>
+      <Button onClick={handleClick} aria-label="Menu">
         {open ? (
           <MenuOpenIcon className="mobileMenuIcon" fontSize="large" />
         ) : (
@@ -51,6 +51,7 @@ export default function CustomMenu({
               onClick={handleClose}
               href={item.link}
               style={{ textDecoration: 'none' }}
+              aria-label={`${i18n._(item.nav.id ?? item.nav)}`}
             >
               <MenuItem>{i18n._(item.nav.id ?? item.nav)}</MenuItem>
             </Link>

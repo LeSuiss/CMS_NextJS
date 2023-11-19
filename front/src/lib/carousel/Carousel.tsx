@@ -31,9 +31,9 @@ export const Carousel = ({ settings, children }: CarouselProps) => {
     pauseOnDotsHover: true,
     arrows: false,
     swipeToSlide: true,
-
+    useTransform: false,
     ...settings,
-  };
+  } satisfies Settings;
 
   return (
     <Box

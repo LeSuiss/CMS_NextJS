@@ -7,6 +7,7 @@ function Logo() {
   return (
     <Link
       href="/"
+      aria-label="navigate to main page"
       passHref={true}
       style={{ height: '100%', display: 'flex', alignItems: 'center' }}
     >

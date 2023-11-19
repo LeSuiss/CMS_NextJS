@@ -50,7 +50,12 @@ function Header({ navigationStructure, className }: HeaderProps) {
       ) : (
         <Tabs value={0} aria-label="tabs menu" role="tablist">
           {navigationStructure.map((page) => (
-            <Link key={page.link} passHref={true} href={page.link}>
+            <Link
+              key={page.link}
+              passHref={true}
+              href={page.link}
+              aria-label={`${page.seo.description}`}
+            >
               <Tab label={i18n._(page.nav)} sx={styles.tabs} role="tab" />
             </Link>
           ))}

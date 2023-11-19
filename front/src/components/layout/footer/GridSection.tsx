@@ -24,17 +24,15 @@ export function GridSection({ title, links, isBlank = false, cb = null }: any) {
       </Typography>
       <Grid xs={12} item container direction="column" marginTop={1}>
         {typeof links === 'object' &&
-          links.map(({ url, content, isBlank: _isBlank }) =>
-            url.includes('http') ? (
-              <a href={url} target={isBlank && '_blank'}>
-                {i18n._(content)}
-              </a>
-            ) : (
-              <Link target={_isBlank && '_blank'} href={url}>
-                {i18n._(content)}
-              </Link>
-            )
-          )}
+          links.map(({ url, content, isBlank: _isBlank }) => (
+            <Link
+              aria-label={i18n._(content)}
+              target={_isBlank && '_blank'}
+              href={url}
+            >
+              {i18n._(content)}
+            </Link>
+          ))}
       </Grid>
     </Grid>
   );

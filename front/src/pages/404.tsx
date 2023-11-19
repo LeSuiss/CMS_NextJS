@@ -8,7 +8,7 @@ import { i18n } from '@lingui/core';
 import loadTranslation from '../utils/loadTranslation';
 import { t } from '@lingui/macro';
 
-export default function Legal() {
+export default function NotFound() {
   return (
     <Layout
       title={i18n._(/* i18n: Mentions Légales */ t`Cette page n'existe pas`)}
