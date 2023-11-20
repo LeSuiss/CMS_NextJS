@@ -7,7 +7,7 @@ import {
 const theme: any = createTheme({
   typography: {
     allVariants: {
-      fontFamily: COMPANY_FONTS,
+      fontFamily: 'inherit',
     },
   },
   palette: {
