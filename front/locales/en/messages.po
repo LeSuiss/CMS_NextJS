@@ -13,7 +13,7 @@ msgstr ""
 "Language-Team: \n"
 "Plural-Forms: \n"
 
-#: src/config/navigation.ts:14
+#: navigation.ts:14
 msgid "Accueil"
 msgstr "Home"
 
@@ -37,29 +37,29 @@ msgid ""
 msgstr ""
 
 #: src/pages/Innovation.tsx:55
-msgid ""
-"BE2i Technologies intervient principalement en mode de\n"
-"sous-traitance: Assistance technique, forfait et offshoring.\n"
-"Nous assurons un suivi global des projets de la pré-étude\n"
-"jusqu'au prototype et pré série. Nous intervenons dans l'étude\n"
-"et la conception des projets dans les secteurs: Automobile,\n"
-"Aéronautique, Ferroviaire, Industrie Mécanique, Médical,\n"
-"Métrologie, Qualité. Nos expert vous accompagnera pour vos\n"
-"besoins de formations en qualité et/ou métrologie, conseils ou\n"
-"accompagnement pour certification accréditation , mise en place\n"
-"de nouveaux procédés, création de nouveaux produits BE2i\n"
-"Technologies s'engage à répondre au mieux à tous vos besoins par\n"
-"des solutions techniques complètes et innovantes adaptées, ainsi\n"
-"qu'un accompagnement personnalisé pour chaque phase de projet.\n"
-"Véritable partenaire de confiance nous vous accompagnons et vous\n"
-"assurons soutien et conseil dans chaque étape de votre projet."
-msgstr ""
+#~ msgid ""
+#~ "BE2i Technologies intervient principalement en mode de\n"
+#~ "sous-traitance: Assistance technique, forfait et offshoring.\n"
+#~ "Nous assurons un suivi global des projets de la pré-étude\n"
+#~ "jusqu'au prototype et pré série. Nous intervenons dans l'étude\n"
+#~ "et la conception des projets dans les secteurs: Automobile,\n"
+#~ "Aéronautique, Ferroviaire, Industrie Mécanique, Médical,\n"
+#~ "Métrologie, Qualité. Nos expert vous accompagnera pour vos\n"
+#~ "besoins de formations en qualité et/ou métrologie, conseils ou\n"
+#~ "accompagnement pour certification accréditation , mise en place\n"
+#~ "de nouveaux procédés, création de nouveaux produits BE2i\n"
+#~ "Technologies s'engage à répondre au mieux à tous vos besoins par\n"
+#~ "des solutions techniques complètes et innovantes adaptées, ainsi\n"
+#~ "qu'un accompagnement personnalisé pour chaque phase de projet.\n"
+#~ "Véritable partenaire de confiance nous vous accompagnons et vous\n"
+#~ "assurons soutien et conseil dans chaque étape de votre projet."
+#~ msgstr ""
 
 #: src/components/homePage/IconPresentation.tsx:38
 msgid "Bien comprendre le besoin État de l’art, rédaction du cahier des charges, benchmarking, reverse engineering, analyse fonctionnelle"
 msgstr ""
 
-#: src/components/homePage/HomePageFirstLookAt.tsx:75
+#: src/components/homePage/HomePageFirstLookAt.tsx:52
 msgid "CREER"
 msgstr ""
 
@@ -74,7 +74,7 @@ msgstr ""
 msgid "Ce champ est requis"
 msgstr ""
 
-#: src/pages/404.tsx:16
+#: src/pages/404.tsx:14
 msgid "Cette page n'existe pas"
 msgstr ""
 
@@ -86,16 +86,16 @@ msgstr ""
 msgid "Conditions générales "
 msgstr ""
 
-#: src/config/navigation.ts:44
+#: navigation.ts:43
 #: src/pages/Contact.tsx:69
 msgid "Contact"
 msgstr ""
 
-#: src/lib/cookieBanner/CookieBanner.tsx:174
+#: src/lib/cookieBanner/CookieBanner.tsx:173
 msgid "Customize your cookies"
 msgstr ""
 
-#: src/components/homePage/HomePageFirstLookAt.tsx:77
+#: src/components/homePage/HomePageFirstLookAt.tsx:55
 msgid "DEVELOPPER"
 msgstr ""
 
@@ -103,11 +103,11 @@ msgstr ""
 msgid "Designer une solution"
 msgstr ""
 
-#: src/components/layout/footer/Footer.main.tsx:90
+#: src/components/layout/footer/Footer.main.tsx:81
 msgid "Du lundi au vendredi de 8h à 17h"
 msgstr ""
 
-#: src/components/homePage/BackgroundVideo.tsx:61
+#: src/components/homePage/BackgroundVideo.tsx:55
 msgid "Découvrir SAPEM"
 msgstr ""
 
@@ -124,7 +124,7 @@ msgstr ""
 msgid "Entreprise"
 msgstr ""
 
-#: src/config/navigation.ts:39
+#: navigation.ts:38
 msgid "Equipe"
 msgstr ""
 
@@ -132,22 +132,26 @@ msgstr ""
 msgid "Ergonomie"
 msgstr ""
 
-#: src/config/navigation.ts:49
-#: src/pages/FAQ.tsx:29
+#: navigation.ts:21
+msgid "Expert du levage depuis 40 ans. Nous accompagnons nos clients dans la construction de solution sur mesures et la resolution de problèmes complexes."
+msgstr ""
+
+#: navigation.ts:48
+#: src/pages/FAQ.tsx:15
 msgid "FAQ"
 msgstr ""
 
 #: src/pages/FAQ.tsx:13
 #: src/pages/FAQ.tsx:17
 #: src/pages/FAQ.tsx:21
-msgid "Foire Aux Questions"
-msgstr ""
+#~ msgid "Foire Aux Questions"
+#~ msgstr ""
 
 #: src/components/layout/footer/Footer.main.tsx:37
 msgid "Gérer les cookies"
 msgstr ""
 
-#: src/components/homePage/HomePageFirstLookAt.tsx:79
+#: src/components/homePage/HomePageFirstLookAt.tsx:57
 msgid "INNOVER"
 msgstr ""
 
@@ -155,12 +159,12 @@ msgstr ""
 msgid "Ils nous font confiance"
 msgstr ""
 
-#: src/config/navigation.ts:30
-#: src/pages/Innovation.tsx:24
+#: navigation.ts:29
+#: src/pages/Innovation.tsx:16
 msgid "Innovation"
 msgstr ""
 
-#: src/pages/Team.tsx:65
+#: src/pages/Team.tsx:66
 msgid "L'atelier"
 msgstr ""
 
@@ -168,12 +172,12 @@ msgstr ""
 msgid "La direction"
 msgstr ""
 
-#: src/pages/FAQ.tsx:35
+#: src/pages/FAQ.tsx:21
 msgid "Les réponses à vos questions"
 msgstr ""
 
 #: src/components/layout/footer/Footer.main.tsx:21
-#: src/pages/Legal.tsx:26
+#: src/pages/Legal.tsx:19
 msgid "Mentions Légales"
 msgstr ""
 
@@ -186,7 +190,7 @@ msgstr ""
 msgid "Nos Equipes"
 msgstr ""
 
-#: src/pages/Products.tsx:40
+#: src/pages/Products.tsx:38
 msgid "Nos Produits"
 msgstr ""
 
@@ -217,7 +221,7 @@ msgstr ""
 msgid "Position"
 msgstr ""
 
-#: src/config/navigation.ts:35
+#: navigation.ts:34
 msgid "Produits"
 msgstr ""
 
@@ -234,8 +238,32 @@ msgstr ""
 msgid "Présentation"
 msgstr ""
 
-#: src/pages/404.tsx:41
+#: src/pages/404.tsx:39
 msgid "Retournez à la page d'accueil"
+msgstr ""
+
+#: src/pages/Innovation.tsx:60
+msgid ""
+"SAPEM\n"
+"Technologies s'engage à répondre au mieux à tous vos besoins par\n"
+"des solutions techniques complètes et innovantes adaptées, ainsi\n"
+"qu'un accompagnement personnalisé pour chaque phase de projet.\n"
+"Véritable partenaire de confiance nous vous accompagnons et vous\n"
+"assurons soutien et conseil dans chaque étape de votre projet."
+msgstr ""
+
+#: src/pages/Innovation.tsx:50
+msgid ""
+"SAPEM Technologies intervient principalement en mode de\n"
+"sous-traitance: Assistance technique, forfait et offshoring.\n"
+"Nous assurons un suivi global des projets de la pré-étude\n"
+"jusqu'au prototype et pré série. Nous intervenons dans l'étude\n"
+"et la conception des projets dans les secteurs: Automobile,\n"
+"Aéronautique, Ferroviaire, Industrie Mécanique, Médical,\n"
+"Métrologie, Qualité. Nos expert vous accompagnera pour vos\n"
+"besoins de formations en qualité et/ou métrologie, conseils ou\n"
+"accompagnement pour certification accréditation , mise en place\n"
+"de nouveaux procédés, création de nouveaux produits"
 msgstr ""
 
 #: src/pages/index.tsx:360
@@ -248,11 +276,25 @@ msgstr ""
 msgid "SAPEM est spécialisée dans le design et la conception technique de produits de levage répondant aux exigences de sécurité et de fiabilité de ses partenaires. SAPEM vous aide à concevoir des produits adaptés à vos contraintes. Nous mettons pour cela à votre disposition nos compétences transversales en ingénierie mécanique et design industriel. Rigueur, qualité et grande curiosité sont pour nous des motivations clés. Elles nous poussent à acquérir continuellement de nouvelles compétences et à comprendre avec précision les enjeux de votre projet. Nous prêtons également une grande attention à la qualité des relations avec nos clients."
 msgstr ""
 
-#: src/pages/index.tsx:27
-#~ msgid "SAPEM les professionnels du levage"
-#~ msgstr "SAPEM the lifting professionals"
+#: src/pages/Innovation.tsx:28
+msgid ""
+"SAPEM est une société de services spécialisée dans l'ingénierie\n"
+"industrielle et l'innovation technologique indépendante."
+msgstr ""
 
-#: src/pages/Legal.tsx:32
+#: src/pages/Innovation.tsx:32
+msgid ""
+"SAPEM intervient grace à un bureau d'études d'ingénierie industrielle,\n"
+"intervenant dans la conduite des affaires en matière d'ingénierie:\n"
+"étude des projets techniques, recherche industrielle, ainsi que la\n"
+"conception et l'innovation des produits et process."
+msgstr ""
+
+#: navigation.ts:18
+msgid "SAPEM les professionnels du levage"
+msgstr "SAPEM the lifting professionals"
+
+#: src/pages/Legal.tsx:25
 msgid "SAPEM: Société d'applications éléctriques et mécaniques."
 msgstr ""
 
@@ -268,7 +310,7 @@ msgstr ""
 msgid "Saisir votre message"
 msgstr ""
 
-#: src/pages/Legal.tsx:45
+#: src/pages/Legal.tsx:38
 msgid ""
 "Société anonyme à conseil d'administration, au capital social de\n"
 "203 062,09 €, dont le siège social est situé au LE BOURG, 58270\n"
@@ -298,11 +340,11 @@ msgstr ""
 msgid "Votre message a bien été transmis"
 msgstr ""
 
-#: src/pages/404.tsx:33
+#: src/pages/404.tsx:31
 msgid "Vous avez demandé une page non repertoriée"
 msgstr ""
 
-#: src/pages/404.tsx:29
+#: src/pages/404.tsx:27
 msgid "erreur"
 msgstr ""
 
@@ -310,37 +352,37 @@ msgstr ""
 msgid "j'accepte que mes données soient enregistrées par SAPEM et utilisées à des fins d'analyses et de démarchage commerciale"
 msgstr ""
 
-#: src/pages/Products.tsx:49
+#: src/pages/Products.tsx:47
 msgid "notre catalogue"
 msgstr ""
 
-#: src/components/layout/footer/Footer.main.tsx:111
+#: src/components/layout/footer/Footer.main.tsx:102
 msgid "par mail"
 msgstr ""
 
-#: src/components/homePage/FewNumbersSection.tsx:41
+#: src/components/homePage/FewNumbersSection.tsx:42
 msgid "partners"
 msgstr ""
 
-#: src/components/homePage/FewNumbersSection.tsx:49
+#: src/components/homePage/FewNumbersSection.tsx:50
 msgid "persons searching for disrupting innovations"
 msgstr ""
 
-#: src/components/homePage/FewNumbersSection.tsx:35
+#: src/components/homePage/FewNumbersSection.tsx:36
 msgid "projects"
 msgstr ""
 
-#: src/components/homePage/HomePageFirstLookAt.tsx:113
+#: src/components/homePage/HomePageFirstLookAt.tsx:90
 msgid "quand la sécurité prime"
 msgstr "When security prevails"
 
 #: src/pages/FAQ.tsx:14
 #: src/pages/FAQ.tsx:18
 #: src/pages/FAQ.tsx:22
-msgid "réponse"
-msgstr ""
+#~ msgid "réponse"
+#~ msgstr ""
 
-#: src/components/layout/footer/AuthorRow.tsx:42
+#: src/components/layout/footer/AuthorRow.tsx:41
 msgid "site realisé par Alexis ARCHER"
 msgstr ""
 
@@ -350,6 +392,18 @@ msgstr ""
 
 #: src/pages/Contact.tsx:248
 msgid "votre message"
+msgstr ""
+
+#: src/pages/FAQ.tsx:39
+#: src/pages/FAQ.tsx:45
+#: src/pages/FAQ.tsx:51
+msgid "{0}"
+msgstr ""
+
+#: src/pages/FAQ.tsx:37
+#: src/pages/FAQ.tsx:43
+#: src/pages/FAQ.tsx:49
+msgid "{lorem}"
 msgstr ""
 
 #: src/components/layout/footer/GridSection.tsx:13

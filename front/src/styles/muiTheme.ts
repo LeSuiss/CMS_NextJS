@@ -1,8 +1,9 @@
-import { COMPANY_COLORS, COMPANY_FONTS } from '../config/styles/styles';
 import {
   createTheme,
   responsiveFontSizes,
 } from '../../node_modules/@mui/material';
+
+import { COMPANY_COLORS } from '../config/styles/styles';
 
 const theme: any = createTheme({
   typography: {

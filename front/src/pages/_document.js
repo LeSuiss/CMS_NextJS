@@ -2,16 +2,9 @@ import * as React from 'react';
 
 import Document, { Head, Html, Main, NextScript } from 'next/document';
 
-import { COMPANY_FONTS } from '../config/styles/styles';
-import { Inter } from 'next/font/google';
 import createEmotionCache from '../createEmotionCache';
 import createEmotionServer from '@emotion/server/create-instance';
 import { muiTheme } from '../styles/muiTheme';
-
-export const inter = Inter({
-  subsets: [COMPANY_FONTS],
-  display: 'swap',
-});
 
 export default class MyDocument extends Document {
   render() {
@@ -27,7 +20,7 @@ export default class MyDocument extends Document {
           {/* Inject MUI styles first to match with the prepend: true configuration. */}
           {this.props.emotionStyleTags}
         </Head>
-        <body className={inter.className}>
+        <body>
           <Main />
           <NextScript />
         </body>
