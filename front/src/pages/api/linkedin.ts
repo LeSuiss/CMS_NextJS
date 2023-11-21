@@ -27,9 +27,7 @@ export default async function handler(req, res) {
 
   try {
     const toto = await axios.get(companyEndpoint, companyOptions);
-    console.log('toto', toto);
     const tota = await axios.get(postsEndpoint, postsOptions);
-    console.log('tota', tota);
     // Use companyData and postsData as required
     // ...
 

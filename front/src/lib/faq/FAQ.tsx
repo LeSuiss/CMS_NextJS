@@ -28,7 +28,6 @@ export const FAQ = ({ faqList = [] }: Props) => {
 
   const handleChange =
     (panel: number) => (event: React.SyntheticEvent, isExpanded: boolean) => {
-      console.log(typeof panel, isExpanded);
       setExpanded(panel === expanded && !isExpanded ? undefined : panel);
     };
 

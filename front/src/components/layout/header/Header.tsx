@@ -52,10 +52,10 @@ function Header({ navigationStructure, className }: HeaderProps) {
           {navigationStructure.map((page) => (
             <Link key={page.link} passHref={true} href={page.link}>
               <Tab
-                label={i18n._(page.nav)}
+                label={i18n._(page.nav.message)}
                 sx={styles.tabs}
                 role="tab"
-                aria-label={i18n._(page.nav)} // Apply aria-label directly to the Tab component
+                aria-label={i18n._(page.nav.message)} // Apply aria-label directly to the Tab component
               />
             </Link>
           ))}

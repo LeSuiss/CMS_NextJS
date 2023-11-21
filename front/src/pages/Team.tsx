@@ -96,7 +96,6 @@ export default Team;
 
 export const getStaticProps: GetStaticProps = async (ctx) => {
   const translation = await loadTranslation(ctx.locale);
-  console.log(generateEmployees[0]);
   return {
     props: {
       translation,
