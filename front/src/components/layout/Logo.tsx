@@ -1,7 +1,7 @@
+import { Box } from '@mui/material';
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
-import logo from '../../assets/logo.svg';
 
 function Logo() {
   return (
@@ -11,7 +11,9 @@ function Logo() {
       passHref={true}
       style={{ height: '100%', display: 'flex', alignItems: 'center' }}
     >
-      <Image alt="logoSapem" src={logo} style={{ maxHeight: '100%' }} />
+      <Box height={100} width={150} position="relative">
+        <Image alt="logoSapem" src={'/assets/logo.svg'} fill />
+      </Box>
     </Link>
   );
 }
