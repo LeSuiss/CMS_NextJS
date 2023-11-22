@@ -14,23 +14,19 @@ export function GridSection({ title, links, isBlank = false, cb = null }: any) {
           )}
         {typeof links !== 'object' && cb ? (
           <a href="#" onClick={cb}>
-            {i18n._(title)}
+            {title}
           </a>
         ) : (
           <a href={links} target={isBlank && '_blank'}>
-            {i18n._(title)}
+            {title}
           </a>
         )}
       </Typography>
       <Grid xs={12} item container direction="column" marginTop={1}>
         {typeof links === 'object' &&
           links.map(({ url, content, isBlank: _isBlank }) => (
-            <Link
-              aria-label={i18n._(content)}
-              target={_isBlank && '_blank'}
-              href={url}
-            >
-              {i18n._(content)}
+            <Link aria-label={content} target={_isBlank && '_blank'} href={url}>
+              {content}
             </Link>
           ))}
       </Grid>

@@ -3,11 +3,12 @@ import { MessageDescriptor, i18n } from '@lingui/core';
 import Head from 'next/head';
 import { NAVIGATION } from '../../config';
 import React from 'react';
+import { useLingui } from '@lingui/react';
 import { useRouter } from 'next/router';
 
 export interface SeoProps {
-  title: string | MessageDescriptor;
-  description: string | MessageDescriptor;
+  title: MessageDescriptor;
+  description: MessageDescriptor;
   type: string;
   url: string;
   image: string;
@@ -18,21 +19,16 @@ export interface SeoProps {
 const SeoHead = () => {
   const { route } = useRouter();
   const config = NAVIGATION.find((nav) => nav?.link === route);
-
+  const { _ } = useLingui();
   return (
     <Head>
-      <title>{config?.seo?.title && i18n._(config?.seo?.title as any)} </title>
+      <title>{_(config?.seo?.title?.message) ?? ''} </title>
       <link rel="icon" href={'/assets/logoHead.png'} />
       <meta itemProp="image" content={'/assets/logoHead.png'} />
-      <meta
-        itemProp="name"
-        content={config?.seo?.title && i18n._(config?.seo?.title as any)}
-      />
+      <meta itemProp="name" content={_(config?.seo?.title?.message) ?? ''} />
       <meta
         name="description"
-        content={
-          config?.seo?.description && i18n._(config?.seo?.description as any)
-        }
+        content={_(config?.seo?.description?.message) ?? ''}
       />
       {socialTags({ ...config?.seo, url: config?.link }).map(
         ({ name, content }) => {

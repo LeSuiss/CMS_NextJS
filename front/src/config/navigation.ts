@@ -1,6 +1,6 @@
 import { MessageDescriptor } from '@lingui/core';
 import { SeoProps } from '../utils/SEO&Co/SeoHead';
-import { defineMessage } from '@lingui/macro';
+import { msg } from '@lingui/macro';
 
 export interface NavigationProps {
   nav: MessageDescriptor;
@@ -11,42 +11,62 @@ export interface NavigationProps {
 export const NAVIGATION: NavigationProps[] = [
   {
     link: '/',
-    nav: defineMessage({ message: 'Accueil' }),
+    nav: msg`Accueil`,
     seo: {
       image: '/',
       type: '',
-      title: defineMessage({
-        message: 'SAPEM les professionnels du levage',
-      }),
-      description: defineMessage({
-        message:
-          'Expert du levage depuis 40 ans. Nous accompagnons nos clients dans la construction de solution sur mesures et la resolution de problèmes complexes.',
-      }),
+      title: msg`SAPEM les professionnels du levage`,
+      description: msg`Expert du levage depuis 40 ans. Nous accompagnons nos clients dans la construction de solution sur mesures et la resolution de problèmes complexes.',`,
     },
   },
   {
     link: '/Innovation',
-    nav: defineMessage({ message: 'Innovation' }),
-    seo: { title: '', description: '', image: '/', type: '' },
+    nav: msg`Innovation`,
+    seo: {
+      title: msg`Innovation`,
+      description: msg`Innovation`,
+      image: '/',
+      type: '',
+    },
   },
   {
     link: '/Products',
-    nav: defineMessage({ message: 'Produits' }),
-    seo: { title: '', description: '', image: '/', type: '' },
+    nav: msg`Produits`,
+    seo: {
+      title: msg`Produits`,
+      description: msg`Produits`,
+      image: '/',
+      type: '',
+    },
   },
   {
-    nav: defineMessage({ message: 'Equipe' }),
+    nav: msg`Equip`,
     link: '/Team',
-    seo: { title: '', description: '', image: '/', type: '' },
+    seo: {
+      title: msg`Team`,
+      description: msg`Team`,
+      image: '/',
+      type: '',
+    },
   },
   {
-    nav: defineMessage({ message: 'Contact' }),
+    nav: msg`Contact`,
     link: '/Contact',
-    seo: { title: '', description: '', image: '/', type: '' },
+    seo: {
+      title: msg`Contact`,
+      description: msg`Contact`,
+      image: '/',
+      type: '',
+    },
   },
   {
-    nav: defineMessage({ message: 'FAQ' }),
+    nav: msg`FAQ`,
     link: '/FAQ',
-    seo: { title: '', description: '', image: '/', type: '' },
+    seo: {
+      title: msg`FAQ`,
+      description: msg`FAQ`,
+      image: '/',
+      type: '',
+    },
   },
 ];

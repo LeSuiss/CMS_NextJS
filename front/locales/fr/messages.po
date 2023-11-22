@@ -1,11 +1,17 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2023-11-22 13:07+0000\n"
+"POT-Creation-Date: 2023-11-22 20:43+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: @lingui/cli\n"
 "Language: fr\n"
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Plural-Forms: \n"
 
 #: src/components/layout/footer/Footer.main.tsx:25
 msgid "+HuqM1"
@@ -19,7 +25,9 @@ msgstr "notre catalogue"
 msgid "/d5Ovx"
 msgstr "Votre message a bien été transmis"
 
-#: navigation.ts:48
+#: src/config/navigation.ts:63
+#: src/config/navigation.ts:66
+#: src/config/navigation.ts:67
 #: src/pages/FAQ.tsx:15
 msgid "/lDBHm"
 msgstr "FAQ"
@@ -59,8 +67,8 @@ msgstr ""
 "Véritable partenaire de confiance nous vous accompagnons et vous\n"
 "assurons soutien et conseil dans chaque étape de votre projet."
 
+#: src/pages/Contact.tsx:191
 #: src/pages/Contact.tsx:194
-#: src/pages/Contact.tsx:197
 msgid "82Ozh9"
 msgstr "Numero de téléphone"
 
@@ -80,10 +88,10 @@ msgstr ""
 "SAPEM est une société de services spécialisée dans l'ingénierie\n"
 "industrielle et l'innovation technologique indépendante."
 
-#: src/pages/Contact.tsx:110
-#: src/pages/Contact.tsx:131
-#: src/pages/Contact.tsx:153
-#: src/pages/Contact.tsx:178
+#: src/pages/Contact.tsx:107
+#: src/pages/Contact.tsx:128
+#: src/pages/Contact.tsx:150
+#: src/pages/Contact.tsx:175
 msgid "AxOm1Q"
 msgstr "Ce champ est requis"
 
@@ -106,7 +114,7 @@ msgstr "Adapter les produits au mieux des contraintes de l'utilisateur tout en g
 msgid "CVbNXn"
 msgstr "Analyser"
 
-#: src/pages/Contact.tsx:52
+#: src/pages/Contact.tsx:51
 msgid "CuDCVw"
 msgstr "Une erreur est survenue. Veuillez réessayer ultérieurement"
 
@@ -114,7 +122,7 @@ msgstr "Une erreur est survenue. Veuillez réessayer ultérieurement"
 msgid "D5mySz"
 msgstr "erreur"
 
-#: navigation.ts:18
+#: src/config/navigation.ts:18
 msgid "DPOoZm"
 msgstr "SAPEM les professionnels du levage"
 
@@ -126,8 +134,8 @@ msgstr "persons searching for disrupting innovations"
 msgid "DvFFN+"
 msgstr "SAPEM est spécialisée dans le design et la conception technique de produits de levage répondant aux exigences de sécurité et de fiabilité de ses partenaires. SAPEM vous aide à concevoir des produits adaptés à vos contraintes. Nous mettons pour cela à votre disposition nos compétences transversales en ingénierie mécanique et design industriel. Rigueur, qualité et grande curiosité sont pour nous des motivations clés. Elles nous poussent à acquérir continuellement de nouvelles compétences et à comprendre avec précision les enjeux de votre projet. Nous prêtons également une grande attention à la qualité des relations avec nos clients."
 
-#: src/pages/Contact.tsx:148
-#: src/pages/Contact.tsx:149
+#: src/pages/Contact.tsx:145
+#: src/pages/Contact.tsx:146
 msgid "E9PLXb"
 msgstr "Entreprise"
 
@@ -135,7 +143,7 @@ msgstr "Entreprise"
 msgid "FXTTP8"
 msgstr "Présentation"
 
-#: src/pages/Contact.tsx:223
+#: src/pages/Contact.tsx:220
 msgid "G4ZLFE"
 msgstr "Saisir une adresse mail valide"
 
@@ -169,6 +177,11 @@ msgstr "Développement technique"
 msgid "Jk4ohF"
 msgstr "Cette page n'existe pas"
 
+#: src/config/navigation.ts:46
+#: src/config/navigation.ts:47
+msgid "KM6m8p"
+msgstr "Team"
+
 #: src/components/homePage/HomePageFirstLookAt.tsx:55
 msgid "Kj53rO"
 msgstr "DEVELOPPER"
@@ -177,12 +190,14 @@ msgstr "DEVELOPPER"
 msgid "M9H+/G"
 msgstr "projects"
 
-#: src/pages/Contact.tsx:125
-#: src/pages/Contact.tsx:127
+#: src/pages/Contact.tsx:122
+#: src/pages/Contact.tsx:124
 msgid "MCvCnO"
 msgstr "Prénom"
 
-#: navigation.ts:34
+#: src/config/navigation.ts:34
+#: src/config/navigation.ts:36
+#: src/config/navigation.ts:37
 msgid "MKYUai"
 msgstr "Produits"
 
@@ -208,11 +223,13 @@ msgstr "Choisissez votre langue"
 msgid "OO+i/B"
 msgstr "L'atelier"
 
-#: src/pages/Contact.tsx:266
+#: src/pages/Contact.tsx:263
 msgid "OSKP8S"
 msgstr "j'accepte que mes données soient enregistrées par SAPEM et utilisées à des fins d'analyses et de démarchage commerciale"
 
-#: navigation.ts:29
+#: src/config/navigation.ts:24
+#: src/config/navigation.ts:26
+#: src/config/navigation.ts:27
 #: src/pages/Innovation.tsx:16
 msgid "Q8rr4y"
 msgstr "Innovation"
@@ -221,13 +238,17 @@ msgstr "Innovation"
 msgid "Rr9CgN"
 msgstr "Valider le produit dans ses moindres détails.Toutes les tailles de prototypes, itérations jusqu’à la validation du prototype"
 
-#: src/pages/Contact.tsx:89
+#: src/pages/Contact.tsx:86
 msgid "SX8gv/"
 msgstr "Nous Contacter"
 
 #: src/components/layout/footer/Footer.main.tsx:79
 msgid "TF9Sxq"
 msgstr "Du lundi au vendredi de 8h à 17h"
+
+#: src/config/navigation.ts:43
+msgid "TMdsfq"
+msgstr "Equip"
 
 #: src/components/layout/footer/Footer.main.tsx:100
 msgid "VEExwK"
@@ -237,7 +258,7 @@ msgstr "par mail"
 msgid "W+2eH4"
 msgstr "partners"
 
-#: src/pages/Contact.tsx:305
+#: src/pages/Contact.tsx:302
 msgid "YwBWLP"
 msgstr "En ligne"
 
@@ -255,11 +276,11 @@ msgstr "Retournez à la page d'accueil"
 msgid "d6GuCI"
 msgstr "SAPEM: Société d'applications éléctriques et mécaniques."
 
-#: src/pages/Contact.tsx:281
+#: src/pages/Contact.tsx:278
 msgid "fPLviK"
 msgstr "soumettre"
 
-#: src/pages/Contact.tsx:253
+#: src/pages/Contact.tsx:250
 msgid "gNI+7u"
 msgstr "Saisir votre message"
 
@@ -267,17 +288,19 @@ msgstr "Saisir votre message"
 msgid "gOdSxa"
 msgstr "site realisé par Alexis ARCHER"
 
-#: src/pages/Contact.tsx:105
-#: src/pages/Contact.tsx:107
+#: src/pages/Contact.tsx:102
+#: src/pages/Contact.tsx:104
 msgid "iAKACc"
 msgstr "Nom"
 
-#: src/pages/Contact.tsx:319
+#: src/pages/Contact.tsx:316
 msgid "ii4k9S"
 msgstr "Sur Site"
 
-#: navigation.ts:43
-#: src/pages/Contact.tsx:69
+#: src/config/navigation.ts:53
+#: src/config/navigation.ts:56
+#: src/config/navigation.ts:57
+#: src/pages/Contact.tsx:66
 msgid "jfC/xh"
 msgstr "Contact"
 
@@ -289,7 +312,7 @@ msgstr "Bien comprendre le besoin État de l’art, rédaction du cahier des cha
 msgid "mM/XsI"
 msgstr "CREER"
 
-#: src/pages/Contact.tsx:295
+#: src/pages/Contact.tsx:292
 msgid "mzc93K"
 msgstr "Nous retrouvez"
 
@@ -297,21 +320,21 @@ msgstr "Nous retrouvez"
 msgid "nXljLj"
 msgstr "Catalogue Produit"
 
-#: navigation.ts:21
-msgid "o/PWuT"
-msgstr "Expert du levage depuis 40 ans. Nous accompagnons nos clients dans la construction de solution sur mesures et la resolution de problèmes complexes."
-
-#: src/pages/Contact.tsx:170
+#: src/pages/Contact.tsx:167
 msgid "p/78dY"
 msgstr "Position"
 
-#: src/pages/Contact.tsx:202
+#: src/pages/Contact.tsx:199
 msgid "p3Ghkv"
 msgstr "Saisir un numero valide"
 
 #: src/pages/404.tsx:31
 msgid "p3pSQG"
 msgstr "Vous avez demandé une page non repertoriée"
+
+#: src/config/navigation.ts:19
+msgid "pC1SmX"
+msgstr "Expert du levage depuis 40 ans. Nous accompagnons nos clients dans la construction de solution sur mesures et la resolution de problèmes complexes.',"
 
 #: src/components/homePage/IconPresentation.tsx:103
 msgid "pD0Omg"
@@ -329,7 +352,7 @@ msgstr "Gérer les cookies"
 msgid "qYTbbd"
 msgstr "La direction"
 
-#: src/pages/Contact.tsx:248
+#: src/pages/Contact.tsx:245
 msgid "rlgF4h"
 msgstr "votre message"
 
@@ -351,11 +374,7 @@ msgstr ""
 "étude des projets techniques, recherche industrielle, ainsi que la\n"
 "conception et l'innovation des produits et process."
 
-#: navigation.ts:38
-msgid "wadLSI"
-msgstr "Equipe"
-
-#: navigation.ts:14
+#: src/config/navigation.ts:14
 msgid "xsJ5fQ"
 msgstr "Accueil"
 

@@ -16,7 +16,6 @@ import {
   GOOGLE_MAP_LOCATION,
   SOCIAL_MEDIAS_LINKS,
 } from '../config';
-import { defineMessage, t } from '@lingui/macro';
 
 import { GetStaticProps } from 'next';
 import { Iframe } from '../lib';
@@ -26,6 +25,7 @@ import { SocialMedias } from '../components/layout/footer/SocialMedias';
 import emailjs from '@emailjs/browser';
 import { i18n } from '@lingui/core';
 import loadTranslation from '../utils/loadTranslation';
+import { t } from '@lingui/macro';
 import { toast } from 'react-toastify';
 import { useForm } from 'react-hook-form';
 import { useState } from 'react';
@@ -46,19 +46,16 @@ export default function Contact({}) {
 
     await trigger();
     await handleSubmit(async (data) => {
-      const successMsg = defineMessage({
-        message: 'Votre message a bien été transmis',
-      });
-      const errorMsg = defineMessage({
-        message: 'Une erreur est survenue. Veuillez réessayer ultérieurement',
-      });
+      const successMsg = i18n._(t`Votre message a bien été transmis`);
+      const errorMsg = i18n._(
+        t`Une erreur est survenue. Veuillez réessayer ultérieurement`
+      );
+
       await sendMail(data)
         .then((x) =>
-          x.status === 200
-            ? toast.success(i18n._(successMsg))
-            : toast.error(i18n._(errorMsg))
+          x.status === 200 ? toast.success(successMsg) : toast.error(errorMsg)
         )
-        .catch(() => toast.error(i18n._(errorMsg)));
+        .catch(() => toast.error(errorMsg));
     })(e);
     setIsSending(false);
   };

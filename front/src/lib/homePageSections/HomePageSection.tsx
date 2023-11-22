@@ -30,7 +30,7 @@ function HomePageSection({
     <section className={styles.test}>
       <Grid container justifyContent="center" padding={2}>
         <Typography variant="h2" style={{ display: 'grid' }}>
-          {i18n._(title).toUpperCase()}
+          {title.toUpperCase()}
           <div className="titleDivider" />
         </Typography>
       </Grid>

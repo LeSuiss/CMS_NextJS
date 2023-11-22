@@ -1,11 +1,17 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2023-11-22 13:07+0000\n"
+"POT-Creation-Date: 2023-11-22 20:43+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: @lingui/cli\n"
 "Language: en\n"
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Plural-Forms: \n"
 
 #: src/components/layout/footer/Footer.main.tsx:25
 msgid "+HuqM1"
@@ -19,7 +25,9 @@ msgstr ""
 msgid "/d5Ovx"
 msgstr ""
 
-#: navigation.ts:48
+#: src/config/navigation.ts:63
+#: src/config/navigation.ts:66
+#: src/config/navigation.ts:67
 #: src/pages/FAQ.tsx:15
 msgid "/lDBHm"
 msgstr ""
@@ -53,8 +61,8 @@ msgstr ""
 msgid "7uNOIE"
 msgstr ""
 
+#: src/pages/Contact.tsx:191
 #: src/pages/Contact.tsx:194
-#: src/pages/Contact.tsx:197
 msgid "82Ozh9"
 msgstr ""
 
@@ -66,10 +74,10 @@ msgstr ""
 msgid "9bmFKO"
 msgstr ""
 
-#: src/pages/Contact.tsx:110
-#: src/pages/Contact.tsx:131
-#: src/pages/Contact.tsx:153
-#: src/pages/Contact.tsx:178
+#: src/pages/Contact.tsx:107
+#: src/pages/Contact.tsx:128
+#: src/pages/Contact.tsx:150
+#: src/pages/Contact.tsx:175
 msgid "AxOm1Q"
 msgstr ""
 
@@ -89,7 +97,7 @@ msgstr ""
 msgid "CVbNXn"
 msgstr ""
 
-#: src/pages/Contact.tsx:52
+#: src/pages/Contact.tsx:51
 msgid "CuDCVw"
 msgstr ""
 
@@ -97,7 +105,7 @@ msgstr ""
 msgid "D5mySz"
 msgstr ""
 
-#: navigation.ts:18
+#: src/config/navigation.ts:18
 msgid "DPOoZm"
 msgstr ""
 
@@ -109,8 +117,8 @@ msgstr ""
 msgid "DvFFN+"
 msgstr ""
 
-#: src/pages/Contact.tsx:148
-#: src/pages/Contact.tsx:149
+#: src/pages/Contact.tsx:145
+#: src/pages/Contact.tsx:146
 msgid "E9PLXb"
 msgstr ""
 
@@ -118,7 +126,7 @@ msgstr ""
 msgid "FXTTP8"
 msgstr ""
 
-#: src/pages/Contact.tsx:223
+#: src/pages/Contact.tsx:220
 msgid "G4ZLFE"
 msgstr ""
 
@@ -152,6 +160,11 @@ msgstr ""
 msgid "Jk4ohF"
 msgstr ""
 
+#: src/config/navigation.ts:46
+#: src/config/navigation.ts:47
+msgid "KM6m8p"
+msgstr ""
+
 #: src/components/homePage/HomePageFirstLookAt.tsx:55
 msgid "Kj53rO"
 msgstr ""
@@ -160,12 +173,14 @@ msgstr ""
 msgid "M9H+/G"
 msgstr ""
 
-#: src/pages/Contact.tsx:125
-#: src/pages/Contact.tsx:127
+#: src/pages/Contact.tsx:122
+#: src/pages/Contact.tsx:124
 msgid "MCvCnO"
 msgstr ""
 
-#: navigation.ts:34
+#: src/config/navigation.ts:34
+#: src/config/navigation.ts:36
+#: src/config/navigation.ts:37
 msgid "MKYUai"
 msgstr ""
 
@@ -181,11 +196,13 @@ msgstr ""
 msgid "OO+i/B"
 msgstr ""
 
-#: src/pages/Contact.tsx:266
+#: src/pages/Contact.tsx:263
 msgid "OSKP8S"
 msgstr ""
 
-#: navigation.ts:29
+#: src/config/navigation.ts:24
+#: src/config/navigation.ts:26
+#: src/config/navigation.ts:27
 #: src/pages/Innovation.tsx:16
 msgid "Q8rr4y"
 msgstr ""
@@ -194,12 +211,16 @@ msgstr ""
 msgid "Rr9CgN"
 msgstr ""
 
-#: src/pages/Contact.tsx:89
+#: src/pages/Contact.tsx:86
 msgid "SX8gv/"
 msgstr ""
 
 #: src/components/layout/footer/Footer.main.tsx:79
 msgid "TF9Sxq"
+msgstr ""
+
+#: src/config/navigation.ts:43
+msgid "TMdsfq"
 msgstr ""
 
 #: src/components/layout/footer/Footer.main.tsx:100
@@ -210,7 +231,7 @@ msgstr ""
 msgid "W+2eH4"
 msgstr ""
 
-#: src/pages/Contact.tsx:305
+#: src/pages/Contact.tsx:302
 msgid "YwBWLP"
 msgstr ""
 
@@ -226,11 +247,11 @@ msgstr ""
 msgid "d6GuCI"
 msgstr ""
 
-#: src/pages/Contact.tsx:281
+#: src/pages/Contact.tsx:278
 msgid "fPLviK"
 msgstr ""
 
-#: src/pages/Contact.tsx:253
+#: src/pages/Contact.tsx:250
 msgid "gNI+7u"
 msgstr ""
 
@@ -238,17 +259,19 @@ msgstr ""
 msgid "gOdSxa"
 msgstr ""
 
-#: src/pages/Contact.tsx:105
-#: src/pages/Contact.tsx:107
+#: src/pages/Contact.tsx:102
+#: src/pages/Contact.tsx:104
 msgid "iAKACc"
 msgstr ""
 
-#: src/pages/Contact.tsx:319
+#: src/pages/Contact.tsx:316
 msgid "ii4k9S"
 msgstr ""
 
-#: navigation.ts:43
-#: src/pages/Contact.tsx:69
+#: src/config/navigation.ts:53
+#: src/config/navigation.ts:56
+#: src/config/navigation.ts:57
+#: src/pages/Contact.tsx:66
 msgid "jfC/xh"
 msgstr ""
 
@@ -260,7 +283,7 @@ msgstr ""
 msgid "mM/XsI"
 msgstr ""
 
-#: src/pages/Contact.tsx:295
+#: src/pages/Contact.tsx:292
 msgid "mzc93K"
 msgstr ""
 
@@ -268,20 +291,20 @@ msgstr ""
 msgid "nXljLj"
 msgstr ""
 
-#: navigation.ts:21
-msgid "o/PWuT"
-msgstr ""
-
-#: src/pages/Contact.tsx:170
+#: src/pages/Contact.tsx:167
 msgid "p/78dY"
 msgstr ""
 
-#: src/pages/Contact.tsx:202
+#: src/pages/Contact.tsx:199
 msgid "p3Ghkv"
 msgstr ""
 
 #: src/pages/404.tsx:31
 msgid "p3pSQG"
+msgstr ""
+
+#: src/config/navigation.ts:19
+msgid "pC1SmX"
 msgstr ""
 
 #: src/components/homePage/IconPresentation.tsx:103
@@ -300,7 +323,7 @@ msgstr ""
 msgid "qYTbbd"
 msgstr ""
 
-#: src/pages/Contact.tsx:248
+#: src/pages/Contact.tsx:245
 msgid "rlgF4h"
 msgstr ""
 
@@ -318,11 +341,7 @@ msgstr ""
 msgid "tdZAIT"
 msgstr ""
 
-#: navigation.ts:38
-msgid "wadLSI"
-msgstr ""
-
-#: navigation.ts:14
+#: src/config/navigation.ts:14
 msgid "xsJ5fQ"
 msgstr ""
 

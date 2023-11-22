@@ -44,23 +44,16 @@ export default function CustomMenu({ linksToDisplay }: CustomMenuProps) {
       >
         <Switcher />
         {linksToDisplay.map((item, index) => (
-          <div
-            key={item.nav.id ?? `${item.nav}${index}`}
-            style={{ width: '100vw' }}
-          >
+          <div key={`${item.nav}${index}`} style={{ width: '100vw' }}>
             {JSON.stringify(item.nav)}
             <Link
-              key={item.nav.id ?? item.nav.id}
+              key={item.nav}
               onClick={handleClose}
               href={item.link}
               style={{ textDecoration: 'none' }}
-              aria-label={
-                item.nav.id
-                  ? `${i18n._((item.nav ?? item.nav.id) as MessageDescriptor)}`
-                  : (item.nav as unknown as string)
-              }
+              aria-label={item.nav}
             >
-              <MenuItem>{i18n._(item.nav.message ?? item.nav.id)}</MenuItem>
+              <MenuItem>{item.nav}</MenuItem>
             </Link>
             {index + 1 < linksToDisplay.length && (
               <Divider sx={{ margin: 0 }} />
