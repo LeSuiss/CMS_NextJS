@@ -1,6 +1,7 @@
 import * as React from 'react';
 
 import { Box, Divider } from '@mui/material';
+import { MessageDescriptor, i18n } from '@lingui/core';
 
 import Button from '@mui/material/Button';
 import Link from 'next/link';
@@ -10,7 +11,6 @@ import MenuItem from '@mui/material/MenuItem';
 import MenuOpenIcon from '@mui/icons-material/MenuOpen';
 import { NavigationProps } from '../../../config';
 import Switcher from './Switcher';
-import { i18n } from '@lingui/core';
 
 interface CustomMenuProps {
   linksToDisplay: NavigationProps[];
@@ -54,7 +54,11 @@ export default function CustomMenu({ linksToDisplay }: CustomMenuProps) {
               onClick={handleClose}
               href={item.link}
               style={{ textDecoration: 'none' }}
-              aria-label={`${i18n._(item.nav ?? item.nav.id)}`}
+              aria-label={
+                item.nav.id
+                  ? `${i18n._((item.nav ?? item.nav.id) as MessageDescriptor)}`
+                  : (item.nav as unknown as string)
+              }
             >
               <MenuItem>{i18n._(item.nav.message ?? item.nav.id)}</MenuItem>
             </Link>
