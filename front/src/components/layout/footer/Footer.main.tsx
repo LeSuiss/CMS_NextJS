@@ -2,7 +2,6 @@
 import { Box, Stack } from '@mui/material';
 import { Divider, Grid, Typography } from '@mui/material';
 import { MAILING_DESTINATARY, SOCIAL_MEDIAS_LINKS } from '../../../config';
-import { defineMessage, t } from '@lingui/macro';
 
 import { AuthorRow } from './AuthorRow';
 import { GridSection } from './GridSection';
@@ -11,6 +10,7 @@ import React from 'react';
 import { SocialMedias } from './SocialMedias';
 import { i18n } from '@lingui/core';
 import styles from '../../../styles/Home.module.scss';
+import { t } from '@lingui/macro';
 import { useRootContext } from '../../../pages/_app';
 import { useTheme } from '../../../../node_modules/@mui/material';
 
@@ -18,23 +18,21 @@ const Footer = () => {
   const { dispatchContext } = useRootContext();
   const footerLinks = [
     {
-      title: defineMessage({
-        message: 'Mentions Légales',
-      }),
+      title: i18n._(/* i18n:  */ t`Mentions Légales`),
       links: '/Legal',
     },
     {
-      title: defineMessage({ message: 'Conditions générales ' }),
+      title: i18n._(t`Conditions générales `),
       links: '/CGV.pdf',
       isBlank: true,
     },
     {
-      title: defineMessage({ message: 'Catalogue Produit' }),
+      title: i18n._(t`Catalogue Produit`),
       links: '/documents/catalogueProduits.pdf',
       isBlank: true,
     },
     {
-      title: defineMessage({ message: 'Gérer les cookies' }),
+      title: i18n._(t`Gérer les cookies`),
       links: '/',
       cb: (e) => dispatchContext({ displayCookieBanner: true }),
     },

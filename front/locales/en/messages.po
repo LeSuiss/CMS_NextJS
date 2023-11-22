@@ -1,29 +1,14 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2023-04-17 07:01+0100\n"
+"POT-Creation-Date: 2023-11-22 13:07+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: @lingui/cli\n"
 "Language: en\n"
-"Project-Id-Version: \n"
-"Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: \n"
-"Last-Translator: \n"
-"Language-Team: \n"
-"Plural-Forms: \n"
 
-#: navigation.ts:33
-#: navigation.ts:34
-#: navigation.ts:43
-#: navigation.ts:44
-#: navigation.ts:53
-#: navigation.ts:54
-#: navigation.ts:63
-#: navigation.ts:64
-#: navigation.ts:73
-#: navigation.ts:74
-msgid "/+Z5u4"
+#: src/components/layout/footer/Footer.main.tsx:25
+msgid "+HuqM1"
 msgstr ""
 
 #: src/pages/Products.tsx:47
@@ -34,6 +19,7 @@ msgstr ""
 msgid "/d5Ovx"
 msgstr ""
 
+#: navigation.ts:48
 #: src/pages/FAQ.tsx:15
 msgid "/lDBHm"
 msgstr ""
@@ -54,6 +40,7 @@ msgstr ""
 msgid "31RTjb"
 msgstr ""
 
+#: src/components/layout/footer/Footer.main.tsx:21
 #: src/pages/Legal.tsx:19
 msgid "6jHOTT"
 msgstr ""
@@ -79,54 +66,12 @@ msgstr ""
 msgid "9bmFKO"
 msgstr ""
 
-#: navigation.ts:14
-msgid "Accueil"
-msgstr "Home"
-
-#: src/components/homePage/IconPresentation.tsx:71
-#~ msgid "Adapter les produits au mieux des contraintes de l'utilisateur tout en garantissant à tout instant une sécurité optimale"
-#~ msgstr "fds"
-
-#: src/components/homePage/IconPresentation.tsx:33
-#~ msgid "Analyser"
-#~ msgstr "fds"
-
-#: src/components/layout/header/Switcher.tsx:141
-#~ msgid "Annuler"
-#~ msgstr "fds"
-
-#: src/components/homePage/IconPresentation.tsx:89
-#~ msgid ""
-#~ "Approfondir la conception Intégration de l’électronique, définition du\n"
-#~ "procédé de fabrication et des matériaux, modélisation 3D, simulation,\n"
-#~ "réduction des coûts de fabrication"
-#~ msgstr "fds"
-
 #: src/pages/Contact.tsx:110
 #: src/pages/Contact.tsx:131
 #: src/pages/Contact.tsx:153
 #: src/pages/Contact.tsx:178
 msgid "AxOm1Q"
 msgstr ""
-
-#: src/pages/Innovation.tsx:55
-#~ msgid ""
-#~ "BE2i Technologies intervient principalement en mode de\n"
-#~ "sous-traitance: Assistance technique, forfait et offshoring.\n"
-#~ "Nous assurons un suivi global des projets de la pré-étude\n"
-#~ "jusqu'au prototype et pré série. Nous intervenons dans l'étude\n"
-#~ "et la conception des projets dans les secteurs: Automobile,\n"
-#~ "Aéronautique, Ferroviaire, Industrie Mécanique, Médical,\n"
-#~ "Métrologie, Qualité. Nos expert vous accompagnera pour vos\n"
-#~ "besoins de formations en qualité et/ou métrologie, conseils ou\n"
-#~ "accompagnement pour certification accréditation , mise en place\n"
-#~ "de nouveaux procédés, création de nouveaux produits BE2i\n"
-#~ "Technologies s'engage à répondre au mieux à tous vos besoins par\n"
-#~ "des solutions techniques complètes et innovantes adaptées, ainsi\n"
-#~ "qu'un accompagnement personnalisé pour chaque phase de projet.\n"
-#~ "Véritable partenaire de confiance nous vous accompagnons et vous\n"
-#~ "assurons soutien et conseil dans chaque étape de votre projet."
-#~ msgstr "fds"
 
 #: src/components/homePage/IconPresentation.tsx:56
 msgid "BHty39"
@@ -136,132 +81,42 @@ msgstr ""
 msgid "BU9E1m"
 msgstr ""
 
-#: src/components/homePage/IconPresentation.tsx:38
-#~ msgid "Bien comprendre le besoin État de l’art, rédaction du cahier des charges, benchmarking, reverse engineering, analyse fonctionnelle"
-#~ msgstr "fds"
-
 #: src/components/homePage/IconPresentation.tsx:71
 msgid "CAKC9/"
 msgstr ""
-
-#: src/components/homePage/HomePageFirstLookAt.tsx:52
-#~ msgid "CREER"
-#~ msgstr "fds"
 
 #: src/components/homePage/IconPresentation.tsx:33
 msgid "CVbNXn"
 msgstr ""
 
-#: src/components/layout/footer/Footer.main.tsx:36
-msgid "Catalogue Produit"
-msgstr "fds"
-
-#: src/pages/Contact.tsx:110
-#: src/pages/Contact.tsx:131
-#: src/pages/Contact.tsx:153
-#: src/pages/Contact.tsx:178
-#~ msgid "Ce champ est requis"
-#~ msgstr "fds"
-
-#: src/pages/404.tsx:14
-#~ msgid "Cette page n'existe pas"
-#~ msgstr "fds"
-
-#: src/components/layout/header/Switcher.tsx:102
-#~ msgid "Choisissez votre langue"
-#~ msgstr "fds"
-
-#: src/components/layout/footer/Footer.main.tsx:28
-msgid "Conditions générales"
-msgstr ""
-
-#: src/components/layout/footer/Footer.main.tsx:27
-#~ msgid "Conditions générales "
-#~ msgstr "fds"
-
-#: navigation.ts:60
-msgid "Contact"
-msgstr "fds"
-
 #: src/pages/Contact.tsx:52
 msgid "CuDCVw"
 msgstr ""
-
-#: src/lib/cookieBanner/CookieBanner.tsx:173
-#~ msgid "Customize your cookies"
-#~ msgstr "fds"
 
 #: src/pages/404.tsx:27
 msgid "D5mySz"
 msgstr ""
 
-#: src/components/homePage/HomePageFirstLookAt.tsx:55
-#~ msgid "DEVELOPPER"
-#~ msgstr "fds"
+#: navigation.ts:18
+msgid "DPOoZm"
+msgstr ""
 
 #: src/components/homePage/FewNumbersSection.tsx:50
 msgid "DWfa3F"
 msgstr ""
 
-#: src/components/homePage/IconPresentation.tsx:51
-#~ msgid "Designer une solution"
-#~ msgstr "fds"
-
-#: src/components/layout/footer/Footer.main.tsx:91
-#~ msgid "Du lundi au vendredi de 8h à 17h"
-#~ msgstr "fds"
-
 #: src/components/homePage/FewNumbersSection.tsx:21
 msgid "DvFFN+"
 msgstr ""
-
-#: src/components/homePage/BackgroundVideo.tsx:55
-#~ msgid "Découvrir SAPEM"
-#~ msgstr "fds"
-
-#: src/components/homePage/IconPresentation.tsx:84
-#~ msgid "Développement technique"
-#~ msgstr "fds"
 
 #: src/pages/Contact.tsx:148
 #: src/pages/Contact.tsx:149
 msgid "E9PLXb"
 msgstr ""
 
-#: src/pages/Contact.tsx:305
-#~ msgid "En ligne"
-#~ msgstr "fds"
-
-#: src/pages/Contact.tsx:148
-#: src/pages/Contact.tsx:149
-#~ msgid "Entreprise"
-#~ msgstr "fds"
-
-#: navigation.ts:50
-msgid "Equipe"
-msgstr "fds"
-
-#: src/components/homePage/IconPresentation.tsx:66
-#~ msgid "Ergonomie"
-#~ msgstr "fds"
-
-#: navigation.ts:22
-msgid "Expert du levage depuis 40 ans. Nous accompagnons nos clients dans la construction de solution sur mesures et la resolution de problèmes complexes."
-msgstr "fds"
-
-#: navigation.ts:70
-msgid "FAQ"
-msgstr "fds"
-
 #: src/components/homePage/FewNumbersSection.tsx:13
 msgid "FXTTP8"
 msgstr ""
-
-#: src/pages/FAQ.tsx:13
-#: src/pages/FAQ.tsx:17
-#: src/pages/FAQ.tsx:21
-#~ msgid "Foire Aux Questions"
-#~ msgstr "fds"
 
 #: src/pages/Contact.tsx:223
 msgid "G4ZLFE"
@@ -271,10 +126,6 @@ msgstr ""
 msgid "G6CgfD"
 msgstr ""
 
-#: src/components/layout/footer/Footer.main.tsx:44
-msgid "Gérer les cookies"
-msgstr "fds"
-
 #: src/pages/FAQ.tsx:21
 msgid "HPp+yd"
 msgstr ""
@@ -283,21 +134,9 @@ msgstr ""
 msgid "HdRJJM"
 msgstr ""
 
-#: src/components/homePage/HomePageFirstLookAt.tsx:57
-#~ msgid "INNOVER"
-#~ msgstr "fds"
-
 #: src/pages/Products.tsx:38
 msgid "IfZ8Ly"
 msgstr ""
-
-#: src/components/homePage/TrustingBrands.tsx:35
-#~ msgid "Ils nous font confiance"
-#~ msgstr "fds"
-
-#: navigation.ts:31
-msgid "Innovation"
-msgstr "fds"
 
 #: src/pages/FAQ.tsx:39
 #: src/pages/FAQ.tsx:45
@@ -317,18 +156,6 @@ msgstr ""
 msgid "Kj53rO"
 msgstr ""
 
-#: src/pages/Team.tsx:66
-#~ msgid "L'atelier"
-#~ msgstr "fds"
-
-#: src/pages/Team.tsx:36
-#~ msgid "La direction"
-#~ msgstr "fds"
-
-#: src/pages/FAQ.tsx:21
-#~ msgid "Les réponses à vos questions"
-#~ msgstr "fds"
-
 #: src/components/homePage/FewNumbersSection.tsx:36
 msgid "M9H+/G"
 msgstr ""
@@ -338,49 +165,13 @@ msgstr ""
 msgid "MCvCnO"
 msgstr ""
 
-#: src/components/layout/footer/Footer.main.tsx:21
-msgid "Mentions Légales"
-msgstr "fds"
+#: navigation.ts:34
+msgid "MKYUai"
+msgstr ""
 
 #: src/pages/Innovation.tsx:50
 msgid "N922Kn"
 msgstr ""
-
-#: src/pages/Contact.tsx:105
-#: src/pages/Contact.tsx:107
-#~ msgid "Nom"
-#~ msgstr "fds"
-
-#: src/pages/Team.tsx:24
-#~ msgid "Nos Equipes"
-#~ msgstr "fds"
-
-#: src/pages/Products.tsx:38
-#~ msgid "Nos Produits"
-#~ msgstr "fds"
-
-#: src/config/navigationStructure.ts:14
-#~ msgid "Notre Equipe"
-#~ msgstr "fds"
-
-#: src/pages/Team.tsx:29
-#~ msgid ""
-#~ "Notre équipe d'ingénieurs, de compagnons vous accompagne dans vos projets. Prototypage, devis, question technique, Notre équipe vous conseille et vous accompagne pour vous apporter des solutions\n"
-#~ "personnalisées."
-#~ msgstr "fds"
-
-#: src/pages/Contact.tsx:89
-#~ msgid "Nous Contacter"
-#~ msgstr "fds"
-
-#: src/pages/Contact.tsx:295
-#~ msgid "Nous retrouvez"
-#~ msgstr "fds"
-
-#: src/pages/Contact.tsx:194
-#: src/pages/Contact.tsx:197
-#~ msgid "Numero de téléphone"
-#~ msgstr "fds"
 
 #: src/components/layout/header/Switcher.tsx:102
 msgid "NyuAOD"
@@ -394,152 +185,26 @@ msgstr ""
 msgid "OSKP8S"
 msgstr ""
 
-#: src/pages/Contact.tsx:170
-#~ msgid "Position"
-#~ msgstr "fds"
-
-#: navigation.ts:41
-msgid "Produits"
-msgstr "fds"
-
-#: src/components/homePage/IconPresentation.tsx:103
-#~ msgid "Prototypage"
-#~ msgstr "fds"
-
-#: src/pages/Contact.tsx:125
-#: src/pages/Contact.tsx:127
-#~ msgid "Prénom"
-#~ msgstr "fds"
-
-#: src/components/homePage/FewNumbersSection.tsx:13
-#~ msgid "Présentation"
-#~ msgstr "fds"
-
+#: navigation.ts:29
 #: src/pages/Innovation.tsx:16
 msgid "Q8rr4y"
 msgstr ""
-
-#: src/pages/404.tsx:39
-#~ msgid "Retournez à la page d'accueil"
-#~ msgstr "fds"
 
 #: src/components/homePage/IconPresentation.tsx:108
 msgid "Rr9CgN"
 msgstr ""
 
-#: src/pages/Innovation.tsx:60
-#~ msgid ""
-#~ "SAPEM\n"
-#~ "Technologies s'engage à répondre au mieux à tous vos besoins par\n"
-#~ "des solutions techniques complètes et innovantes adaptées, ainsi\n"
-#~ "qu'un accompagnement personnalisé pour chaque phase de projet.\n"
-#~ "Véritable partenaire de confiance nous vous accompagnons et vous\n"
-#~ "assurons soutien et conseil dans chaque étape de votre projet."
-#~ msgstr "fds"
-
-#: src/pages/Innovation.tsx:50
-#~ msgid ""
-#~ "SAPEM Technologies intervient principalement en mode de\n"
-#~ "sous-traitance: Assistance technique, forfait et offshoring.\n"
-#~ "Nous assurons un suivi global des projets de la pré-étude\n"
-#~ "jusqu'au prototype et pré série. Nous intervenons dans l'étude\n"
-#~ "et la conception des projets dans les secteurs: Automobile,\n"
-#~ "Aéronautique, Ferroviaire, Industrie Mécanique, Médical,\n"
-#~ "Métrologie, Qualité. Nos expert vous accompagnera pour vos\n"
-#~ "besoins de formations en qualité et/ou métrologie, conseils ou\n"
-#~ "accompagnement pour certification accréditation , mise en place\n"
-#~ "de nouveaux procédés, création de nouveaux produits"
-#~ msgstr "fds"
-
-#: src/pages/index.tsx:360
-#~ msgid ""
-#~ "SAPEM est spécialisée dans le design et la conception technique de produits de levage répondant aux exigences de sécurité et de fiabilité de ses partenaires. SAPEM vous aide à concevoir des produits adaptés à vos contraintes. Nous mettons pour cela à votre disposition nos compétences transversales en ingénierie mécanique et design industriel.\n"
-#~ "Rigueur, qualité et grande curiosité sont pour nous des motivations clés. Elles nous poussent à acquérir continuellement de nouvelles compétences et à comprendre avec précision les enjeux de votre projet. Nous prêtons également une grande attention à la qualité des relations avec nos clients."
-#~ msgstr "fds"
-
-#: src/components/homePage/FewNumbersSection.tsx:21
-#~ msgid "SAPEM est spécialisée dans le design et la conception technique de produits de levage répondant aux exigences de sécurité et de fiabilité de ses partenaires. SAPEM vous aide à concevoir des produits adaptés à vos contraintes. Nous mettons pour cela à votre disposition nos compétences transversales en ingénierie mécanique et design industriel. Rigueur, qualité et grande curiosité sont pour nous des motivations clés. Elles nous poussent à acquérir continuellement de nouvelles compétences et à comprendre avec précision les enjeux de votre projet. Nous prêtons également une grande attention à la qualité des relations avec nos clients."
-#~ msgstr "fds"
-
-#: src/pages/Innovation.tsx:28
-#~ msgid ""
-#~ "SAPEM est une société de services spécialisée dans l'ingénierie\n"
-#~ "industrielle et l'innovation technologique indépendante."
-#~ msgstr "fds"
-
-#: src/pages/Innovation.tsx:32
-#~ msgid ""
-#~ "SAPEM intervient grace à un bureau d'études d'ingénierie industrielle,\n"
-#~ "intervenant dans la conduite des affaires en matière d'ingénierie:\n"
-#~ "étude des projets techniques, recherche industrielle, ainsi que la\n"
-#~ "conception et l'innovation des produits et process."
-#~ msgstr "fds"
-
-#: navigation.ts:18
-msgid "SAPEM les professionnels du levage"
-msgstr "SAPEM the lifting professionals"
-
-#: src/pages/Legal.tsx:25
-#~ msgid "SAPEM: Société d'applications éléctriques et mécaniques."
-#~ msgstr "fds"
-
 #: src/pages/Contact.tsx:89
 msgid "SX8gv/"
 msgstr ""
 
-#: src/pages/Contact.tsx:202
-#~ msgid "Saisir un numero valide"
-#~ msgstr "fds"
-
-#: src/pages/Contact.tsx:223
-#~ msgid "Saisir une adresse mail valide"
-#~ msgstr "fds"
-
-#: src/pages/Contact.tsx:253
-#~ msgid "Saisir votre message"
-#~ msgstr "fds"
-
-#: src/pages/Legal.tsx:38
-#~ msgid ""
-#~ "Société anonyme à conseil d'administration, au capital social de\n"
-#~ "203 062,09 €, dont le siège social est situé au LE BOURG, 58270\n"
-#~ "CIZELY, immatriculée au Registre du Commerce et des Sociétés de\n"
-#~ "Nevers sous le numéro 549 879 096 représentée par M Joel ARCHER\n"
-#~ "agissant et ayant les pouvoirs nécessaires en tant que président\n"
-#~ "du conseil d'administration."
-#~ msgstr "fds"
-
-#: src/pages/Contact.tsx:319
-#~ msgid "Sur Site"
-#~ msgstr "fds"
-
-#: src/components/layout/footer/Footer.main.tsx:91
+#: src/components/layout/footer/Footer.main.tsx:79
 msgid "TF9Sxq"
 msgstr ""
 
-#: src/components/homePage/IconPresentation.tsx:56
-#~ msgid "Travailler le produit. Recherches adaptées et optimisées. Adéquation du produits aux exigences de sécurité."
-#~ msgstr "fds"
-
-#: src/pages/Contact.tsx:52
-#~ msgid "Une erreur est survenue. Veuillez réessayer ultérieurement"
-#~ msgstr "fds"
-
-#: src/components/layout/footer/Footer.main.tsx:112
+#: src/components/layout/footer/Footer.main.tsx:100
 msgid "VEExwK"
 msgstr ""
-
-#: src/components/homePage/IconPresentation.tsx:108
-#~ msgid "Valider le produit dans ses moindres détails.Toutes les tailles de prototypes, itérations jusqu’à la validation du prototype"
-#~ msgstr "fds"
-
-#: src/pages/Contact.tsx:49
-#~ msgid "Votre message a bien été transmis"
-#~ msgstr "fds"
-
-#: src/pages/404.tsx:31
-#~ msgid "Vous avez demandé une page non repertoriée"
-#~ msgstr "fds"
 
 #: src/components/homePage/FewNumbersSection.tsx:42
 msgid "W+2eH4"
@@ -560,10 +225,6 @@ msgstr ""
 #: src/pages/Legal.tsx:25
 msgid "d6GuCI"
 msgstr ""
-
-#: src/pages/404.tsx:27
-#~ msgid "erreur"
-#~ msgstr "fds"
 
 #: src/pages/Contact.tsx:281
 msgid "fPLviK"
@@ -586,10 +247,7 @@ msgstr ""
 msgid "ii4k9S"
 msgstr ""
 
-#: src/pages/Contact.tsx:266
-#~ msgid "j'accepte que mes données soient enregistrées par SAPEM et utilisées à des fins d'analyses et de démarchage commerciale"
-#~ msgstr "fds"
-
+#: navigation.ts:43
 #: src/pages/Contact.tsx:69
 msgid "jfC/xh"
 msgstr ""
@@ -606,9 +264,13 @@ msgstr ""
 msgid "mzc93K"
 msgstr ""
 
-#: src/pages/Products.tsx:47
-#~ msgid "notre catalogue"
-#~ msgstr "fds"
+#: src/components/layout/footer/Footer.main.tsx:30
+msgid "nXljLj"
+msgstr ""
+
+#: navigation.ts:21
+msgid "o/PWuT"
+msgstr ""
 
 #: src/pages/Contact.tsx:170
 msgid "p/78dY"
@@ -630,47 +292,17 @@ msgstr ""
 msgid "pDgeaz"
 msgstr ""
 
-#: src/components/layout/footer/Footer.main.tsx:112
-#~ msgid "par mail"
-#~ msgstr "fds"
-
-#: src/components/homePage/FewNumbersSection.tsx:42
-#~ msgid "partners"
-#~ msgstr "fds"
-
-#: src/components/homePage/FewNumbersSection.tsx:50
-#~ msgid "persons searching for disrupting innovations"
-#~ msgstr "fds"
-
-#: src/components/homePage/FewNumbersSection.tsx:36
-#~ msgid "projects"
-#~ msgstr "fds"
+#: src/components/layout/footer/Footer.main.tsx:35
+msgid "pVuwNa"
+msgstr ""
 
 #: src/pages/Team.tsx:36
 msgid "qYTbbd"
 msgstr ""
 
-#: src/components/homePage/HomePageFirstLookAt.tsx:90
-#~ msgid "quand la sécurité prime"
-#~ msgstr "When security prevails"
-
 #: src/pages/Contact.tsx:248
 msgid "rlgF4h"
 msgstr ""
-
-#: src/pages/FAQ.tsx:14
-#: src/pages/FAQ.tsx:18
-#: src/pages/FAQ.tsx:22
-#~ msgid "réponse"
-#~ msgstr "fds"
-
-#: src/components/layout/footer/AuthorRow.tsx:41
-#~ msgid "site realisé par Alexis ARCHER"
-#~ msgstr "fds"
-
-#: src/pages/Contact.tsx:281
-#~ msgid "soumettre"
-#~ msgstr "fds"
 
 #: src/components/layout/header/Switcher.tsx:141
 msgid "tALayW"
@@ -686,26 +318,14 @@ msgstr ""
 msgid "tdZAIT"
 msgstr ""
 
-#: src/pages/Contact.tsx:248
-#~ msgid "votre message"
-#~ msgstr "fds"
+#: navigation.ts:38
+msgid "wadLSI"
+msgstr ""
+
+#: navigation.ts:14
+msgid "xsJ5fQ"
+msgstr ""
 
 #: src/components/homePage/HomePageFirstLookAt.tsx:90
 msgid "zJTteZ"
 msgstr ""
-
-#: src/pages/FAQ.tsx:39
-#: src/pages/FAQ.tsx:45
-#: src/pages/FAQ.tsx:51
-#~ msgid "{0}"
-#~ msgstr "fds"
-
-#: src/pages/FAQ.tsx:37
-#: src/pages/FAQ.tsx:43
-#: src/pages/FAQ.tsx:49
-#~ msgid "{lorem}"
-#~ msgstr "fds"
-
-#: src/components/layout/footer/GridSection.tsx:13
-#~ msgid "{title}"
-#~ msgstr "title"

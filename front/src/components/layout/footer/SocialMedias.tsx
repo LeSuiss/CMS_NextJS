@@ -19,6 +19,8 @@ export function SocialMedias({ urls, whiteIcons = true }: SocialMediasProps) {
           <LinkedIn fontSize="large" className={styles.socialMediaIcons} />
         ) : (
           <Image
+            width={50}
+            height={50}
             src="/medias/logo/linkedinLogoFull.png"
             alt="Logo"
             className={styles.socialMediaIcons}
@@ -32,6 +34,8 @@ export function SocialMedias({ urls, whiteIcons = true }: SocialMediasProps) {
           <YouTube fontSize="large" className={styles.socialMediaIcons} />
         ) : (
           <Image
+            width={50}
+            height={50}
             src="/medias/logo/youtubeLogoFull.png"
             alt="Logo"
             className={styles.socialMediaIcons}
