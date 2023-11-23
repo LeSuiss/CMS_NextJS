@@ -1,6 +1,5 @@
 import * as React from 'react';
 
-// import { defineMessage }                    from '@lingui/macro';
 import {
   Card,
   CardContent,

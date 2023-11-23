@@ -25,9 +25,9 @@ msgstr "notre catalogue"
 msgid "/d5Ovx"
 msgstr "Votre message a bien été transmis"
 
-#: src/config/navigation.ts:63
-#: src/config/navigation.ts:66
 #: src/config/navigation.ts:67
+#: src/config/navigation.ts:70
+#: src/config/navigation.ts:71
 #: src/pages/FAQ.tsx:15
 msgid "/lDBHm"
 msgstr "FAQ"
@@ -122,7 +122,7 @@ msgstr "Une erreur est survenue. Veuillez réessayer ultérieurement"
 msgid "D5mySz"
 msgstr "erreur"
 
-#: src/config/navigation.ts:18
+#: src/config/navigation.ts:20
 msgid "DPOoZm"
 msgstr "SAPEM les professionnels du levage"
 
@@ -177,8 +177,8 @@ msgstr "Développement technique"
 msgid "Jk4ohF"
 msgstr "Cette page n'existe pas"
 
-#: src/config/navigation.ts:46
-#: src/config/navigation.ts:47
+#: src/config/navigation.ts:50
+#: src/config/navigation.ts:51
 msgid "KM6m8p"
 msgstr "Team"
 
@@ -195,9 +195,9 @@ msgstr "projects"
 msgid "MCvCnO"
 msgstr "Prénom"
 
-#: src/config/navigation.ts:34
-#: src/config/navigation.ts:36
-#: src/config/navigation.ts:37
+#: src/config/navigation.ts:38
+#: src/config/navigation.ts:40
+#: src/config/navigation.ts:41
 msgid "MKYUai"
 msgstr "Produits"
 
@@ -227,9 +227,9 @@ msgstr "L'atelier"
 msgid "OSKP8S"
 msgstr "j'accepte que mes données soient enregistrées par SAPEM et utilisées à des fins d'analyses et de démarchage commerciale"
 
-#: src/config/navigation.ts:24
-#: src/config/navigation.ts:26
-#: src/config/navigation.ts:27
+#: src/config/navigation.ts:28
+#: src/config/navigation.ts:30
+#: src/config/navigation.ts:31
 #: src/pages/Innovation.tsx:16
 msgid "Q8rr4y"
 msgstr "Innovation"
@@ -246,7 +246,7 @@ msgstr "Nous Contacter"
 msgid "TF9Sxq"
 msgstr "Du lundi au vendredi de 8h à 17h"
 
-#: src/config/navigation.ts:43
+#: src/config/navigation.ts:47
 msgid "TMdsfq"
 msgstr "Equip"
 
@@ -297,9 +297,9 @@ msgstr "Nom"
 msgid "ii4k9S"
 msgstr "Sur Site"
 
-#: src/config/navigation.ts:53
-#: src/config/navigation.ts:56
 #: src/config/navigation.ts:57
+#: src/config/navigation.ts:60
+#: src/config/navigation.ts:61
 #: src/pages/Contact.tsx:66
 msgid "jfC/xh"
 msgstr "Contact"
@@ -332,7 +332,7 @@ msgstr "Saisir un numero valide"
 msgid "p3pSQG"
 msgstr "Vous avez demandé une page non repertoriée"
 
-#: src/config/navigation.ts:19
+#: src/config/navigation.ts:21
 msgid "pC1SmX"
 msgstr "Expert du levage depuis 40 ans. Nous accompagnons nos clients dans la construction de solution sur mesures et la resolution de problèmes complexes.',"
 
@@ -374,7 +374,7 @@ msgstr ""
 "étude des projets techniques, recherche industrielle, ainsi que la\n"
 "conception et l'innovation des produits et process."
 
-#: src/config/navigation.ts:14
+#: src/config/navigation.ts:16
 msgid "xsJ5fQ"
 msgstr "Accueil"
 

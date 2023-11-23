@@ -25,9 +25,9 @@ msgstr ""
 msgid "/d5Ovx"
 msgstr ""
 
-#: src/config/navigation.ts:63
-#: src/config/navigation.ts:66
 #: src/config/navigation.ts:67
+#: src/config/navigation.ts:70
+#: src/config/navigation.ts:71
 #: src/pages/FAQ.tsx:15
 msgid "/lDBHm"
 msgstr ""
@@ -105,7 +105,7 @@ msgstr ""
 msgid "D5mySz"
 msgstr ""
 
-#: src/config/navigation.ts:18
+#: src/config/navigation.ts:20
 msgid "DPOoZm"
 msgstr ""
 
@@ -160,8 +160,8 @@ msgstr ""
 msgid "Jk4ohF"
 msgstr ""
 
-#: src/config/navigation.ts:46
-#: src/config/navigation.ts:47
+#: src/config/navigation.ts:50
+#: src/config/navigation.ts:51
 msgid "KM6m8p"
 msgstr ""
 
@@ -178,9 +178,9 @@ msgstr ""
 msgid "MCvCnO"
 msgstr ""
 
-#: src/config/navigation.ts:34
-#: src/config/navigation.ts:36
-#: src/config/navigation.ts:37
+#: src/config/navigation.ts:38
+#: src/config/navigation.ts:40
+#: src/config/navigation.ts:41
 msgid "MKYUai"
 msgstr ""
 
@@ -200,9 +200,9 @@ msgstr ""
 msgid "OSKP8S"
 msgstr ""
 
-#: src/config/navigation.ts:24
-#: src/config/navigation.ts:26
-#: src/config/navigation.ts:27
+#: src/config/navigation.ts:28
+#: src/config/navigation.ts:30
+#: src/config/navigation.ts:31
 #: src/pages/Innovation.tsx:16
 msgid "Q8rr4y"
 msgstr ""
@@ -219,7 +219,7 @@ msgstr ""
 msgid "TF9Sxq"
 msgstr ""
 
-#: src/config/navigation.ts:43
+#: src/config/navigation.ts:47
 msgid "TMdsfq"
 msgstr ""
 
@@ -268,9 +268,9 @@ msgstr ""
 msgid "ii4k9S"
 msgstr ""
 
-#: src/config/navigation.ts:53
-#: src/config/navigation.ts:56
 #: src/config/navigation.ts:57
+#: src/config/navigation.ts:60
+#: src/config/navigation.ts:61
 #: src/pages/Contact.tsx:66
 msgid "jfC/xh"
 msgstr ""
@@ -303,7 +303,7 @@ msgstr ""
 msgid "p3pSQG"
 msgstr ""
 
-#: src/config/navigation.ts:19
+#: src/config/navigation.ts:21
 msgid "pC1SmX"
 msgstr ""
 
@@ -341,7 +341,7 @@ msgstr ""
 msgid "tdZAIT"
 msgstr ""
 
-#: src/config/navigation.ts:14
+#: src/config/navigation.ts:16
 msgid "xsJ5fQ"
 msgstr ""
 

@@ -3,9 +3,10 @@ import React, { useEffect } from 'react';
 
 import Footer from './footer/Footer.main';
 import Header from './header/Header';
-import { NAVIGATION } from '../../config';
 import SeoHead from '../../utils/SEO&Co/SeoHead';
+import { getNavigationStructure } from '../../config';
 import { isMobile } from '../../utils/hooks';
+import { useLingui } from '@lingui/react';
 
 interface LayoutProps {
   backgroundImageUrl?: string;
@@ -27,6 +28,8 @@ function Layout({
   titleIsSticky = true,
   stickerToDisplay = null,
 }: LayoutProps) {
+  const { i18n } = useLingui();
+  const navigationStructure = getNavigationStructure(i18n);
   const isSticky = () => {
     const header = document.querySelector('.header-section');
     const scrollTop = document.querySelector('.container_component').scrollTop;
@@ -58,7 +61,10 @@ function Layout({
     <>
       <SeoHead />
       <div className={`container_GlobalLayoutPage ${className}`}>
-        <Header navigationStructure={NAVIGATION} className="header-section" />
+        <Header
+          navigationStructure={navigationStructure}
+          className="header-section"
+        />
 
         <Box className="container_component">
           {title && (

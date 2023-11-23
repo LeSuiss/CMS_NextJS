@@ -1,8 +1,8 @@
 import { MessageDescriptor, i18n } from '@lingui/core';
 
 import Head from 'next/head';
-import { NAVIGATION } from '../../config';
 import React from 'react';
+import { getNavigationStructure } from '../../config';
 import { useLingui } from '@lingui/react';
 import { useRouter } from 'next/router';
 
@@ -18,18 +18,17 @@ export interface SeoProps {
 
 const SeoHead = () => {
   const { route } = useRouter();
-  const config = NAVIGATION.find((nav) => nav?.link === route);
-  const { _ } = useLingui();
+  const { i18n } = useLingui();
+  const config = getNavigationStructure(i18n).find(
+    (nav) => nav?.link === route
+  );
   return (
     <Head>
-      <title>{_(config?.seo?.title?.message) ?? ''} </title>
+      <title>{config?.seo?.title?.message} </title>
       <link rel="icon" href={'/assets/logoHead.png'} />
       <meta itemProp="image" content={'/assets/logoHead.png'} />
-      <meta itemProp="name" content={_(config?.seo?.title?.message) ?? ''} />
-      <meta
-        name="description"
-        content={_(config?.seo?.description?.message) ?? ''}
-      />
+      <meta itemProp="name" content={config?.seo?.title?.message} />
+      <meta name="description" content={config?.seo?.description?.message} />
       {socialTags({ ...config?.seo, url: config?.link }).map(
         ({ name, content }) => {
           return <meta key={name} name={name} content={content} />;
