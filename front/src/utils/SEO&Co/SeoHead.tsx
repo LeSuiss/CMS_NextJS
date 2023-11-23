@@ -22,6 +22,7 @@ const SeoHead = () => {
   const config = getNavigationStructure(i18n).find(
     (nav) => nav?.link === route
   );
+
   return (
     <Head>
       <title>{config?.seo?.title?.message} </title>

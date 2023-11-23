@@ -13,7 +13,7 @@ import { NavigationProps } from '../../../config';
 import Switcher from './Switcher';
 
 interface CustomMenuProps {
-  linksToDisplay: NavigationProps[];
+  linksToDisplay: any[];
 }
 
 export default function CustomMenu({ linksToDisplay }: CustomMenuProps) {
@@ -47,11 +47,11 @@ export default function CustomMenu({ linksToDisplay }: CustomMenuProps) {
           <div key={`${item.nav}${index}`} style={{ width: '100vw' }}>
             {JSON.stringify(item.nav)}
             <Link
-              key={item.nav.message}
+              key={item.nav}
               onClick={handleClose}
               href={item.link}
               style={{ textDecoration: 'none' }}
-              aria-label={item.nav.message}
+              aria-label={item.nav}
             >
               <MenuItem>{item.nav}</MenuItem>
             </Link>

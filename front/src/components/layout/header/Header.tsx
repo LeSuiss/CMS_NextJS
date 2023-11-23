@@ -30,14 +30,14 @@ const _styles = (theme: Theme) => ({
   },
 });
 interface HeaderProps {
-  navigationStructure: NavigationProps[];
+  navigationStructure: any[];
   className;
 }
 function Header({ navigationStructure, className }: HeaderProps) {
   const theme = useTheme();
   const styles = _styles(theme);
 
-  console.log(navigationStructure);
+  console.log('header', navigationStructure);
 
   return (
     <Box
@@ -51,13 +51,18 @@ function Header({ navigationStructure, className }: HeaderProps) {
         <CustomMenu linksToDisplay={navigationStructure} />
       ) : (
         <Tabs value={0} aria-label="tabs menu" role="tablist">
-          {navigationStructure.map((page) => (
-            <Link key={page.link} passHref={true} href={page.link}>
+          {navigationStructure.map((item, index) => (
+            <Link
+              key={item.nav}
+              href={item.link}
+              style={{ textDecoration: 'none' }}
+              aria-label={item.nav}
+            >
               <Tab
-                label={page.nav.message}
+                label={item.nav}
                 sx={styles.tabs}
                 role="tab"
-                aria-label={page.nav.message} // Apply aria-label directly to the Tab component
+                aria-label={item.nav} // Apply aria-label directly to the Tab component
               />
             </Link>
           ))}
