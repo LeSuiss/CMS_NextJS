@@ -4,11 +4,19 @@ import {
 } from '../../node_modules/@mui/material';
 
 import { COMPANY_COLORS } from '../config/styles/styles';
+import { Roboto } from 'next/font/google';
+
+const roboto = Roboto({
+  weight: ['400', '700'],
+  style: ['normal', 'italic'],
+  subsets: ['latin'],
+  display: 'block',
+});
 
 const theme: any = createTheme({
   typography: {
     allVariants: {
-      fontFamily: 'inherit',
+      fontFamily: roboto.style.fontFamily,
     },
   },
   palette: {

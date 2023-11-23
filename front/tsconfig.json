@@ -12,16 +12,16 @@
     "module": "esnext",
     "resolveJsonModule": true,
     "moduleResolution": "node",
-    "isolatedModules": true, "jsx": "preserve", "plugins": [ { "name": "next"
-      }
-    ]
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "plugins": [{ "name": "next" }]
   },
   "include": [
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",
     "scripts/generateSiteMap.mjs",
-    "src/pages/_document.js",
+    "src/pages/_document.ts",
     ".next/types/**/*.ts",
     "src/assets/media/index.js",
     "next.config.js"

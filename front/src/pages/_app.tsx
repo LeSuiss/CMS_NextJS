@@ -10,7 +10,6 @@ import { CacheProvider } from '@emotion/react';
 import { CookieBanner } from '../lib';
 import CssBaseline from '@mui/material/CssBaseline';
 import { I18nProvider } from '@lingui/react';
-import { Roboto } from 'next/font/google';
 import { ThemeProvider } from '@mui/material/styles';
 import { ToastContainer } from 'react-toastify';
 import createEmotionCache from '../createEmotionCache';
@@ -21,13 +20,6 @@ import { useRouter } from 'next/router';
 
 const generateClassName = createGenerateClassName({
   productionPrefix: 'c',
-});
-
-const roboto = Roboto({
-  weight: ['400', '700'],
-  style: ['normal', 'italic'],
-  subsets: ['latin'],
-  display: 'block',
 });
 
 // initialization function
@@ -76,12 +68,10 @@ export default function MyApp(props: any) {
         <rootContext.Provider value={{ context, dispatchContext }}>
           <ThemeProvider theme={muiTheme}>
             <StylesProvider generateClassName={generateClassName}>
-              <main className={roboto.className}>
-                <CssBaseline />
-                <CookieBanner />
-                <Component {...pageProps} />
-                <ToastContainer />
-              </main>
+              <CssBaseline />
+              <CookieBanner />
+              <Component {...pageProps} />
+              <ToastContainer />
             </StylesProvider>
           </ThemeProvider>
         </rootContext.Provider>
