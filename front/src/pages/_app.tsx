@@ -27,7 +27,7 @@ const roboto = Roboto({
   weight: ['400', '700'],
   style: ['normal', 'italic'],
   subsets: ['latin'],
-  display: 'swap',
+  display: 'block',
 });
 
 // initialization function
@@ -72,20 +72,20 @@ export default function MyApp(props: any) {
   return (
     <CacheProvider value={emotionCache}>
       {/* {!!process.env.NEXT_PUBLIC_PUBLIC_GOOGLE_ANALYTICS && <GTAG />} */}
-      <div className={roboto.className}>
-        <I18nProvider i18n={i18n}>
-          <rootContext.Provider value={{ context, dispatchContext }}>
-            <ThemeProvider theme={muiTheme}>
-              <StylesProvider generateClassName={generateClassName}>
+      <I18nProvider i18n={i18n}>
+        <rootContext.Provider value={{ context, dispatchContext }}>
+          <ThemeProvider theme={muiTheme}>
+            <StylesProvider generateClassName={generateClassName}>
+              <main className={roboto.className}>
                 <CssBaseline />
                 <CookieBanner />
                 <Component {...pageProps} />
                 <ToastContainer />
-              </StylesProvider>
-            </ThemeProvider>
-          </rootContext.Provider>
-        </I18nProvider>
-      </div>
+              </main>
+            </StylesProvider>
+          </ThemeProvider>
+        </rootContext.Provider>
+      </I18nProvider>
     </CacheProvider>
   );
 }

@@ -14,7 +14,7 @@ export default function Innovation() {
   return (
     <Layout
       title={i18n._(/* i18n: Innovation */ t`Innovation`)}
-      backgroundImageUrl="/medias/bgBE.webp"
+      backgroundImageUrl="/medias/bgHome.webp"
     >
       <Card sx={{ marginY: theme.spacing(5) }}>
         <CardHeader
