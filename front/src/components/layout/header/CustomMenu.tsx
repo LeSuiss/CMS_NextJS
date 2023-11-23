@@ -47,11 +47,11 @@ export default function CustomMenu({ linksToDisplay }: CustomMenuProps) {
           <div key={`${item.nav}${index}`} style={{ width: '100vw' }}>
             {JSON.stringify(item.nav)}
             <Link
-              key={item.nav}
+              key={item.nav.message}
               onClick={handleClose}
               href={item.link}
               style={{ textDecoration: 'none' }}
-              aria-label={item.nav}
+              aria-label={item.nav.message}
             >
               <MenuItem>{item.nav}</MenuItem>
             </Link>

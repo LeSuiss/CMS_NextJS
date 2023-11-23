@@ -37,6 +37,8 @@ function Header({ navigationStructure, className }: HeaderProps) {
   const theme = useTheme();
   const styles = _styles(theme);
 
+  console.log(navigationStructure);
+
   return (
     <Box
       component="header"
