@@ -6,7 +6,7 @@ import {
 import { COMPANY_COLORS } from '../config/styles/styles';
 import { Roboto } from 'next/font/google';
 
-const roboto = Roboto({
+export const roboto = Roboto({
   weight: ['400', '700'],
   style: ['normal', 'italic'],
   subsets: ['latin'],

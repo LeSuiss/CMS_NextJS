@@ -1,24 +1,18 @@
 import * as React from 'react';
 
 import Document, { Head, Html, Main, NextScript } from 'next/document';
+import { muiTheme, roboto } from '../styles/muiTheme';
 
 import createEmotionCache from '../createEmotionCache';
 import createEmotionServer from '@emotion/server/create-instance';
-import { muiTheme } from '../styles/muiTheme';
 
 export default class MyDocument extends Document {
   render() {
     return (
-      <Html lang="fr">
+      <Html lang="fr" className={roboto.className}>
         <Head>
-          {/* PWA primary color */}
           <meta name="theme-color" content={muiTheme.palette.primary.main} />
-          {/* <link
-            rel="stylesheet"
-            href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
-          /> */}
-          {/* Inject MUI styles first to match with the prepend: true configuration. */}
-          {this.props.emotionStyleTags}
+          {(this.props as any).emotionStyleTags}
         </Head>
         <body>
           <Main />
@@ -63,7 +57,7 @@ MyDocument.getInitialProps = async (ctx) => {
 
   ctx.renderPage = () =>
     originalRenderPage({
-      enhanceApp: (App) =>
+      enhanceApp: (App: any) =>
         function EnhanceApp(props) {
           return <App emotionCache={cache} {...props} />;
         },

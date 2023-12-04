@@ -37,8 +37,6 @@ function Header({ navigationStructure, className }: HeaderProps) {
   const theme = useTheme();
   const styles = _styles(theme);
 
-  console.log('header', navigationStructure);
-
   return (
     <Box
       component="header"
@@ -51,7 +49,7 @@ function Header({ navigationStructure, className }: HeaderProps) {
         <CustomMenu linksToDisplay={navigationStructure} />
       ) : (
         <Tabs value={0} aria-label="tabs menu" role="tablist">
-          {navigationStructure.map((item, index) => (
+          {navigationStructure.map((item) => (
             <Link
               key={item.nav}
               href={item.link}
