@@ -13,7 +13,7 @@ interface FaqProps {
   FAQitems: {
     question: string;
     answer: string;
-  };
+  }[];
 }
 export default function Faq({ FAQitems }: FaqProps) {
   return (
