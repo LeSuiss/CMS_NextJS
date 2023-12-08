@@ -149,7 +149,7 @@ const GridStyled = styled(Grid)(({ theme }) => ({
 
 const TestimonialCard = (props) => {
   return (
-    <GridStyled item>
+    <GridStyled container>
       <Grid
         item
         className={['avatarContainer', 'testimonial-avatar-container'].join(
@@ -170,12 +170,7 @@ const TestimonialCard = (props) => {
           </div>
         )}
       </Grid>
-      <Grid
-        item
-        xs={11}
-        className={['body', 'testimonial-body'].join(' ')}
-        sx={{ maxWidth: '600px' }}
-      >
+      <Grid item xs={11} className={['body', 'testimonial-body'].join(' ')}>
         <p>{props.content}</p>
       </Grid>
       <Grid item className={['author', 'testimonial-author'].join(' ')}>

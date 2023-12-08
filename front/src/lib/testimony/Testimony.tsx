@@ -3,7 +3,6 @@ import { Box, Grid, Theme, Typography } from '@mui/material';
 import { FormatQuote } from '@mui/icons-material';
 import Image from 'next/image';
 import React from 'react';
-// import { FormatQuote } from '@mui/icons-material'
 import { useTheme } from '@emotion/react';
 
 export interface TestimonyProps {

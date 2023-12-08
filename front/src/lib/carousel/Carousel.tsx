@@ -19,7 +19,7 @@ export const Carousel = ({ settings, children }: CarouselProps) => {
     sliderRef.slickPause();
   };
 
-  const enhancedSettings = {
+  const enhancedSettings: Settings = {
     dots: true,
     infinite: true,
     speed: 500,
@@ -32,6 +32,7 @@ export const Carousel = ({ settings, children }: CarouselProps) => {
     arrows: false,
     swipeToSlide: true,
     useTransform: false,
+
     ...settings,
   };
 
