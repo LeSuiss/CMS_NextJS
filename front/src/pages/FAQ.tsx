@@ -9,7 +9,13 @@ import loadTranslation from '../utils/loadTranslation';
 import { lorem } from '../utils/lorem';
 import { t } from '@lingui/macro';
 
-export default function Faq({ FAQitems }) {
+interface FaqProps {
+  FAQitems: {
+    question: string;
+    answer: string;
+  };
+}
+export default function Faq({ FAQitems }: FaqProps) {
   return (
     <Layout
       title={i18n._(/* i18n: FAQ */ t`FAQ`)}

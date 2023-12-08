@@ -1,3 +1,4 @@
+import React from 'react';
 interface SectionBackgroundProps {
   url: string | ImageDataSettings;
   children?: any;
