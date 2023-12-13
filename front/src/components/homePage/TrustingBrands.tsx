@@ -42,9 +42,13 @@ function TrustingBrands(props: any) {
 
       <Grid container justifyContent="center" paddingTop={3} gap={2}>
         {props?.brandsList?.map((x) => (
-          <Grid item key={`logo${x}`} textAlign="center" height="50px">
-            <Image width="50" height="50" alt={`logo${x}`} src={`/${x}`} />
-          </Grid>
+          <Image
+            key={`logo${x}`}
+            width="50"
+            height="50"
+            alt={`logo${x}`}
+            src={`/${x}`}
+          />
         ))}
       </Grid>
     </GridWithStyle>

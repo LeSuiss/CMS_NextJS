@@ -60,12 +60,10 @@ export const FilteringMenuAccordeon = ({
   const [level1Open, setLevel1Open] = React.useState(
     Object.keys(filteringStructure).map((k) => ({ [k]: true }))
   );
-  // const [expanded, setExpanded] = React.useState(filteringStructure)
   const theme = useTheme();
 
   return (
     <div style={{ minWidth: '65%', maxHeight: '80dvh', overflowY: 'auto' }}>
-      {/* {JSON.stringify(expanded)} */}
       {Object?.entries(filteringStructure).map(([category, values], index) => (
         <Accordion
           key={category + index}

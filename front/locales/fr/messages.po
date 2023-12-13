@@ -28,7 +28,7 @@ msgstr "Votre message a bien été transmis"
 #: src/config/navigation.ts:67
 #: src/config/navigation.ts:70
 #: src/config/navigation.ts:71
-#: src/pages/FAQ.tsx:15
+#: src/pages/FAQ.tsx:21
 msgid "/lDBHm"
 msgstr "FAQ"
 
@@ -151,7 +151,7 @@ msgstr "Saisir une adresse mail valide"
 msgid "G6CgfD"
 msgstr "Designer une solution"
 
-#: src/pages/FAQ.tsx:21
+#: src/pages/FAQ.tsx:27
 msgid "HPp+yd"
 msgstr "Les réponses à vos questions"
 
@@ -163,9 +163,9 @@ msgstr "Customize your cookies"
 msgid "IfZ8Ly"
 msgstr "Nos Produits"
 
-#: src/pages/FAQ.tsx:39
 #: src/pages/FAQ.tsx:45
 #: src/pages/FAQ.tsx:51
+#: src/pages/FAQ.tsx:57
 msgid "J/hVSQ"
 msgstr "{0}"
 
@@ -360,9 +360,9 @@ msgstr "votre message"
 msgid "tALayW"
 msgstr "Annuler"
 
-#: src/pages/FAQ.tsx:37
 #: src/pages/FAQ.tsx:43
 #: src/pages/FAQ.tsx:49
+#: src/pages/FAQ.tsx:55
 msgid "tQaaCj"
 msgstr "{lorem}"
 

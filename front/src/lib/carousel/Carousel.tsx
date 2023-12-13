@@ -43,7 +43,10 @@ export const Carousel = ({ settings, children }: CarouselProps) => {
       onMouseLeave={play}
       onTouchStart={pause}
       // center image/video on slick
-      sx={{ "& *:is(.slick-list) *[class^='slick-']": { marginY: 'auto' } }}
+      sx={{
+        '& >*': { maxWidth: '100vw' },
+        "& *:is(.slick-list) *[class^='slick-']": { marginY: 'auto' },
+      }}
     >
       <Slider {...enhancedSettings} ref={(slider) => (sliderRef = slider)}>
         {children}

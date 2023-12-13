@@ -45,7 +45,6 @@ export default function CustomMenu({ linksToDisplay }: CustomMenuProps) {
         <Switcher />
         {linksToDisplay.map((item, index) => (
           <div key={`${item.nav}${index}`} style={{ width: '100vw' }}>
-            {JSON.stringify(item.nav)}
             <Link
               key={item.nav}
               onClick={handleClose}

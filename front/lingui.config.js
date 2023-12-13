@@ -18,6 +18,7 @@ module.exports = {
       path: '<rootDir>/locales/{locale}/messages',
       include: ['<rootDir>/src'],
       exclude: ['**/node_modules/**'],
+      sourceLocale: 'fr',
     },
   ],
   format: 'po',
