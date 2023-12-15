@@ -122,10 +122,16 @@ export const CookieBanner = ({
       buttonStyle={{ margin: '20px' }}
       buttonText="accept"
       declineButtonText="decline"
-      customButtonProps={{ color: 'info', variant: 'contained', margin: 2 }}
+      customButtonProps={{
+        color: 'info',
+        variant: 'contained',
+        margin: 2,
+        size: 'small',
+      }}
       customDeclineButtonProps={{
         color: 'error',
         variant: 'contained',
+        size: 'small',
       }}
       contentStyle={{
         flex: 'none',

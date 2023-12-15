@@ -12,339 +12,340 @@ msgstr ""
 "Last-Translator: \n"
 "Language-Team: \n"
 "Plural-Forms: \n"
-
 #: src/components/layout/footer/Footer.main.tsx:25
 msgid "+HuqM1"
-msgstr ""
+msgstr "Terms and Conditions"
 
 #: src/pages/Products.tsx:47
 msgid "/TlRFZ"
-msgstr ""
+msgstr "our catalog"
 
 #: src/pages/Contact.tsx:49
 msgid "/d5Ovx"
-msgstr ""
+msgstr "Your message has been successfully transmitted"
 
 #: src/config/navigation.ts:67
 #: src/config/navigation.ts:70
 #: src/config/navigation.ts:71
 #: src/pages/FAQ.tsx:21
 msgid "/lDBHm"
-msgstr ""
+msgstr "FAQ"
 
 #: src/components/homePage/BackgroundVideo.tsx:55
 msgid "1UcJim"
-msgstr ""
+msgstr "Discover SAPEM"
 
 #: src/components/homePage/HomePageFirstLookAt.tsx:57
 msgid "1fZYAs"
-msgstr ""
+msgstr "INNOVATE"
 
 #: src/components/homePage/TrustingBrands.tsx:35
 msgid "1rghDI"
-msgstr ""
+msgstr "They trust us"
 
 #: src/pages/Team.tsx:24
 msgid "31RTjb"
-msgstr ""
+msgstr "Our Teams"
 
 #: src/components/layout/footer/Footer.main.tsx:21
 #: src/pages/Legal.tsx:19
 msgid "6jHOTT"
-msgstr ""
+msgstr "Legal Notice"
 
 #: src/components/homePage/IconPresentation.tsx:66
 msgid "6rhZsA"
-msgstr ""
+msgstr "Ergonomics"
 
 #: src/pages/Innovation.tsx:60
 msgid "7uNOIE"
 msgstr ""
+"SAPEM\n"
+"Technologies is committed to meeting all your needs with\n"
+"comprehensive and innovative technical solutions, as well as\n"
+"personalized support for each project phase. A true trusted\n"
+"partner, we accompany you and provide support and advice at\n"
+"every step of your project."
 
 #: src/pages/Contact.tsx:191
 #: src/pages/Contact.tsx:194
 msgid "82Ozh9"
-msgstr ""
+msgstr "Phone number"
 
 #: src/pages/Legal.tsx:38
 msgid "93U/Ib"
 msgstr ""
+"A public limited company with a board of directors, with a\n"
+"share capital of €203,062.09, whose registered office is located\n"
+"at LE BOURG, 58270 CIZELY, registered with the Trade and Companies\n"
+"Register of Nevers under number 549 879 096, represented by Mr. Joel\n"
+"ARCHER acting and having the necessary powers as the president of\n"
+"the board of directors."
 
 #: src/pages/Innovation.tsx:28
 msgid "9bmFKO"
 msgstr ""
+"SAPEM is a specialized service company in industrial engineering\n"
+"and technological innovation."
 
 #: src/pages/Contact.tsx:107
 #: src/pages/Contact.tsx:128
 #: src/pages/Contact.tsx:150
 #: src/pages/Contact.tsx:175
 msgid "AxOm1Q"
-msgstr ""
+msgstr "This field is required"
 
 #: src/components/homePage/IconPresentation.tsx:56
 msgid "BHty39"
-msgstr ""
+msgstr "Work on the product. Tailored and optimized research. Product alignment with safety requirements."
 
 #: src/components/homePage/IconPresentation.tsx:89
 msgid "BU9E1m"
 msgstr ""
+"Deepen the design. Integration of electronics, definition of\n"
+"manufacturing process and materials, 3D modeling, simulation,\n"
+"reduction of manufacturing costs"
 
 #: src/components/homePage/IconPresentation.tsx:71
 msgid "CAKC9/"
-msgstr ""
+msgstr "Adapt the products to the constraints of the user while ensuring optimal safety at all times."
 
 #: src/components/homePage/IconPresentation.tsx:33
 msgid "CVbNXn"
-msgstr ""
+msgstr "Analyze"
 
 #: src/pages/Contact.tsx:51
 msgid "CuDCVw"
-msgstr ""
+msgstr "An error occurred. Please try again later."
 
 #: src/pages/404.tsx:27
 msgid "D5mySz"
-msgstr ""
+msgstr "Error"
 
 #: src/config/navigation.ts:20
 msgid "DPOoZm"
-msgstr ""
+msgstr "SAPEM lifting professionals"
 
 #: src/components/homePage/FewNumbersSection.tsx:50
 msgid "DWfa3F"
-msgstr ""
+msgstr "persons searching for disrupting innovations"
 
 #: src/components/homePage/FewNumbersSection.tsx:21
 msgid "DvFFN+"
-msgstr ""
+msgstr "SAPEM specializes in the design and technical conception of lifting products meeting the safety and reliability requirements of its partners. SAPEM helps you design products adapted to your constraints. For this, we provide you with our cross-functional skills in mechanical engineering and industrial design. Rigor, quality, and great curiosity are key motivations for us. They drive us to continually acquire new skills and to understand your project's challenges with precision. We also pay great attention to the quality of relationships with our clients."
 
 #: src/pages/Contact.tsx:145
 #: src/pages/Contact.tsx:146
 msgid "E9PLXb"
-msgstr ""
+msgstr "Company"
 
 #: src/components/homePage/FewNumbersSection.tsx:13
 msgid "FXTTP8"
-msgstr ""
+msgstr "Presentation"
 
 #: src/pages/Contact.tsx:220
 msgid "G4ZLFE"
-msgstr ""
+msgstr "Enter a valid email address"
 
 #: src/components/homePage/IconPresentation.tsx:51
 msgid "G6CgfD"
-msgstr ""
+msgstr "Design a solution"
 
 #: src/pages/FAQ.tsx:27
 msgid "HPp+yd"
-msgstr ""
+msgstr "Answers to your questions"
 
 #: src/lib/cookieBanner/CookieBanner.tsx:173
 msgid "HdRJJM"
-msgstr ""
+msgstr "Customize your cookies"
 
 #: src/pages/Products.tsx:38
 msgid "IfZ8Ly"
-msgstr ""
+msgstr "Our Products"
 
 #: src/pages/FAQ.tsx:45
 #: src/pages/FAQ.tsx:51
 #: src/pages/FAQ.tsx:57
 msgid "J/hVSQ"
-msgstr ""
+msgstr "{0}"
 
 #: src/components/homePage/IconPresentation.tsx:84
 msgid "JUkcqX"
-msgstr ""
+msgstr "Technical development"
 
 #: src/pages/404.tsx:14
 msgid "Jk4ohF"
-msgstr ""
+msgstr "This page does not exist"
 
 #: src/config/navigation.ts:50
 #: src/config/navigation.ts:51
 msgid "KM6m8p"
-msgstr ""
+msgstr "Team"
 
 #: src/components/homePage/HomePageFirstLookAt.tsx:55
 msgid "Kj53rO"
-msgstr ""
+msgstr "DEVELOP"
 
 #: src/components/homePage/FewNumbersSection.tsx:36
 msgid "M9H+/G"
-msgstr ""
+msgstr "projects"
 
 #: src/pages/Contact.tsx:122
 #: src/pages/Contact.tsx:124
 msgid "MCvCnO"
-msgstr ""
+msgstr "First Name"
 
 #: src/config/navigation.ts:38
 #: src/config/navigation.ts:40
 #: src/config/navigation.ts:41
 msgid "MKYUai"
-msgstr ""
+msgstr "Products"
 
 #: src/pages/Innovation.tsx:50
 msgid "N922Kn"
 msgstr ""
+"SAPEM Technologies mainly operates in\n"
+"outsourcing mode: Technical assistance,\n"
+"fixed-price and offshoring. We ensure a\n"
+"comprehensive follow-up of projects from\n"
+"pre-study to prototype and pre-series. We\n"
+"intervene in the study and design of projects\n"
+"in the following sectors: Automotive,\n"
+"Aerospace, Rail, Mechanical Industry,\n"
+"Medical, Metrology, Quality. Our experts will\n"
+"accompany you for your training needs in\n"
+"quality and/or metrology, advice or support\n"
+"for certification accreditation, setting up\n"
+"new processes, creation of new products."
 
 #: src/components/layout/header/Switcher.tsx:102
 msgid "NyuAOD"
-msgstr ""
+msgstr "Choose your language"
 
 #: src/pages/Team.tsx:66
 msgid "OO+i/B"
-msgstr ""
+msgstr "The workshop"
 
 #: src/pages/Contact.tsx:263
 msgid "OSKP8S"
-msgstr ""
+msgstr "I agree that my data be recorded by SAPEM and used for analysis and commercial prospecting"
 
 #: src/config/navigation.ts:28
 #: src/config/navigation.ts:30
 #: src/config/navigation.ts:31
 #: src/pages/Innovation.tsx:16
 msgid "Q8rr4y"
-msgstr ""
+msgstr "Innovation"
 
 #: src/components/homePage/IconPresentation.tsx:108
 msgid "Rr9CgN"
-msgstr ""
+msgstr "Validate the product in every detail. All sizes of prototypes, iterations until prototype validation"
 
 #: src/pages/Contact.tsx:86
 msgid "SX8gv/"
-msgstr ""
+msgstr "Contact Us"
 
 #: src/components/layout/footer/Footer.main.tsx:79
 msgid "TF9Sxq"
-msgstr ""
+msgstr "Monday to Friday from 8am to 5pm"
 
 #: src/config/navigation.ts:47
 msgid "TMdsfq"
-msgstr ""
+msgstr "Equipment"
 
 #: src/components/layout/footer/Footer.main.tsx:100
 msgid "VEExwK"
-msgstr ""
+msgstr "by email"
 
 #: src/components/homePage/FewNumbersSection.tsx:42
 msgid "W+2eH4"
-msgstr ""
+msgstr "partners"
 
 #: src/pages/Contact.tsx:302
 msgid "YwBWLP"
-msgstr ""
+msgstr "Online"
 
 #: src/pages/Team.tsx:29
 msgid "amaDoC"
-msgstr ""
+msgstr "Our team of engineers, companions accompanies you in your projects. Prototyping, quotes, technical questions, Our team advises you and accompanies you to provide you with personalized solutions."
 
 #: src/pages/404.tsx:39
 msgid "ch4b0p"
-msgstr ""
+msgstr "Return to the homepage"
 
 #: src/pages/Legal.tsx:25
 msgid "d6GuCI"
-msgstr ""
+msgstr "SAPEM: Society of Electrical and Mechanical Applications."
 
 #: src/pages/Contact.tsx:278
 msgid "fPLviK"
-msgstr ""
+msgstr "submit"
 
 #: src/pages/Contact.tsx:250
 msgid "gNI+7u"
-msgstr ""
+msgstr "Enter your message"
 
 #: src/components/layout/footer/AuthorRow.tsx:41
 msgid "gOdSxa"
-msgstr ""
+msgstr "site realized by Alexis ARCHER"
 
 #: src/pages/Contact.tsx:102
 #: src/pages/Contact.tsx:104
 msgid "iAKACc"
-msgstr ""
+msgstr "Name"
 
 #: src/pages/Contact.tsx:316
 msgid "ii4k9S"
-msgstr ""
+msgstr "On Site"
 
 #: src/config/navigation.ts:57
 #: src/config/navigation.ts:60
 #: src/config/navigation.ts:61
 #: src/pages/Contact.tsx:66
 msgid "jfC/xh"
-msgstr ""
+msgstr "Contact"
 
 #: src/components/homePage/IconPresentation.tsx:38
 msgid "jzRtlC"
-msgstr ""
+msgstr "Understand the need well. State of the art, writing the specifications, benchmarking, reverse engineering, functional analysis"
 
 #: src/components/homePage/HomePageFirstLookAt.tsx:52
 msgid "mM/XsI"
-msgstr ""
+msgstr "CREATE"
 
 #: src/pages/Contact.tsx:292
 msgid "mzc93K"
-msgstr ""
+msgstr "Find us"
 
 #: src/components/layout/footer/Footer.main.tsx:30
 msgid "nXljLj"
-msgstr ""
+msgstr "Product Catalog"
 
 #: src/pages/Contact.tsx:167
 msgid "p/78dY"
-msgstr ""
+msgstr "Position"
 
 #: src/pages/Contact.tsx:199
 msgid "p3Ghkv"
-msgstr ""
+msgstr "Enter a valid number"
 
 #: src/pages/404.tsx:31
 msgid "p3pSQG"
-msgstr ""
+msgstr "You have requested an unlisted page"
 
 #: src/config/navigation.ts:21
 msgid "pC1SmX"
-msgstr ""
+msgstr "Lifting expert for 40 years. We support our clients in building tailor-made solutions and solving complex problems."
 
 #: src/components/homePage/IconPresentation.tsx:103
 msgid "pD0Omg"
-msgstr ""
+msgstr "Prototyping"
 
 #: src/components/layout/footer/GridSection.tsx:13
 msgid "pDgeaz"
-msgstr ""
+msgstr "{title}"
 
 #: src/components/layout/footer/Footer.main.tsx:35
 msgid "pVuwNa"
-msgstr ""
+msgstr "Manage cookies"
 
-#: src/pages/Team.tsx:36
-msgid "qYTbbd"
-msgstr ""
-
-#: src/pages/Contact.tsx:245
-msgid "rlgF4h"
-msgstr ""
-
-#: src/components/layout/header/Switcher.tsx:141
-msgid "tALayW"
-msgstr ""
-
-#: src/pages/FAQ.tsx:43
-#: src/pages/FAQ.tsx:49
-#: src/pages/FAQ.tsx:55
-msgid "tQaaCj"
-msgstr ""
-
-#: src/pages/Innovation.tsx:32
-msgid "tdZAIT"
-msgstr ""
-
-#: src/config/navigation.ts:16
-msgid "xsJ5fQ"
-msgstr ""
-
-#: src/components/homePage/HomePageFirstLookAt.tsx:90
-msgid "zJTteZ"
-msgstr ""
+#: src/pages/Team.ts
